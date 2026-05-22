@@ -1,0 +1,22 @@
+.bar {
+  background: var(--orange);
+  color: var(--white);
+  font-family: var(--font-head);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1001;
+}
+
+.bar a {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-left: 12px;
+}
+.bar a:hover {
+  opacity: 0.85;
+}

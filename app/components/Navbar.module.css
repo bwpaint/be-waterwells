@@ -1,0 +1,218 @@
+.navWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: var(--transition);
+  background: rgba(26, 23, 20, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
+}
+
+.navWrapper.transparent {
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  position: absolute;
+  top: 40px; /* offset for announcement bar */
+}
+
+.navWrapper.scrolled {
+  position: fixed;
+  top: 0;
+  background: rgba(26, 23, 20, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 220px 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 16px var(--container-pad);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  align-items: center;
+}
+
+.navLinks li > a,
+.navLinks li > span {
+  font-family: var(--font-head);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88);
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+}
+
+.navLinks li > a:hover,
+.navLinks li > span:hover {
+  color: var(--orange);
+}
+
+.hasDropdown {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: -20px;
+  background: var(--charcoal);
+  border: 1px solid var(--mid-stone);
+  border-radius: var(--radius);
+  min-width: 220px;
+  list-style: none;
+  padding: 8px 0;
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 10px 20px;
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  transition: var(--transition);
+}
+
+.dropdown li a:hover {
+  background: var(--mid-stone);
+  color: var(--orange);
+}
+
+.navCta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.phoneLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--white) !important;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.phoneLink:hover {
+  color: var(--orange) !important;
+}
+
+.phoneIcon {
+  font-size: 0.85rem;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* Mobile menu */
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  background: var(--charcoal);
+  border-top: 1px solid var(--mid-stone);
+  padding: 16px var(--container-pad);
+  gap: 4px;
+}
+
+.mobileMenu a {
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: var(--transition);
+}
+
+.mobileMenu a:hover {
+  color: var(--orange);
+}
+
+.mobileGroupLabel {
+  font-family: var(--font-head);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sand);
+  padding: 14px 0 4px;
+}
+
+.mobileSublink {
+  padding-left: 16px !important;
+}
+
+.mobileCta {
+  margin-top: 12px;
+  background: var(--orange) !important;
+  color: var(--white) !important;
+  text-align: center;
+  padding: 14px !important;
+  border-radius: var(--radius);
+  border-bottom: none !important;
+}
+
+@media (max-width: 1024px) {
+  .navLinks { gap: 20px; }
+  .nav { grid-template-columns: 180px 1fr auto; gap: 16px; }
+}
+
+@media (max-width: 768px) {
+  .navLinks,
+  .navCta .btn { display: none; }
+
+  .hamburger { display: flex; }
+
+  .nav {
+    grid-template-columns: 1fr auto;
+  }
+}

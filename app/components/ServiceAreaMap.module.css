@@ -1,0 +1,75 @@
+.mapWrap {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: visible;
+  box-shadow: 0 16px 64px rgba(26, 23, 20, 0.3);
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.tooltip {
+  position: absolute;
+  background: var(--charcoal);
+  border: 1px solid var(--mid-stone);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  pointer-events: none;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 180px;
+  box-shadow: var(--shadow-lg);
+}
+
+.tooltip strong {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.tooltip span {
+  font-family: var(--font-head);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand);
+}
+
+.tooltip em {
+  font-style: normal;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.6);
+  border-top: 1px solid var(--mid-stone);
+  padding-top: 6px;
+  margin-top: 3px;
+}
+
+.tooltipCta {
+  font-family: var(--font-head);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--orange) !important;
+  letter-spacing: 0.04em;
+  text-transform: none !important;
+}
+
+.mapHint {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--warm-gray);
+  margin-top: 14px;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .tooltip { display: none; }
+}

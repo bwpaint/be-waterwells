@@ -1,0 +1,157 @@
+/* ============================================================
+   DESIGN SYSTEM — B-E Waterwell Services
+   Bold Earth & Stone | Gray · Black · Brown · Orange
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --charcoal:     #1a1714;
+  --dark-stone:   #2c2825;
+  --mid-stone:    #4a433c;
+  --warm-gray:    #7a7068;
+  --sand:         #a89070;
+  --sand-light:   #c4aa88;
+  --cream:        #f4ede0;
+  --cream-dark:   #ede3d0;
+  --stone-light:  #e8e0d4;
+  --white:        #ffffff;
+  --orange:       #d95f0a;
+  --orange-hover: #b84e08;
+  --orange-glow:  rgba(217,95,10,0.15);
+
+  --font-head: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+
+  --radius:      6px;
+  --radius-lg:   12px;
+  --shadow-sm:   0 2px 12px rgba(26,23,20,0.12);
+  --shadow-md:   0 6px 32px rgba(26,23,20,0.18);
+  --shadow-lg:   0 16px 64px rgba(26,23,20,0.26);
+  --transition:  all 0.28s cubic-bezier(0.4,0,0.2,1);
+
+  --container-max: 1400px;
+  --container-pad: 48px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--dark-stone);
+  background: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── CONTAINER ─────────────────────────────── */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+/* ── BUTTONS ───────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: var(--white);
+  border-color: var(--orange);
+}
+.btn-primary:hover {
+  background: var(--orange-hover);
+  border-color: var(--orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(217,95,10,0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255,255,255,0.55);
+}
+.btn-outline:hover {
+  border-color: var(--white);
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+.btn-dark {
+  background: var(--charcoal);
+  color: var(--white);
+  border-color: var(--charcoal);
+}
+.btn-dark:hover {
+  background: var(--dark-stone);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ── SECTION LABELS ────────────────────────── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 14px;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--orange);
+  flex-shrink: 0;
+}
+.section-label.light { color: var(--sand-light); }
+.section-label.light::before { background: var(--sand-light); }
+
+.section-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--charcoal);
+}
+.section-title.light { color: var(--white); }
