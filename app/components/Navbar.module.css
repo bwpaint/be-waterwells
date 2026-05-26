@@ -74,9 +74,21 @@
   position: relative;
 }
 
+/* Invisible bridge fills any gap between nav item and dropdown panel,
+   keeping the hover active while the mouse travels down */
+.hasDropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  right: -20px;
+  height: 12px;
+  background: transparent;
+}
+
 .dropdown {
   position: absolute;
-  top: calc(100% + 16px);
+  top: calc(100% + 8px);
   left: -20px;
   background: var(--charcoal);
   border: 1px solid var(--mid-stone);
@@ -86,6 +98,19 @@
   padding: 8px 0;
   box-shadow: var(--shadow-lg);
   z-index: 100;
+  /* Hidden by default; shown on CSS hover — no JS timing race */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
+}
+
+.hasDropdown:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .dropdown li a {

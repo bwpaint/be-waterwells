@@ -21,7 +21,6 @@ const services = [
 export default function Navbar({ transparent = false }: NavbarProps) {
   const [scrolled, setScrolled] = useState(!transparent);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
     if (!transparent) return;
@@ -49,21 +48,16 @@ export default function Navbar({ transparent = false }: NavbarProps) {
         {/* Desktop links */}
         <ul className={styles.navLinks}>
           <li><Link href="/">Home</Link></li>
-          <li
-            className={styles.hasDropdown}
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
-          >
+          <li className={styles.hasDropdown}>
             <span>Services ▾</span>
-            {servicesOpen && (
-              <ul className={styles.dropdown}>
-                {services.map((s) => (
-                  <li key={s.href}>
-                    <Link href={s.href}>{s.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            )}
+            {/* Dropdown always rendered — CSS :hover controls visibility, no JS timing race */}
+            <ul className={styles.dropdown}>
+              {services.map((s) => (
+                <li key={s.href}>
+                  <Link href={s.href}>{s.label}</Link>
+                </li>
+              ))}
+            </ul>
           </li>
           <li><Link href="/service-areas">Service Areas</Link></li>
           <li><Link href="/about">About</Link></li>
