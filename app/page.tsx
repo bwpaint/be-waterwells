@@ -64,15 +64,6 @@ export default function HomePage() {
           </div>
 
           <div className={styles.heroRight}>
-            <div className={styles.heroVideoWrap}>
-              <video autoPlay muted loop playsInline>
-                <source
-                  src="https://bewaterwells.com/wp-content/uploads/2024/08/bewater.mp4"
-                  type="video/mp4"
-                />
-              </video>
-              <span className={styles.heroVideoLabel}>B-E Waterwell Services in Action</span>
-            </div>
             <HomeHeroForm />
           </div>
         </div>
@@ -109,17 +100,26 @@ export default function HomePage() {
       <section className={styles.servicesSection}>
         <div className="container">
           <div className={styles.servicesTitleRow}>
-            <div>
+            <div className={styles.servicesTitleText}>
               <span className="section-label">What We Do</span>
               <h2 className={`section-title ${styles.servicesH2}`}>
                 Complete Waterwell Services
               </h2>
+              <p className={styles.servicesSubtext}>
+                One call handles everything. Drilling, pumps, pressure tanks,
+                generator prep. B-E Waterwell does it all with the same crew
+                and the same accountability.
+              </p>
             </div>
-            <p className={styles.servicesSubtext}>
-              One call handles everything. Drilling, pumps, pressure tanks,
-              generator prep. B-E Waterwell does it all with the same crew
-              and the same accountability.
-            </p>
+            <div className={styles.servicesVideoWrap}>
+              <video autoPlay muted loop playsInline>
+                <source
+                  src="https://bewaterwells.com/wp-content/uploads/2024/08/bewater.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <span className={styles.servicesVideoLabel}>B-E Waterwell Services in Action</span>
+            </div>
           </div>
           <div className={styles.servicesGrid}>
             {services.map((svc) => (
