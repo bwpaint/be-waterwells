@@ -48,16 +48,16 @@ const serviceCategories = [
 ];
 
 export default function Navbar({ transparent = false }: NavbarProps) {
-  const [scrolled, setScrolled] = useState(!transparent);
+  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [openMobileCategory, setOpenMobileCategory] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!transparent) return;
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 40);
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [transparent]);
+  }, []);
 
   return (
     <nav

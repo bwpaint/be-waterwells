@@ -7,7 +7,7 @@ export default function AnnouncementBar() {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setHidden(window.scrollY > 60);
+    const handleScroll = () => setHidden(window.scrollY > 40);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
