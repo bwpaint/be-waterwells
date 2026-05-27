@@ -163,7 +163,7 @@ export default function CostEstimator() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '6px' }}>
             {([['filtration','Water Filtration System (+$800–$1,800)','filtration'],['generatorPrep','Generator Prep Kit (+$600–$1,200)','generatorPrep']] as [string,string,keyof Inputs][]).map(([key,label]) => (
               <label key={key} style={{ display: 'flex', gap: '10px', alignItems: 'center', fontSize: '0.88rem', color: 'var(--dark-stone)', cursor: 'pointer' }}>
-                <input type="checkbox" checked={inputs[key] as boolean} onChange={e => set(key as keyof Inputs, e.target.checked)} style={{ accentColor: 'var(--orange)', width: '16px', height: '16px' }} />
+                <input type="checkbox" checked={inputs[key as keyof Inputs] as boolean} onChange={e => set(key as keyof Inputs, e.target.checked)} style={{ accentColor: 'var(--orange)', width: '16px', height: '16px' }} />
                 {label}
               </label>
             ))}

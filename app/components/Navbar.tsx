@@ -189,4 +189,8 @@ export default function Navbar({ transparent = false }: NavbarProps) {
           <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
           <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
           <a href="tel:+12814484447" className={styles.mobileCta}>(281) 448-4447</a>
-        </d
+        </div>
+      )}
+    </nav>
+  );
+}
