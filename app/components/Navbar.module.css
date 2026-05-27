@@ -308,4 +308,23 @@
   .megaDropdown { min-width: 480px; }
 }
 
-@media (max-
+@media (max-width: 900px) {
+  .navLinks,
+  .navCta .phoneLink,
+  .navCta .btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+  }
+
+  .navCta {
+    gap: 8px;
+  }
+}
