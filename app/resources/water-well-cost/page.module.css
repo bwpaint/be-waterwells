@@ -172,7 +172,7 @@
 
 /* ESTIMATOR SECTION */
 .estimatorSection {
-  background: #1a2e1a;
+  background: var(--charcoal);
   padding: 72px 24px;
   color: #fff;
 }
