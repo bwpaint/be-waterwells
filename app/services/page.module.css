@@ -42,7 +42,7 @@
   color: var(--white);
   margin-bottom: 20px;
 }
-.heroAccent { color: var(--orange); }
+.heroAccent { color: var(--highlight); }
 .heroSubtitle {
   font-size: 1.05rem;
   color: rgba(255,255,255,0.68);

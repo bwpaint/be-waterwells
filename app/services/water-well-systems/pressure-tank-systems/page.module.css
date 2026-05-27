@@ -38,7 +38,7 @@
 .h1Wrap { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
 .h1Line1 { font-family: var(--font-head); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
 .h1Line2 { font-family: var(--font-head); font-size: clamp(1.9rem, 4vw, 3.5rem); font-weight: 900; line-height: 1.05; color: var(--white); }
-.h1Line3 { font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: var(--orange); letter-spacing: 0.05em; }
+.h1Line3 { font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: var(--highlight); letter-spacing: 0.05em; }
 .heroSubtitle { font-size: 1rem; color: rgba(255,255,255,0.68); line-height: 1.7; max-width: 560px; margin-bottom: 28px; }
 .heroBtns { display: flex; gap: 14px; flex-wrap: wrap; }
 .bodyP { font-size: 0.97rem; color: var(--warm-gray); line-height: 1.75; margin-top: 12px; }
@@ -103,7 +103,7 @@
 .sizingRow:last-child { border-bottom: none; }
 .sizingRow:nth-child(even) { background: var(--cream); }
 .sizingSize { font-family: var(--font-head); font-size: 0.85rem; font-weight: 700; color: var(--charcoal); }
-.sizingTank { font-family: var(--font-head); font-size: 1rem; font-weight: 900; color: var(--orange); white-space: nowrap; }
+.sizingTank { font-family: var(--font-head); font-size: 1rem; font-weight: 900; color: var(--highlight); white-space: nowrap; }
 .sizingNote { font-size: 0.78rem; color: var(--warm-gray); max-width: 220px; text-align: right; }
 
 /* ── COST ──────────────────────────────────────────────────── */

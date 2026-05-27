@@ -71,7 +71,7 @@
   font-family: var(--font-head);
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--orange);
+  color: var(--highlight);
   letter-spacing: 0.03em;
 }
 .heroSubtitle {

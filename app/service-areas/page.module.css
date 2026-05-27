@@ -64,7 +64,7 @@
   color: var(--white);
   margin-bottom: 20px;
 }
-.heroOrange { color: var(--orange); }
+.heroOrange { color: var(--highlight); }
 
 .heroSubtitle {
   font-size: 1rem;
