@@ -20,11 +20,6 @@ const serviceCategories = [
     ],
   },
   {
-    label: 'Emergency Well Service',
-    href: '/services/emergency-well-services',
-    children: [],
-  },
-  {
     label: 'Well Pump Services',
     href: '/services/well-pump-services',
     children: [
