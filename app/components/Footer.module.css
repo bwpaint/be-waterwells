@@ -13,11 +13,16 @@
 
 .footerBrand {}
 
+/* Tint footer logo image to tan (--orange #DDD0AC) */
+.footerBrand img {
+  filter: brightness(0) saturate(100%) invert(94%) sepia(13%) saturate(990%) hue-rotate(346deg) brightness(89%) contrast(86%);
+}
+
 .tagline {
   font-size: 0.88rem;
   line-height: 1.65;
   margin: 16px 0 20px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--white);
 }
 
 .socialLinks {
