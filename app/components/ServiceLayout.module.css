@@ -1,0 +1,36 @@
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 48px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 48px var(--container-pad) 80px;
+  align-items: start;
+}
+
+.mainContent {
+  min-width: 0; /* prevent grid blowout */
+}
+
+/* Sidebar sticks while content scrolls */
+.sidebarCol {
+  position: sticky;
+  top: 100px;
+}
+
+@media (max-width: 1100px) {
+  .serviceGrid {
+    grid-template-columns: 1fr 280px;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .serviceGrid {
+    grid-template-columns: 1fr;
+    padding: 32px var(--container-pad) 64px;
+  }
+  .sidebarCol {
+    position: static;
+  }
+}

@@ -6,21 +6,55 @@ import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 interface NavbarProps {
-  transparent?: boolean; // homepage uses transparent→solid; internal pages solid from load
+  transparent?: boolean;
 }
 
-const services = [
-  { label: 'Water Well Drilling', href: '/water-well-drilling' },
-  { label: 'Pump Installation & Repair', href: '/pump-installation' },
-  { label: 'Well Rehabilitation', href: '/well-rehabilitation' },
-  { label: 'Irrigation Wells', href: '/irrigation-wells' },
-  { label: 'Well Inspection', href: '/well-inspection' },
-  { label: 'Generator Prep Kits', href: '/generator-prep' },
+const serviceCategories = [
+  {
+    label: 'Water Well Drilling',
+    href: '/services/water-well-drilling',
+    children: [
+      { label: 'New Well Drilling', href: '/services/water-well-drilling/new-well-drilling' },
+      { label: 'Irrigation Wells', href: '/services/water-well-drilling/irrigation-wells' },
+      { label: 'Commercial & Agricultural', href: '/services/water-well-drilling/commercial-agricultural-wells' },
+    ],
+  },
+  {
+    label: 'Emergency Well Service',
+    href: '/services/emergency-well-services',
+    children: [],
+  },
+  {
+    label: 'Well Pump Services',
+    href: '/services/well-pump-services',
+    children: [
+      { label: 'Pump Installation & Repair', href: '/services/well-pump-services/pump-installation-repair' },
+      { label: 'Constant Pressure Systems', href: '/services/well-pump-services/constant-pressure-systems' },
+    ],
+  },
+  {
+    label: 'Water Well Systems',
+    href: '/services/water-well-systems',
+    children: [
+      { label: 'Pressure Tank Systems', href: '/services/water-well-systems/pressure-tank-systems' },
+      { label: 'Generator Prep Kits', href: '/services/water-well-systems/generator-prep-kits' },
+    ],
+  },
+  {
+    label: 'Well Maintenance',
+    href: '/services/well-maintenance',
+    children: [
+      { label: 'Well Rehabilitation', href: '/services/well-maintenance/well-rehabilitation' },
+      { label: 'Well Inspection', href: '/services/well-maintenance/well-inspection' },
+      { label: 'Ongoing Maintenance', href: '/services/well-maintenance/ongoing-maintenance' },
+    ],
+  },
 ];
 
 export default function Navbar({ transparent = false }: NavbarProps) {
   const [scrolled, setScrolled] = useState(!transparent);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openMobileCategory, setOpenMobileCategory] = useState<string | null>(null);
 
   useEffect(() => {
     if (!transparent) return;
@@ -48,19 +82,35 @@ export default function Navbar({ transparent = false }: NavbarProps) {
         {/* Desktop links */}
         <ul className={styles.navLinks}>
           <li><Link href="/">Home</Link></li>
+
+          {/* Services mega-dropdown */}
           <li className={styles.hasDropdown}>
-            <span>Services ▾</span>
-            {/* Dropdown always rendered — CSS :hover controls visibility, no JS timing race */}
-            <ul className={styles.dropdown}>
-              {services.map((s) => (
-                <li key={s.href}>
-                  <Link href={s.href}>{s.label}</Link>
-                </li>
-              ))}
-            </ul>
+            <Link href="/services">Services ▾</Link>
+            <div className={styles.megaDropdown}>
+              <div className={styles.megaInner}>
+                {serviceCategories.map((cat) => (
+                  <div key={cat.href} className={styles.megaCol}>
+                    <Link href={cat.href} className={styles.megaCatTitle}>
+                      {cat.label}
+                    </Link>
+                    {cat.children.length > 0 && (
+                      <ul className={styles.megaSubLinks}>
+                        {cat.children.map((child) => (
+                          <li key={child.href}>
+                            <Link href={child.href}>{child.label}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
           </li>
+
           <li><Link href="/service-areas">Service Areas</Link></li>
           <li><Link href="/about">About</Link></li>
+          <li><Link href="/blog">Blog</Link></li>
           <li><Link href="/contact">Contact</Link></li>
         </ul>
 
@@ -75,7 +125,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
           </Link>
         </div>
 
-        {/* Mobile hamburger */}
+        {/* Hamburger */}
         <button
           className={styles.hamburger}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -89,14 +139,51 @@ export default function Navbar({ transparent = false }: NavbarProps) {
       {menuOpen && (
         <div className={styles.mobileMenu}>
           <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <span className={styles.mobileGroupLabel}>Services</span>
-          {services.map((s) => (
-            <Link key={s.href} href={s.href} onClick={() => setMenuOpen(false)} className={styles.mobileSublink}>
-              {s.label}
-            </Link>
+
+          {serviceCategories.map((cat) => (
+            <div key={cat.href} className={styles.mobileCategoryGroup}>
+              <div className={styles.mobileCategoryRow}>
+                <Link
+                  href={cat.href}
+                  className={styles.mobileCatLink}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {cat.label}
+                </Link>
+                {cat.children.length > 0 && (
+                  <button
+                    className={styles.mobileToggle}
+                    onClick={() =>
+                      setOpenMobileCategory(
+                        openMobileCategory === cat.href ? null : cat.href
+                      )
+                    }
+                    aria-label={`Expand ${cat.label}`}
+                  >
+                    {openMobileCategory === cat.href ? '▲' : '▼'}
+                  </button>
+                )}
+              </div>
+              {openMobileCategory === cat.href && cat.children.length > 0 && (
+                <div className={styles.mobileSubGroup}>
+                  {cat.children.map((child) => (
+                    <Link
+                      key={child.href}
+                      href={child.href}
+                      className={styles.mobileSublink}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
+
           <Link href="/service-areas" onClick={() => setMenuOpen(false)}>Service Areas</Link>
           <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
+          <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
           <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
           <a href="tel:+12814484447" className={styles.mobileCta}>(281) 448-4447</a>
         </div>

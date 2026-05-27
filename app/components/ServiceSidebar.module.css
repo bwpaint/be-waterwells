@@ -1,0 +1,179 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.widget {
+  background: var(--white);
+  border: 1px solid #e8e4de;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+/* ── Search ─────────────────────────────────── */
+.searchForm {
+  display: flex;
+  gap: 0;
+  border: 1.5px solid #d5cfc6;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.searchForm:focus-within {
+  border-color: var(--orange);
+}
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  background: transparent;
+  font-family: var(--font-body);
+  color: var(--charcoal);
+}
+.searchInput::placeholder { color: #aaa; }
+.searchBtn {
+  background: none;
+  border: none;
+  border-left: 1.5px solid #d5cfc6;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.15s;
+  color: var(--mid-stone);
+}
+.searchBtn:hover {
+  background: var(--sand-light);
+  color: var(--orange);
+}
+
+/* ── Widget title ────────────────────────────── */
+.widgetTitle {
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--orange);
+}
+
+/* ── Contact form ────────────────────────────── */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.formInput {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #d5cfc6;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  background: #faf9f7;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.formInput:focus {
+  outline: none;
+  border-color: var(--orange);
+  background: var(--white);
+}
+.submitBtn {
+  width: 100%;
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 4px;
+}
+.submitBtn:hover {
+  background: #c45b1c;
+  transform: translateY(-1px);
+}
+.phoneAlt {
+  display: block;
+  text-align: center;
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  text-decoration: none;
+  padding: 4px 0;
+  transition: color 0.15s;
+}
+.phoneAlt:hover { color: var(--orange); }
+
+/* ── Submitted state ─────────────────────────── */
+.submitted {
+  text-align: center;
+}
+.submitted p {
+  font-size: 0.9rem;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* ── Blog posts ──────────────────────────────── */
+.postList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.postItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0ece6;
+}
+.postItem:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.postLink {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.postLink:hover { color: var(--orange); }
+.postDate {
+  font-size: 0.75rem;
+  color: var(--mid-stone);
+}
+.allArticlesLink {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--orange);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.allArticlesLink:hover { color: var(--charcoal); }

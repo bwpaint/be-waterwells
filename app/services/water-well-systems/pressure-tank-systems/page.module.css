@@ -1,0 +1,163 @@
+/* ── HERO ──────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  padding-top: 80px;
+  background: var(--charcoal);
+  overflow: hidden;
+}
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+}
+.heroGrid {
+  position: relative;
+  z-index: 1;
+  padding: 72px 0 88px;
+  max-width: 760px;
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.breadcrumb a { color: rgba(255,255,255,0.45); transition: var(--transition); }
+.breadcrumb a:hover { color: var(--orange); }
+.breadcrumb span { color: rgba(255,255,255,0.35); }
+.breadcrumb span:last-child { color: var(--sand-light); }
+.h1Wrap { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+.h1Line1 { font-family: var(--font-head); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+.h1Line2 { font-family: var(--font-head); font-size: clamp(1.9rem, 4vw, 3.5rem); font-weight: 900; line-height: 1.05; color: var(--white); }
+.h1Line3 { font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: var(--orange); letter-spacing: 0.05em; }
+.heroSubtitle { font-size: 1rem; color: rgba(255,255,255,0.68); line-height: 1.7; max-width: 560px; margin-bottom: 28px; }
+.heroBtns { display: flex; gap: 14px; flex-wrap: wrap; }
+.bodyP { font-size: 0.97rem; color: var(--warm-gray); line-height: 1.75; margin-top: 12px; }
+
+/* ── INTRO ─────────────────────────────────────────────────── */
+.introSection { padding: 8px 0 40px; }
+
+/* ── SIGNS ─────────────────────────────────────────────────── */
+.signsSection { margin-bottom: 40px; }
+.signsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+.signCard {
+  background: var(--white);
+  border: 1px solid var(--stone-light);
+  border-radius: var(--radius-lg);
+  padding: 22px 18px;
+  transition: var(--transition);
+}
+.signCard:hover { border-color: var(--orange); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.signIcon { font-size: 1.6rem; margin-bottom: 10px; display: block; }
+.signTitle { font-family: var(--font-head); font-size: 0.88rem; font-weight: 800; color: var(--charcoal); margin-bottom: 7px; }
+.signDesc { font-size: 0.82rem; color: var(--warm-gray); line-height: 1.65; }
+.signsCta {
+  margin-top: 20px;
+  font-size: 0.92rem;
+  color: var(--warm-gray);
+  background: var(--cream);
+  border-left: 3px solid var(--orange);
+  padding: 14px 18px;
+  border-radius: var(--radius);
+}
+.signsCta a { color: var(--orange); font-weight: 700; }
+
+/* ── TANK TYPES ────────────────────────────────────────────── */
+.typesSection {
+  background: var(--charcoal);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  margin-bottom: 40px;
+}
+.typeGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 28px; }
+.typeCard {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-lg);
+  padding: 28px 22px;
+}
+.typeTitle { font-family: var(--font-head); font-size: 1rem; font-weight: 900; color: var(--orange); margin-bottom: 12px; }
+.typeDesc { font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 16px; }
+.typePros { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.typePros li { font-size: 0.82rem; color: rgba(255,255,255,0.75); padding-left: 18px; position: relative; }
+.typePros li::before { content: '✓'; position: absolute; left: 0; color: var(--orange); font-weight: 700; }
+
+/* ── SIZING ────────────────────────────────────────────────── */
+.sizingSection { margin-bottom: 40px; }
+.sizingGrid { display: flex; flex-direction: column; gap: 0; margin-top: 20px; border: 1px solid var(--stone-light); border-radius: var(--radius-lg); overflow: hidden; }
+.sizingRow { display: grid; grid-template-columns: 1fr auto auto; gap: 16px; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--stone-light); background: var(--white); }
+.sizingRow:last-child { border-bottom: none; }
+.sizingRow:nth-child(even) { background: var(--cream); }
+.sizingSize { font-family: var(--font-head); font-size: 0.85rem; font-weight: 700; color: var(--charcoal); }
+.sizingTank { font-family: var(--font-head); font-size: 1rem; font-weight: 900; color: var(--orange); white-space: nowrap; }
+.sizingNote { font-size: 0.78rem; color: var(--warm-gray); max-width: 220px; text-align: right; }
+
+/* ── COST ──────────────────────────────────────────────────── */
+.costSection { margin-bottom: 40px; }
+.costGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
+.costCard {
+  background: var(--white);
+  border: 1px solid var(--stone-light);
+  border-left: 3px solid var(--orange);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+}
+.costLabel { font-family: var(--font-head); font-size: 0.85rem; font-weight: 800; color: var(--charcoal); margin-bottom: 8px; }
+.costDetail { font-size: 0.82rem; color: var(--warm-gray); line-height: 1.6; }
+.costNote { margin-top: 18px; font-size: 0.92rem; color: var(--warm-gray); line-height: 1.7; }
+.costNote a { color: var(--orange); font-weight: 700; }
+
+/* ── FAQ ───────────────────────────────────────────────────── */
+.faqSection { margin-bottom: 40px; }
+
+/* ── SERVICE AREAS ─────────────────────────────────────────── */
+.areasSection { margin-bottom: 8px; }
+.areasGrid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.areaChip {
+  background: var(--white);
+  border: 1px solid var(--stone-light);
+  border-radius: 100px;
+  padding: 9px 20px;
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  transition: var(--transition);
+}
+.areaChip:hover { background: var(--orange); border-color: var(--orange); color: var(--white); transform: translateY(-2px); }
+.areaChipHQ { border-color: var(--orange); color: var(--orange); }
+
+/* ── FINAL CTA ─────────────────────────────────────────────── */
+.finalCta { background: var(--dark-stone); padding: 80px 0; }
+.finalCtaInner { text-align: center; max-width: 600px; margin: 0 auto; }
+.finalCtaInner h2 { font-family: var(--font-head); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 900; color: var(--white); margin-bottom: 16px; }
+.finalCtaInner p { color: rgba(255,255,255,0.65); font-size: 1rem; line-height: 1.7; margin-bottom: 32px; }
+.finalCtaBtns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .heroGrid { padding: 52px 0 64px; }
+  .signsGrid { grid-template-columns: repeat(2, 1fr); }
+  .typeGrid { grid-template-columns: 1fr; }
+  .costGrid { grid-template-columns: 1fr; }
+  .sizingRow { grid-template-columns: 1fr auto; }
+  .sizingNote { display: none; }
+}
+@media (max-width: 600px) {
+  .signsGrid { grid-template-columns: 1fr; }
+  .typesSection { padding: 28px 16px; }
+}

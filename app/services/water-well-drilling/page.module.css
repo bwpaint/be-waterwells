@@ -1,0 +1,288 @@
+/* ── HERO ──────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  padding-top: 80px;
+  background: var(--charcoal);
+  overflow: hidden;
+}
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://bewaterwells.com/wp-content/uploads/2024/09/water-well-services.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+}
+.heroGrid {
+  position: relative;
+  z-index: 1;
+  padding: 72px 0 88px;
+  max-width: 760px;
+}
+.heroContent {}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 28px;
+}
+.breadcrumb a { color: rgba(255,255,255,0.5); transition: var(--transition); }
+.breadcrumb a:hover { color: var(--orange); }
+.breadcrumb span { color: rgba(255,255,255,0.4); }
+.breadcrumb span:last-child { color: var(--sand-light); }
+
+.h1Wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.h1Line1 {
+  font-family: var(--font-head);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.h1Line2 {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--white);
+}
+.h1Line3 {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: 0.04em;
+}
+.heroSubtitle {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.68);
+  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: 28px;
+}
+.heroBtns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ── OVERVIEW ──────────────────────────────────────────────── */
+.overviewSection { padding: 8px 0 40px; }
+.overviewP {
+  font-size: 0.97rem;
+  color: var(--warm-gray);
+  line-height: 1.75;
+  margin-top: 14px;
+}
+.overviewStats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+.overviewStat {
+  background: var(--cream);
+  border: 1px solid var(--stone-light);
+  border-radius: var(--radius);
+  padding: 16px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.overviewStat strong {
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--orange);
+}
+.overviewStat span {
+  font-family: var(--font-head);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--warm-gray);
+}
+
+/* ── SUB-SERVICES ──────────────────────────────────────────── */
+.subServicesSection {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  margin-bottom: 40px;
+}
+.subGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 28px;
+}
+.subCard {
+  background: var(--white);
+  border: 1px solid var(--stone-light);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+.subCard:hover {
+  border-color: var(--orange);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.subIcon { font-size: 1.8rem; margin-bottom: 12px; display: block; }
+.subTitle {
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 10px;
+}
+.subDesc { font-size: 0.85rem; color: var(--warm-gray); line-height: 1.65; margin-bottom: 16px; flex: 1; }
+.subHighlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 18px;
+}
+.subHighlights li {
+  font-size: 0.8rem;
+  color: var(--dark-stone);
+  padding-left: 16px;
+  position: relative;
+}
+.subHighlights li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+  font-weight: 700;
+}
+.subLink {
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--orange);
+  transition: var(--transition);
+  align-self: flex-start;
+}
+.subLink:hover { color: var(--orange-hover); }
+
+/* ── AQUIFER ───────────────────────────────────────────────── */
+.aquiferSection { margin-bottom: 40px; }
+.aquiferGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+.aquiferCard {
+  background: var(--charcoal);
+  border: 1px solid var(--mid-stone);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+}
+.aquiferCounty {
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--sand-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+.aquiferDepth {
+  font-family: var(--font-head);
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--orange);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.aquiferName {
+  font-family: var(--font-head);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--mid-stone);
+}
+.aquiferNotes { font-size: 0.82rem; color: rgba(255,255,255,0.58); line-height: 1.6; }
+
+/* ── FAQ ───────────────────────────────────────────────────── */
+.faqSection { margin-bottom: 40px; }
+
+/* ── SERVICE AREAS ─────────────────────────────────────────── */
+.areasSection { margin-bottom: 8px; }
+.areasGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+.areaChip {
+  background: var(--white);
+  border: 1px solid var(--stone-light);
+  border-radius: 100px;
+  padding: 9px 20px;
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  transition: var(--transition);
+}
+.areaChip:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+.areaChipHQ { border-color: var(--orange); color: var(--orange); }
+
+/* ── FINAL CTA ─────────────────────────────────────────────── */
+.finalCta { background: var(--dark-stone); padding: 80px 0; }
+.finalCtaInner {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.finalCtaInner h2 {
+  font-family: var(--font-head);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.finalCtaInner p {
+  color: rgba(255,255,255,0.65);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.finalCtaBtns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .heroGrid { padding: 52px 0 64px; }
+  .subGrid { grid-template-columns: 1fr; }
+  .overviewStats { grid-template-columns: repeat(2, 1fr); }
+  .aquiferGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .subServicesSection { padding: 28px 16px; }
+  .overviewStats { grid-template-columns: repeat(2, 1fr); }
+}
