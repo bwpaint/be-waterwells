@@ -39,7 +39,7 @@ export default function HomePage() {
         <div className={styles.heroInner}>
           <div className={styles.heroLeft}>
             <div className={styles.heroBadge}>
-              Serving Houston Since 1979
+              Serving Houston and Surrounding Counties Since 1979
             </div>
             <h1 className={styles.heroH1}>
               Houston&apos;s{" "}
