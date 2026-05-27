@@ -43,7 +43,7 @@ export default function HomePage() {
             </div>
             <h1 className={styles.heroH1}>
               Houston&apos;s{" "}
-              <span className={styles.heroOrange}>Waterwell</span>
+              <span className={styles.heroOrange}>Waterwell Services</span>
               <br />Experts
               <span className={styles.heroH1Sub}>
                 Drilling &middot; Pumps &middot; Rehabilitation
