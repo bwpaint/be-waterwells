@@ -40,7 +40,6 @@ export const services = [
 export const stats = [
   { value: '45+', label: 'Years in Business' },
   { value: '5,000+', label: 'Waterwells Drilled' },
-  { value: '24/7', label: 'Emergency Service' },
   { value: '11', label: 'Cities Served' },
 ];
 
@@ -131,10 +130,6 @@ export const homeFaqs = [
   {
     question: 'Does B-E Waterwell Services serve my area near Houston?',
     answer: 'B-E Waterwell Services serves the greater Houston metro area — roughly a 60-mile radius. We regularly work in Magnolia, Tomball, Conroe, The Woodlands, Spring, Cypress, Humble, Kingwood, Katy, Waller, Montgomery, Pinehurst, Sugar Land, and Baytown. If you\'re not sure whether we cover your area, call (281) 448-4447 and we\'ll confirm.',
-  },
-  {
-    question: 'My well stopped working — how fast can B-E Waterwell respond?',
-    answer: 'B-E Waterwell Services offers 24/7 emergency well and pump service across the Houston area. For most locations in Montgomery and Harris counties, we target a 2-hour response time. Call (281) 448-4447 any time — we dispatch day and night including weekends and holidays.',
   },
   {
     question: 'How long does it take to drill a new waterwell?',

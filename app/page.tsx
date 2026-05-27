@@ -46,7 +46,7 @@ export default function HomePage() {
               <span className={styles.heroOrange}>Waterwell</span>
               <br />Experts
               <span className={styles.heroH1Sub}>
-                Drilling &middot; Pumps &middot; Rehabilitation &middot; 24/7 Emergency
+                Drilling &middot; Pumps &middot; Rehabilitation
               </span>
             </h1>
             <p className={styles.heroSubtitle}>
@@ -136,26 +136,6 @@ export default function HomePage() {
                 <span className={styles.serviceCardLink}>Learn More</span>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* DUAL CTA BAND */}
-      <section className={styles.ctaBand}>
-        <div className={`container ${styles.ctaBandGrid}`}>
-          <div className={styles.ctaBandCard}>
-            <h3>Waterwell Emergency?</h3>
-            <p>No water at 2am is not a wait-until-morning problem. We run 24/7 emergency dispatch across all 11 service areas.</p>
-            <a href="tel:+12814484447" className="btn btn-primary">
-              Emergency Line: (281) 448-4447
-            </a>
-          </div>
-          <div className={`${styles.ctaBandCard} ${styles.ctaBandDark}`}>
-            <h3>Planning a New Well?</h3>
-            <p>From site assessment to permit pull to pump installation, we manage the whole project. Free estimate, no obligation.</p>
-            <Link href="/contact" className="btn btn-outline">
-              Request Free Estimate
-            </Link>
           </div>
         </div>
       </section>
