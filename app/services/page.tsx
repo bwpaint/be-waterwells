@@ -8,9 +8,9 @@ import CityFaqAccordion from '../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Water Well Services — North Houston TX | B-E Waterwell Services',
+  title: 'Water Well Services — Houston, TX | B-E Waterwell Services',
   description:
-    'Complete water well services in North Houston since 1979. Drilling, pump repair, constant pressure, well maintenance & more. TDLR licensed. Call (281) 448-4447.',
+    'Complete water well services in the Houston area since 1979. Drilling, pump repair, constant pressure, well maintenance & more. TDLR licensed. Call (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services' },
 };
 
@@ -29,9 +29,9 @@ const jsonLd = {
     addressCountry: 'US',
   },
   description:
-    'Complete waterwell services in North Houston since 1979. Drilling, pump repair, constant pressure systems, well maintenance, and emergency service. TDLR Licensed.',
+    'Complete waterwell services in the Houston area since 1979. Drilling, pump repair, constant pressure systems, well maintenance, and emergency service. TDLR Licensed.',
   foundingDate: '1979',
-  areaServed: 'North Houston, TX',
+  areaServed: 'Houston, TX',
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Waterwell Services',
@@ -50,7 +50,7 @@ const categories = [
     icon: '🔩',
     title: 'Water Well Drilling',
     slug: 'water-well-drilling',
-    desc: 'New residential, irrigation, and commercial well drilling using truck-mounted rotary rigs. We drill to the Jasper, Chicot, and Evangeline Aquifers across North Houston.',
+    desc: 'New residential, irrigation, and commercial well drilling using truck-mounted rotary rigs. We drill to the Jasper, Chicot, and Evangeline Aquifers across the Houston area.',
     services: ['New Residential Wells', 'Irrigation Wells', 'Commercial & Agricultural', 'Permit Handling'],
   },
   {
@@ -84,7 +84,7 @@ const categories = [
 ];
 
 const trustedReasons = [
-  { stat: '45+', label: 'Years in Business', desc: 'Serving North Houston since 1979' },
+  { stat: '45+', label: 'Years in Business', desc: 'Serving Houston since 1979' },
   { stat: 'TDLR', label: 'Licensed & Bonded', desc: 'Texas Dept. of Licensing & Regulation' },
   { stat: '5,000+', label: 'Wells Drilled', desc: 'Across Montgomery, Harris & Waller counties' },
   { stat: '2-Year', label: 'Workmanship Warranty', desc: 'On all drilling and installation work' },
@@ -96,7 +96,7 @@ const faqs = [
   {
     question: 'How long has B-E Waterwell been in business?',
     answer:
-      'B-E Waterwell Services has been drilling and servicing waterwells in North Houston since 1979 — over 45 years. We are a family-owned company based in Magnolia, TX, and we have drilled more than 5,000 wells across Montgomery, Harris, and Waller counties.',
+      'B-E Waterwell Services has been drilling and servicing waterwells in the Houston area since 1979 — over 45 years. We are a family-owned company based in Magnolia, TX, and we have drilled more than 5,000 wells across Montgomery, Harris, and Waller counties.',
   },
   {
     question: 'Is B-E Waterwell licensed in Texas?',
@@ -106,7 +106,7 @@ const faqs = [
   {
     question: 'What areas does B-E Waterwell serve?',
     answer:
-      'We serve the entire North Houston region including Magnolia (our headquarters), Conroe, Tomball, The Woodlands, Spring, Cypress, Humble, Kingwood, Montgomery, Pinehurst, and Waller. Call us if your city is not listed — we may still be able to help.',
+      'We serve the entire Houston region including Magnolia (our headquarters), Conroe, Tomball, The Woodlands, Spring, Cypress, Humble, Kingwood, Montgomery, Pinehurst, and Waller. Call us if your city is not listed — we may still be able to help.',
   },
   {
     question: 'Do you offer free estimates?',
@@ -145,9 +145,9 @@ export default function ServicesHubPage() {
         <div className={styles.heroBg} />
         <div className="container">
           <div className={styles.heroInner}>
-            <span className={styles.heroEyebrow}>Since 1979 · TDLR Licensed · North Houston, TX</span>
+            <span className={styles.heroEyebrow}>Since 1979 · TDLR Licensed · Houston, TX</span>
             <h1 className={styles.heroH1}>
-              North Houston&apos;s Complete<br />
+              Houston&apos;s Complete<br />
               <span className={styles.heroAccent}>Waterwell Services</span>
             </h1>
             <p className={styles.heroSubtitle}>

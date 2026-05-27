@@ -8,9 +8,9 @@ import CityFaqAccordion from '../../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Well Generator Prep Kits — North Houston TX | B-E Waterwell',
+  title: 'Well Generator Prep Kits — Houston, TX | B-E Waterwell',
   description:
-    'Keep your well running during power outages and hurricanes. B-E Waterwell installs generator prep kits for well pumps across North Houston TX. (281) 448-4447.',
+    'Keep your well running during power outages and hurricanes. B-E Waterwell installs generator prep kits for well pumps across Houston, TX. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/water-well-systems/generator-prep-kits' },
 };
 
@@ -19,7 +19,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Generator Prep Kit Installation — North Houston TX',
+      name: 'Generator Prep Kit Installation — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
@@ -31,8 +31,8 @@ const jsonLd = {
           postalCode: '77354',
         },
       },
-      areaServed: 'North Houston, TX',
-      description: 'Generator prep kit installation for residential water wells in North Houston TX. Transfer switch, generator inlet, wiring. Be ready before hurricane season.',
+      areaServed: 'Houston, TX',
+      description: 'Generator prep kit installation for residential water wells in Houston, TX. Transfer switch, generator inlet, wiring. Be ready before hurricane season.',
     },
     {
       '@type': 'FAQPage',
@@ -110,13 +110,13 @@ const checklist = [
   { item: 'Test run with your generator', desc: 'Run the system for 30 minutes under load. Verify pump starts, pressure builds, no tripped breakers.' },
   { item: 'Check well condition', desc: 'Annual pump check before storm season. A weak pump under generator power may not recover if it fails mid-storm.' },
   { item: 'Inspect pressure tank', desc: 'A waterlogged tank makes your generator work harder and can short cycle the pump under partial load.' },
-  { item: 'Have fuel on hand', desc: 'North Houston extended outages can last 3–7 days. Store at minimum 50 gallons of stabilized fuel.' },
+  { item: 'Have fuel on hand', desc: 'Houston extended outages can last 3–7 days. Store at minimum 50 gallons of stabilized fuel.' },
 ];
 
 const faqs = [
   {
-    question: 'What size generator do I need to run my well pump in North Houston?',
-    answer: 'Match the generator to your pump's horsepower. A 1/2 HP pump needs 1,000W running (2,000W startup surge). A 1 HP pump needs 1,500W running (3,000W startup). A 1.5 HP pump needs 2,000W running (4,000W startup). Always add a 50–100% safety margin for startup surge and to power other appliances simultaneously. We recommend a minimum 5,000W generator for most residential well pumps — larger is safer.',
+    question: 'What size generator do I need to run my well pump in the Houston area?',
+    answer: 'Match the generator to your pump\'s horsepower. A 1/2 HP pump needs 1,000W running (2,000W startup surge). A 1 HP pump needs 1,500W running (3,000W startup). A 1.5 HP pump needs 2,000W running (4,000W startup). Always add a 50–100% safety margin for startup surge and to power other appliances simultaneously. We recommend a minimum 5,000W generator for most residential well pumps — larger is safer.',
   },
   {
     question: 'How long does generator prep kit installation take?',
@@ -171,7 +171,7 @@ export default function GeneratorPrepKitsPage() {
               <span>Generator Prep Kits</span>
             </nav>
             <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>Hurricane Season Ready — North Houston TX</span>
+              <span className={styles.h1Line1}>Hurricane Season Ready — Houston, TX</span>
               <h1 className={styles.h1Line2}>Generator Prep Kits for Water Wells</h1>
               <span className={styles.h1Line3}>Hurricane Season · Power Outages · Backup Power</span>
             </div>
@@ -201,9 +201,9 @@ export default function GeneratorPrepKitsPage() {
         {/* ── WHY NORTH HOUSTON ───────────────── */}
         <section className={styles.whySection}>
           <span className="section-label">Why It Matters Here</span>
-          <h2 className="section-title">Why North Houston Needs Generator-Ready Wells</h2>
+          <h2 className="section-title">Why Houston Needs Generator-Ready Wells</h2>
           <p className={styles.bodyP}>
-            North Houston is not just hurricane country — it is ERCOT country.
+            Houston is not just hurricane country — it is ERCOT country.
             The February 2021 winter storm knocked out power for millions of Texans
             for days. Hurricane Harvey in 2017 left parts of Montgomery County without
             power for over a week. Rural areas outside city water service routinely lose
@@ -219,7 +219,7 @@ export default function GeneratorPrepKitsPage() {
           <div className={styles.whyStats}>
             {[
               { stat: 'Feb 2021', label: 'ERCOT grid failure — millions without power for days' },
-              { stat: '7+ Days', label: 'Typical rural North Houston outage in a major hurricane' },
+              { stat: '7+ Days', label: 'Typical rural Houston outage in a major hurricane' },
               { stat: '$300–$800', label: 'Installed cost for a generator prep kit' },
               { stat: '2–4 Hours', label: 'Installation time — be ready before storm season' },
             ].map((s) => (

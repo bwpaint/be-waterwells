@@ -10,7 +10,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Water Well Inspection — Home Buyers, Real Estate, Annual Service | B-E Waterwell',
   description:
-    'Certified water well inspection in North Houston TX. For home buyers, real estate transactions, FHA/VA loans, and annual well owner maintenance. (281) 448-4447.',
+    'Certified water well inspection in Houston, TX. For home buyers, real estate transactions, FHA/VA loans, and annual well owner maintenance. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/well-maintenance/well-inspection' },
 };
 
@@ -19,15 +19,15 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Water Well Inspection — North Houston TX',
+      name: 'Water Well Inspection — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
         telephone: '+1-281-448-4447',
         address: { '@type': 'PostalAddress', addressLocality: 'Magnolia', addressRegion: 'TX', postalCode: '77354' },
       },
-      areaServed: 'North Houston, TX',
-      description: 'Certified water well inspection for home buyers, real estate, FHA/VA/USDA loans, and annual maintenance. North Houston TX. TDLR licensed.',
+      areaServed: 'Houston, TX',
+      description: 'Certified water well inspection for home buyers, real estate, FHA/VA/USDA loans, and annual maintenance. Houston, TX. TDLR licensed.',
     },
     {
       '@type': 'FAQPage',
@@ -50,7 +50,7 @@ const jsonLd = {
         {
           '@type': 'Question',
           name: 'Do you provide a written report for real estate?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Yes. We provide a written inspection report with photos, pump performance data, and water quality results. This report is formatted for use in real estate transactions and acceptable to most lenders for FHA, VA, and USDA loan requirements in North Houston TX.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. We provide a written inspection report with photos, pump performance data, and water quality results. This report is formatted for use in real estate transactions and acceptable to most lenders for FHA, VA, and USDA loan requirements in Houston, TX.' },
         },
         {
           '@type': 'Question',
@@ -67,7 +67,7 @@ const whoNeeds = [
   { icon: '📋', title: 'Sellers Pre-Listing', desc: 'A pre-listing well inspection lets you address issues before they become closing surprises. Buyers and agents appreciate documented inspection history.' },
   { icon: '🔄', title: 'Annual Owners', desc: 'Current well owners benefit from annual or every-3-year inspection to catch issues early — pump wear, water quality changes, pressure tank decline.' },
   { icon: '🏦', title: 'FHA / VA / USDA Borrowers', desc: 'Government-backed loans require a functioning well inspection and water quality test meeting minimum distance requirements. We are familiar with all applicable requirements.' },
-  { icon: '🏘️', title: 'Real Estate Agents', desc: 'North Houston realtors rely on our fast turnaround inspection reports to keep transactions on track. We know what lenders need and deliver it quickly.' },
+  { icon: '🏘️', title: 'Real Estate Agents', desc: 'Houston realtors rely on our fast turnaround inspection reports to keep transactions on track. We know what lenders need and deliver it quickly.' },
 ];
 
 const coverItems = [
@@ -133,14 +133,14 @@ export default function WellInspectionPage() {
               <span>Well Inspection</span>
             </nav>
             <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>North Houston TX — Written Report · Fast Turnaround</span>
+              <span className={styles.h1Line1}>Houston, TX — Written Report · Fast Turnaround</span>
               <h1 className={styles.h1Line2}>Water Well Inspection</h1>
               <span className={styles.h1Line3}>Home Buyers · Real Estate · Annual Inspection</span>
             </div>
             <p className={styles.heroSubtitle}>
               Buying a home with a well? Closing an FHA or VA loan? Need an annual well checkup?
               B-E Waterwell provides certified well inspections with written reports accepted by
-              lenders and real estate agents across North Houston TX.
+              lenders and real estate agents across Houston, TX.
             </p>
             <div className={styles.heroBtns}>
               <a href="tel:+12814484447" className="btn btn-primary">📞 (281) 448-4447</a>
@@ -208,9 +208,9 @@ export default function WellInspectionPage() {
 
         <section className={styles.realtorSection}>
           <span className="section-label">For Real Estate Agents</span>
-          <h2 className="section-title">Fast Turnaround for North Houston Realtors</h2>
+          <h2 className="section-title">Fast Turnaround for the Houston area Realtors</h2>
           <p className={styles.bodyP}>
-            If you are representing a buyer or seller in North Houston with a private well,
+            If you are representing a buyer or seller in the Houston area with a private well,
             we offer priority scheduling for real estate inspection requests. We know
             what lenders need, we deliver written reports within 24 hours of the site visit,
             and we communicate clearly with everyone in the transaction about what was found

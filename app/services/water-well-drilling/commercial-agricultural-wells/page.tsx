@@ -8,9 +8,9 @@ import CityFaqAccordion from '../../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Commercial & Agricultural Well Drilling — North Houston TX | B-E Waterwell',
+  title: 'Commercial & Agricultural Well Drilling — Houston, TX | B-E Waterwell',
   description:
-    'Commercial and agricultural water well drilling in North Houston TX. Ranches, farms, equestrian properties, and commercial sites. TDLR licensed. (281) 448-4447.',
+    'Commercial and agricultural water well drilling in Houston, TX. Ranches, farms, equestrian properties, and commercial sites. TDLR licensed. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/water-well-drilling/commercial-agricultural-wells' },
 };
 
@@ -19,23 +19,23 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Commercial & Agricultural Well Drilling — North Houston TX',
+      name: 'Commercial & Agricultural Well Drilling — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
         telephone: '+1-281-448-4447',
         address: { '@type': 'PostalAddress', addressLocality: 'Magnolia', addressRegion: 'TX', postalCode: '77354' },
       },
-      areaServed: 'North Houston, TX',
-      description: 'High-capacity commercial and agricultural well drilling for ranches, farms, nurseries, equestrian properties, and commercial sites. TDLR licensed. North Houston TX.',
+      areaServed: 'Houston, TX',
+      description: 'High-capacity commercial and agricultural well drilling for ranches, farms, nurseries, equestrian properties, and commercial sites. TDLR licensed. Houston, TX.',
     },
     {
       '@type': 'FAQPage',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'How deep are commercial wells in North Houston?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Commercial and agricultural wells in North Houston typically range from 200 to 500+ feet depending on target aquifer, location, and required yield. Higher-capacity commercial wells may target deeper Evangeline or Trinity aquifer zones. We assess your site and water demand before quoting.' },
+          name: 'How deep are commercial wells in the Houston area?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Commercial and agricultural wells in the Houston area typically range from 200 to 500+ feet depending on target aquifer, location, and required yield. Higher-capacity commercial wells may target deeper Evangeline or Trinity aquifer zones. We assess your site and water demand before quoting.' },
         },
         {
           '@type': 'Question',
@@ -44,8 +44,8 @@ const jsonLd = {
         },
         {
           '@type': 'Question',
-          name: 'What does commercial well drilling cost in North Houston?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Commercial and agricultural wells in North Houston typically range from $15,000–$35,000+ depending on depth, casing diameter, pump specifications, and required yield. Equestrian and ranch applications vary widely by water demand. We provide free written estimates with itemized scope.' },
+          name: 'What does commercial well drilling cost in the Houston area?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Commercial and agricultural wells in the Houston area typically range from $15,000–$35,000+ depending on depth, casing diameter, pump specifications, and required yield. Equestrian and ranch applications vary widely by water demand. We provide free written estimates with itemized scope.' },
         },
         {
           '@type': 'Question',
@@ -81,15 +81,15 @@ const equestrian = [
 
 const faqs = [
   {
-    question: 'How deep are commercial and agricultural wells in North Houston?',
-    answer: 'Commercial and agricultural wells in North Houston range from 200 to 500+ feet depending on location, target aquifer, and required yield. Standard residential Jasper Aquifer wells run 180–320 feet. Higher-demand commercial applications may require the deeper Evangeline Aquifer (240–440 ft) or even the Trinity Group formation for maximum yield. We assess your site water demand before recommending a target depth.',
+    question: 'How deep are commercial and agricultural wells in the Houston area?',
+    answer: 'Commercial and agricultural wells in the Houston area range from 200 to 500+ feet depending on location, target aquifer, and required yield. Standard residential Jasper Aquifer wells run 180–320 feet. Higher-demand commercial applications may require the deeper Evangeline Aquifer (240–440 ft) or even the Trinity Group formation for maximum yield. We assess your site water demand before recommending a target depth.',
   },
   {
     question: 'Do I need a high-capacity permit for a commercial well in Texas?',
     answer: 'Wells exceeding production thresholds require enhanced high-capacity permits from your Groundwater Conservation District. In Montgomery County, that is LSGCD. In Harris County, it is HGSD. High-capacity permits require additional documentation including intended water use, quantity requested, and sometimes hydrological assessment. B-E Waterwell handles all permitting as part of every drilling job. We are familiar with the LSGCD and HGSD high-capacity permit process.',
   },
   {
-    question: 'What does commercial well drilling cost in North Houston TX?',
+    question: 'What does commercial well drilling cost in Houston, TX?',
     answer: 'Commercial and agricultural wells typically range from $15,000–$35,000+ complete, depending on depth, casing diameter, pump specifications, and required yield. Equestrian properties and small farm applications are often in the $15,000–$22,000 range. Large commercial or multi-zone applications are higher. We provide free, itemized written estimates — no guessing on what you are paying for.',
   },
   {
@@ -129,13 +129,13 @@ export default function CommercialAgriculturalWellsPage() {
               <span>Commercial &amp; Agricultural</span>
             </nav>
             <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>North Houston TX · TDLR Licensed · Since 1979</span>
+              <span className={styles.h1Line1}>Houston, TX · TDLR Licensed · Since 1979</span>
               <h1 className={styles.h1Line2}>Commercial &amp; Agricultural Wells</h1>
               <span className={styles.h1Line3}>Ranches · Farms · Equestrian · Commercial Sites</span>
             </div>
             <p className={styles.heroSubtitle}>
               B-E Waterwell drills high-capacity commercial and agricultural wells across
-              North Houston TX — from horse properties in Magnolia to nurseries in Waller County
+              Houston, TX — from horse properties in Magnolia to nurseries in Waller County
               to commercial sites in Conroe. TDLR licensed. 45+ years. 5,000+ wells drilled.
             </p>
             <div className={styles.heroBtns}>
@@ -188,9 +188,9 @@ export default function CommercialAgriculturalWellsPage() {
 
         <section className={styles.equestrianSection}>
           <span className="section-label">Equestrian & Horse Properties</span>
-          <h2 className="section-title">Well Drilling for Equestrian Properties in North Houston</h2>
+          <h2 className="section-title">Well Drilling for Equestrian Properties in the Houston area</h2>
           <p className={styles.bodyP}>
-            North Houston — particularly Magnolia, Montgomery, and Waller County — is
+            Houston — particularly Magnolia, Montgomery, and Waller County — is
             equestrian country. Horse properties have specific water demands that
             residential well systems are not designed for. We plan the well for your
             actual daily water demand and distribution needs from the start.
@@ -257,7 +257,7 @@ export default function CommercialAgriculturalWellsPage() {
             <h2>Drill Your Commercial or Agricultural Well</h2>
             <p>
               Serving ranches, farms, equestrian properties, and commercial sites
-              across North Houston TX since 1979. Free written estimates.
+              across Houston, TX since 1979. Free written estimates.
             </p>
             <div className={styles.finalCtaBtns}>
               <a href="tel:+12814484447" className="btn btn-primary">📞 (281) 448-4447</a>

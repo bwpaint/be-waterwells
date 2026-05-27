@@ -7,9 +7,9 @@ import ServiceAreaMap from '../components/ServiceAreaMap';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Service Areas | B-E Waterwell Services — North Houston, TX',
+  title: 'Service Areas | B-E Waterwell Services — Houston, TX',
   description:
-    'B-E Waterwell Services provides waterwell drilling, pump repair, and well rehabilitation across 11 cities in North Houston — Magnolia, Conroe, Tomball, The Woodlands, Spring, Cypress, Humble, Kingwood, Montgomery, Pinehurst, and Waller.',
+    'B-E Waterwell Services provides waterwell drilling, pump repair, and well rehabilitation across 11 cities in the Houston area — Magnolia, Conroe, Tomball, The Woodlands, Spring, Cypress, Humble, Kingwood, Montgomery, Pinehurst, and Waller.',
   alternates: { canonical: 'https://bewaterwells.com/service-areas' },
 };
 
@@ -59,12 +59,12 @@ export default function ServiceAreasPage() {
           <span className={styles.heroLabel}>Where We Work</span>
           <h1 className={styles.heroH1}>
             Waterwell Services Across<br />
-            <span className={styles.heroOrange}>North Houston</span>
+            <span className={styles.heroOrange}>Houston</span>
           </h1>
           <p className={styles.heroSubtitle}>
             11 cities. 3 counties. One crew that knows this ground better than anyone.
             B-E Waterwell Services has been drilling and servicing waterwells in
-            North Houston since 1979.
+            Houston since 1979.
           </p>
           <div className={styles.heroBtns}>
             <a href="tel:+12814484447" className="btn btn-primary">

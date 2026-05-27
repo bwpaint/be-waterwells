@@ -15,7 +15,7 @@ export default function Footer() {
             height={71}
           />
           <p className={styles.tagline}>
-            North Houston&apos;s trusted water well specialists since 1979.
+            Houston&apos;s trusted water well specialists since 1979.
             Family-owned. Licensed. Guaranteed.
           </p>
           <div className={styles.socialLinks}>
@@ -69,7 +69,7 @@ export default function Footer() {
             </li>
             <li>
               <span className={styles.contactIcon}>📍</span>
-              <span>Magnolia, TX 77354<br />Serving Greater North Houston</span>
+              <span>Magnolia, TX 77354<br />Serving Greater Houston</span>
             </li>
             <li>
               <span className={styles.contactIcon}>🕐</span>

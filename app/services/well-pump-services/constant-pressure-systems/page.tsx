@@ -8,9 +8,9 @@ import CityFaqAccordion from '../../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Constant Pressure Well Systems — North Houston TX | B-E Waterwell',
+  title: 'Constant Pressure Well Systems — Houston, TX | B-E Waterwell',
   description:
-    'Upgrade your well to city-like constant pressure. Variable speed pump systems installed across North Houston TX. Eliminates pressure fluctuation. Free estimate. (281) 448-4447.',
+    'Upgrade your well to city-like constant pressure. Variable speed pump systems installed across Houston, TX. Eliminates pressure fluctuation. Free estimate. (281) 448-4447.',
   alternates: {
     canonical: 'https://bewaterwells.com/services/well-pump-services/constant-pressure-systems',
   },
@@ -21,7 +21,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Constant Pressure Well Systems — North Houston TX',
+      name: 'Constant Pressure Well Systems — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
@@ -33,7 +33,7 @@ const jsonLd = {
           postalCode: '77354',
         },
       },
-      areaServed: 'North Houston, TX',
+      areaServed: 'Houston, TX',
       description:
         'Variable frequency drive (VFD) constant pressure well systems — city-like pressure for homes and properties on private wells.',
       offers: {
@@ -94,7 +94,7 @@ const faqs = [
   {
     question: 'Do I need a new pressure tank with a constant pressure system?',
     answer:
-      'With a VFD constant pressure system the pressure tank can be dramatically smaller — as little as 2–4 gallons — because the pump modulates continuously. Your existing large tank can remain as a buffer, but it's not required for the system to function correctly.',
+      'With a VFD constant pressure system the pressure tank can be dramatically smaller — as little as 2–4 gallons — because the pump modulates continuously. Your existing large tank can remain as a buffer, but it\'s not required for the system to function correctly.',
   },
   {
     question: 'How does a constant pressure system work?',
@@ -296,7 +296,7 @@ export default function ConstantPressureSystemsPage() {
                 {
                   icon: '🌿',
                   title: 'Properties with Irrigation',
-                  desc: 'When irrigation zones activate, a standard pump can't keep up and household pressure suffers. A VFD pump ramps to match combined demand — irrigation and indoor use at full pressure simultaneously.',
+                  desc: 'When irrigation zones activate, a standard pump can\'t keep up and household pressure suffers. A VFD pump ramps to match combined demand — irrigation and indoor use at full pressure simultaneously.',
                 },
                 {
                   icon: '🐴',
@@ -332,7 +332,7 @@ export default function ConstantPressureSystemsPage() {
                 },
                 {
                   brand: 'Franklin SubDrive',
-                  desc: 'Franklin Electric's constant pressure solution. Pairs with standard Franklin submersible pumps to add VFD control. As a Franklin authorized service center, we install and service SubDrive systems with full factory support.',
+                  desc: 'Franklin Electric\'s constant pressure solution. Pairs with standard Franklin submersible pumps to add VFD control. As a Franklin authorized service center, we install and service SubDrive systems with full factory support.',
                 },
                 {
                   brand: 'Pentek Intellidrive',
@@ -455,7 +455,7 @@ export default function ConstantPressureSystemsPage() {
             <p>
               Free on-site estimate. We assess your existing pump, pressure
               tank, and electrical before recommending a system — no
-              one-size-fits-all quotes. Serving North Houston since 1979.
+              one-size-fits-all quotes. Serving Houston since 1979.
             </p>
             <div className={styles.finalCtaBtns}>
               <a href="tel:+12814484447" className="btn btn-primary">

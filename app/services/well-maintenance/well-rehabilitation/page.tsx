@@ -8,9 +8,9 @@ import CityFaqAccordion from '../../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Well Rehabilitation — Restore Water Flow & Pressure | B-E Waterwell North Houston',
+  title: 'Well Rehabilitation — Restore Water Flow & Pressure | B-E Waterwell Houston',
   description:
-    'Is your well producing less water than before? B-E Waterwell rehabilitates declining wells in North Houston TX. Restore flow without drilling new. (281) 448-4447.',
+    'Is your well producing less water than before? B-E Waterwell rehabilitates declining wells in Houston, TX. Restore flow without drilling new. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/well-maintenance/well-rehabilitation' },
 };
 
@@ -19,15 +19,15 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Well Rehabilitation — North Houston TX',
+      name: 'Well Rehabilitation — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
         telephone: '+1-281-448-4447',
         address: { '@type': 'PostalAddress', addressLocality: 'Magnolia', addressRegion: 'TX', postalCode: '77354' },
       },
-      areaServed: 'North Houston, TX',
-      description: 'Well rehabilitation to restore flow and yield in declining wells. Mechanical jetting, shock chlorination, acid treatment. North Houston TX.',
+      areaServed: 'Houston, TX',
+      description: 'Well rehabilitation to restore flow and yield in declining wells. Mechanical jetting, shock chlorination, acid treatment. Houston, TX.',
     },
     {
       '@type': 'FAQPage',
@@ -44,8 +44,8 @@ const jsonLd = {
         },
         {
           '@type': 'Question',
-          name: 'What is iron bacteria and why is it common in North Houston wells?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Iron bacteria are naturally occurring microorganisms that oxidize dissolved iron in groundwater, producing a reddish-brown slime that clogs well screens and perforations. The Jasper Aquifer beneath Montgomery County and North Houston has elevated dissolved iron levels, making iron bacteria a common problem in wells over 8–10 years old. Signs include red or orange slime in the toilet tank, sulfur odor, and declining water yield.' },
+          name: 'What is iron bacteria and why is it common in the Houston area wells?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Iron bacteria are naturally occurring microorganisms that oxidize dissolved iron in groundwater, producing a reddish-brown slime that clogs well screens and perforations. The Jasper Aquifer beneath Montgomery County and Houston has elevated dissolved iron levels, making iron bacteria a common problem in wells over 8–10 years old. Signs include red or orange slime in the toilet tank, sulfur odor, and declining water yield.' },
         },
         {
           '@type': 'Question',
@@ -58,7 +58,7 @@ const jsonLd = {
 };
 
 const declineReasons = [
-  { num: '01', title: 'Biofouling', desc: 'Iron bacteria and sulfate-reducing bacteria (SRB) colonize the well screen and perforations. They produce slime that physically blocks water entry. Common in North Houston Jasper Aquifer wells after 8–10 years.' },
+  { num: '01', title: 'Biofouling', desc: 'Iron bacteria and sulfate-reducing bacteria (SRB) colonize the well screen and perforations. They produce slime that physically blocks water entry. Common in the Houston area Jasper Aquifer wells after 8–10 years.' },
   { num: '02', title: 'Mineral Encrustation', desc: 'Calcium carbonate and iron oxide deposits build up on the well screen over time, reducing the effective open area. Most common in high-mineral Jasper and Evangeline aquifer zones.' },
   { num: '03', title: 'Mechanical Wear', desc: 'Worn or corroded well screen, damaged casing, or shifted gravel pack. Structural issues require assessment before rehabilitation — some may need new well drilling.' },
   { num: '04', title: 'Aquifer Changes', desc: 'Natural water table decline or seasonal fluctuation can reduce available yield. Long-term aquifer drawdown requires site assessment and may indicate the need for a deeper well.' },
@@ -81,15 +81,15 @@ const compareRows = [
 const faqs = [
   {
     question: 'How do I know if my declining well can be rehabilitated?',
-    answer: 'The main factors are well age, structural integrity, and cause of decline. Wells under 20 years old with intact PVC casing are usually good rehab candidates. If decline is due to biofouling or mineral encrustation — the most common causes in North Houston Jasper Aquifer wells — rehabilitation success rates are high. We perform a diagnostic before recommending any approach.',
+    answer: 'The main factors are well age, structural integrity, and cause of decline. Wells under 20 years old with intact PVC casing are usually good rehab candidates. If decline is due to biofouling or mineral encrustation — the most common causes in the Houston area Jasper Aquifer wells — rehabilitation success rates are high. We perform a diagnostic before recommending any approach.',
   },
   {
     question: 'How long does well rehabilitation last?',
     answer: 'It depends on the method and the underlying cause. Shock chlorination for iron bacteria typically lasts 2–5 years before re-treatment is needed, especially in high-iron Jasper Aquifer water. Mechanical jetting for mineral deposits often restores yield for 5–10 years. We monitor performance after rehabilitation and recommend annual inspection to track results.',
   },
   {
-    question: 'What is iron bacteria and why is it so common in North Houston?',
-    answer: 'Iron bacteria are microorganisms that oxidize dissolved iron in groundwater, producing reddish-brown slime that clogs well screens. The Jasper Aquifer under Montgomery County and North Houston has elevated dissolved iron, making iron bacteria a common problem in wells over 8–10 years old. Signs include red or orange staining in toilet tanks, sulfur or rotten egg odor, and declining yield.',
+    question: 'What is iron bacteria and why is it so common in the Houston area?',
+    answer: 'Iron bacteria are microorganisms that oxidize dissolved iron in groundwater, producing reddish-brown slime that clogs well screens. The Jasper Aquifer under Montgomery County and Houston has elevated dissolved iron, making iron bacteria a common problem in wells over 8–10 years old. Signs include red or orange staining in toilet tanks, sulfur or rotten egg odor, and declining yield.',
   },
   {
     question: 'Can I treat iron bacteria in my well myself?',
@@ -128,7 +128,7 @@ export default function WellRehabilitationPage() {
               <span>Well Rehabilitation</span>
             </nav>
             <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>North Houston TX — Restore Before You Replace</span>
+              <span className={styles.h1Line1}>Houston, TX — Restore Before You Replace</span>
               <h1 className={styles.h1Line2}>Well Rehabilitation</h1>
               <span className={styles.h1Line3}>Restore Flow · Treat Biofouling · Avoid Costly Replacement</span>
             </div>
@@ -159,7 +159,7 @@ export default function WellRehabilitationPage() {
           <p className={styles.bodyP} style={{ marginTop: 14 }}>
             Not every well can be rehabilitated. Structural failures, severe casing damage, and
             contamination may require a new well. But for the most common causes of decline in
-            North Houston — iron bacteria from the Jasper Aquifer and mineral buildup — rehab
+            Houston — iron bacteria from the Jasper Aquifer and mineral buildup — rehab
             is often the right call.
           </p>
         </section>
@@ -217,8 +217,8 @@ export default function WellRehabilitationPage() {
         </section>
 
         <section className={styles.ironBacteriaSection}>
-          <span className="section-label">North Houston Specific</span>
-          <h2 className="section-title">Iron Bacteria in North Houston Wells</h2>
+          <span className="section-label">Houston Specific</span>
+          <h2 className="section-title">Iron Bacteria in the Houston area Wells</h2>
           <p className={styles.bodyP}>
             The Jasper Aquifer beneath Montgomery County contains elevated dissolved iron —
             a natural characteristic of the sandy coastal plain formation. This creates

@@ -8,9 +8,9 @@ import CityFaqAccordion from '../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: '24/7 Emergency Well Service — North Houston TX | B-E Waterwell',
+  title: '24/7 Emergency Well Service — Houston, TX | B-E Waterwell',
   description:
-    'Well stopped working? B-E Waterwell Services dispatches emergency well and pump repair 24/7 across North Houston. Same-day service in Montgomery and Harris counties. (281) 448-4447.',
+    'Well stopped working? B-E Waterwell Services dispatches emergency well and pump repair 24/7 across the Houston area. Same-day service in Montgomery and Harris counties. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/emergency-well-services' },
 };
 
@@ -19,7 +19,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: '24/7 Emergency Well Service — North Houston TX',
+      name: '24/7 Emergency Well Service — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
@@ -31,7 +31,7 @@ const jsonLd = {
           postalCode: '77354',
         },
       },
-      areaServed: 'North Houston, TX',
+      areaServed: 'Houston, TX',
       description:
         '24/7 emergency well and pump repair dispatched same-day across Montgomery and Harris counties.',
       availableChannel: {
@@ -47,7 +47,7 @@ const jsonLd = {
           name: 'What causes a well to stop working suddenly?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The most common causes are a tripped breaker, a failed pressure switch, a burned-out pump motor, or a blown control box. Storm damage, power surges, and frozen pipes are also frequent culprits in North Houston.',
+            text: 'The most common causes are a tripped breaker, a failed pressure switch, a burned-out pump motor, or a blown control box. Storm damage, power surges, and frozen pipes are also frequent culprits in the Houston area.',
           },
         },
         {
@@ -83,7 +83,7 @@ const faqs = [
   {
     question: 'What causes a well to stop working suddenly?',
     answer:
-      'The most common causes are a tripped breaker, a failed pressure switch, a burned-out pump motor, or a blown control box. Power surges during storms are a frequent culprit in North Houston — a single voltage spike can kill a control box instantly.',
+      'The most common causes are a tripped breaker, a failed pressure switch, a burned-out pump motor, or a blown control box. Power surges during storms are a frequent culprit in the Houston area — a single voltage spike can kill a control box instantly.',
   },
   {
     question: 'How fast can B-E Waterwell respond to an emergency?',
@@ -144,7 +144,7 @@ export default function EmergencyWellServicesPage() {
             <h1 className={styles.h1Main}>Emergency Well Service — 24/7</h1>
           </div>
           <p className={styles.heroSubtitle}>
-            Well stopped working? We dispatch same-day across all 11 North Houston
+            Well stopped working? We dispatch same-day across all 11 Houston
             service areas — Montgomery County, Harris County, and Waller County.
             Two-hour response target, any time, any day.
           </p>
@@ -190,7 +190,7 @@ export default function EmergencyWellServicesPage() {
                 {
                   n: '03',
                   title: 'Check if you have power',
-                  desc: 'A well pump won't run without electricity. Confirm other circuits in your house are live. After a storm, your meter base or main disconnect may have tripped — check with your power company before assuming pump failure.',
+                  desc: 'A well pump won\'t run without electricity. Confirm other circuits in your house are live. After a storm, your meter base or main disconnect may have tripped — check with your power company before assuming pump failure.',
                 },
                 {
                   n: '04',
@@ -276,7 +276,7 @@ export default function EmergencyWellServicesPage() {
             <span className="section-label">Response Time</span>
             <h2 className="section-title">We Respond Within 2 Hours</h2>
             <p className={styles.responseIntro}>
-              We maintain 24/7 dispatch coverage across all 11 North Houston
+              We maintain 24/7 dispatch coverage across all 11 Houston
               service areas. When you call after hours, you reach a technician —
               not an answering service.
             </p>
@@ -285,7 +285,7 @@ export default function EmergencyWellServicesPage() {
                 { stat: '2 hr', label: 'Average response time', sub: 'All service areas' },
                 { stat: '24/7', label: 'Dispatch coverage', sub: '365 days a year' },
                 { stat: 'Same Day', label: 'Parts on hand', sub: 'Common pumps, switches, control boxes' },
-                { stat: '45+', label: 'Years serving North Houston', sub: 'Since 1979' },
+                { stat: '45+', label: 'Years serving Houston', sub: 'Since 1979' },
               ].map((s) => (
                 <div key={s.label} className={styles.responseStat}>
                   <div className={styles.responseStatNum}>{s.stat}</div>
@@ -331,7 +331,7 @@ export default function EmergencyWellServicesPage() {
                   Don&apos;t Wait for the Next Power Outage
                 </h2>
                 <p>
-                  Hurricane season and North Houston ice storms knock out grid power
+                  Hurricane season and Houston ice storms knock out grid power
                   for days at a time. A generator prep kit keeps your well pump
                   running even when the lights are out — no extension cords,
                   no unsafe workarounds.
@@ -382,7 +382,7 @@ export default function EmergencyWellServicesPage() {
             <span className="section-label">Where We Respond</span>
             <h2 className="section-title">Emergency Service Areas</h2>
             <p className={styles.areasNote}>
-              24/7 emergency well service across North Houston — 2-hour response target.
+              24/7 emergency well service across the Houston area — 2-hour response target.
             </p>
             <div className={styles.areasGrid}>
               {serviceAreas.map((a) => (
@@ -410,7 +410,7 @@ export default function EmergencyWellServicesPage() {
           </a>
           <p className={styles.finalCtaSub}>
             We answer around the clock — not an answering service, a technician.
-            North Houston&apos;s emergency well specialists since 1979.
+            Houston&apos;s emergency well specialists since 1979.
           </p>
         </div>
       </section>

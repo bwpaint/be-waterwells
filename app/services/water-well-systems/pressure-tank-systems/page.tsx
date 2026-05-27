@@ -8,9 +8,9 @@ import CityFaqAccordion from '../../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Well Pressure Tank Replacement — North Houston TX | B-E Waterwell',
+  title: 'Well Pressure Tank Replacement — Houston, TX | B-E Waterwell',
   description:
-    'Waterlogged pressure tank? Pump short cycling? B-E Waterwell replaces well pressure tanks same-day in North Houston TX. $400–$900 installed. (281) 448-4447.',
+    'Waterlogged pressure tank? Pump short cycling? B-E Waterwell replaces well pressure tanks same-day in Houston, TX. $400–$900 installed. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/water-well-systems/pressure-tank-systems' },
 };
 
@@ -19,7 +19,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Pressure Tank Replacement — North Houston TX',
+      name: 'Pressure Tank Replacement — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
@@ -31,8 +31,8 @@ const jsonLd = {
           postalCode: '77354',
         },
       },
-      areaServed: 'North Houston, TX',
-      description: 'Well pressure tank replacement and sizing in North Houston TX. Same-day service. $400–$900 installed. Bladder and diaphragm tanks stocked.',
+      areaServed: 'Houston, TX',
+      description: 'Well pressure tank replacement and sizing in Houston, TX. Same-day service. $400–$900 installed. Bladder and diaphragm tanks stocked.',
     },
     {
       '@type': 'FAQPage',
@@ -58,7 +58,7 @@ const jsonLd = {
           name: 'How long do pressure tanks last in Texas?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'In North Houston, pressure tanks typically last 8–15 years. The humid climate and mineral-heavy water from the Jasper Aquifer can accelerate bladder wear. Tanks over 10 years old should be inspected annually, especially if you notice any pump cycling changes.',
+            text: 'In Houston, pressure tanks typically last 8–15 years. The humid climate and mineral-heavy water from the Jasper Aquifer can accelerate bladder wear. Tanks over 10 years old should be inspected annually, especially if you notice any pump cycling changes.',
           },
         },
         {
@@ -79,7 +79,7 @@ const signs = [
   { icon: '💧', title: 'Waterlogged Tank', desc: 'The bladder has failed and the tank is filled with water with no air cushion. Tap the tank — no hollow sound means it is waterlogged.' },
   { icon: '🔩', title: 'Visible Corrosion or Leaks', desc: 'Rust streaks, corrosion at fittings, or dripping water around the tank base. A leaking tank needs immediate replacement.' },
   { icon: '🚿', title: 'Pressure Drops in Shower', desc: 'Dramatic pressure loss when a second fixture opens. A proper-sized tank buffers demand so pressure stays steady throughout the house.' },
-  { icon: '📅', title: 'Tank Over 10 Years Old', desc: 'Even a functioning tank over 10 years old in North Houston's mineral-heavy water should be inspected — bladder failure is unpredictable.' },
+  { icon: '📅', title: 'Tank Over 10 Years Old', desc: 'Even a functioning tank over 10 years old in Houston\'s mineral-heavy water should be inspected — bladder failure is unpredictable.' },
 ];
 
 const tankTypes = [
@@ -113,7 +113,7 @@ const faqs = [
   },
   {
     question: 'How long do pressure tanks last in Texas heat and humidity?',
-    answer: 'In North Houston, pressure tanks typically last 8–15 years. The combination of humid air around the tank exterior and mineral-heavy water from the Jasper Aquifer accelerates bladder wear. Tanks over 10 years old should be inspected annually. We check pre-charge pressure and bladder integrity on every service call.',
+    answer: 'In Houston, pressure tanks typically last 8–15 years. The combination of humid air around the tank exterior and mineral-heavy water from the Jasper Aquifer accelerates bladder wear. Tanks over 10 years old should be inspected annually. We check pre-charge pressure and bladder integrity on every service call.',
   },
   {
     question: 'Can I replace my pressure tank myself?',
@@ -159,13 +159,13 @@ export default function PressureTankSystemsPage() {
               <span>Pressure Tank Systems</span>
             </nav>
             <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>North Houston TX — Same-Day Service</span>
+              <span className={styles.h1Line1}>Houston, TX — Same-Day Service</span>
               <h1 className={styles.h1Line2}>Pressure Tank Systems</h1>
               <span className={styles.h1Line3}>Replacement · Sizing · Same-Day Service</span>
             </div>
             <p className={styles.heroSubtitle}>
               Waterlogged tank? Pump short cycling every few seconds? B-E Waterwell
-              replaces well pressure tanks same-day across North Houston TX.
+              replaces well pressure tanks same-day across Houston, TX.
               Correctly sized, properly pre-charged, and warrantied. $400–$900 installed.
             </p>
             <div className={styles.heroBtns}>
@@ -199,7 +199,7 @@ export default function PressureTankSystemsPage() {
           <p className={styles.bodyP} style={{ marginTop: 14 }}>
             Without a functioning pressure tank, your pump would start and stop with
             every small water draw — a condition called short cycling. Short cycling
-            is the single biggest cause of premature pump motor failure in North Houston.
+            is the single biggest cause of premature pump motor failure in the Houston area.
             A correctly sized, properly charged pressure tank can extend pump life by years.
           </p>
         </section>
@@ -266,7 +266,7 @@ export default function PressureTankSystemsPage() {
           <span className="section-label">Honest Pricing</span>
           <h2 className="section-title">What Does Pressure Tank Replacement Cost?</h2>
           <p className={styles.bodyP}>
-            Pressure tank replacement in North Houston TX typically runs{' '}
+            Pressure tank replacement in Houston, TX typically runs{' '}
             <strong>$400–$900 installed</strong> — including the tank, fittings,
             pre-charge setup, and labor. Cost depends on three factors:
           </p>
@@ -321,7 +321,7 @@ export default function PressureTankSystemsPage() {
           <div className={styles.finalCtaInner}>
             <h2>Pump Short Cycling? Let&apos;s Fix It Today.</h2>
             <p>
-              Same-day pressure tank replacement in North Houston TX.
+              Same-day pressure tank replacement in Houston, TX.
               $400–$900 installed. Free written estimate. TDLR licensed.
             </p>
             <div className={styles.finalCtaBtns}>

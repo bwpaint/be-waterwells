@@ -8,9 +8,9 @@ import CityFaqAccordion from '../../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'New Water Well Drilling — North Houston, Magnolia, Conroe TX | B-E Waterwell',
+  title: 'New Water Well Drilling — Houston, Magnolia, Conroe TX | B-E Waterwell',
   description:
-    'New residential water well drilling in North Houston TX since 1979. Drill to the Jasper or Evangeline Aquifer. TDLR licensed, 2-year warranty, free estimate. (281) 448-4447.',
+    'New residential water well drilling in Houston, TX since 1979. Drill to the Jasper or Evangeline Aquifer. TDLR licensed, 2-year warranty, free estimate. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/water-well-drilling/new-well-drilling' },
 };
 
@@ -19,7 +19,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'New Water Well Drilling — North Houston TX',
+      name: 'New Water Well Drilling — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
@@ -31,16 +31,16 @@ const jsonLd = {
           postalCode: '77354',
         },
       },
-      areaServed: 'North Houston, TX',
+      areaServed: 'Houston, TX',
       description:
-        'Complete new residential water well drilling in North Houston TX. Drill, case, develop, pump, pressure tank, and permits — all included. TDLR licensed, 2-year warranty.',
+        'Complete new residential water well drilling in Houston, TX. Drill, case, develop, pump, pressure tank, and permits — all included. TDLR licensed, 2-year warranty.',
     },
     {
       '@type': 'FAQPage',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'How deep will my new well be in North Houston?',
+          name: 'How deep will my new well be in the Houston area?',
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'Depth depends on your county and target aquifer. Montgomery County typically requires 180–320 ft to reach the Jasper Aquifer. Harris County NW is 180–360 ft. Harris County East (Humble, Kingwood) requires 240–440 ft for the Evangeline. We assess your property before providing a quote.',
@@ -72,10 +72,10 @@ const jsonLd = {
         },
         {
           '@type': 'Question',
-          name: 'How much does a new well cost in North Houston?',
+          name: 'How much does a new well cost in the Houston area?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'New residential waterwells in North Houston typically cost $8,000–$18,000 complete. Depth, casing diameter, and pump horsepower are the main cost drivers. We provide free, itemized written estimates before any work begins.',
+            text: 'New residential waterwells in the Houston area typically cost $8,000–$18,000 complete. Depth, casing diameter, and pump horsepower are the main cost drivers. We provide free, itemized written estimates before any work begins.',
           },
         },
       ],
@@ -89,14 +89,14 @@ const included = [
   { icon: '💧', title: 'Well Development', desc: 'Full aquifer development to clear drilling fluids, remove fines, and maximize sustainable production yield.' },
   { icon: '⚙️', title: 'Submersible Pump & Motor', desc: 'Franklin Electric submersible pump and motor sized to your household demand — installed and wired at wellhead.' },
   { icon: '🔋', title: 'Pressure Tank', desc: 'Correctly sized pressure tank with pressure switch, gauge, and main shut-off for reliable system pressure.' },
-  { icon: '📋', title: 'Permits & Water Test', desc: 'All GCD permits, driller's completion report, and initial bacteriological and basic water quality test.' },
+  { icon: '📋', title: 'Permits & Water Test', desc: 'All GCD permits, driller\'s completion report, and initial bacteriological and basic water quality test.' },
 ];
 
 const processSteps = [
   { step: '01', title: 'Site Assessment', desc: 'We visit your property, review county geology records, and identify the best drill location before quoting.' },
   { step: '02', title: 'Permit Application', desc: 'We file with your Groundwater Conservation District (LSGCD or HGSD). Approval typically takes 5–10 business days.' },
   { step: '03', title: 'Drilling Day', desc: 'Our rotary rig mobilizes to your site. We drill to aquifer depth, set casing, and develop the well — usually completed same day.' },
-  { step: '04', title: 'Pump & Tank', desc: 'Submersible pump, drop pipe, pressure tank, and all surface equipment installed and connected to your home's electrical.' },
+  { step: '04', title: 'Pump & Tank', desc: 'Submersible pump, drop pipe, pressure tank, and all surface equipment installed and connected to your home\'s electrical.' },
   { step: '05', title: 'Final Inspection', desc: 'System pressure test, water quality sample collected, completion paperwork signed. Your well is live.' },
 ];
 
@@ -109,7 +109,7 @@ const aquifers = [
 
 const faqs = [
   {
-    question: 'How deep will my new well be in Magnolia or North Houston?',
+    question: 'How deep will my new well be in Magnolia or Houston?',
     answer:
       'Montgomery County properties (Magnolia, Conroe, Montgomery) typically require 180–320 ft to reach the Jasper Aquifer. Harris County NW (Tomball, Spring, Cypress) is 180–360 ft. Harris County East (Humble, Kingwood) requires 240–440 ft. We assess every property and quote the actual depth we expect to drill.',
   },
@@ -126,12 +126,12 @@ const faqs = [
   {
     question: 'What exactly is included in my new well installation?',
     answer:
-      'Every well includes: rotary rig drilling, geological log, Schedule 40 PVC casing, gravel pack, stainless screen, full well development, Franklin Electric submersible pump and motor, drop pipe, pitless adapter, pressure tank, pressure switch and gauge, main shut-off, electrical wiring at wellhead, all GCD permits, driller's completion report, and initial water quality test.',
+      'Every well includes: rotary rig drilling, geological log, Schedule 40 PVC casing, gravel pack, stainless screen, full well development, Franklin Electric submersible pump and motor, drop pipe, pitless adapter, pressure tank, pressure switch and gauge, main shut-off, electrical wiring at wellhead, all GCD permits, driller\'s completion report, and initial water quality test.',
   },
   {
-    question: 'How much does a new water well cost in North Houston TX?',
+    question: 'How much does a new water well cost in Houston, TX?',
     answer:
-      'New residential wells in North Houston typically run $8,000–$18,000 complete. The main cost drivers are depth (more feet = more casing, more drilling time), casing diameter, and pump horsepower. We provide free, itemized written estimates — no surprises on billing day.',
+      'New residential wells in the Houston area typically run $8,000–$18,000 complete. The main cost drivers are depth (more feet = more casing, more drilling time), casing diameter, and pump horsepower. We provide free, itemized written estimates — no surprises on billing day.',
   },
 ];
 
@@ -176,13 +176,13 @@ export default function NewWellDrillingPage() {
                 <span>New Well Drilling</span>
               </nav>
               <div className={styles.h1Wrap}>
-                <span className={styles.h1Line1}>Magnolia · Conroe · North Houston TX</span>
+                <span className={styles.h1Line1}>Magnolia · Conroe · Houston, TX</span>
                 <h1 className={styles.h1Line2}>New Water Well Drilling</h1>
                 <span className={styles.h1Line3}>Drill · Case · Pump · Done Right</span>
               </div>
               <p className={styles.heroSubtitle}>
                 Switching from city water or drilling on a new property? B-E Waterwell
-                drills new residential wells across North Houston — from permit to first
+                drills new residential wells across the Houston area — from permit to first
                 drop of water in your glass. 45+ years, 5,000+ wells, 2-year warranty.
               </p>
               <div className={styles.heroBtns}>
@@ -211,7 +211,7 @@ export default function NewWellDrillingPage() {
           <h2 className="section-title">Everything Included in Every New Well</h2>
           <p className={styles.bodyP}>
             A new waterwell from B-E Waterwell is not a drill hole with a pump dropped in.
-            Every new well drilling job in North Houston TX includes a complete, code-compliant
+            Every new well drilling job in Houston, TX includes a complete, code-compliant
             installation — from rotary rig to final water test.
           </p>
           <div className={styles.includedGrid}>
@@ -244,10 +244,10 @@ export default function NewWellDrillingPage() {
 
         {/* ── DEPTH / GEOLOGY TABLE ────────────── */}
         <section className={styles.aquiferSection}>
-          <span className="section-label">North Houston Geology</span>
+          <span className="section-label">Houston Geology</span>
           <h2 className="section-title">How Deep Will Your Well Be?</h2>
           <p className={styles.bodyP}>
-            Well drilling depth in Montgomery County TX and across North Houston
+            Well drilling depth in Montgomery County TX and across the Houston area
             depends on your specific location and the target aquifer. Here is what
             we typically encounter across our service area.
           </p>
@@ -266,9 +266,9 @@ export default function NewWellDrillingPage() {
         {/* ── COST SECTION ────────────────────── */}
         <section className={styles.costSection}>
           <span className="section-label">Honest Pricing</span>
-          <h2 className="section-title">What Does a New Well Cost in North Houston?</h2>
+          <h2 className="section-title">What Does a New Well Cost in the Houston area?</h2>
           <p className={styles.bodyP}>
-            New residential waterwell drilling in North Houston TX typically runs
+            New residential waterwell drilling in Houston, TX typically runs
             <strong> $8,000–$18,000 complete</strong> — including drill, case, pump,
             pressure tank, and all permits. Here is what drives the price:
           </p>
@@ -323,7 +323,7 @@ export default function NewWellDrillingPage() {
           <div className={styles.finalCtaInner}>
             <h2>Drill Your New Well with B-E Waterwell</h2>
             <p>
-              Serving Magnolia, Conroe, Tomball, and all of North Houston TX since 1979.
+              Serving Magnolia, Conroe, Tomball, and all of Houston, TX since 1979.
               Call for a free, written estimate — no pressure, no surprises.
             </p>
             <div className={styles.finalCtaBtns}>

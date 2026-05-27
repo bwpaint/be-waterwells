@@ -8,9 +8,9 @@ import CityFaqAccordion from '../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Water Well Drilling Services — North Houston TX | B-E Waterwell',
+  title: 'Water Well Drilling Services — Houston, TX | B-E Waterwell',
   description:
-    'Professional water well drilling in North Houston TX since 1979. New residential wells, irrigation wells, commercial & agricultural drilling. TDLR Licensed. (281) 448-4447.',
+    'Professional water well drilling in Houston, TX since 1979. New residential wells, irrigation wells, commercial & agricultural drilling. TDLR Licensed. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/water-well-drilling' },
 };
 
@@ -19,7 +19,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Water Well Drilling — North Houston TX',
+      name: 'Water Well Drilling — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
@@ -31,16 +31,16 @@ const jsonLd = {
           postalCode: '77354',
         },
       },
-      areaServed: 'North Houston, TX',
+      areaServed: 'Houston, TX',
       description:
-        'Rotary rig waterwell drilling for residential, irrigation, commercial, and agricultural properties across North Houston. TDLR licensed, 45+ years experience.',
+        'Rotary rig waterwell drilling for residential, irrigation, commercial, and agricultural properties across the Houston area. TDLR licensed, 45+ years experience.',
     },
     {
       '@type': 'FAQPage',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'How deep are water wells drilled in North Houston?',
+          name: 'How deep are water wells drilled in the Houston area?',
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'Depth depends on your county and target aquifer. Montgomery County wells typically reach the Jasper Aquifer at 180–320 ft. Harris County NW wells access the Chicot/Jasper at 180–360 ft. Harris County East wells reach the Evangeline at 240–440 ft. Waller County wells are typically 160–300 ft.',
@@ -64,10 +64,10 @@ const jsonLd = {
         },
         {
           '@type': 'Question',
-          name: 'How much does water well drilling cost in North Houston?',
+          name: 'How much does water well drilling cost in the Houston area?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Residential wells in North Houston typically range from $8,000–$18,000 complete, including pump and pressure tank. Cost depends on depth, casing diameter, and pump specifications. Call for a free written estimate.',
+            text: 'Residential wells in the Houston area typically range from $8,000–$18,000 complete, including pump and pressure tank. Cost depends on depth, casing diameter, and pump specifications. Call for a free written estimate.',
           },
         },
       ],
@@ -94,7 +94,7 @@ const subServices = [
     icon: '🏗️',
     title: 'Commercial & Agricultural',
     slug: 'commercial-agricultural-wells',
-    desc: 'High-yield commercial and agricultural well drilling for businesses, nurseries, farms, ranches, and equestrian properties across North Houston.',
+    desc: 'High-yield commercial and agricultural well drilling for businesses, nurseries, farms, ranches, and equestrian properties across the Houston area.',
     highlights: ['High-capacity pumps', 'Larger casing diameters', 'Multi-zone completions', 'Ag exemption assistance'],
   },
 ];
@@ -108,12 +108,12 @@ const aquifers = [
 
 const faqs = [
   {
-    question: 'How deep are water wells drilled in North Houston?',
+    question: 'How deep are water wells drilled in the Houston area?',
     answer:
       'Depth depends on your county and target aquifer. Montgomery County wells typically reach the Jasper Aquifer at 180–320 ft. Harris County NW wells access the Chicot/Jasper at 180–360 ft. Harris County East (Humble, Kingwood) wells reach the Evangeline at 240–440 ft. Waller County wells run 160–300 ft.',
   },
   {
-    question: 'How long does water well drilling take in North Houston?',
+    question: 'How long does water well drilling take in the Houston area?',
     answer:
       'Most residential waterwells are drilled and fully completed — casing set, pump installed, pressure tank connected, and water tested — in 1–2 days after permit approval. Commercial or large agricultural wells may take 2–3 days.',
   },
@@ -123,9 +123,9 @@ const faqs = [
       'Yes. All new wells require a permit from your Groundwater Conservation District. In Montgomery County that is the Lone Star GCD (LSGCD). In most of Harris County it is the Harris-Galveston Subsidence District (HGSD). B-E Waterwell handles all permitting on your behalf.',
   },
   {
-    question: 'How much does water well drilling cost in North Houston TX?',
+    question: 'How much does water well drilling cost in Houston, TX?',
     answer:
-      'A complete residential well — drill, case, pump, pressure tank, and permits — typically runs $8,000–$18,000 in North Houston. Cost varies by depth, casing size, and pump specs. We provide free, written estimates before any work begins.',
+      'A complete residential well — drill, case, pump, pressure tank, and permits — typically runs $8,000–$18,000 in the Houston area. Cost varies by depth, casing size, and pump specs. We provide free, written estimates before any work begins.',
   },
 ];
 
@@ -168,7 +168,7 @@ export default function WaterWellDrillingHubPage() {
                 <span>Water Well Drilling</span>
               </nav>
               <div className={styles.h1Wrap}>
-                <span className={styles.h1Line1}>North Houston, TX · Since 1979</span>
+                <span className={styles.h1Line1}>Houston, TX · Since 1979</span>
                 <h1 className={styles.h1Line2}>Water Well Drilling</h1>
                 <span className={styles.h1Line3}>Residential · Irrigation · Commercial</span>
               </div>
@@ -200,10 +200,10 @@ export default function WaterWellDrillingHubPage() {
         {/* ── OVERVIEW ────────────────────────── */}
         <section className={styles.overviewSection}>
           <span className="section-label">The Process</span>
-          <h2 className="section-title">Well Drilling in North Houston TX</h2>
+          <h2 className="section-title">Well Drilling in Houston, TX</h2>
           <p className={styles.overviewP}>
             B-E Waterwell Services uses truck-mounted rotary drilling rigs to reach the
-            Jasper, Chicot, and Evangeline Aquifers beneath North Houston&apos;s sandy
+            Jasper, Chicot, and Evangeline Aquifers beneath Houston&apos;s sandy
             coastal plains. Every well we drill is permitted, cased in Schedule 40 PVC,
             gravel-packed, and fully developed before the pump is set.
           </p>
@@ -254,7 +254,7 @@ export default function WaterWellDrillingHubPage() {
 
         {/* ── AQUIFER TABLE ───────────────────── */}
         <section className={styles.aquiferSection}>
-          <span className="section-label">North Houston Geology</span>
+          <span className="section-label">Houston Geology</span>
           <h2 className="section-title">Aquifer Depths by County</h2>
           <p className={styles.overviewP}>
             Well depth is determined by your property location and target aquifer.

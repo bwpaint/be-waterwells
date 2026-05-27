@@ -8,9 +8,9 @@ import CityFaqAccordion from '../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Water Well Maintenance Services — North Houston TX | B-E Waterwell',
+  title: 'Water Well Maintenance Services — Houston, TX | B-E Waterwell',
   description:
-    'Annual well inspection, well rehabilitation, and ongoing maintenance programs in North Houston TX. TDLR licensed since 1979. Free estimate. (281) 448-4447.',
+    'Annual well inspection, well rehabilitation, and ongoing maintenance programs in Houston, TX. TDLR licensed since 1979. Free estimate. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/well-maintenance' },
 };
 
@@ -19,7 +19,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Water Well Maintenance — North Houston TX',
+      name: 'Water Well Maintenance — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
@@ -31,8 +31,8 @@ const jsonLd = {
           postalCode: '77354',
         },
       },
-      areaServed: 'North Houston, TX',
-      description: 'Annual well inspection, well rehabilitation, and ongoing maintenance programs. TDLR licensed, serving North Houston since 1979.',
+      areaServed: 'Houston, TX',
+      description: 'Annual well inspection, well rehabilitation, and ongoing maintenance programs. TDLR licensed, serving Houston since 1979.',
     },
     {
       '@type': 'FAQPage',
@@ -42,7 +42,7 @@ const jsonLd = {
           name: 'How often should I service my water well?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Annual inspection is recommended for residential wells. At minimum, get a professional inspection every 3 years. Pre-hurricane season pump checks are also a good idea in North Houston.',
+            text: 'Annual inspection is recommended for residential wells. At minimum, get a professional inspection every 3 years. Pre-hurricane season pump checks are also a good idea in the Houston area.',
           },
         },
         {
@@ -107,8 +107,8 @@ const costCompare = [
 
 const faqs = [
   {
-    question: 'How often should I have my well serviced in North Houston?',
-    answer: 'Annual inspection is recommended for residential wells. At minimum, every 3 years. In North Houston, the humid climate and mineral-heavy Jasper Aquifer water accelerate equipment wear. Pre-hurricane season pump checks are also wise — discovering a weak pump in April is far better than discovering it in August when your power is out.',
+    question: 'How often should I have my well serviced in the Houston area?',
+    answer: 'Annual inspection is recommended for residential wells. At minimum, every 3 years. In Houston, the humid climate and mineral-heavy Jasper Aquifer water accelerate equipment wear. Pre-hurricane season pump checks are also wise — discovering a weak pump in April is far better than discovering it in August when your power is out.',
   },
   {
     question: 'What does an annual well inspection include?',
@@ -156,14 +156,14 @@ export default function WellMaintenancePage() {
               <span>Well Maintenance</span>
             </nav>
             <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>North Houston TX · Since 1979</span>
+              <span className={styles.h1Line1}>Houston, TX · Since 1979</span>
               <h1 className={styles.h1Line2}>Well Maintenance Services</h1>
               <span className={styles.h1Line3}>Inspection · Rehabilitation · Ongoing Care</span>
             </div>
             <p className={styles.heroSubtitle}>
               Wells last 20–40 years with proper care — or 10–15 without it. B-E Waterwell
               provides annual inspection, well rehabilitation, and ongoing maintenance
-              programs across North Houston TX. TDLR licensed.
+              programs across Houston, TX. TDLR licensed.
             </p>
             <div className={styles.heroBtns}>
               <a href="tel:+12814484447" className="btn btn-primary">
@@ -195,7 +195,7 @@ export default function WellMaintenancePage() {
             is far cheaper than a $1,500 emergency repair or a $12,000 new well.
           </p>
           <p className={styles.bodyP} style={{ marginTop: 14 }}>
-            In North Houston, the Jasper Aquifer water is mineral-heavy with iron
+            In Houston, the Jasper Aquifer water is mineral-heavy with iron
             content that accelerates pump wear and can cause biofouling in aging wells.
             Annual monitoring catches these conditions early, when they are treatable
             rather than catastrophic.
@@ -295,7 +295,7 @@ export default function WellMaintenancePage() {
             <h2>Schedule Your Well Maintenance Today</h2>
             <p>
               Annual inspections, rehabilitation, and written service records.
-              TDLR licensed. Free estimates. Serving North Houston since 1979.
+              TDLR licensed. Free estimates. Serving Houston since 1979.
             </p>
             <div className={styles.finalCtaBtns}>
               <a href="tel:+12814484447" className="btn btn-primary">

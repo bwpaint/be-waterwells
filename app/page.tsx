@@ -9,9 +9,9 @@ import { services, stats, cityAreas, partners, testimonials, jsonLd, SERVICE_ICO
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'North Houston Waterwell Drilling & Pump Services | B-E Waterwell Services',
+  title: 'Houston Area Waterwell Drilling & Pump Services | B-E Waterwell Services',
   description:
-    "B-E Waterwell Services - North Houston's trusted waterwell drilling, pump installation, and repair specialists since 1979. Serving Magnolia, Tomball, The Woodlands, Spring and Conroe. Call (281) 448-4447.",
+    "B-E Waterwell Services - Houston's trusted waterwell drilling, pump installation, and repair specialists since 1979. Serving Magnolia, Tomball, The Woodlands, Spring and Conroe. Call (281) 448-4447.",
   alternates: { canonical: 'https://bewaterwells.com' },
 };
 
@@ -32,10 +32,10 @@ export default function HomePage() {
         <div className={styles.heroInner}>
           <div className={styles.heroLeft}>
             <div className={styles.heroBadge}>
-              Serving North Houston Since 1979
+              Serving Houston Since 1979
             </div>
             <h1 className={styles.heroH1}>
-              North Houston&apos;s{" "}
+              Houston&apos;s{" "}
               <span className={styles.heroOrange}>Waterwell</span>
               <br />Experts
               <span className={styles.heroH1Sub}>
@@ -67,7 +67,6 @@ export default function HomePage() {
             <HomeHeroForm />
           </div>
         </div>
-        <div className={styles.heroDiagonal} />
       </section>
 
       {/* STATS BAR */}
@@ -228,7 +227,7 @@ export default function HomePage() {
       <section className={styles.areasSection}>
         <div className="container">
           <span className="section-label">Where We Work</span>
-          <h2 className="section-title">11 Cities Across North Houston</h2>
+          <h2 className="section-title">11 Cities Across the Houston Area</h2>
           <p className={styles.areasSubtext}>
             From Waller County to the Lake Houston corridor.
           </p>

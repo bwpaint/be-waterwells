@@ -2,7 +2,7 @@ export const services = [
   {
     icon: 'drill',
     title: 'Waterwell Drilling',
-    desc: 'Residential and commercial waterwell drilling using rotary rig technology. We drill to the Jasper and Evangeline Aquifers across 11 North Houston service areas.',
+    desc: 'Residential and commercial waterwell drilling using rotary rig technology. We drill to the Jasper and Evangeline Aquifers across 11 Houston service areas.',
     href: '/water-well-drilling',
   },
   {
@@ -32,7 +32,7 @@ export const services = [
   {
     icon: 'generator',
     title: 'Generator Prep Kits',
-    desc: 'Keep your water flowing during power outages. We install generator transfer switches and prep kits for pump systems throughout North Houston.',
+    desc: 'Keep your water flowing during power outages. We install generator transfer switches and prep kits for pump systems throughout Houston.',
     href: '/generator-prep',
   },
 ];
@@ -92,7 +92,7 @@ export const jsonLd = {
   '@type': 'LocalBusiness',
   '@id': 'https://bewaterwells.com',
   name: 'B-E Waterwell Services',
-  description: 'North Houston waterwell drilling, pump installation, and repair specialists since 1979.',
+  description: 'Houston area waterwell drilling, pump installation, and repair specialists since 1979.',
   url: 'https://bewaterwells.com',
   telephone: '+1-281-448-4447',
   email: 'info@bewaterwells.com',

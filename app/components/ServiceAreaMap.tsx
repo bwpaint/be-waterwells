@@ -167,7 +167,7 @@ export default function ServiceAreaMap() {
         xmlns="http://www.w3.org/2000/svg"
         className={styles.svg}
         role="img"
-        aria-label="North Houston waterwell service area map"
+        aria-label="Houston area waterwell service area map"
       >
         {/* Background */}
         <rect width="860" height="550" fill="#1a1714" rx="12" />
@@ -191,7 +191,7 @@ export default function ServiceAreaMap() {
         <rect width="860" height="28" fill="rgba(26,23,20,0.9)" />
         <text x="430" y="18" textAnchor="middle" fill="rgba(255,255,255,0.5)"
           fontFamily="'Montserrat',sans-serif" fontSize="9" fontWeight="700" letterSpacing="3">
-          NORTH HOUSTON SERVICE AREA — B-E WATERWELL SERVICES
+          HOUSTON AREA SERVICE REGION — B-E WATERWELL SERVICES
         </text>
 
         {/* Region polygons */}

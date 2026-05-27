@@ -58,7 +58,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
 
   useEffect(() => {
     if (!transparent) return;
-    const handleScroll = () => setScrolled(window.scrollY > 80);
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [transparent]);
@@ -97,7 +97,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
                       <ul className={styles.megaSubLinks}>
                         {cat.children.map((child) => (
                           <li key={child.href}>
-                            <Link href={child.href}>{child.label}</Link>
+                            <Link href={child.href} className={styles.megaSubLink}>{child.label}</Link>
                           </li>
                         ))}
                       </ul>
@@ -186,8 +186,4 @@ export default function Navbar({ transparent = false }: NavbarProps) {
           <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
           <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
           <a href="tel:+12814484447" className={styles.mobileCta}>(281) 448-4447</a>
-        </div>
-      )}
-    </nav>
-  );
-}
+        </d

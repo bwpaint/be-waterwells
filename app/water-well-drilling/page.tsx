@@ -9,9 +9,9 @@ import CityFaqAccordion from '../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Waterwell Drilling — North Houston, TX | B-E Waterwell Services',
+  title: 'Waterwell Drilling — Houston, TX | B-E Waterwell Services',
   description:
-    'Professional waterwell drilling in North Houston since 1979. B-E Waterwell Services drills residential, commercial, and agricultural waterwells across Montgomery and Harris counties. TDLR Licensed. Call (281) 448-4447.',
+    'Professional waterwell drilling in the Houston area since 1979. B-E Waterwell Services drills residential, commercial, and agricultural waterwells across Montgomery and Harris counties. TDLR Licensed. Call (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/water-well-drilling' },
 };
 
@@ -20,7 +20,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Waterwell Drilling — North Houston, TX',
+      name: 'Waterwell Drilling — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
@@ -32,9 +32,9 @@ const jsonLd = {
           postalCode: '77354',
         },
       },
-      areaServed: 'North Houston, TX',
+      areaServed: 'Houston, TX',
       description:
-        'Rotary rig waterwell drilling for residential, commercial, and agricultural properties across North Houston.',
+        'Rotary rig waterwell drilling for residential, commercial, and agricultural properties across the Houston area.',
       offers: {
         '@type': 'Offer',
         description: 'Free waterwell drilling estimate. TDLR Licensed.',
@@ -45,10 +45,10 @@ const jsonLd = {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'How deep are waterwells drilled in North Houston?',
+          name: 'How deep are waterwells drilled in the Houston area?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Most residential waterwells in North Houston reach 180–420 feet depending on your specific location. Montgomery County wells typically access the Jasper Aquifer at 180–320 ft. Harris County wells often require 220–420 ft to reach the Evangeline Aquifer.',
+            text: 'Most residential waterwells in the Houston area reach 180–420 feet depending on your specific location. Montgomery County wells typically access the Jasper Aquifer at 180–320 ft. Harris County wells often require 220–420 ft to reach the Evangeline Aquifer.',
           },
         },
         {
@@ -56,7 +56,7 @@ const jsonLd = {
           name: 'How long does it take to drill a waterwell?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Most residential waterwells in North Houston are drilled and completed — casing, pump, pressure tank, and initial water test — in 1–2 days after permit approval. Agricultural or commercial wells may take 2–3 days.',
+            text: 'Most residential waterwells in the Houston area are drilled and completed — casing, pump, pressure tank, and initial water test — in 1–2 days after permit approval. Agricultural or commercial wells may take 2–3 days.',
           },
         },
         {
@@ -77,10 +77,10 @@ const jsonLd = {
         },
         {
           '@type': 'Question',
-          name: 'How much does waterwell drilling cost in North Houston?',
+          name: 'How much does waterwell drilling cost in the Houston area?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Waterwell drilling cost depends on depth, casing diameter, and pump specifications. Residential waterwells in North Houston typically range from $8,000–$18,000 complete. Call us for a free site-specific estimate.',
+            text: 'Waterwell drilling cost depends on depth, casing diameter, and pump specifications. Residential waterwells in the Houston area typically range from $8,000–$18,000 complete. Call us for a free site-specific estimate.',
           },
         },
       ],
@@ -90,14 +90,14 @@ const jsonLd = {
 
 const faqs = [
   {
-    question: 'How deep are waterwells drilled in North Houston?',
+    question: 'How deep are waterwells drilled in the Houston area?',
     answer:
-      'Most residential waterwells in North Houston reach 180–420 feet. Montgomery County wells typically access the Jasper Aquifer at 180–320 ft. Harris County wells often require 220–420 ft to reach the Evangeline Aquifer. We assess every property before quoting.',
+      'Most residential waterwells in the Houston area reach 180–420 feet. Montgomery County wells typically access the Jasper Aquifer at 180–320 ft. Harris County wells often require 220–420 ft to reach the Evangeline Aquifer. We assess every property before quoting.',
   },
   {
     question: 'How long does it take to drill a waterwell?',
     answer:
-      'Most residential waterwells in North Houston are drilled and completed — casing, pump, pressure tank, and initial water test — in 1–2 days after permit approval. Agricultural or commercial wells may take 2–3 days.',
+      'Most residential waterwells in the Houston area are drilled and completed — casing, pump, pressure tank, and initial water test — in 1–2 days after permit approval. Agricultural or commercial wells may take 2–3 days.',
   },
   {
     question: 'Do I need a permit to drill a waterwell in Texas?',
@@ -110,9 +110,9 @@ const faqs = [
       'A complete installation includes: drilling, PVC casing, gravel pack, well development, submersible pump and motor, drop pipe, pressure tank, electrical connection, and initial water quality test.',
   },
   {
-    question: 'How much does waterwell drilling cost in North Houston?',
+    question: 'How much does waterwell drilling cost in the Houston area?',
     answer:
-      'Residential waterwells in North Houston typically run $8,000–$18,000 complete depending on depth and pump spec. Call us for a free site-specific estimate — we quote every job in writing with no hidden charges.',
+      'Residential waterwells in the Houston area typically run $8,000–$18,000 complete depending on depth and pump spec. Call us for a free site-specific estimate — we quote every job in writing with no hidden charges.',
   },
 ];
 
@@ -141,7 +141,7 @@ export default function WaterWellDrillingPage() {
               <span>Waterwell Drilling</span>
             </nav>
             <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>North Houston Waterwell Services</span>
+              <span className={styles.h1Line1}>Houston Area Waterwell Services</span>
               <h1 className={styles.h1Line2}>Waterwell Drilling</h1>
               <span className={styles.h1Line3}>
                 Residential · Commercial · Agricultural
@@ -161,7 +161,7 @@ export default function WaterWellDrillingPage() {
               </Link>
             </div>
           </div>
-          <CityHeroForm city="North Houston" />
+          <CityHeroForm city="Houston" />
           <div />
         </div>
       </section>
@@ -176,7 +176,7 @@ export default function WaterWellDrillingPage() {
             </h2>
             <p>
               B-E Waterwell Services uses truck-mounted rotary drilling rigs to
-              drill through the sandy coastal plains of North Houston to the Jasper,
+              drill through the sandy coastal plains of the Houston area to the Jasper,
               Evangeline, and Chicot Aquifers — the same reliable freshwater
               sources that have supplied this region for generations.
             </p>
@@ -246,7 +246,7 @@ export default function WaterWellDrillingPage() {
       {/* ── AQUIFER INFO ─────────────────────── */}
       <section className={styles.aquiferSection}>
         <div className="container">
-          <span className="section-label light">North Houston Geology</span>
+          <span className="section-label light">Houston Geology</span>
           <h2 className={`section-title light ${styles.aquiferH2}`}>
             Aquifer Depths by County
           </h2>

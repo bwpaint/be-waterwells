@@ -10,7 +10,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Well Pump Services — Installation, Repair & Constant Pressure | B-E Waterwell',
   description:
-    'Well pump installation, repair, and constant pressure system upgrades in North Houston TX. Franklin Electric authorized service center. TDLR licensed. (281) 448-4447.',
+    'Well pump installation, repair, and constant pressure system upgrades in Houston, TX. Franklin Electric authorized service center. TDLR licensed. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/well-pump-services' },
 };
 
@@ -19,7 +19,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Well Pump Services — North Houston TX',
+      name: 'Well Pump Services — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
@@ -31,7 +31,7 @@ const jsonLd = {
           postalCode: '77354',
         },
       },
-      areaServed: 'North Houston, TX',
+      areaServed: 'Houston, TX',
       description:
         'Submersible well pump installation, repair, and constant pressure system upgrades. Franklin Electric authorized service center.',
     },
@@ -40,10 +40,10 @@ const jsonLd = {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'How long do well pumps last in North Houston?',
+          name: 'How long do well pumps last in the Houston area?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Submersible well pumps in North Houston typically last 10–15 years. Pumps that run frequently due to undersized pressure tanks, or are exposed to sand-heavy aquifers, often need replacement in 8–12 years.',
+            text: 'Submersible well pumps in the Houston area typically last 10–15 years. Pumps that run frequently due to undersized pressure tanks, or are exposed to sand-heavy aquifers, often need replacement in 8–12 years.',
           },
         },
         {
@@ -69,9 +69,9 @@ const jsonLd = {
 
 const faqs = [
   {
-    question: 'How long do well pumps last in North Houston?',
+    question: 'How long do well pumps last in the Houston area?',
     answer:
-      'Submersible well pumps in North Houston typically last 10–15 years. Pumps that run frequently — due to an undersized pressure tank or high-demand irrigation — often see replacement in 8–12 years. Pumps drawing from sandier sections of the Jasper Aquifer wear faster.',
+      'Submersible well pumps in the Houston area typically last 10–15 years. Pumps that run frequently — due to an undersized pressure tank or high-demand irrigation — often see replacement in 8–12 years. Pumps drawing from sandier sections of the Jasper Aquifer wear faster.',
   },
   {
     question: 'Should I repair or replace my well pump?',
@@ -128,7 +128,7 @@ export default function WellPumpServicesPage() {
           </div>
           <p className={styles.heroSubtitle}>
             Franklin Electric authorized service center. TDLR licensed well technicians.
-            Serving North Houston since 1979 — submersible pumps installed, repaired,
+            Serving Houston since 1979 — submersible pumps installed, repaired,
             and upgraded same day.
           </p>
           <div className={styles.heroBtns}>
@@ -268,7 +268,7 @@ export default function WellPumpServicesPage() {
             <div className={styles.typesGrid}>
               {[
                 { hp: '½ HP', use: 'Shallow residential', depth: 'Up to 200 ft', size: '3-inch bore casing', note: 'Typical for smaller lots and shallow Montgomery County wells.' },
-                { hp: '¾–1 HP', use: 'Standard residential', depth: '200–320 ft', size: '4-inch bore casing', note: 'Most common size for North Houston homes on 1–5 acres.' },
+                { hp: '¾–1 HP', use: 'Standard residential', depth: '200–320 ft', size: '4-inch bore casing', note: 'Most common size for the Houston area homes on 1–5 acres.' },
                 { hp: '1½ HP', use: 'Irrigation / high-demand', depth: '200–400 ft', size: '4-inch bore casing', note: 'For homes with large irrigation systems or high GPM needs.' },
                 { hp: '2+ HP', use: 'Commercial / agricultural', depth: '300–500+ ft', size: '6-inch bore casing', note: 'Farms, ranches, small commercial operations.' },
               ].map((row) => (

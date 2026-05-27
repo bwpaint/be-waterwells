@@ -8,9 +8,9 @@ import CityFaqAccordion from '../../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Irrigation Well Drilling — North Houston, Montgomery County TX | B-E Waterwell',
+  title: 'Irrigation Well Drilling — Houston, Montgomery County TX | B-E Waterwell',
   description:
-    'Dedicated irrigation well installation in North Houston TX. Separate your sprinkler system from household water. Save on utility bills. Free estimate. (281) 448-4447.',
+    'Dedicated irrigation well installation in Houston, TX. Separate your sprinkler system from household water. Save on utility bills. Free estimate. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/water-well-drilling/irrigation-wells' },
 };
 
@@ -19,7 +19,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Irrigation Well Drilling — North Houston TX',
+      name: 'Irrigation Well Drilling — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
@@ -31,9 +31,9 @@ const jsonLd = {
           postalCode: '77354',
         },
       },
-      areaServed: 'North Houston, TX',
+      areaServed: 'Houston, TX',
       description:
-        'Dedicated irrigation well drilling for residential lots, acreage, farms, ranches, and equestrian properties across North Houston. Stop paying city water rates for lawn irrigation.',
+        'Dedicated irrigation well drilling for residential lots, acreage, farms, ranches, and equestrian properties across the Houston area. Stop paying city water rates for lawn irrigation.',
     },
     {
       '@type': 'FAQPage',
@@ -48,7 +48,7 @@ const jsonLd = {
         },
         {
           '@type': 'Question',
-          name: 'How deep is an irrigation well in North Houston?',
+          name: 'How deep is an irrigation well in the Houston area?',
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'Irrigation wells follow the same aquifer depths as residential wells. In Montgomery County that is typically 180–320 ft to the Jasper Aquifer. In Harris County NW it is 180–360 ft. We size the pump specifically for irrigation demand, which is different from household demand.',
@@ -79,7 +79,7 @@ const whyDedicated = [
   {
     icon: '💸',
     title: 'Stop Paying City Water Rates',
-    desc: 'Running a sprinkler system on city water in North Houston can cost $150–$250 per month or more during summer. A dedicated irrigation well eliminates that bill entirely.',
+    desc: 'Running a sprinkler system on city water in the Houston area can cost $150–$250 per month or more during summer. A dedicated irrigation well eliminates that bill entirely.',
   },
   {
     icon: '🏠',
@@ -103,7 +103,7 @@ const included = [
   { icon: '⚙️', title: 'Irrigation Pump Sizing', desc: 'Pump sized for your sprinkler system flow rate and pressure requirements — not generic household sizing.' },
   { icon: '🔧', title: 'Dedicated Wellhead', desc: 'Separate wellhead, pitless adapter, and surface casing distinct from any existing household well on the property.' },
   { icon: '🔌', title: 'System Integration', desc: 'We work with your existing irrigation system or contractor to ensure clean integration at the pump controller.' },
-  { icon: '📋', title: 'All Permits Included', desc: 'GCD permit filing and fees, driller's completion report, and all required documentation included in your estimate.' },
+  { icon: '📋', title: 'All Permits Included', desc: 'GCD permit filing and fees, driller\'s completion report, and all required documentation included in your estimate.' },
 ];
 
 const bestFor = [
@@ -122,7 +122,7 @@ const faqs = [
       'Yes. All new wells in Texas require a permit from your local Groundwater Conservation District — this applies to irrigation wells the same as residential drinking water wells. B-E Waterwell handles all permitting (LSGCD in Montgomery County, HGSD in Harris County) as part of the installation. You do not file anything yourself.',
   },
   {
-    question: 'How deep is an irrigation well in North Houston?',
+    question: 'How deep is an irrigation well in the Houston area?',
     answer:
       'Irrigation wells reach the same aquifers as residential wells. Montgomery County properties typically require 180–320 ft to the Jasper Aquifer. Harris County NW (Tomball, Cypress, Spring) is 180–360 ft. The pump is sized specifically for irrigation demand — higher flow rates at lower pressure than a household system.',
   },
@@ -179,7 +179,7 @@ export default function IrrigationWellsPage() {
                 <span>Irrigation Wells</span>
               </nav>
               <div className={styles.h1Wrap}>
-                <span className={styles.h1Line1}>North Houston · Montgomery County TX</span>
+                <span className={styles.h1Line1}>Houston · Montgomery County TX</span>
                 <h1 className={styles.h1Line2}>Irrigation Well Drilling</h1>
                 <span className={styles.h1Line3}>Stop Paying City Water Rates for Your Lawn</span>
               </div>
@@ -187,7 +187,7 @@ export default function IrrigationWellsPage() {
                 A dedicated irrigation well separates your sprinkler system from your
                 household supply, eliminates $150–$250/month in water bills, and pays
                 for itself in 4–6 years. B-E Waterwell has been drilling irrigation wells
-                across North Houston since 1979.
+                across the Houston area since 1979.
               </p>
               <div className={styles.heroBtns}>
                 <a href="tel:+12814484447" className="btn btn-primary">
@@ -217,7 +217,7 @@ export default function IrrigationWellsPage() {
           </h2>
           <p className={styles.bodyP}>
             Running your lawn sprinklers on your household well — or on city water — is
-            costing you money and wear. A dedicated irrigation well in North Houston TX
+            costing you money and wear. A dedicated irrigation well in Houston, TX
             is one of the best long-term investments for any property with more than half
             an acre of irrigated landscape.
           </p>
@@ -240,7 +240,7 @@ export default function IrrigationWellsPage() {
             <div className={styles.roiCard}>
               <div className={styles.roiNumber}>$150–$250</div>
               <div className={styles.roiLabel}>Avg. Monthly Irrigation Bill</div>
-              <p className={styles.roiDesc}>Typical city water irrigation cost for a North Houston home with established landscaping during growing season.</p>
+              <p className={styles.roiDesc}>Typical city water irrigation cost for a Houston home with established landscaping during growing season.</p>
             </div>
             <div className={styles.roiCard}>
               <div className={styles.roiNumber}>4–6 yrs</div>

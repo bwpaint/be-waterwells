@@ -8,9 +8,9 @@ import CityFaqAccordion from '../../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Well Pump Installation & Repair — North Houston TX | B-E Waterwell',
+  title: 'Well Pump Installation & Repair — Houston, TX | B-E Waterwell',
   description:
-    'Submersible well pump installation and repair in North Houston TX. Franklin Electric authorized. Same-day service available. TDLR licensed. Free estimate. (281) 448-4447.',
+    'Submersible well pump installation and repair in Houston, TX. Franklin Electric authorized. Same-day service available. TDLR licensed. Free estimate. (281) 448-4447.',
   alternates: {
     canonical: 'https://bewaterwells.com/services/well-pump-services/pump-installation-repair',
   },
@@ -21,7 +21,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Well Pump Installation & Repair — North Houston TX',
+      name: 'Well Pump Installation & Repair — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
@@ -33,7 +33,7 @@ const jsonLd = {
           postalCode: '77354',
         },
       },
-      areaServed: 'North Houston, TX',
+      areaServed: 'Houston, TX',
       description:
         'Submersible well pump installation, pull-and-replace service, motor testing, and same-day emergency repair. Franklin Electric authorized service center.',
       offers: {
@@ -58,7 +58,7 @@ const jsonLd = {
           name: 'How deep can you pull a submersible pump?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'We pull and replace pumps at depths up to 500+ feet using our service rig. Most North Houston residential wells require pump pulls at 180–400 feet.',
+            text: 'We pull and replace pumps at depths up to 500+ feet using our service rig. Most Houston residential wells require pump pulls at 180–400 feet.',
           },
         },
         {
@@ -91,7 +91,7 @@ const faqs = [
   {
     question: 'How deep can you pull a submersible pump?',
     answer:
-      'We pull and replace pumps at depths up to 500+ feet using our service rig. Most North Houston residential wells require pump service at 180–400 feet. We quote pull depth when we give your estimate.',
+      'We pull and replace pumps at depths up to 500+ feet using our service rig. Most Houston residential wells require pump service at 180–400 feet. We quote pull depth when we give your estimate.',
   },
   {
     question: 'How long does a pump installation take?',
@@ -101,7 +101,7 @@ const faqs = [
   {
     question: 'What warranty do you provide on pump installations?',
     answer:
-      'We provide a 1-year labor warranty on all installations and pass through the full Franklin Electric manufacturer warranty (typically 1–2 years). All warranty claims are handled directly through us — you don't call the manufacturer.',
+      'We provide a 1-year labor warranty on all installations and pass through the full Franklin Electric manufacturer warranty (typically 1–2 years). All warranty claims are handled directly through us — you don\'t call the manufacturer.',
   },
 ];
 
@@ -328,7 +328,7 @@ export default function PumpInstallRepairPage() {
                 </p>
                 <ul className={styles.replaceList}>
                   {[
-                    { signal: 'Age over 12 years', detail: 'Most submersible pumps last 10–15 years in North Houston aquifer conditions. After 12 years, repair costs often approach replacement cost.' },
+                    { signal: 'Age over 12 years', detail: 'Most submersible pumps last 10–15 years in the Houston area aquifer conditions. After 12 years, repair costs often approach replacement cost.' },
                     { signal: 'Pulling sand or sediment', detail: 'Sand passing through the pump wears impellers rapidly. Replacement plus a downhole sand separator is more cost-effective than repeated repairs.' },
                     { signal: 'Frequent breaker trips', detail: 'A pump that trips the breaker more than twice in a month has a motor or winding problem that will not self-resolve.' },
                     { signal: 'Reduced flow at the tap', detail: 'If your flow rate has dropped noticeably over months, impeller wear is the likely cause — repair rarely restores original performance.' },
@@ -409,7 +409,7 @@ export default function PumpInstallRepairPage() {
             <p>
               Same-day service available. Franklin Electric authorized.
               Free written estimate before any work starts.
-              Keywords: well pump repair North Houston TX · submersible pump replacement Texas · well pump repair Magnolia TX.
+              Keywords: well pump repair Houston, TX · submersible pump replacement Texas · well pump repair Magnolia TX.
             </p>
             <div className={styles.finalCtaBtns}>
               <a href="tel:+12814484447" className="btn btn-primary">

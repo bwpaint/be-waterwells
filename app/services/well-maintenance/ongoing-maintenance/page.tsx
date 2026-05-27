@@ -8,9 +8,9 @@ import CityFaqAccordion from '../../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Annual Well Maintenance Program — North Houston TX | B-E Waterwell',
+  title: 'Annual Well Maintenance Program — Houston, TX | B-E Waterwell',
   description:
-    'Annual well maintenance service program in North Houston TX. Keep your well in peak condition year-round. Affordable plans for residential and rural properties. (281) 448-4447.',
+    'Annual well maintenance service program in Houston, TX. Keep your well in peak condition year-round. Affordable plans for residential and rural properties. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/well-maintenance/ongoing-maintenance' },
 };
 
@@ -19,15 +19,15 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Ongoing Well Maintenance Program — North Houston TX',
+      name: 'Ongoing Well Maintenance Program — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
         telephone: '+1-281-448-4447',
         address: { '@type': 'PostalAddress', addressLocality: 'Magnolia', addressRegion: 'TX', postalCode: '77354' },
       },
-      areaServed: 'North Houston, TX',
-      description: 'Annual and ongoing well maintenance program in North Houston TX. Written service records, priority scheduling, seasonal checks. TDLR licensed.',
+      areaServed: 'Houston, TX',
+      description: 'Annual and ongoing well maintenance program in Houston, TX. Written service records, priority scheduling, seasonal checks. TDLR licensed.',
     },
     {
       '@type': 'FAQPage',
@@ -112,7 +112,7 @@ const faqs = [
     answer: 'Annual maintenance covers: pump performance test (flow rate, amp draw), pressure tank pre-charge and bladder integrity check, wellhead and casing visual inspection, water pressure and flow rate measurement, pressure switch calibration, visual water quality assessment, and a written report with photos. We compare results to prior visits to track trends.',
   },
   {
-    question: 'How much does annual well maintenance cost in North Houston?',
+    question: 'How much does annual well maintenance cost in the Houston area?',
     answer: 'Annual maintenance service visits run $200–$350 depending on system complexity. Any additional repairs discovered during the visit are quoted separately in writing before we do anything. No surprise charges on the invoice.',
   },
   {
@@ -156,12 +156,12 @@ export default function OngoingMaintenancePage() {
               <span>Ongoing Maintenance</span>
             </nav>
             <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>North Houston TX · TDLR Licensed</span>
+              <span className={styles.h1Line1}>Houston, TX · TDLR Licensed</span>
               <h1 className={styles.h1Line2}>Ongoing Well Maintenance</h1>
               <span className={styles.h1Line3}>Annual Service Plans · Seasonal Care · Peace of Mind</span>
             </div>
             <p className={styles.heroSubtitle}>
-              Annual well maintenance is the single highest-ROI investment a North Houston
+              Annual well maintenance is the single highest-ROI investment a Houston
               well owner can make. Catch a $40 pressure switch issue before it becomes a
               $1,200 pump failure. Written records for every visit. Priority scheduling.
             </p>
@@ -188,7 +188,7 @@ export default function OngoingMaintenancePage() {
           </p>
           <p className={styles.bodyP} style={{ marginTop: 14 }}>
             Written service records also protect your investment when selling your home.
-            Buyers and lenders in North Houston ask about well maintenance history.
+            Buyers and lenders in the Houston area ask about well maintenance history.
             A documented record of annual inspections answers that question with confidence.
           </p>
         </section>
@@ -209,9 +209,9 @@ export default function OngoingMaintenancePage() {
 
         <section className={styles.seasonSection}>
           <span className="section-label">Seasonal Calendar</span>
-          <h2 className="section-title">Seasonal Maintenance Calendar for North Houston Wells</h2>
+          <h2 className="section-title">Seasonal Maintenance Calendar for the Houston area Wells</h2>
           <p className={styles.bodyP}>
-            North Houston&apos;s climate drives a natural maintenance calendar —
+            Houston&apos;s climate drives a natural maintenance calendar —
             freeze risk in January and February, hurricane season from June through November,
             and the hottest high-demand months in summer. Here is how we structure
             ongoing maintenance around your local conditions.

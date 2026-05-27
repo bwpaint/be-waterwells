@@ -8,9 +8,9 @@ import CityFaqAccordion from '../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Well Water System Installation & Repair — North Houston TX | B-E Waterwell',
+  title: 'Well Water System Installation & Repair — Houston, TX | B-E Waterwell',
   description:
-    'Pressure tanks, generator prep kits, and complete well water system service in North Houston TX. TDLR licensed. Franklin Electric authorized. (281) 448-4447.',
+    'Pressure tanks, generator prep kits, and complete well water system service in Houston, TX. TDLR licensed. Franklin Electric authorized. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/water-well-systems' },
 };
 
@@ -19,7 +19,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Well Water System Service — North Houston TX',
+      name: 'Well Water System Service — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
@@ -31,9 +31,9 @@ const jsonLd = {
           postalCode: '77354',
         },
       },
-      areaServed: 'North Houston, TX',
+      areaServed: 'Houston, TX',
       description:
-        'Pressure tank replacement, generator prep kit installation, and complete well system service in North Houston TX. TDLR licensed, Franklin Electric authorized.',
+        'Pressure tank replacement, generator prep kit installation, and complete well system service in Houston, TX. TDLR licensed, Franklin Electric authorized.',
     },
     {
       '@type': 'FAQPage',
@@ -56,10 +56,10 @@ const jsonLd = {
         },
         {
           '@type': 'Question',
-          name: 'What does well system replacement cost in North Houston?',
+          name: 'What does well system replacement cost in the Houston area?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A complete system overhaul — new pressure tank, pump, and controls — typically runs $1,200–$2,500 in North Houston. Individual component replacement is less. Call for a free written estimate.',
+            text: 'A complete system overhaul — new pressure tank, pump, and controls — typically runs $1,200–$2,500 in the Houston area. Individual component replacement is less. Call for a free written estimate.',
           },
         },
       ],
@@ -87,7 +87,7 @@ const subServices = [
 const systemComponents = [
   { step: '01', label: 'Well Casing & Screen', desc: 'The casing is the pipe that lines your borehole. The screen at the bottom lets water in while filtering sediment. It is the foundation everything else depends on.' },
   { step: '02', label: 'Submersible Pump & Motor', desc: 'Seated deep in the well, the submersible pump pushes water up through the drop pipe to your home. Motor sizing matches your household demand and well depth.' },
-  { step: '03', label: 'Pressure Switch', desc: 'The pressure switch senses system pressure and signals the pump to start and stop. A faulty switch causes short cycling or a pump that won't shut off.' },
+  { step: '03', label: 'Pressure Switch', desc: 'The pressure switch senses system pressure and signals the pump to start and stop. A faulty switch causes short cycling or a pump that won\'t shut off.' },
   { step: '04', label: 'Pressure Tank', desc: 'The pressure tank stores a pressurized water reserve, buffering demand and protecting your pump from rapid on/off cycling that wears out motors.' },
   { step: '05', label: 'Distribution Piping', desc: 'Pipes carry pressurized water from the tank to every tap, appliance, and irrigation zone in your home. System pressure should be steady throughout.' },
 ];
@@ -108,7 +108,7 @@ const faqs = [
     answer: 'Consider a system upgrade when your pressure tank is over 10 years old, you notice the pump cycling rapidly (every few seconds), pressure drops during showers, or you want backup generator capability before hurricane season. Proactive upgrades — before failure — are significantly less expensive than emergency repairs.',
   },
   {
-    question: 'What does well water system replacement cost in North Houston?',
+    question: 'What does well water system replacement cost in the Houston area?',
     answer: 'A complete pressure tank replacement runs $400–$900 installed. A full system overhaul including pump, tank, and controls is $1,200–$2,500 depending on pump size and depth. Generator prep kits run $300–$800 installed for basic transfer switch setups. We provide free written estimates before any work begins.',
   },
 ];
@@ -153,7 +153,7 @@ export default function WaterWellSystemsPage() {
               <span>Water Well Systems</span>
             </nav>
             <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>North Houston TX · Since 1979</span>
+              <span className={styles.h1Line1}>Houston, TX · Since 1979</span>
               <h1 className={styles.h1Line2}>Water Well Systems</h1>
               <span className={styles.h1Line3}>Pressure Tanks · Generator Prep · Complete System Service</span>
             </div>

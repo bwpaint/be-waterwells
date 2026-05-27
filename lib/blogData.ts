@@ -9,7 +9,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // ── Water Well Drilling ──
   {
-    title: 'How Much Does Water Well Drilling Cost in North Houston? (2025 Guide)',
+    title: 'How Much Does Water Well Drilling Cost in the Houston area? (2025 Guide)',
     slug: 'water-well-drilling-cost-north-houston-2025',
     categorySlug: 'water-well-drilling',
     date: '2025-04-10',
@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'switching-city-water-private-well-houston',
     categorySlug: 'water-well-drilling',
     date: '2025-03-22',
-    excerpt: 'Thinking about going off the municipal water grid? Here is the real ROI calculation for North Houston homeowners with acreage.',
+    excerpt: 'Thinking about going off the municipal water grid? Here is the real ROI calculation for the Houston area homeowners with acreage.',
   },
   {
     title: 'How Deep Does a Water Well Need to Be in Montgomery County TX?',
@@ -45,7 +45,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Before you call, run through these 5 checks. Most no-water emergencies have a simple fix — here is how to find it in 10 minutes.',
   },
   {
-    title: 'No Water After a Power Outage or Storm in North Houston',
+    title: 'No Water After a Power Outage or Storm in the Houston area',
     slug: 'no-water-after-storm-power-outage-north-houston',
     categorySlug: 'emergency-well-services',
     date: '2025-03-01',
@@ -74,7 +74,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "The average submersible pump lasts 8–15 years. Texas's heat, sandy soil, and aquifer chemistry all affect that number. Here's what to expect.",
   },
   {
-    title: 'Well Pump Pulling Sand: Causes and Fixes in North Houston',
+    title: 'Well Pump Pulling Sand: Causes and Fixes in the Houston area',
     slug: 'well-pump-pulling-sand-causes-fixes-north-houston',
     categorySlug: 'well-pump-services',
     date: '2025-02-20',
@@ -85,7 +85,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'constant-pressure-well-system-vs-standard-pump-comparison',
     categorySlug: 'well-pump-services',
     date: '2025-01-14',
-    excerpt: 'City-like water pressure from a private well is possible. Here is a side-by-side cost and performance comparison for North Houston homeowners.',
+    excerpt: 'City-like water pressure from a private well is possible. Here is a side-by-side cost and performance comparison for the Houston area homeowners.',
   },
   // ── Water Well Systems ──
   {
@@ -114,7 +114,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'pressure-tank-replacement-cost-texas',
     categorySlug: 'water-well-systems',
     date: '2025-02-05',
-    excerpt: 'Most pressure tank replacements in North Houston run $400–$900 including labor. Here is what drives the price and red flags to avoid.',
+    excerpt: 'Most pressure tank replacements in the Houston area run $400–$900 including labor. Here is what drives the price and red flags to avoid.',
   },
   // ── Well Maintenance ──
   {
@@ -122,14 +122,14 @@ export const blogPosts: BlogPost[] = [
     slug: 'how-often-service-water-well-texas',
     categorySlug: 'well-maintenance',
     date: '2025-04-28',
-    excerpt: 'The Texas Department of Licensing recommends annual inspection. Here is a practical maintenance calendar for North Houston well owners.',
+    excerpt: 'The Texas Department of Licensing recommends annual inspection. Here is a practical maintenance calendar for the Houston area well owners.',
   },
   {
     title: 'Water Well Inspection for Home Buyers in Texas: Complete Guide',
     slug: 'water-well-inspection-home-buyers-texas-guide',
     categorySlug: 'well-maintenance',
     date: '2025-03-18',
-    excerpt: 'FHA, VA, and USDA loans all have specific well inspection requirements. Here is what buyers, sellers, and realtors need to know in North Houston.',
+    excerpt: 'FHA, VA, and USDA loans all have specific well inspection requirements. Here is what buyers, sellers, and realtors need to know in the Houston area.',
   },
   {
     title: 'Well Rehabilitation vs. Drilling a New Well: The Cost Comparison',
@@ -143,7 +143,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'iron-bacteria-texas-water-well-treatment',
     categorySlug: 'well-maintenance',
     date: '2025-01-22',
-    excerpt: 'Reddish-brown slime, sulfur smell, and stained fixtures are the telltale signs. Iron bacteria is common in North Houston groundwater — here is how to treat it.',
+    excerpt: 'Reddish-brown slime, sulfur smell, and stained fixtures are the telltale signs. Iron bacteria is common in the Houston area groundwater — here is how to treat it.',
   },
 ];
 
@@ -155,4 +155,8 @@ export function getRecentBlogPosts(count = 4): BlogPost[] {
   return [...blogPosts]
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, count);
+}
+
+export function getAllBlogPosts(): BlogPost[] {
+  return [...blogPosts].sort((a, b) => b.date.localeCompare(a.date));
 }
