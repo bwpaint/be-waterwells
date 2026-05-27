@@ -28,6 +28,7 @@ const serviceCategories = [
     label: 'Well Pump Services',
     href: '/services/well-pump-services',
     children: [
+      { label: 'Well Pump Repair', href: '/services/well-pump-services/well-pump-repair' },
       { label: 'Pump Installation & Repair', href: '/services/well-pump-services/pump-installation-repair' },
       { label: 'Constant Pressure Systems', href: '/services/well-pump-services/constant-pressure-systems' },
     ],
@@ -109,6 +110,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
           </li>
 
           <li><Link href="/service-areas">Service Areas</Link></li>
+          <li><Link href="/resources/water-well-cost">Cost Guide</Link></li>
           <li><Link href="/about">About</Link></li>
           <li><Link href="/blog">Blog</Link></li>
           <li><Link href="/contact">Contact</Link></li>
@@ -182,6 +184,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
           ))}
 
           <Link href="/service-areas" onClick={() => setMenuOpen(false)}>Service Areas</Link>
+          <Link href="/resources/water-well-cost" onClick={() => setMenuOpen(false)}>Cost Guide</Link>
           <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
           <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
           <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>

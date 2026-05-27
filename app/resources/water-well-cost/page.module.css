@@ -1,0 +1,404 @@
+.main {
+  padding-top: 0;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #1a2e1a 0%, #2d4a2d 60%, #3d6b3d 100%);
+  color: #fff;
+  padding: 100px 24px 72px;
+  text-align: center;
+}
+
+.heroInner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c8a96e;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.heroSub {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 600px;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+}
+
+.heroStats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.heroStat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statNum {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #c8a96e;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+}
+
+.heroCta {
+  display: inline-block;
+  background: #c8a96e;
+  color: #1a2e1a;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 16px 36px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.heroCta:hover {
+  background: #b8944f;
+}
+
+/* SHARED SECTION */
+.section {
+  padding: 72px 24px;
+}
+
+.altSection {
+  background: #f7f4ef;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #1a2e1a;
+  margin-bottom: 16px;
+}
+
+.sectionIntro {
+  font-size: 1.05rem;
+  color: #555;
+  max-width: 720px;
+  line-height: 1.65;
+  margin-bottom: 40px;
+}
+
+/* COST TABLE */
+.tableWrapper {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.costTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.costTable th {
+  background: #1a2e1a;
+  color: #fff;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.costTable td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0d9ce;
+  color: #333;
+  vertical-align: top;
+}
+
+.costTable tbody tr:nth-child(even) td {
+  background: #f7f4ef;
+}
+
+.price {
+  font-weight: 700;
+  color: #1a2e1a !important;
+  white-space: nowrap;
+}
+
+.notes {
+  color: #666 !important;
+  font-size: 0.88rem !important;
+}
+
+.totalRow td {
+  background: #e8f0e8 !important;
+  font-weight: 700;
+  border-top: 2px solid #1a2e1a;
+}
+
+.disclaimer {
+  font-size: 0.82rem;
+  color: #888;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ESTIMATOR SECTION */
+.estimatorSection {
+  background: #1a2e1a;
+  padding: 72px 24px;
+  color: #fff;
+}
+
+.estimatorSection h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.estimatorSection .sectionIntro {
+  color: rgba(255,255,255,0.75);
+}
+
+/* FACTORS GRID */
+.factorsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.factorCard {
+  background: #fff;
+  border: 1px solid #e0d9ce;
+  border-left: 4px solid #c8a96e;
+  padding: 24px;
+  border-radius: 4px;
+}
+
+.factorCard h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a2e1a;
+  margin-bottom: 10px;
+}
+
+.factorCard p {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* REPAIR GRID */
+.repairGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.repairCard {
+  background: #fff;
+  border: 1px solid #e0d9ce;
+  border-radius: 4px;
+  padding: 20px 24px;
+  text-align: center;
+}
+
+.repairTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.repairRange {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a2e1a;
+  margin-bottom: 8px;
+}
+
+.repairDesc {
+  font-size: 0.82rem;
+  color: #777;
+}
+
+.repairCta {
+  text-align: center;
+  padding: 32px 24px;
+  background: #fff;
+  border: 2px solid #1a2e1a;
+  border-radius: 4px;
+}
+
+.repairCta p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a2e1a;
+  margin-bottom: 20px;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background: #c8a96e;
+  color: #1a2e1a;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-right: 16px;
+  margin-bottom: 12px;
+  transition: background 0.2s;
+}
+
+.ctaBtn:hover {
+  background: #b8944f;
+}
+
+.ctaLink {
+  display: inline-block;
+  color: #1a2e1a;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
+/* FAQ */
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faqItem {
+  border-bottom: 1px solid #e0d9ce;
+  padding: 28px 0;
+}
+
+.faqItem:first-child {
+  border-top: 1px solid #e0d9ce;
+}
+
+.faqItem h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a2e1a;
+  margin-bottom: 12px;
+}
+
+.faqItem p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* CTA SECTION */
+.ctaSection {
+  background: #1a2e1a;
+  color: #fff;
+  padding: 72px 24px;
+  text-align: center;
+}
+
+.ctaSection h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.ctaSection p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  max-width: 680px;
+  margin: 0 auto 16px;
+  line-height: 1.65;
+}
+
+.serviceAreaList {
+  font-size: 0.88rem !important;
+  color: rgba(255,255,255,0.55) !important;
+  margin-bottom: 40px !important;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.ctaOutline {
+  display: inline-block;
+  border: 2px solid #c8a96e;
+  color: #c8a96e;
+  font-weight: 600;
+  padding: 13px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.ctaOutline:hover {
+  background: #c8a96e;
+  color: #1a2e1a;
+}
+
+.relatedLinks {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.relatedLinks a {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.88rem;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.relatedLinks a:hover {
+  color: #c8a96e;
+}
+
+@media (max-width: 768px) {
+  .heroStats {
+    gap: 24px;
+  }
+
+  .costTable th:last-child,
+  .costTable td:last-child {
+    display: none;
+  }
+}

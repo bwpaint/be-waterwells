@@ -89,32 +89,66 @@ export const testimonials = [
 
 export const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://bewaterwells.com',
+  '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
+  '@id': 'https://bewaterwells.com/#business',
   name: 'B-E Waterwell Services',
-  description: 'Houston area waterwell drilling, pump installation, and repair specialists since 1979.',
+  description: 'Family-owned waterwell drilling, pump repair, and well service company serving the greater Houston area since 1979. Licensed by the Texas Department of Licensing and Regulation (TDLR).',
   url: 'https://bewaterwells.com',
-  telephone: '+1-281-448-4447',
+  telephone: '+12814484447',
   email: 'info@bewaterwells.com',
+  foundingDate: '1979',
+  priceRange: '$$',
+  image: 'https://bewaterwells.com/wp-content/uploads/2024/09/bewater2-1024x768.jpg',
+  logo: 'https://bewaterwells.com/wp-content/uploads/2024/08/be-waterwell-logo_dkor-250x99.png',
   address: {
     '@type': 'PostalAddress',
+    streetAddress: '30815 Collier Smith Rd.',
     addressLocality: 'Magnolia',
     addressRegion: 'TX',
     postalCode: '77354',
     addressCountry: 'US',
   },
-  geo: { '@type': 'GeoCoordinates', latitude: 30.2099, longitude: -95.7516 },
-  openingHours: ['Mo-Fr 07:00-18:00'],
-  image: 'https://bewaterwells.com/wp-content/uploads/2024/09/bewater2-1024x768.jpg',
-  logo: 'https://bewaterwells.com/wp-content/uploads/2024/08/be-waterwell-logo_dkor-250x99.png',
-  foundingDate: '1979',
+  geo: { '@type': 'GeoCoordinates', latitude: 30.2158, longitude: -95.7522 },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '07:00', closes: '18:00' },
+  ],
   areaServed: [
-    'Magnolia, TX', 'Conroe, TX', 'Tomball, TX', 'The Woodlands, TX',
-    'Spring, TX', 'Cypress, TX', 'Humble, TX', 'Kingwood, TX',
-    'Montgomery, TX', 'Pinehurst, TX', 'Waller, TX',
+    { '@type': 'AdministrativeArea', name: 'Harris County, Texas' },
+    { '@type': 'AdministrativeArea', name: 'Montgomery County, Texas' },
+    { '@type': 'AdministrativeArea', name: 'Waller County, Texas' },
+    { '@type': 'AdministrativeArea', name: 'Fort Bend County, Texas' },
+    { '@type': 'AdministrativeArea', name: 'Brazoria County, Texas' },
+    { '@type': 'AdministrativeArea', name: 'Liberty County, Texas' },
   ],
   sameAs: ['https://www.facebook.com/bewaterwells'],
 };
+
+export const homeFaqs = [
+  {
+    question: 'How much does waterwell drilling cost in Houston?',
+    answer: 'A complete new waterwell installation in the greater Houston area typically costs $5,000–$18,000, with most residential projects running $8,000–$12,000. Drilling runs $30–$55 per foot. Most wells in Montgomery and Harris counties reach productive aquifers at 200–350 feet. B-E Waterwell Services provides free on-site estimates. Call (281) 448-4447.',
+  },
+  {
+    question: 'Does B-E Waterwell Services serve my area near Houston?',
+    answer: 'B-E Waterwell Services serves the greater Houston metro area — roughly a 60-mile radius. We regularly work in Magnolia, Tomball, Conroe, The Woodlands, Spring, Cypress, Humble, Kingwood, Katy, Waller, Montgomery, Pinehurst, Sugar Land, and Baytown. If you\'re not sure whether we cover your area, call (281) 448-4447 and we\'ll confirm.',
+  },
+  {
+    question: 'My well stopped working — how fast can B-E Waterwell respond?',
+    answer: 'B-E Waterwell Services offers 24/7 emergency well and pump service across the Houston area. For most locations in Montgomery and Harris counties, we target a 2-hour response time. Call (281) 448-4447 any time — we dispatch day and night including weekends and holidays.',
+  },
+  {
+    question: 'How long does it take to drill a new waterwell?',
+    answer: 'Most residential waterwell projects in Houston take 1–3 days from drilling through pump installation and hookup. Permitting through the Texas Department of Licensing and Regulation (TDLR) typically takes 3–5 business days before drilling can begin. We handle all permits for you.',
+  },
+  {
+    question: 'Is B-E Waterwell Services licensed in Texas?',
+    answer: 'Yes. B-E Waterwell Services is licensed by the Texas Department of Licensing and Regulation (TDLR) as a water well driller and pump installer. We have operated in the greater Houston area since 1979 and have drilled over 5,000 wells across Montgomery, Harris, Waller, and surrounding counties.',
+  },
+  {
+    question: 'What aquifers do you drill into in the Houston area?',
+    answer: 'In the Houston area we primarily drill into the Jasper Aquifer (200–350 ft depth) for residential wells in Montgomery and Waller counties, and the Evangeline Aquifer (350–600 ft) for deeper or higher-demand applications. The aquifer and required depth depend on your specific property location — we assess this during the free estimate.',
+  },
+];
 
 export const SERVICE_ICONS: Record<string, string> = {
   drill: '🔩',

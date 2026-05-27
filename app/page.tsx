@@ -5,8 +5,11 @@ import AnnouncementBar from './components/AnnouncementBar';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomeHeroForm from './components/HomeHeroForm';
-import { services, stats, cityAreas, partners, testimonials, jsonLd, SERVICE_ICONS } from '../lib/homeData';
+import { services, stats, cityAreas, partners, testimonials, jsonLd, homeFaqs, SERVICE_ICONS } from '../lib/homeData';
+import { buildFaqSchema } from '../lib/seoData';
 import styles from './page.module.css';
+
+const faqSchema = buildFaqSchema(homeFaqs);
 
 export const metadata: Metadata = {
   title: 'Houston Area Waterwell Drilling & Pump Services | B-E Waterwell Services',
@@ -21,6 +24,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <AnnouncementBar />
@@ -248,6 +255,22 @@ export default function HomePage() {
             <Link href="/service-areas" className="btn btn-dark">
               View Interactive Service Area Map
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ SECTION */}
+      <section className={styles.faqSection}>
+        <div className="container">
+          <span className="section-label">Common Questions</span>
+          <h2 className="section-title">Waterwell Questions — Houston Area</h2>
+          <div className={styles.faqGrid}>
+            {homeFaqs.map((faq, i) => (
+              <div key={i} className={styles.faqItem}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

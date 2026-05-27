@@ -610,3 +610,48 @@
   .testimonialsGrid { grid-template-columns: 1fr; }
   .areasGrid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ── FAQ SECTION ───────────────────────────────────────────── */
+.faqSection {
+  padding: 80px 24px;
+  background: #f7f4ef;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 0;
+  margin-top: 48px;
+}
+
+.faqItem {
+  padding: 28px 0;
+  border-bottom: 1px solid #ddd5c8;
+}
+
+.faqItem:nth-child(odd) {
+  padding-right: 40px;
+}
+
+.faqItem h3 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #1a2e1a;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.faqItem p {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+  .faqItem:nth-child(odd) {
+    padding-right: 0;
+  }
+}

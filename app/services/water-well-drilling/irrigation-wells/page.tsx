@@ -257,7 +257,7 @@ export default function IrrigationWellsPage() {
 
         {/* ── WHAT'S INCLUDED ─────────────────── */}
         <section className={styles.includedSection}>
-          <span className="section-label">What's Included</span>
+          <span className="section-label">What Is Included</span>
           <h2 className="section-title">Complete Irrigation Well Installation</h2>
           <div className={styles.includedGrid}>
             {included.map((item) => (
@@ -272,7 +272,7 @@ export default function IrrigationWellsPage() {
 
         {/* ── BEST FOR ────────────────────────── */}
         <section className={styles.bestForSection}>
-          <span className="section-label">Who It's For</span>
+          <span className="section-label">Who It Is For</span>
           <h2 className="section-title">Irrigation Wells Are Best For</h2>
           <div className={styles.bestForGrid}>
             {bestFor.map((b) => (
