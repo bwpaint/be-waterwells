@@ -13,7 +13,7 @@
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at 60% 40%, rgba(180,30,10,0.28) 0%, transparent 70%),
-              radial-gradient(ellipse at 20% 80%, rgba(217,95,10,0.18) 0%, transparent 60%);
+              radial-gradient(ellipse at 20% 80%, rgba(221,208,172,0.18) 0%, transparent 60%);
 }
 .heroInner {
   position: relative;

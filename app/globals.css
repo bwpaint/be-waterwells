@@ -6,9 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap');
 
 :root {
-  --charcoal:     #1a1714;
-  --dark-stone:   #2c2825;
-  --mid-stone:    #4a433c;
+  --charcoal:     #533B22;
+  --dark-stone:   #533B22;
+  --mid-stone:    #6B4F33;
   --warm-gray:    #7a7068;
   --sand:         #a89070;
   --sand-light:   #c4aa88;
@@ -16,9 +16,9 @@
   --cream-dark:   #ede3d0;
   --stone-light:  #e8e0d4;
   --white:        #ffffff;
-  --orange:       #d95f0a;
-  --orange-hover: #b84e08;
-  --orange-glow:  rgba(217,95,10,0.15);
+  --orange:       #DDD0AC;
+  --orange-hover: #C9B891;
+  --orange-glow:  rgba(221,208,172,0.20);
 
   --font-head: 'Montserrat', sans-serif;
   --font-body: 'Open Sans', sans-serif;
@@ -93,14 +93,14 @@ a {
 
 .btn-primary {
   background: var(--orange);
-  color: var(--white);
+  color: var(--charcoal);
   border-color: var(--orange);
 }
 .btn-primary:hover {
   background: var(--orange-hover);
   border-color: var(--orange-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(217,95,10,0.35);
+  box-shadow: 0 8px 24px rgba(221,208,172,0.35);
 }
 
 .btn-outline {

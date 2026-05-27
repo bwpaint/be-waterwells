@@ -62,8 +62,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(217,95,10,0.18);
-  border: 1px solid rgba(217,95,10,0.4);
+  background: rgba(221,208,172,0.18);
+  border: 1px solid rgba(221,208,172,0.4);
   color: var(--sand-light);
   font-family: var(--font-head);
   font-size: 0.7rem;

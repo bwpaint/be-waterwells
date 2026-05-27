@@ -13,7 +13,7 @@
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at 30% 60%, rgba(0,80,160,0.22) 0%, transparent 65%),
-              radial-gradient(ellipse at 80% 30%, rgba(217,95,10,0.15) 0%, transparent 55%);
+              radial-gradient(ellipse at 80% 30%, rgba(221,208,172,0.15) 0%, transparent 55%);
 }
 .heroInner {
   position: relative;
@@ -98,8 +98,8 @@
   padding: 24px;
 }
 .visualCardHighlight {
-  background: rgba(217,95,10,0.08) !important;
-  border-color: rgba(217,95,10,0.35) !important;
+  background: rgba(221,208,172,0.08) !important;
+  border-color: rgba(221,208,172,0.35) !important;
 }
 .visualTitle {
   font-family: var(--font-head);
