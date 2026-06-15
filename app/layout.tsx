@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +20,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* WebWize Proof overlay — activates only when a ?proof= or ?review= token is present */}
+        <Script
+          src="https://bewaterwellscms.wp1.sh/wp-content/plugins/webwize-connect/modules/proof/assets/launcher.js?ver=1.7.2"
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   );
 }
