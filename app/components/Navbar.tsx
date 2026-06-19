@@ -10,57 +10,16 @@ interface NavbarProps {
 }
 
 const serviceCategories = [
-  {
-    label: 'Water Well Drilling & Installation',
-    href: '/services/water-well-drilling',
-    children: [
-      { label: 'New Well Drilling', href: '/services/water-well-drilling' },
-      { label: 'Irrigation Wells', href: '/services/water-well-drilling' },
-      { label: 'Full Installation', href: '/services/water-well-drilling' },
-    ],
-  },
-  {
-    label: 'Residential Water Well Services',
-    href: '/services/residential',
-    children: [
-      { label: 'Well Pump Repair', href: '/services/residential' },
-      { label: 'Pressure & Constant Pressure', href: '/services/residential' },
-      { label: 'Generator Prep & Emergency', href: '/services/residential' },
-    ],
-  },
-  {
-    label: 'Commercial Water Well Services',
-    href: '/services/commercial',
-    children: [
-      { label: 'Ranch, Farm & Equestrian', href: '/services/commercial' },
-      { label: 'Commercial Sites', href: '/services/commercial' },
-      { label: 'High-Capacity Permits', href: '/services/commercial' },
-    ],
-  },
-  {
-    label: 'Water Well Rehabilitation',
-    href: '/services/well-rehabilitation',
-    children: [
-      { label: 'Restore Well Yield', href: '/services/well-rehabilitation' },
-      { label: 'Iron Bacteria Treatment', href: '/services/well-rehabilitation' },
-      { label: 'Well Screen Repair', href: '/services/well-rehabilitation' },
-    ],
-  },
-  {
-    label: 'Water Well Maintenance & Inspection',
-    href: '/services/well-maintenance',
-    children: [
-      { label: 'Annual Maintenance', href: '/services/well-maintenance' },
-      { label: 'Well Inspection', href: '/services/well-maintenance' },
-      { label: 'FHA / VA / Real Estate', href: '/services/well-maintenance' },
-    ],
-  },
+  { label: 'Water Well Drilling & Installation', href: '/services/water-well-drilling' },
+  { label: 'Residential Water Well Services', href: '/services/residential' },
+  { label: 'Commercial Water Well Services', href: '/services/commercial' },
+  { label: 'Water Well Rehabilitation', href: '/services/well-rehabilitation' },
+  { label: 'Water Well Maintenance & Inspection', href: '/services/well-maintenance' },
 ];
 
 export default function Navbar({ transparent = false }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [openMobileCategory, setOpenMobileCategory] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -89,28 +48,19 @@ export default function Navbar({ transparent = false }: NavbarProps) {
         <ul className={styles.navLinks}>
           <li><Link href="/">Home</Link></li>
 
-          {/* Services mega-dropdown */}
+          {/* Services dropdown */}
           <li className={styles.hasDropdown}>
             <Link href="/services">Services ▾</Link>
-            <div className={styles.megaDropdown}>
-              <div className={styles.megaInner}>
+            <div className={styles.dropdown}>
+              <ul className={styles.dropdownList}>
                 {serviceCategories.map((cat) => (
-                  <div key={cat.href} className={styles.megaCol}>
-                    <Link href={cat.href} className={styles.megaCatTitle}>
+                  <li key={cat.href}>
+                    <Link href={cat.href} className={styles.dropdownLink}>
                       {cat.label}
                     </Link>
-                    {cat.children.length > 0 && (
-                      <ul className={styles.megaSubLinks}>
-                        {cat.children.map((child) => (
-                          <li key={child.href}>
-                            <Link href={child.href} className={styles.megaSubLink}>{child.label}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </li>
 
@@ -128,7 +78,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
             (281) 448-4447
           </a>
           <Link href="/contact" className="btn btn-primary">
-            Free Estimate
+            Get Assistance
           </Link>
         </div>
 
@@ -147,45 +97,16 @@ export default function Navbar({ transparent = false }: NavbarProps) {
         <div className={styles.mobileMenu}>
           <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
 
+          <Link href="/services" onClick={() => setMenuOpen(false)}>Services</Link>
           {serviceCategories.map((cat) => (
-            <div key={cat.href} className={styles.mobileCategoryGroup}>
-              <div className={styles.mobileCategoryRow}>
-                <Link
-                  href={cat.href}
-                  className={styles.mobileCatLink}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {cat.label}
-                </Link>
-                {cat.children.length > 0 && (
-                  <button
-                    className={styles.mobileToggle}
-                    onClick={() =>
-                      setOpenMobileCategory(
-                        openMobileCategory === cat.href ? null : cat.href
-                      )
-                    }
-                    aria-label={`Expand ${cat.label}`}
-                  >
-                    {openMobileCategory === cat.href ? '▲' : '▼'}
-                  </button>
-                )}
-              </div>
-              {openMobileCategory === cat.href && cat.children.length > 0 && (
-                <div className={styles.mobileSubGroup}>
-                  {cat.children.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      className={styles.mobileSublink}
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+            <Link
+              key={cat.href}
+              href={cat.href}
+              className={styles.mobileSublink}
+              onClick={() => setMenuOpen(false)}
+            >
+              {cat.label}
+            </Link>
           ))}
 
           <Link href="/service-areas" onClick={() => setMenuOpen(false)}>Service Areas</Link>

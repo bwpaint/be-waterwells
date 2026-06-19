@@ -42,9 +42,9 @@ export default function HomePage() {
               Serving Houston and Surrounding Counties Since 1979
             </div>
             <h1 className={styles.heroH1}>
-              Houston&apos;s{" "}
-              <span className={styles.heroOrange}>Waterwell Services</span>
-              {" "}Experts
+              Houston Area<br />
+              <span className={styles.heroOrange}>Waterwell Services</span><br />
+              Experts
               <span className={styles.heroH1Sub}>
                 Drilling &middot; Pumps &middot; Rehabilitation
               </span>
@@ -58,9 +58,6 @@ export default function HomePage() {
               <a href="tel:+12814484447" className="btn btn-primary">
                 Call (281) 448-4447
               </a>
-              <Link href="/contact" className="btn btn-outline">
-                Free Estimate
-              </Link>
             </div>
             <div className={styles.heroTrust}>
               <span>TDLR Licensed</span>
