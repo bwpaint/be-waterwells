@@ -36,11 +36,11 @@ const jsonLd = {
     '@type': 'OfferCatalog',
     name: 'Waterwell Services',
     itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Water Well Drilling' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Emergency Well Services' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Well Pump Services' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Water Well Systems' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Well Maintenance' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Water Well Drilling & Installation' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Residential Water Well Services' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial & Agricultural Water Well Services' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Water Well Rehabilitation' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Water Well Maintenance & Inspection' } },
     ],
   },
 };
@@ -48,38 +48,38 @@ const jsonLd = {
 const categories = [
   {
     icon: '🔩',
-    title: 'Water Well Drilling',
+    title: 'Water Well Drilling & Installation',
     slug: 'water-well-drilling',
-    desc: 'New residential, irrigation, and commercial well drilling using truck-mounted rotary rigs. We drill to the Jasper, Chicot, and Evangeline Aquifers across the Houston area.',
-    services: ['New Residential Wells', 'Irrigation Wells', 'Commercial & Agricultural', 'Permit Handling'],
+    desc: 'New residential, irrigation, and commercial well drilling and complete installation using truck-mounted rotary rigs. We drill to the Jasper, Chicot, and Evangeline Aquifers across the Houston area.',
+    services: ['New Wells', 'Irrigation Wells', 'Full Installation', 'Permit Handling'],
   },
   {
-    icon: '🚨',
-    title: 'Emergency Well Services',
-    slug: 'emergency-well-services',
-    desc: '24/7 emergency dispatch for loss-of-water situations. If your pump quits or your well stops producing, we respond fast — day, night, or weekend.',
-    services: ['24/7 Emergency Response', 'Pump Failure Diagnosis', 'Same-Day Repair', 'Temporary Water Solutions'],
+    icon: '🏡',
+    title: 'Residential Water Well Services',
+    slug: 'residential',
+    desc: 'Everything homeowners need: well pump repair and replacement, pressure tanks, constant pressure systems, generator prep, and 24/7 emergency service.',
+    services: ['Pump Repair', 'Pressure Tanks', 'Constant Pressure', '24/7 Emergency'],
   },
   {
-    icon: '⚙️',
-    title: 'Well Pump Services',
-    slug: 'well-pump-services',
-    desc: 'Pump installation, repair, and replacement for submersible and jet pumps. Franklin Electric authorized dealer for constant pressure variable-speed systems.',
-    services: ['Pump Installation', 'Pump Repair & Replacement', 'Constant Pressure Systems', 'Motor Service'],
+    icon: '🏗️',
+    title: 'Commercial & Agricultural',
+    slug: 'commercial',
+    desc: 'High-capacity wells for ranches, farms, equestrian properties, nurseries, and commercial sites — larger casing, higher-horsepower pumps, high-capacity permits handled.',
+    services: ['Ranch & Livestock', 'Equestrian', 'Farms & Nurseries', 'Commercial Sites'],
   },
   {
-    icon: '🔧',
-    title: 'Water Well Systems',
-    slug: 'water-well-systems',
-    desc: 'Pressure tanks, generator prep kits, storage tanks, and complete system upgrades to keep your water supply reliable and code-compliant.',
-    services: ['Pressure Tank Replacement', 'Generator Prep Kits', 'Storage Tank Systems', 'System Upgrades'],
+    icon: '💧',
+    title: 'Water Well Rehabilitation',
+    slug: 'well-rehabilitation',
+    desc: 'Restore yield and water quality in declining wells through mechanical jetting, shock chlorination, and acid treatment — at a fraction of new well drilling cost.',
+    services: ['Restore Flow', 'Iron Bacteria', 'Well Screen Repair', 'Avoid Replacement'],
   },
   {
     icon: '🔍',
-    title: 'Well Maintenance',
+    title: 'Water Well Maintenance & Inspection',
     slug: 'well-maintenance',
-    desc: 'Scheduled inspection, well shocking, rehabilitation, and ongoing maintenance to extend the life of your waterwell and protect water quality.',
-    services: ['Annual Inspections', 'Well Shocking & Disinfection', 'Well Rehabilitation', 'Pre-Purchase Inspections'],
+    desc: 'Annual inspection, real-estate and FHA/VA well inspections, and ongoing maintenance programs to extend the life of your well and protect water quality.',
+    services: ['Annual Service', 'Home-Buyer Inspections', 'FHA / VA', 'Water Quality'],
   },
 ];
 
@@ -255,11 +255,4 @@ export default function ServicesHubPage() {
                 Request Free Estimate
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </>
-  );
-}
+        

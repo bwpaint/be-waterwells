@@ -279,7 +279,7 @@ export default function WaterWellCostPage() {
               <a href="tel:+12814484447" className={styles.ctaBtn}>
                 Call Now: (281) 448-4447
               </a>
-              <Link href="/services/well-pump-services/well-pump-repair" className={styles.ctaLink}>
+              <Link href="/services/residential" className={styles.ctaLink}>
                 Well Pump Repair Guide →
               </Link>
             </div>
@@ -324,7 +324,7 @@ export default function WaterWellCostPage() {
             </div>
             <div className={styles.relatedLinks}>
               <Link href="/services/water-well-drilling">Water Well Drilling Services</Link>
-              <Link href="/services/well-pump-services/well-pump-repair">Well Pump Repair</Link>
+              <Link href="/services/residential">Well Pump Repair</Link>
               <Link href="/services/well-maintenance">Well Maintenance</Link>
               <Link href="/services">All Services</Link>
             </div>
@@ -336,3 +336,4 @@ export default function WaterWellCostPage() {
     </>
   );
 }
+                                                

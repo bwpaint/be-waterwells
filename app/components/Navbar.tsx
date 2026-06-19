@@ -11,38 +11,48 @@ interface NavbarProps {
 
 const serviceCategories = [
   {
-    label: 'Water Well Drilling',
+    label: 'Water Well Drilling & Installation',
     href: '/services/water-well-drilling',
     children: [
-      { label: 'New Well Drilling', href: '/services/water-well-drilling/new-well-drilling' },
-      { label: 'Irrigation Wells', href: '/services/water-well-drilling/irrigation-wells' },
-      { label: 'Commercial & Agricultural', href: '/services/water-well-drilling/commercial-agricultural-wells' },
+      { label: 'New Well Drilling', href: '/services/water-well-drilling' },
+      { label: 'Irrigation Wells', href: '/services/water-well-drilling' },
+      { label: 'Full Installation', href: '/services/water-well-drilling' },
     ],
   },
   {
-    label: 'Well Pump Services',
-    href: '/services/well-pump-services',
+    label: 'Residential Water Well Services',
+    href: '/services/residential',
     children: [
-      { label: 'Well Pump Repair', href: '/services/well-pump-services/well-pump-repair' },
-      { label: 'Pump Installation & Repair', href: '/services/well-pump-services/pump-installation-repair' },
-      { label: 'Constant Pressure Systems', href: '/services/well-pump-services/constant-pressure-systems' },
+      { label: 'Well Pump Repair', href: '/services/residential' },
+      { label: 'Pressure & Constant Pressure', href: '/services/residential' },
+      { label: 'Generator Prep & Emergency', href: '/services/residential' },
     ],
   },
   {
-    label: 'Water Well Systems',
-    href: '/services/water-well-systems',
+    label: 'Commercial Water Well Services',
+    href: '/services/commercial',
     children: [
-      { label: 'Pressure Tank Systems', href: '/services/water-well-systems/pressure-tank-systems' },
-      { label: 'Generator Prep Kits', href: '/services/water-well-systems/generator-prep-kits' },
+      { label: 'Ranch, Farm & Equestrian', href: '/services/commercial' },
+      { label: 'Commercial Sites', href: '/services/commercial' },
+      { label: 'High-Capacity Permits', href: '/services/commercial' },
     ],
   },
   {
-    label: 'Well Maintenance',
+    label: 'Water Well Rehabilitation',
+    href: '/services/well-rehabilitation',
+    children: [
+      { label: 'Restore Well Yield', href: '/services/well-rehabilitation' },
+      { label: 'Iron Bacteria Treatment', href: '/services/well-rehabilitation' },
+      { label: 'Well Screen Repair', href: '/services/well-rehabilitation' },
+    ],
+  },
+  {
+    label: 'Water Well Maintenance & Inspection',
     href: '/services/well-maintenance',
     children: [
-      { label: 'Well Rehabilitation', href: '/services/well-maintenance/well-rehabilitation' },
-      { label: 'Well Inspection', href: '/services/well-maintenance/well-inspection' },
-      { label: 'Ongoing Maintenance', href: '/services/well-maintenance/ongoing-maintenance' },
+      { label: 'Annual Maintenance', href: '/services/well-maintenance' },
+      { label: 'Well Inspection', href: '/services/well-maintenance' },
+      { label: 'FHA / VA / Real Estate', href: '/services/well-maintenance' },
     ],
   },
 ];
@@ -182,10 +192,4 @@ export default function Navbar({ transparent = false }: NavbarProps) {
           <Link href="/resources/water-well-cost" onClick={() => setMenuOpen(false)}>Cost Guide</Link>
           <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
           <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
-          <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
-          <a href="tel:+12814484447" className={styles.mobileCta}>(281) 448-4447</a>
-        </div>
-      )}
-    </nav>
-  );
-}
+          

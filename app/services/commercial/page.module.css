@@ -179,154 +179,121 @@
 }
 .subLink:hover { color: var(--orange-hover); }
 
-/* ── AQUIFER ───────────────────────────────────────────────── */
-.aquiferSection { margin-bottom: 40px; }
-.aquiferGrid {
+/* ── SPEC TABLE (Commercial vs. Residential) ───────────────── */
+.specSection { margin-bottom: 40px; }
+.specGrid {
+  margin-top: 24px;
+  border: 1px solid var(--stone-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.specRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.4fr 1.6fr;
+  border-bottom: 1px solid var(--stone-light);
+}
+.specRow:last-child { border-bottom: none; }
+.specHead {
+  background: var(--charcoal);
+}
+.specHead .specCell {
+  font-family: var(--font-head);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sand-light);
+}
+.specCell {
+  padding: 16px 18px;
+  font-size: 0.85rem;
+  color: var(--dark-stone);
+  line-height: 1.6;
+  border-right: 1px solid var(--stone-light);
+}
+.specCell:last-child { border-right: none; }
+.specRow:nth-child(even of .specRow):not(.specHead) { background: var(--cream); }
+.specLabel {
+  font-family: var(--font-head);
+  font-weight: 800;
+  color: var(--charcoal);
+}
+.specNotes { color: var(--warm-gray); font-size: 0.82rem; }
+
+/* ── EQUESTRIAN ────────────────────────────────────────────── */
+.equestrianSection { margin-bottom: 40px; }
+.equestrianGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-top: 24px;
 }
-.aquiferCard {
+.equestrianCard {
   background: var(--charcoal);
   border: 1px solid var(--mid-stone);
   border-radius: var(--radius-lg);
   padding: 24px 20px;
 }
-.aquiferCounty {
+.equestrianTitle {
   font-family: var(--font-head);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 800;
   color: var(--sand-light);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   margin-bottom: 10px;
-}
-.aquiferDepth {
-  font-family: var(--font-head);
-  font-size: 1.7rem;
-  font-weight: 900;
-  color: var(--orange);
-  line-height: 1;
-  margin-bottom: 4px;
-}
-.aquiferName {
-  font-family: var(--font-head);
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.45);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--mid-stone);
 }
-.aquiferNotes { font-size: 0.82rem; color: rgba(255,255,255,0.58); line-height: 1.6; }
+.equestrianDesc { font-size: 0.85rem; color: rgba(255,255,255,0.62); line-height: 1.65; }
 
-/* ── PROCESS ───────────────────────────────────────────────── */
-.processSection { margin-bottom: 40px; }
-.processList {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 24px;
-}
-.processStep {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
+/* ── PERMITS ───────────────────────────────────────────────── */
+.permitsSection {
   background: var(--cream);
-  border: 1px solid var(--stone-light);
   border-radius: var(--radius-lg);
-  padding: 20px 22px;
-  transition: var(--transition);
-}
-.processStep:hover {
-  border-color: var(--orange);
-  box-shadow: var(--shadow-md);
-}
-.stepNum {
-  flex: none;
-  font-family: var(--font-head);
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--orange);
-  line-height: 1;
-  min-width: 44px;
-}
-.stepBody {}
-.stepTitle {
-  font-family: var(--font-head);
-  font-size: 0.98rem;
-  font-weight: 800;
-  color: var(--charcoal);
-  margin-bottom: 6px;
-}
-.stepDesc {
-  font-size: 0.88rem;
-  color: var(--warm-gray);
-  line-height: 1.65;
+  padding: 40px 32px;
+  margin-bottom: 40px;
 }
 
 /* ── COST ──────────────────────────────────────────────────── */
 .costSection { margin-bottom: 40px; }
-.costLead {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  background: var(--charcoal);
-  border-radius: var(--radius-lg);
-  padding: 26px 24px;
-  margin-top: 24px;
-}
-.costLead strong {
-  font-family: var(--font-head);
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--orange);
-  line-height: 1;
-}
-.costLead span {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.7;
-}
 .costGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 .costCard {
   background: var(--white);
   border: 1px solid var(--stone-light);
   border-radius: var(--radius-lg);
-  padding: 22px 20px;
-}
-.costCardTitle {
-  font-family: var(--font-head);
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--charcoal);
-  margin-bottom: 8px;
-}
-.costCardDesc {
-  font-size: 0.85rem;
-  color: var(--warm-gray);
-  line-height: 1.65;
-}
-.costLink {
-  font-size: 0.92rem;
-  color: var(--warm-gray);
-  line-height: 1.7;
-  margin-top: 20px;
-}
-.costLink a {
-  font-weight: 700;
-  color: var(--orange);
+  padding: 24px 20px;
+  text-align: center;
   transition: var(--transition);
 }
-.costLink a:hover { color: var(--orange-hover); }
+.costCard:hover {
+  border-color: var(--orange);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.costRange {
+  font-family: var(--font-head);
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--orange);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.costName {
+  font-family: var(--font-head);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+}
+.costNote { font-size: 0.82rem; color: var(--warm-gray); line-height: 1.6; }
 
 /* ── FAQ ───────────────────────────────────────────────────── */
 .faqSection { margin-bottom: 40px; }
@@ -384,11 +351,30 @@
 @media (max-width: 900px) {
   .heroGrid { padding: 52px 0 64px; }
   .subGrid { grid-template-columns: 1fr; }
-  .costGrid { grid-template-columns: 1fr; }
   .overviewStats { grid-template-columns: repeat(2, 1fr); }
-  .aquiferGrid { grid-template-columns: 1fr; }
+  .equestrianGrid { grid-template-columns: 1fr; }
+  .costGrid { grid-template-columns: 1fr; }
+  .specRow { grid-template-columns: 1fr; }
+  .specHead { display: none; }
+  .specCell { border-right: none; }
+  .specCell[data-th]::before {
+    content: attr(data-th);
+    display: block;
+    font-family: var(--font-head);
+    font-size: 0.62rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--orange);
+    margin-bottom: 4px;
+  }
+  .specLabel {
+    background: var(--cream);
+    font-size: 0.95rem;
+  }
 }
 @media (max-width: 600px) {
   .subServicesSection { padding: 28px 16px; }
+  .permitsSection { padding: 28px 16px; }
   .overviewStats { grid-template-columns: repeat(2, 1fr); }
 }

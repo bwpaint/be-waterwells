@@ -12,18 +12,16 @@ interface ServiceSidebarProps {
 }
 
 const SERVICE_OPTIONS = [
-  'Water Well Drilling',
-  'Irrigation Well',
-  'Emergency Well Service',
-  'Pump Installation',
-  'Pump Repair',
-  'Constant Pressure System',
-  'Pressure Tank',
-  'Generator Prep Kit',
-  'Well Rehabilitation',
-  'Well Inspection',
-  'Well Maintenance',
+  'Water Well Drilling & Installation',
+  'Residential Well Services',
+  'Well Pump Repair',
+  'Pressure Tank / Constant Pressure',
+  'Generator Prep',
+  'Emergency Service',
   'Commercial / Agricultural',
+  'Irrigation Well',
+  'Well Rehabilitation',
+  'Well Maintenance & Inspection',
   'Other',
 ];
 

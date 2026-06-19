@@ -113,7 +113,45 @@
   color: var(--warm-gray);
 }
 
-/* ── SUB-SERVICES ──────────────────────────────────────────── */
+/* ── WHY YIELD DECREASES ───────────────────────────────────── */
+.reasonsSection { margin-bottom: 40px; }
+.reasonsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+.reasonCard {
+  background: var(--white);
+  border: 1px solid var(--stone-light);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  position: relative;
+  transition: var(--transition);
+}
+.reasonCard:hover {
+  border-color: var(--orange);
+  box-shadow: var(--shadow-md);
+}
+.reasonNum {
+  font-family: var(--font-head);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--orange);
+  line-height: 1;
+  display: block;
+  margin-bottom: 10px;
+}
+.reasonTitle {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+.reasonDesc { font-size: 0.85rem; color: var(--warm-gray); line-height: 1.65; }
+
+/* ── SUB-SERVICES / METHODS ────────────────────────────────── */
 .subServicesSection {
   background: var(--cream);
   border-radius: var(--radius-lg);
@@ -122,7 +160,7 @@
 }
 .subGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;
   margin-top: 28px;
 }
@@ -179,157 +217,106 @@
 }
 .subLink:hover { color: var(--orange-hover); }
 
-/* ── AQUIFER ───────────────────────────────────────────────── */
-.aquiferSection { margin-bottom: 40px; }
-.aquiferGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+/* ── REHAB VS NEW WELL ─────────────────────────────────────── */
+.compareSection { margin-bottom: 40px; }
+.compareTable {
   margin-top: 24px;
-}
-.aquiferCard {
-  background: var(--charcoal);
-  border: 1px solid var(--mid-stone);
-  border-radius: var(--radius-lg);
-  padding: 24px 20px;
-}
-.aquiferCounty {
-  font-family: var(--font-head);
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--sand-light);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 10px;
-}
-.aquiferDepth {
-  font-family: var(--font-head);
-  font-size: 1.7rem;
-  font-weight: 900;
-  color: var(--orange);
-  line-height: 1;
-  margin-bottom: 4px;
-}
-.aquiferName {
-  font-family: var(--font-head);
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.45);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--mid-stone);
-}
-.aquiferNotes { font-size: 0.82rem; color: rgba(255,255,255,0.58); line-height: 1.6; }
-
-/* ── PROCESS ───────────────────────────────────────────────── */
-.processSection { margin-bottom: 40px; }
-.processList {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 24px;
-}
-.processStep {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  background: var(--cream);
   border: 1px solid var(--stone-light);
   border-radius: var(--radius-lg);
-  padding: 20px 22px;
-  transition: var(--transition);
+  overflow: hidden;
 }
-.processStep:hover {
-  border-color: var(--orange);
-  box-shadow: var(--shadow-md);
+.compareRow {
+  display: grid;
+  grid-template-columns: 1.1fr 1.4fr 1.4fr;
+  border-bottom: 1px solid var(--stone-light);
 }
-.stepNum {
-  flex: none;
+.compareRow:last-child { border-bottom: none; }
+.compareHead {
+  background: var(--charcoal);
+}
+.compareHead .compareCell {
   font-family: var(--font-head);
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--orange);
-  line-height: 1;
-  min-width: 44px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white);
 }
-.stepBody {}
-.stepTitle {
+.compareCell {
+  padding: 14px 16px;
+  font-size: 0.85rem;
+  color: var(--warm-gray);
+  line-height: 1.55;
+  border-right: 1px solid var(--stone-light);
+}
+.compareCell:last-child { border-right: none; }
+.compareLabel {
   font-family: var(--font-head);
-  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  background: var(--cream);
+}
+.compareRehab {
+  color: var(--dark-stone);
+  font-weight: 600;
+}
+.compareRow:nth-child(even) .compareRehab { background: rgba(0,0,0,0.015); }
+
+/* ── IRON BACTERIA ─────────────────────────────────────────── */
+.ironSection { margin-bottom: 40px; }
+.ironHeading {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-top: 28px;
+  margin-bottom: 4px;
+}
+.ironGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+.ironCard {
+  background: var(--cream);
+  border: 1px solid var(--stone-light);
+  border-left: 3px solid var(--orange);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.ironSign {
+  font-family: var(--font-head);
+  font-size: 0.9rem;
   font-weight: 800;
   color: var(--charcoal);
   margin-bottom: 6px;
 }
-.stepDesc {
-  font-size: 0.88rem;
-  color: var(--warm-gray);
-  line-height: 1.65;
-}
-
-/* ── COST ──────────────────────────────────────────────────── */
-.costSection { margin-bottom: 40px; }
-.costLead {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  background: var(--charcoal);
-  border-radius: var(--radius-lg);
-  padding: 26px 24px;
-  margin-top: 24px;
-}
-.costLead strong {
-  font-family: var(--font-head);
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--orange);
-  line-height: 1;
-}
-.costLead span {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.7;
-}
-.costGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 20px;
-}
-.costCard {
-  background: var(--white);
-  border: 1px solid var(--stone-light);
-  border-radius: var(--radius-lg);
-  padding: 22px 20px;
-}
-.costCardTitle {
-  font-family: var(--font-head);
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--charcoal);
-  margin-bottom: 8px;
-}
-.costCardDesc {
-  font-size: 0.85rem;
-  color: var(--warm-gray);
-  line-height: 1.65;
-}
-.costLink {
-  font-size: 0.92rem;
-  color: var(--warm-gray);
-  line-height: 1.7;
-  margin-top: 20px;
-}
-.costLink a {
-  font-weight: 700;
-  color: var(--orange);
-  transition: var(--transition);
-}
-.costLink a:hover { color: var(--orange-hover); }
+.ironDesc { font-size: 0.82rem; color: var(--warm-gray); line-height: 1.6; }
 
 /* ── FAQ ───────────────────────────────────────────────────── */
 .faqSection { margin-bottom: 40px; }
+
+/* ── CROSS-LINKS ───────────────────────────────────────────── */
+.crossLinkSection {
+  background: var(--cream);
+  border: 1px solid var(--stone-light);
+  border-radius: var(--radius-lg);
+  padding: 22px 26px;
+  margin-bottom: 40px;
+}
+.crossLinkP {
+  font-size: 0.92rem;
+  color: var(--warm-gray);
+  line-height: 1.7;
+  margin: 0;
+}
+.crossLink {
+  color: var(--orange);
+  font-weight: 700;
+  transition: var(--transition);
+}
+.crossLink:hover { color: var(--orange-hover); }
 
 /* ── SERVICE AREAS ─────────────────────────────────────────── */
 .areasSection { margin-bottom: 8px; }
@@ -384,11 +371,15 @@
 @media (max-width: 900px) {
   .heroGrid { padding: 52px 0 64px; }
   .subGrid { grid-template-columns: 1fr; }
-  .costGrid { grid-template-columns: 1fr; }
+  .reasonsGrid { grid-template-columns: 1fr; }
+  .ironGrid { grid-template-columns: 1fr; }
   .overviewStats { grid-template-columns: repeat(2, 1fr); }
-  .aquiferGrid { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
   .subServicesSection { padding: 28px 16px; }
   .overviewStats { grid-template-columns: repeat(2, 1fr); }
+  .compareRow { grid-template-columns: 1fr; }
+  .compareCell { border-right: none; }
+  .compareHead { display: none; }
+  .compareLabel { background: var(--charcoal); color: var(--white); }
 }

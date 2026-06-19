@@ -8,7 +8,7 @@
 .heroBg {
   position: absolute;
   inset: 0;
-  background-image: url('https://bewaterwells.com/wp-content/uploads/2024/09/water-well-services.webp');
+  background-image: url('https://bewaterwells.com/wp-content/uploads/2024/09/bewater1-scaled.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.18;
@@ -179,154 +179,216 @@
 }
 .subLink:hover { color: var(--orange-hover); }
 
-/* ── AQUIFER ───────────────────────────────────────────────── */
-.aquiferSection { margin-bottom: 40px; }
-.aquiferGrid {
+/* ── PUMP REPAIR (keyword anchor) ──────────────────────────── */
+.pumpSection { margin-bottom: 40px; }
+.signGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+.signCard {
+  background: var(--white);
+  border: 1px solid var(--stone-light);
+  border-left: 3px solid var(--orange);
+  border-radius: var(--radius);
+  padding: 18px 18px;
+}
+.signCard h3 {
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+.signCard p { font-size: 0.84rem; color: var(--warm-gray); line-height: 1.6; }
+
+.calloutBox {
+  background: var(--cream);
+  border: 1px solid var(--stone-light);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-top: 22px;
+  font-size: 0.9rem;
+  color: var(--dark-stone);
+  line-height: 1.7;
+}
+.calloutBox strong { color: var(--orange); }
+
+/* ── REPAIR VS REPLACE ─────────────────────────────────────── */
+.compareGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+.compareCol {
+  background: var(--white);
+  border: 1px solid var(--stone-light);
+  border-radius: var(--radius-lg);
+  padding: 24px 22px;
+}
+.compareCol h3 {
+  font-family: var(--font-head);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--stone-light);
+}
+.compareCol ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.compareCol li {
+  font-size: 0.85rem;
+  color: var(--dark-stone);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.55;
+}
+.compareCol li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+  font-weight: 700;
+}
+
+/* ── COST TABLE ────────────────────────────────────────────── */
+.costTable {
+  margin-top: 24px;
+  border: 1px solid var(--stone-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.costRow {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.4fr;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--stone-light);
+  align-items: center;
+}
+.costRow:last-child { border-bottom: none; }
+.costRow:nth-child(even) { background: var(--cream); }
+.costRowHead {
+  background: var(--charcoal);
+  color: var(--white);
+}
+.costRowHead span {
+  font-family: var(--font-head);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sand-light);
+}
+.costService { font-size: 0.85rem; color: var(--charcoal); font-weight: 600; }
+.costPrice {
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--orange);
+}
+.costNote { font-size: 0.78rem; color: var(--warm-gray); }
+
+/* ── PRESSURE / CONSTANT PRESSURE ──────────────────────────── */
+.pressureSection {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  margin-bottom: 40px;
+}
+.featureGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-top: 24px;
 }
-.aquiferCard {
-  background: var(--charcoal);
-  border: 1px solid var(--mid-stone);
-  border-radius: var(--radius-lg);
-  padding: 24px 20px;
-}
-.aquiferCounty {
-  font-family: var(--font-head);
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--sand-light);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 10px;
-}
-.aquiferDepth {
-  font-family: var(--font-head);
-  font-size: 1.7rem;
-  font-weight: 900;
-  color: var(--orange);
-  line-height: 1;
-  margin-bottom: 4px;
-}
-.aquiferName {
-  font-family: var(--font-head);
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.45);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--mid-stone);
-}
-.aquiferNotes { font-size: 0.82rem; color: rgba(255,255,255,0.58); line-height: 1.6; }
-
-/* ── PROCESS ───────────────────────────────────────────────── */
-.processSection { margin-bottom: 40px; }
-.processList {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 24px;
-}
-.processStep {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  background: var(--cream);
-  border: 1px solid var(--stone-light);
-  border-radius: var(--radius-lg);
-  padding: 20px 22px;
-  transition: var(--transition);
-}
-.processStep:hover {
-  border-color: var(--orange);
-  box-shadow: var(--shadow-md);
-}
-.stepNum {
-  flex: none;
-  font-family: var(--font-head);
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--orange);
-  line-height: 1;
-  min-width: 44px;
-}
-.stepBody {}
-.stepTitle {
-  font-family: var(--font-head);
-  font-size: 0.98rem;
-  font-weight: 800;
-  color: var(--charcoal);
-  margin-bottom: 6px;
-}
-.stepDesc {
-  font-size: 0.88rem;
-  color: var(--warm-gray);
-  line-height: 1.65;
-}
-
-/* ── COST ──────────────────────────────────────────────────── */
-.costSection { margin-bottom: 40px; }
-.costLead {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  background: var(--charcoal);
-  border-radius: var(--radius-lg);
-  padding: 26px 24px;
-  margin-top: 24px;
-}
-.costLead strong {
-  font-family: var(--font-head);
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--orange);
-  line-height: 1;
-}
-.costLead span {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.7;
-}
-.costGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 20px;
-}
-.costCard {
+.featureCard {
   background: var(--white);
   border: 1px solid var(--stone-light);
   border-radius: var(--radius-lg);
   padding: 22px 20px;
 }
-.costCardTitle {
+.featureCard h3 {
   font-family: var(--font-head);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 800;
   color: var(--charcoal);
   margin-bottom: 8px;
 }
-.costCardDesc {
-  font-size: 0.85rem;
-  color: var(--warm-gray);
-  line-height: 1.65;
+.featureCard p { font-size: 0.84rem; color: var(--warm-gray); line-height: 1.65; }
+
+/* ── GENERATOR ─────────────────────────────────────────────── */
+.generatorSection { margin-bottom: 40px; }
+
+/* ── EMERGENCY CALLOUT ─────────────────────────────────────── */
+.emergencyBlock {
+  background: var(--charcoal);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
 }
-.costLink {
-  font-size: 0.92rem;
-  color: var(--warm-gray);
+.emergencyBadge {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--white);
+  font-family: var(--font-head);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+.emergencyBlock h2 {
+  font-family: var(--font-head);
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+.emergencyBlock p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
   line-height: 1.7;
-  margin-top: 20px;
+  max-width: 620px;
+  margin-bottom: 24px;
 }
-.costLink a {
-  font-weight: 700;
+.emergencyStats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 26px;
+}
+.emergencyStat {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--mid-stone);
+  border-radius: var(--radius);
+  padding: 16px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.emergencyStat strong {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 900;
   color: var(--orange);
-  transition: var(--transition);
 }
-.costLink a:hover { color: var(--orange-hover); }
+.emergencyStat span {
+  font-family: var(--font-head);
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.55);
+}
+.emergencyBtns { display: flex; gap: 14px; flex-wrap: wrap; }
 
 /* ── FAQ ───────────────────────────────────────────────────── */
 .faqSection { margin-bottom: 40px; }
@@ -384,11 +446,17 @@
 @media (max-width: 900px) {
   .heroGrid { padding: 52px 0 64px; }
   .subGrid { grid-template-columns: 1fr; }
-  .costGrid { grid-template-columns: 1fr; }
   .overviewStats { grid-template-columns: repeat(2, 1fr); }
-  .aquiferGrid { grid-template-columns: 1fr; }
+  .signGrid { grid-template-columns: 1fr; }
+  .compareGrid { grid-template-columns: 1fr; }
+  .featureGrid { grid-template-columns: 1fr; }
+  .emergencyStats { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 600px) {
   .subServicesSection { padding: 28px 16px; }
+  .pressureSection { padding: 28px 16px; }
+  .emergencyBlock { padding: 28px 20px; }
   .overviewStats { grid-template-columns: repeat(2, 1fr); }
+  .costRow { grid-template-columns: 1fr; gap: 4px; }
+  .costRowHead { display: none; }
 }

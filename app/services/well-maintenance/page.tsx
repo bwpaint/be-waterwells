@@ -8,18 +8,51 @@ import CityFaqAccordion from '../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Water Well Maintenance Services — Houston, TX | B-E Waterwell',
+  title: 'Water Well Maintenance & Inspection — Houston, TX | B-E Waterwell',
   description:
-    'Annual well inspection, well rehabilitation, and ongoing maintenance programs in Houston, TX. TDLR licensed since 1979. Free estimate. (281) 448-4447.',
+    'Annual water well maintenance and well inspection in Houston, TX — for home buyers, FHA/VA/USDA loans, and well owners. Rehabilitation referral. TDLR licensed since 1979. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/well-maintenance' },
 };
+
+const faqs = [
+  {
+    question: 'How often should a water well be inspected and serviced in the Houston area?',
+    answer:
+      'Annual inspection is recommended for residential wells, and at minimum every 3 years. In Houston, the humid climate and mineral-heavy Jasper Aquifer water accelerate equipment wear, so consistent well water pump maintenance pays off. Pre-hurricane season pump checks are also wise — discovering a weak pump in April is far better than discovering it in August when your power is out.',
+  },
+  {
+    question: 'What does a water well inspection include?',
+    answer:
+      'Our inspection covers visual inspection of the wellhead and casing (sanitary cap, vent screen, setback from structures), a pump performance test (flow rate and motor amp draw), a pressure system check (tank pre-charge, switch calibration), a water quality sample collection, and a written report with photos. For FHA/VA/USDA requirements, we test for bacteria and nitrates as required by the applicable program.',
+  },
+  {
+    question: 'Can I set up an ongoing annual maintenance plan with B-E Waterwell?',
+    answer:
+      'Yes. We offer priority scheduling for customers who want an annual maintenance relationship. We maintain your service record and reach out when your visit is due. You receive written service reports after every visit — these records are valuable when selling your home and may support warranty claims on equipment.',
+  },
+  {
+    question: 'How much does well inspection and annual maintenance cost?',
+    answer:
+      'A standard well inspection — site visit, pump performance test, pressure system check, water quality sample collection, and written report — typically costs $250–$450, with lab fees additional depending on the panel required. Annual maintenance service visits run $200–$350 depending on system complexity. Any repairs found are quoted separately in writing before we do anything.',
+  },
+  {
+    question: 'What happens if my well fails inspection?',
+    answer:
+      'We provide a written summary of all issues found and what remediation is recommended. Many issues are fixable at reasonable cost — a waterlogged pressure tank ($400–$900), a failing pump ($800–$1,800), or a water quality treatment system. We quote remediation separately so buyers and sellers have clear information for negotiations. Not all "failures" mean a new well.',
+  },
+  {
+    question: 'How does documented maintenance affect my well equipment warranty and home sale?',
+    answer:
+      'Franklin Electric pump warranties and most pressure tank warranties are more supportable with documented maintenance records from a TDLR-licensed contractor. Written service records also protect your investment when selling — buyers and lenders in the Houston area ask about well maintenance history, and a documented record of annual inspections answers that with confidence.',
+  },
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Water Well Maintenance — Houston, TX',
+      name: 'Water Well Maintenance & Inspection — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
@@ -32,93 +65,90 @@ const jsonLd = {
         },
       },
       areaServed: 'Houston, TX',
-      description: 'Annual well inspection, well rehabilitation, and ongoing maintenance programs. TDLR licensed, serving Houston since 1979.',
+      description:
+        'Annual water well maintenance, well water pump maintenance, and certified well inspection for home buyers, real estate transactions, and FHA/VA/USDA loans across the Houston area. TDLR licensed, serving Houston since 1979.',
     },
     {
       '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How often should I service my water well?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Annual inspection is recommended for residential wells. At minimum, get a professional inspection every 3 years. Pre-hurricane season pump checks are also a good idea in the Houston area.',
-          },
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: f.answer,
         },
-        {
-          '@type': 'Question',
-          name: 'What does an annual well inspection include?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Our annual inspection covers pump performance test (flow rate and amp draw), pressure tank pre-charge check, wellhead and casing visual inspection, pressure switch calibration, water pressure and flow rate measurement, and a written report with recommendations.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do you offer well maintenance service plans?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We offer priority scheduling for customers who call annually for inspection service. Annual inspection customers receive written records useful for home sales and insurance purposes. Call to set up your annual schedule.',
-          },
-        },
-      ],
+      })),
     },
   ],
 };
 
-const subServices = [
-  {
-    icon: '🔬',
-    title: 'Well Rehabilitation',
-    slug: 'well-rehabilitation',
-    desc: 'Restore declining well yields through mechanical jetting, shock chlorination, or acid treatment. Often avoids costly new well drilling.',
-    highlights: ['Biofouling treatment', 'Mechanical jetting', 'Acid descaling', 'Rehab vs. new well guidance'],
-  },
-  {
-    icon: '🔍',
-    title: 'Well Inspection',
-    slug: 'well-inspection',
-    desc: 'Certified well inspection for home buyers, real estate transactions, FHA/VA/USDA loans, and annual owner maintenance.',
-    highlights: ['Written report with photos', 'Pump performance test', 'Water quality sample', 'FHA/VA compliant'],
-  },
-  {
-    icon: '📅',
-    title: 'Ongoing Maintenance',
-    slug: 'ongoing-maintenance',
-    desc: 'Annual service calls, seasonal checks, and written maintenance records that protect your well investment and simplify home sales.',
-    highlights: ['Annual pump performance test', 'Pressure tank check', 'Written service records', 'Priority scheduling'],
-  },
-];
-
 const checklist = [
-  { item: 'Pump performance test', detail: 'Flow rate, motor amp draw, start/stop pressures' },
-  { item: 'Water quality visual', detail: 'Color, odor, clarity — flag for lab testing if needed' },
-  { item: 'Pressure tank pre-charge', detail: 'Check bladder integrity and air charge level' },
-  { item: 'Casing integrity', detail: 'Visual inspection at wellhead for cracks, corrosion, vermin entry' },
-  { item: 'Wellhead condition', detail: 'Vent screen, sanitary cap, surface seal condition' },
-  { item: 'Water level assessment', detail: 'Static and pumping water level if accessible' },
+  { icon: '⚙️', item: 'Pump Performance Test', detail: 'Flow rate, motor amp draw, and start/stop pressure verification to confirm the pump is operating within spec.' },
+  { icon: '🔋', item: 'Pressure Tank Pre-Charge', detail: 'Check bladder integrity and air charge level. A declining pre-charge is an early warning of bladder failure before waterlogging occurs.' },
+  { icon: '🔍', item: 'Wellhead & Casing Visual', detail: 'Inspect sanitary cap, vent screen, surface seal, and casing condition. Check for pest entry points or surface water intrusion risks.' },
+  { icon: '📊', item: 'Pressure & Flow Rate Test', detail: 'Measure system pressure at multiple points, verify cut-in and cut-out settings, and check for pressure loss across distribution.' },
+  { icon: '🔧', item: 'Pressure Switch Calibration', detail: 'Verify and adjust cut-in and cut-out pressure settings. An out-of-spec switch causes short cycling or inadequate system pressure.' },
+  { icon: '💧', item: 'Water Quality Visual', detail: 'Assess color, clarity, and odor. Flag any changes from prior visits for targeted lab testing if needed.' },
 ];
 
 const costCompare = [
-  { type: 'Annual Preventive Maintenance', cost: '$200–$400/year', outcome: 'Catch problems early, extend equipment life 3–5 years, maintain water quality' },
+  { type: 'Annual Preventive Maintenance', cost: '$200–$400/year', outcome: 'Catch problems early, extend equipment life 3–5 years, and maintain water quality.' },
   { type: 'Emergency Pump Replacement', cost: '$800–$1,800', outcome: 'Unplanned, urgent, often includes overtime. Could have been prevented with regular inspection.' },
-  { type: 'Emergency System Repair', cost: '$1,500–$3,000+', outcome: 'Multiple component failures when one issue was ignored. Highest cost outcome.' },
+  { type: 'Emergency System Repair', cost: '$1,500–$3,000+', outcome: 'Multiple component failures when one issue was ignored. The highest-cost outcome.' },
 ];
 
-const faqs = [
+const inspectionSituations = [
+  { icon: '🏠', title: 'Home Buyers', desc: 'Purchasing a property with a private well? A pre-purchase inspection gives you an independent assessment of the well system — pump condition, water quality, and pressure performance.' },
+  { icon: '📋', title: 'Sellers Pre-Listing', desc: 'A pre-listing well inspection lets you address issues before they become closing surprises. Buyers and agents appreciate documented inspection history.' },
+  { icon: '🔄', title: 'Annual Owners', desc: 'Current well owners benefit from annual or every-3-year inspection to catch issues early — pump wear, water quality changes, and pressure tank decline.' },
+  { icon: '🏦', title: 'FHA / VA / USDA Borrowers', desc: 'Government-backed loans require a functioning well inspection and water quality test meeting minimum distance requirements. We are familiar with all applicable requirements.' },
+  { icon: '🏘️', title: 'Real Estate Agents', desc: 'Houston realtors rely on our fast turnaround inspection reports to keep transactions on track. We know what lenders need and deliver it quickly.' },
+];
+
+const inspectionCovers = [
+  { item: 'Wellhead & casing visual', detail: 'Vent screen, sanitary cap, surface seal, setback from septic' },
+  { item: 'Pump performance test', detail: 'Flow rate (GPM), pressure output, motor amp draw' },
+  { item: 'Recovery rate assessment', detail: 'How quickly the water level recovers after pumping' },
+  { item: 'Pressure system check', detail: 'Tank pre-charge, pressure switch calibration, cut-in/cut-out settings' },
+  { item: 'Water quality sample', detail: 'Collected for lab analysis — bacteria, nitrates, and basic chemistry' },
+  { item: 'Written report with photos', detail: 'Delivered within 24 hours of site visit, formatted for lenders' },
+];
+
+const seasonalCalendar = [
   {
-    question: 'How often should I have my well serviced in the Houston area?',
-    answer: 'Annual inspection is recommended for residential wells. At minimum, every 3 years. In Houston, the humid climate and mineral-heavy Jasper Aquifer water accelerate equipment wear. Pre-hurricane season pump checks are also wise — discovering a weak pump in April is far better than discovering it in August when your power is out.',
+    season: 'Spring 🌱',
+    items: [
+      'Post-freeze inspection — check for cracked pressure tank or casing damage',
+      'Annual water quality test (bacteria and basic chemistry)',
+      'Verify generator prep kit function before hurricane season',
+    ],
   },
   {
-    question: 'What does an annual well inspection include?',
-    answer: 'Our inspection covers: pump performance test (flow rate, motor amp draw), pressure tank pre-charge check, wellhead and casing visual, pressure switch calibration, water pressure and flow rate measurement, visual water quality assessment, and a written report with photos and recommendations. We document everything in writing.',
+    season: 'Pre-Hurricane (May) ⚡',
+    items: [
+      'Pump performance test — identify any weakening before storm season',
+      'Generator hookup test run under load',
+      'Fuel and supply inventory check',
+    ],
   },
   {
-    question: 'Do you offer well maintenance service plans or contracts?',
-    answer: 'We offer priority scheduling and written record-keeping for customers who schedule annual inspections with us. These written service records are valuable when selling your home — buyers and lenders want to see documented maintenance history. Call us to set up your annual schedule and we will reach out before each inspection is due.',
+    season: 'Fall 🍂',
+    items: [
+      'Pre-winter system check — pressure tank, all fittings',
+      'Verify wellhead is clear of debris and vegetation',
+      'Address any issues found during the year before cold weather',
+    ],
+  },
+  {
+    season: 'Annual 📅',
+    items: [
+      'Full inspection per the B-E Waterwell checklist',
+      'Written report with photos and prior-year comparison',
+      'Recommendations for upcoming service needs',
+    ],
   },
 ];
+
 const serviceAreas = [
   { city: 'Magnolia', slug: 'magnolia-tx', hq: true },
   { city: 'Conroe', slug: 'conroe-tx' },
@@ -148,30 +178,33 @@ export default function WellMaintenancePage() {
         <div className={styles.heroBg} />
         <div className="container">
           <div className={styles.heroGrid}>
-            <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-              <Link href="/">Home</Link>
-              <span>/</span>
-              <Link href="/services">Services</Link>
-              <span>/</span>
-              <span>Well Maintenance</span>
-            </nav>
-            <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>Houston, TX · Since 1979</span>
-              <h1 className={styles.h1Line2}>Well Maintenance Services</h1>
-              <span className={styles.h1Line3}>Inspection · Rehabilitation · Ongoing Care</span>
-            </div>
-            <p className={styles.heroSubtitle}>
-              Wells last 20–40 years with proper care — or 10–15 without it. B-E Waterwell
-              provides annual inspection, well rehabilitation, and ongoing maintenance
-              programs across Houston, TX. TDLR licensed.
-            </p>
-            <div className={styles.heroBtns}>
-              <a href="tel:+12814484447" className="btn btn-primary">
-                📞 (281) 448-4447
-              </a>
-              <Link href="/contact" className="btn btn-outline">
-                Free Estimate
-              </Link>
+            <div className={styles.heroContent}>
+              <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+                <Link href="/">Home</Link>
+                <span>/</span>
+                <Link href="/services">Services</Link>
+                <span>/</span>
+                <span>Water Well Maintenance &amp; Inspection</span>
+              </nav>
+              <div className={styles.h1Wrap}>
+                <span className={styles.h1Line1}>Houston, TX · Since 1979</span>
+                <h1 className={styles.h1Line2}>Water Well Maintenance &amp; Inspection</h1>
+                <span className={styles.h1Line3}>Annual Service · Inspections · Real-Estate &amp; FHA/VA</span>
+              </div>
+              <p className={styles.heroSubtitle}>
+                Wells last 20–40 years with proper care — or 10–15 without it. B-E Waterwell
+                provides annual well water pump maintenance, certified well inspections for
+                home buyers and FHA/VA/USDA loans, and ongoing seasonal care across
+                Houston, TX. TDLR licensed.
+              </p>
+              <div className={styles.heroBtns}>
+                <a href="tel:+12814484447" className="btn btn-primary">
+                  📞 (281) 448-4447
+                </a>
+                <Link href="/contact" className="btn btn-outline">
+                  Free Estimate
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -183,44 +216,33 @@ export default function WellMaintenancePage() {
         defaultService="Well Maintenance"
       >
 
-        {/* ── WHY MAINTENANCE ─────────────────── */}
-        <section className={styles.whySection}>
+        {/* ── OVERVIEW ────────────────────────── */}
+        <section className={styles.overviewSection}>
           <span className="section-label">Why Maintenance Matters</span>
           <h2 className="section-title">Maintained Wells Last Twice as Long</h2>
-          <p className={styles.bodyP}>
+          <p className={styles.overviewP}>
             A residential waterwell with annual inspection and proper maintenance
             regularly achieves 25–40 years of service. Neglected wells — where problems
             go undetected — often fail at 10–15 years, requiring expensive emergency
-            repairs or full replacement. The math is simple: a $250 annual inspection
-            is far cheaper than a $1,500 emergency repair or a $12,000 new well.
+            repairs or full replacement. The math is simple: a $250 annual inspection is
+            far cheaper than a $1,500 emergency repair or a $12,000 new well.
           </p>
-          <p className={styles.bodyP} style={{ marginTop: 14 }}>
-            In Houston, the Jasper Aquifer water is mineral-heavy with iron
-            content that accelerates pump wear and can cause biofouling in aging wells.
-            Annual monitoring catches these conditions early, when they are treatable
-            rather than catastrophic.
+          <p className={styles.overviewP}>
+            In Houston, the Jasper Aquifer water is mineral-heavy with iron content that
+            accelerates pump wear and can cause biofouling in aging wells. Annual
+            monitoring catches these conditions early, when they are treatable rather than
+            catastrophic.
           </p>
-        </section>
-
-        {/* ── SUB-SERVICE CARDS ────────────────── */}
-        <section className={styles.subServicesSection}>
-          <span className="section-label">Maintenance Services</span>
-          <h2 className="section-title">Three Ways We Maintain Your Well</h2>
-          <div className={styles.subGrid}>
-            {subServices.map((s) => (
-              <div key={s.slug} className={styles.subCard}>
-                <span className={styles.subIcon}>{s.icon}</span>
-                <h3 className={styles.subTitle}>{s.title}</h3>
-                <p className={styles.subDesc}>{s.desc}</p>
-                <ul className={styles.subHighlights}>
-                  {s.highlights.map((h) => <li key={h}>{h}</li>)}
-                </ul>
-                <Link
-                  href={`/services/well-maintenance/${s.slug}`}
-                  className={styles.subLink}
-                >
-                  Learn More →
-                </Link>
+          <div className={styles.overviewStats}>
+            {[
+              { stat: '25–40 yr', label: 'Maintained Lifespan' },
+              { stat: '$250', label: 'Inspection vs. $1,500 Repair' },
+              { stat: '45+', label: 'Years Serving Houston' },
+              { stat: 'TDLR', label: 'Licensed' },
+            ].map((s) => (
+              <div key={s.label} className={styles.overviewStat}>
+                <strong>{s.stat}</strong>
+                <span>{s.label}</span>
               </div>
             ))}
           </div>
@@ -231,85 +253,16 @@ export default function WellMaintenancePage() {
           <span className="section-label">What We Check</span>
           <h2 className="section-title">The B-E Maintenance Checklist</h2>
           <p className={styles.bodyP}>
-            Every maintenance visit follows a documented checklist. You receive a
-            written report with findings, photos, and recommendations after every call.
+            Every maintenance visit follows a documented checklist. You receive a written
+            report with findings, photos, test results, and prior-visit comparison after
+            every call.
           </p>
           <div className={styles.checkGrid}>
             {checklist.map((c) => (
               <div key={c.item} className={styles.checkCard}>
-                <div className={styles.checkIcon}>✓</div>
+                <div className={styles.checkIcon}>{c.icon}</div>
                 <div>
                   <h3 className={styles.checkItem}>{c.item}</h3>
                   <p className={styles.checkDetail}>{c.detail}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ── COST COMPARE ─────────────────────── */}
-        <section className={styles.costSection}>
-          <span className="section-label">The Cost of Not Maintaining</span>
-          <h2 className="section-title">Preventive Maintenance vs. Emergency Repair</h2>
-          <div className={styles.costTable}>
-            {costCompare.map((row) => (
-              <div key={row.type} className={styles.costRow}>
-                <div className={styles.costType}>{row.type}</div>
-                <div className={styles.costAmt}>{row.cost}</div>
-                <div className={styles.costOutcome}>{row.outcome}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ── FAQ ─────────────────────────────── */}
-        <section className={styles.faqSection}>
-          <span className="section-label">Common Questions</span>
-          <h2 className="section-title">Well Maintenance FAQs</h2>
-          <CityFaqAccordion faqs={faqs} />
-        </section>
-
-        {/* ── SERVICE AREAS ───────────────────── */}
-        <section className={styles.areasSection}>
-          <span className="section-label">Where We Work</span>
-          <h2 className="section-title">Service Areas</h2>
-          <div className={styles.areasGrid}>
-            {serviceAreas.map((a) => (
-              <Link
-                key={a.slug}
-                href={`/service-area/${a.slug}`}
-                className={`${styles.areaChip} ${a.hq ? styles.areaChipHQ : ''}`}
-              >
-                {a.city}, TX {a.hq && '★'}
-              </Link>
-            ))}
-          </div>
-        </section>
-
-      </ServiceLayout>
-
-      {/* ── FINAL CTA ────────────────────────── */}
-      <section className={styles.finalCta}>
-        <div className="container">
-          <div className={styles.finalCtaInner}>
-            <h2>Schedule Your Well Maintenance Today</h2>
-            <p>
-              Annual inspections, rehabilitation, and written service records.
-              TDLR licensed. Free estimates. Serving Houston since 1979.
-            </p>
-            <div className={styles.finalCtaBtns}>
-              <a href="tel:+12814484447" className="btn btn-primary">
-                📞 (281) 448-4447
-              </a>
-              <Link href="/contact" className="btn btn-outline">
-                Request Free Estimate
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </>
-  );
-}
+             
