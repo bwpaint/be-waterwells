@@ -143,6 +143,62 @@
   background: rgba(255, 255, 255, 0.06);
 }
 
+/* ── Flyout submenu ───────────────────────── */
+.dropdownList li {
+  position: relative;
+}
+
+.flyoutCaret {
+  margin-left: 8px;
+  font-size: 0.95rem;
+  opacity: 0.7;
+}
+
+.flyout {
+  position: absolute;
+  top: -10px;
+  left: 100%;
+  margin-left: 6px;
+  min-width: 230px;
+  background: var(--charcoal);
+  border: 1px solid var(--mid-stone);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-4px);
+  transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
+}
+
+.hasFlyout:hover > .flyout {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* Mobile second-level (Residential / Commercial under Water Well Services) */
+.mobileMenu a.mobileSubSublink {
+  font-family: var(--font-head);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  padding: 8px 0 8px 28px;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.mobileMenu a.mobileSubSublink:hover {
+  color: var(--orange);
+}
+
 /* ── CTA area ─────────────────────────────── */
 .navCta {
   display: flex;

@@ -28,6 +28,9 @@ const nextConfig = {
       { source: '/services/well-maintenance/well-inspection', destination: '/services/well-maintenance', permanent: true },
       { source: '/services/well-maintenance/ongoing-maintenance', destination: '/services/well-maintenance', permanent: true },
 
+      // ── Retired Cost Guide page ──
+      { source: '/resources/water-well-cost', destination: '/services/water-well-drilling', permanent: true },
+
       // ── Old flat / top-level URLs → new homes ──
       { source: '/water-well-drilling', destination: '/services/water-well-drilling', permanent: true },
       { source: '/irrigation-wells', destination: '/services/water-well-drilling', permanent: true },

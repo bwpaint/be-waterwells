@@ -368,9 +368,8 @@ export default function WaterWellDrillingPage() {
             ))}
           </div>
           <p className={styles.costLink}>
-            Want the full breakdown? See our{' '}
-            <Link href="/resources/water-well-cost">Water Well Cost Guide</Link> for
-            depth, casing, and pump pricing in detail.
+            Want exact numbers for your property? We provide free, itemized written
+            estimates — <Link href="/contact">request yours here</Link>.
           </p>
         </section>
 
