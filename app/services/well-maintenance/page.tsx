@@ -265,4 +265,166 @@ export default function WellMaintenancePage() {
                   <h3 className={styles.checkItem}>{c.item}</h3>
                   <p className={styles.checkDetail}>{c.detail}</p>
                 </div>
-             
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── COST COMPARE ─────────────────────── */}
+        <section className={styles.costSection}>
+          <span className="section-label">The Cost of Not Maintaining</span>
+          <h2 className="section-title">Preventive Maintenance vs. Emergency Repair</h2>
+          <div className={styles.costTable}>
+            {costCompare.map((row) => (
+              <div key={row.type} className={styles.costRow}>
+                <div className={styles.costType}>{row.type}</div>
+                <div className={styles.costAmt}>{row.cost}</div>
+                <div className={styles.costOutcome}>{row.outcome}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── WELL INSPECTIONS ─────────────────── */}
+        <section className={styles.inspectSection}>
+          <span className="section-label">Well Inspections</span>
+          <h2 className="section-title">Certified Well Inspection — Buyers, Sellers &amp; Lenders</h2>
+          <p className={styles.bodyP}>
+            Buying a home with a well? Closing an FHA or VA loan? Need an annual well
+            checkup? B-E Waterwell provides certified well inspections with written reports
+            accepted by lenders and real estate agents across Houston, TX.
+          </p>
+
+          <h3 className={styles.subHead}>Five Situations That Call for a Well Inspection</h3>
+          <div className={styles.subGrid}>
+            {inspectionSituations.map((s) => (
+              <div key={s.title} className={styles.subCard}>
+                <span className={styles.subIcon}>{s.icon}</span>
+                <h4 className={styles.subTitle}>{s.title}</h4>
+                <p className={styles.subDesc}>{s.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <h3 className={styles.subHead}>What Our Inspection Covers</h3>
+          <div className={styles.checkGrid}>
+            {inspectionCovers.map((c) => (
+              <div key={c.item} className={styles.checkCard}>
+                <div className={styles.checkIcon}>✓</div>
+                <div>
+                  <h4 className={styles.checkItem}>{c.item}</h4>
+                  <p className={styles.checkDetail}>{c.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.calloutBox}>
+            <h3 className={styles.calloutTitle}>FHA, VA &amp; USDA Loan Well Requirements</h3>
+            <p className={styles.calloutP}>
+              FHA, VA, and USDA Rural Development loans all require that wells meet minimum
+              distance requirements from potential contamination sources — typically 50 feet
+              from a septic tank and 100 feet from a drain field — and that the water meets
+              minimum bacteriological and chemical quality standards.
+            </p>
+            <p className={styles.calloutP}>
+              Our inspection report documents wellhead location, setback distances, pump
+              performance, and water quality lab results — the data package your lender&apos;s
+              appraiser needs to satisfy the well-related conditions of your loan. We know
+              what each program requires and make sure we capture it.
+            </p>
+            <p className={styles.calloutTip}>
+              <strong>Tip for buyers:</strong> Schedule your well inspection at the same time
+              as your general home inspection — not after the appraisal comes back. Lab
+              results take 3–5 business days, and you do not want them on the critical path to
+              closing. A typical inspection runs <strong>$250–$450</strong> plus lab fees.
+            </p>
+          </div>
+        </section>
+
+        {/* ── ONGOING MAINTENANCE & SEASONAL CARE ─ */}
+        <section className={styles.seasonSection}>
+          <span className="section-label">Ongoing Care</span>
+          <h2 className="section-title">Ongoing Maintenance &amp; Seasonal Care</h2>
+          <p className={styles.bodyP}>
+            Annual well maintenance is the single highest-ROI investment a Houston well owner
+            can make — catch a $40 pressure switch issue before it becomes a $1,200 pump
+            failure. Houston&apos;s climate drives a natural maintenance calendar: freeze risk
+            in January and February, hurricane season June through November, and the hottest
+            high-demand months in summer.
+          </p>
+          <div className={styles.seasonGrid}>
+            {seasonalCalendar.map((s) => (
+              <div key={s.season} className={styles.seasonCard}>
+                <h3 className={styles.seasonTitle}>{s.season}</h3>
+                <ul className={styles.seasonList}>
+                  {s.items.map((i) => <li key={i}>{i}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── CROSS-LINKS ──────────────────────── */}
+        <section className={styles.crossLinkSection}>
+          <p className={styles.crossLinkP}>
+            If an inspection finds declining yield, brown water, or biofouling, see our{' '}
+            <Link href="/services/well-rehabilitation">water well rehabilitation</Link>{' '}
+            service — we can often restore flow without drilling new. For pump, pressure tank,
+            and constant-pressure repairs, visit our{' '}
+            <Link href="/services/residential">residential water well services</Link>.
+          </p>
+        </section>
+
+        {/* ── FAQ ─────────────────────────────── */}
+        <section className={styles.faqSection}>
+          <span className="section-label">Common Questions</span>
+          <h2 className="section-title">Well Maintenance &amp; Inspection FAQs</h2>
+          <CityFaqAccordion faqs={faqs} />
+        </section>
+
+        {/* ── SERVICE AREAS ───────────────────── */}
+        <section className={styles.areasSection}>
+          <span className="section-label">Where We Work</span>
+          <h2 className="section-title">Service Areas</h2>
+          <div className={styles.areasGrid}>
+            {serviceAreas.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/service-area/${a.slug}`}
+                className={`${styles.areaChip} ${a.hq ? styles.areaChipHQ : ''}`}
+              >
+                {a.city}, TX {a.hq && '★'}
+              </Link>
+            ))}
+          </div>
+        </section>
+
+      </ServiceLayout>
+
+      {/* ── FINAL CTA ────────────────────────── */}
+      <section className={styles.finalCta}>
+        <div className="container">
+          <div className={styles.finalCtaInner}>
+            <h2>Schedule Your Well Maintenance or Inspection</h2>
+            <p>
+              Annual maintenance, certified inspections for home buyers and FHA/VA loans,
+              and written service records. TDLR licensed. Free estimates. Serving Houston
+              since 1979.
+            </p>
+            <div className={styles.finalCtaBtns}>
+              <a href="tel:+12814484447" className="btn btn-primary">
+                📞 (281) 448-4447
+              </a>
+              <Link href="/contact" className="btn btn-outline">
+                Request Free Estimate
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}

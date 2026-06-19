@@ -192,4 +192,10 @@ export default function Navbar({ transparent = false }: NavbarProps) {
           <Link href="/resources/water-well-cost" onClick={() => setMenuOpen(false)}>Cost Guide</Link>
           <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
           <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
-          
+          <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+          <a href="tel:+12814484447" className={styles.mobileCta}>(281) 448-4447</a>
+        </div>
+      )}
+    </nav>
+  );
+}

@@ -327,4 +327,119 @@ export default function WaterWellDrillingPage() {
 
         {/* ── AQUIFER TABLE ───────────────────── */}
         <section className={styles.aquiferSection}>
-          <span className="s
+          <span className="section-label">Houston Geology</span>
+          <h2 className="section-title">Aquifer Depths by County</h2>
+          <p className={styles.overviewP}>
+            Well depth is determined by your property location and target aquifer.
+            Understanding local geology is key to drilling a productive well — here is
+            what we typically encounter across our service area.
+          </p>
+          <div className={styles.aquiferGrid}>
+            {aquifers.map((row) => (
+              <div key={row.county} className={styles.aquiferCard}>
+                <h3 className={styles.aquiferCounty}>{row.county}</h3>
+                <div className={styles.aquiferDepth}>{row.range}</div>
+                <div className={styles.aquiferName}>{row.aquifer}</div>
+                <p className={styles.aquiferNotes}>{row.notes}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── COST ────────────────────────────── */}
+        <section className={styles.costSection}>
+          <span className="section-label">What It Costs</span>
+          <h2 className="section-title">Water Well Drilling Cost in Houston, TX</h2>
+          <div className={styles.costLead}>
+            <strong>$8,000–$18,000 complete</strong>
+            <span>
+              New residential water well drilling in Houston, TX typically runs
+              $8,000–$18,000 complete — including drill, case, pump, pressure tank, and
+              all permits. We provide free, itemized written estimates with no surprises
+              on billing day.
+            </span>
+          </div>
+          <div className={styles.costGrid}>
+            {costDrivers.map((c) => (
+              <div key={c.title} className={styles.costCard}>
+                <h3 className={styles.costCardTitle}>{c.title}</h3>
+                <p className={styles.costCardDesc}>{c.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className={styles.costLink}>
+            Want the full breakdown? See our{' '}
+            <Link href="/resources/water-well-cost">Water Well Cost Guide</Link> for
+            depth, casing, and pump pricing in detail.
+          </p>
+        </section>
+
+        {/* ── FAQ ─────────────────────────────── */}
+        <section className={styles.faqSection}>
+          <span className="section-label">Common Questions</span>
+          <h2 className="section-title">Water Well Drilling FAQs</h2>
+          <CityFaqAccordion faqs={faqs} />
+        </section>
+
+        {/* ── RELATED SERVICES ────────────────── */}
+        <section className={styles.subServicesSection}>
+          <span className="section-label">Explore More</span>
+          <h2 className="section-title">Related Services</h2>
+          <div className={styles.subGrid}>
+            {related.map((r) => (
+              <div key={r.slug} className={styles.subCard}>
+                <span className={styles.subIcon}>{r.icon}</span>
+                <h3 className={styles.subTitle}>{r.title}</h3>
+                <p className={styles.subDesc}>{r.desc}</p>
+                <Link href={r.slug} className={styles.subLink}>
+                  Learn More →
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── SERVICE AREAS ───────────────────── */}
+        <section className={styles.areasSection}>
+          <span className="section-label">Where We Drill</span>
+          <h2 className="section-title">Well Drilling Service Areas</h2>
+          <div className={styles.areasGrid}>
+            {serviceAreas.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/service-area/${a.slug}`}
+                className={`${styles.areaChip} ${a.hq ? styles.areaChipHQ : ''}`}
+              >
+                {a.city}, TX {a.hq && '★'}
+              </Link>
+            ))}
+          </div>
+        </section>
+
+      </ServiceLayout>
+
+      {/* ── FINAL CTA ────────────────────────── */}
+      <section className={styles.finalCta}>
+        <div className="container">
+          <div className={styles.finalCtaInner}>
+            <h2>Ready to Drill Your Well?</h2>
+            <p>
+              Call us for a free estimate or fill out the contact form. We quote every
+              job in writing — no surprise charges, no pressure.
+            </p>
+            <div className={styles.finalCtaBtns}>
+              <a href="tel:+12814484447" className="btn btn-primary">
+                📞 (281) 448-4447
+              </a>
+              <Link href="/contact" className="btn btn-outline">
+                Request Free Estimate
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}

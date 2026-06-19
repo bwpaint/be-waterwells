@@ -255,4 +255,11 @@ export default function ServicesHubPage() {
                 Request Free Estimate
               </Link>
             </div>
-        
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}
