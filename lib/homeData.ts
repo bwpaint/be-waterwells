@@ -49,6 +49,16 @@ export const cityAreas = [
   { city: 'Montgomery', slug: 'montgomery-tx', hq: false },
   { city: 'Pinehurst', slug: 'pinehurst-tx', hq: false },
   { city: 'Waller', slug: 'waller-tx', hq: false },
+  { city: 'Anderson', slug: 'anderson-tx', hq: false },
+  { city: 'Navasota', slug: 'navasota-tx', hq: false },
+  { city: 'Hockley', slug: 'hockley-tx', hq: false },
+  { city: 'Hempstead', slug: 'hempstead-tx', hq: false },
+  { city: 'Washington', slug: 'washington-tx', hq: false },
+  { city: 'Chappell Hill', slug: 'chappell-hill-tx', hq: false },
+  { city: 'Millican', slug: 'millican-tx', hq: false },
+  { city: 'Katy', slug: 'katy-tx', hq: false },
+  { city: 'Somerville', slug: 'somerville-tx', hq: false },
+  { city: 'Brenham', slug: 'brenham-tx', hq: false },
 ];
 
 export const partners = [

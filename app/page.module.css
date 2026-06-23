@@ -91,12 +91,15 @@
   font-family: var(--font-head);
   font-size: clamp(2.2rem, 4.5vw, 4.4rem);
   font-weight: 900;
+  letter-spacing: -0.02em;
   line-height: 1.08;
   color: var(--white);
   margin-bottom: 6px;
+  -webkit-text-stroke: 0.7px currentColor;
 }
 .heroOrange {
   color: var(--highlight);
+  white-space: nowrap;
 }
 .heroH1Sub {
   display: block;

@@ -30,7 +30,7 @@ export default function HomeHeroForm() {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <p className={styles.formTitle}>Connect With An Expert</p>
+      <p className={styles.formTitle}>Get Consultation</p>
       <p className={styles.formSub}>Same-day response · No obligation</p>
       <div className={styles.fieldGrid}>
         <input
@@ -66,7 +66,7 @@ export default function HomeHeroForm() {
         <option>Other / Not Sure</option>
       </select>
       <button type="submit" className={styles.submitBtn} disabled={loading}>
-        {loading ? 'Sending…' : 'Submit'}
+        {loading ? 'Sending…' : 'Request Service'}
       </button>
       <p className={styles.formDisclaimer}>
         🔒 Your info stays private. TDLR Licensed · Insured · Since 1979

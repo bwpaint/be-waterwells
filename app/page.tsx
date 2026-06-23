@@ -149,11 +149,10 @@ export default function HomePage() {
               Houston landowners have trusted us with their most important resource.
             </p>
             <ul className={styles.whyList}>
-              <li>TDLR Licensed Waterwell Driller</li>
+              <li>TDLR Licensed Water Well Driller / Pump Installer</li>
               <li>Franklin Electric Authorized Dealer</li>
-              <li>All work permitted and inspected per Texas law</li>
               <li>Written estimates with no surprise charges</li>
-              <li>2-year workmanship warranty on drilling; pump &amp; motor warranty in most cases</li>
+              <li>Two-year warranty on pump &amp; motors in most cases</li>
               <li>Locally owned, same family, same number since 1979</li>
             </ul>
             <Link href="/about" className="btn btn-dark" style={{ marginTop: "28px", display: "inline-flex" }}>
@@ -210,9 +209,9 @@ export default function HomePage() {
       <section className={styles.areasSection}>
         <div className="container">
           <span className="section-label">Where We Work</span>
-          <h2 className="section-title">11 Cities Across the Houston Area</h2>
+          <h2 className="section-title">Cities Across the Houston Area</h2>
           <p className={styles.areasSubtext}>
-            From Waller County to the Lake Houston corridor.
+            From the Brazos Valley to the Lake Houston corridor.
           </p>
           <div className={styles.areasGrid}>
             {cityAreas.map((a) => (
