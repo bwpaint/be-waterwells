@@ -29,7 +29,7 @@ const jsonLd = {
     addressCountry: 'US',
   },
   description:
-    'Complete waterwell services in the Houston area since 1979. Drilling, pump repair, constant pressure systems, well maintenance, and emergency service. TDLR Licensed.',
+    'Complete waterwell services in the Houston area since 1979. Drilling, pump repair, constant pressure systems, well maintenance, and emergencies handled. TDLR Licensed.',
   foundingDate: '1979',
   areaServed: 'Houston, TX',
   hasOfferCatalog: {
@@ -57,8 +57,8 @@ const categories = [
     icon: '🏡',
     title: 'Residential Water Well Services',
     slug: 'residential',
-    desc: 'Everything homeowners need: well pump repair and replacement, pressure tanks, constant pressure systems, generator prep, and 24/7 emergency service.',
-    services: ['Pump Repair', 'Pressure Tanks', 'Constant Pressure', '24/7 Emergency'],
+    desc: 'Everything homeowners need: well pump repair and replacement, pressure tanks, constant pressure systems, generator prep, and emergency service when you need it.',
+    services: ['Pump Repair', 'Pressure Tanks', 'Constant Pressure', 'Emergency Service'],
   },
   {
     icon: '🏗️',
@@ -86,17 +86,17 @@ const categories = [
 const trustedReasons = [
   { stat: '45+', label: 'Years in Business', desc: 'Serving Houston since 1979' },
   { stat: 'TDLR', label: 'Licensed & Bonded', desc: 'Texas Dept. of Licensing & Regulation' },
-  { stat: '5,000+', label: 'Wells Drilled', desc: 'Across Montgomery, Harris & Waller counties' },
+  { stat: '5,000+', label: 'Wells Serviced', desc: 'Across Montgomery, Harris, Waller, Grimes, Washington, Anderson, and surrounding counties' },
   { stat: '2-Year', label: 'Workmanship Warranty', desc: 'On all drilling and installation work' },
   { stat: 'FE Auth.', label: 'Franklin Electric', desc: 'Authorized dealer for pumps & motors' },
-  { stat: '24/7', label: 'Emergency Service', desc: 'We answer after hours — always' },
+  { stat: 'Emergency', label: 'Emergency Service Available', desc: 'We help when problems come up' },
 ];
 
 const faqs = [
   {
     question: 'How long has B-E Waterwell been in business?',
     answer:
-      'B-E Waterwell Services has been drilling and servicing waterwells in the Houston area since 1979 — over 45 years. We are a family-owned company based in Magnolia, TX, and we have drilled more than 5,000 wells across Montgomery, Harris, and Waller counties.',
+      'B-E Waterwell Services has been drilling and servicing waterwells in the Houston area since 1979 — over 45 years. We are a family-owned company based in Magnolia, TX, and we have serviced more than 5,000 wells across Montgomery, Harris, Waller, Grimes, Washington, Anderson, and surrounding counties.',
   },
   {
     question: 'Is B-E Waterwell licensed in Texas?',
@@ -109,9 +109,9 @@ const faqs = [
       'We serve the entire Houston region including Magnolia (our headquarters), Conroe, Tomball, The Woodlands, Spring, Cypress, Humble, Kingwood, Montgomery, Pinehurst, and Waller. Call us if your city is not listed — we may still be able to help.',
   },
   {
-    question: 'Do you offer free estimates?',
+    question: 'Do you offer estimates?',
     answer:
-      'Yes. We provide free, written estimates for all drilling, pump, and installation work. Call us at (281) 448-4447 or use the contact form and we will get back to you promptly.',
+      'Yes. We provide written estimates for all drilling, pump, and installation work. Call us at (281) 448-4447 or use the contact form and we will get back to you promptly.',
   },
 ];
 
@@ -152,15 +152,15 @@ export default function ServicesHubPage() {
             </h1>
             <p className={styles.heroSubtitle}>
               45+ years of drilling, pump service, and waterwell maintenance across
-              Montgomery, Harris, and Waller counties. All five service categories
-              — one trusted company.
+              Montgomery, Harris, Waller, Grimes, Washington, Anderson, and surrounding
+              counties. All five service categories — one trusted company.
             </p>
             <div className={styles.heroBtns}>
               <a href="tel:+12814484447" className="btn btn-primary">
                 📞 (281) 448-4447
               </a>
               <Link href="/contact" className="btn btn-outline">
-                Free Estimate
+                Get Consultation
               </Link>
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function ServicesHubPage() {
           <span className="section-label">What We Do</span>
           <h2 className="section-title">Our Service Categories</h2>
           <p className={styles.categoriesIntro}>
-            From drilling a brand-new well to repairing a pump at midnight,
+            From drilling a brand-new well to repairing a pump,
             B-E Waterwell Services handles every part of your waterwell system.
           </p>
           <div className={styles.categoriesGrid}>
@@ -244,7 +244,7 @@ export default function ServicesHubPage() {
           <div className={styles.finalCtaInner}>
             <h2>Ready to Get Started?</h2>
             <p>
-              Call us for a free estimate or use our contact form. We quote every job
+              Call us to discuss your project or use our contact form. We quote every job
               in writing — no hidden charges, no pressure.
             </p>
             <div className={styles.finalCtaBtns}>
@@ -252,7 +252,7 @@ export default function ServicesHubPage() {
                 📞 (281) 448-4447
               </a>
               <Link href="/contact" className="btn btn-outline">
-                Request Free Estimate
+                Get Consultation
               </Link>
             </div>
           </div>

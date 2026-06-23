@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const cityServices = [
   { icon: '🔩', title: 'Waterwell Drilling', desc: 'New residential and commercial waterwells. Rotary rig drilling to the Jasper and Evangeline Aquifers.' },
-  { icon: '⚙️', title: 'Pump Repair & Install', desc: 'Submersible pump service, motor replacement, and emergency repair. Franklin Electric certified.' },
+  { icon: '⚙️', title: 'Pump Repair & Install', desc: 'Submersible pump service, motor replacement, and emergency repair. Franklin Electric authorized dealer.' },
   { icon: '💧', title: 'Well Rehabilitation', desc: 'Well shocking, acid treatment, and screen cleaning to restore aging wells to full production.' },
   { icon: '🌿', title: 'Irrigation Waterwells', desc: 'Dedicated irrigation systems for residential lots, farms, and ranches.' },
   { icon: '⚡', title: 'Generator Prep Kits', desc: 'Keep the water flowing during outages with a properly installed generator transfer switch.' },
@@ -166,7 +166,7 @@ export default function CityPage({ params }: Props) {
               </div>
               <div className={styles.introStat}>
                 <strong>Emergency</strong>
-                <span>24/7 Coverage</span>
+                <span>Emergency Coverage</span>
               </div>
             </div>
           </div>
@@ -214,7 +214,7 @@ export default function CityPage({ params }: Props) {
           </h2>
           <div className={styles.processSteps}>
             {[
-              { n: '01', title: 'Free Phone Estimate', desc: 'Call or submit the form. We discuss your property, service needs, and give a ballpark estimate on the spot.' },
+              { n: '01', title: 'Phone Consultation', desc: 'Call or submit the form. We discuss your property, service needs, and give a ballpark estimate on the spot.' },
               { n: '02', title: 'Site Assessment', desc: 'We visit your property, assess soil conditions, aquifer access, and determine the right drill plan.' },
               { n: '03', title: 'Permitting', desc: 'We pull all required permits from the appropriate groundwater conservation district on your behalf.' },
               { n: '04', title: 'Drilling & Completion', desc: 'Our rig crew drills, installs casing, pump, and pressure tank. Most residential jobs complete in 1–2 days.' },
@@ -270,7 +270,7 @@ export default function CityPage({ params }: Props) {
           <div className={styles.finalCtaInner}>
             <h2>Need a Waterwell in {city.city}?</h2>
             <p>
-              Call us directly or request a free estimate online.
+              Call us directly or request an estimate online.
               We serve {city.city} and all of {city.county} with 45+ years of expertise.
             </p>
             <div className={styles.finalCtaBtns}>
@@ -278,7 +278,7 @@ export default function CityPage({ params }: Props) {
                 📞 (281) 448-4447
               </a>
               <Link href="/contact" className="btn btn-outline">
-                Free Estimate
+                Get Consultation
               </Link>
             </div>
           </div>

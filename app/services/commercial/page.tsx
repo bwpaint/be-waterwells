@@ -59,7 +59,7 @@ const jsonLd = {
           name: 'What does commercial well drilling cost in Houston, TX?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Commercial and agricultural wells typically range from $15,000–$35,000+ complete, depending on depth, casing diameter, pump specifications, and required yield. Equestrian properties and small farm applications are often in the $15,000–$22,000 range. Large commercial or multi-zone applications are higher. We provide free, itemized written estimates.',
+            text: 'Pricing depends on your location, well depth, static water level, and equipment selection — call us to discuss your project.',
           },
         },
         {
@@ -173,7 +173,7 @@ const faqs = [
   {
     question: 'What does commercial well drilling cost in Houston, TX?',
     answer:
-      'Commercial and agricultural wells typically range from $15,000–$35,000+ complete, depending on depth, casing diameter, pump specifications, and required yield. Equestrian properties and small farm applications are often in the $15,000–$22,000 range. Large commercial or multi-zone applications are higher. We provide free, itemized written estimates — no guessing on what you are paying for.',
+      'Pricing depends on your location, well depth, static water level, and equipment selection — call us to discuss your project.',
   },
   {
     question: 'How long does commercial well drilling take?',
@@ -229,14 +229,14 @@ export default function CommercialWellServicesHubPage() {
                 B-E Waterwell drills high-capacity commercial and agricultural wells across
                 Houston, TX — from horse properties in Magnolia to nurseries in Waller County
                 to commercial sites in Conroe. Water well drilling contractors with 45+ years
-                and 5,000+ wells drilled. TDLR Licensed.
+                and 5,000+ Wells Serviced. TDLR Licensed.
               </p>
               <div className={styles.heroBtns}>
                 <a href="tel:+12814484447" className="btn btn-primary">
                   📞 (281) 448-4447
                 </a>
                 <Link href="/contact" className="btn btn-outline">
-                  Free Estimate
+                  Get Consultation
                 </Link>
               </div>
             </div>
@@ -270,7 +270,7 @@ export default function CommercialWellServicesHubPage() {
           <div className={styles.overviewStats}>
             {[
               { stat: '45+', label: 'Years Drilling' },
-              { stat: '5,000+', label: 'Wells Drilled' },
+              { stat: '5,000+', label: 'Wells Serviced' },
               { stat: 'TDLR', label: 'Licensed' },
               { stat: '2-Year', label: 'Warranty' },
             ].map((s) => (
@@ -389,7 +389,8 @@ export default function CommercialWellServicesHubPage() {
           </p>
           <p className={styles.overviewP}>
             B-E Waterwell handles all permitting on your behalf. We have 45+ years of
-            experience navigating the GCD permit process in all three counties.
+            experience navigating the GCD permit process across Montgomery, Harris, Waller,
+            Grimes, Washington, Anderson, and surrounding counties.
           </p>
         </section>
 
@@ -398,30 +399,27 @@ export default function CommercialWellServicesHubPage() {
           <span className="section-label">What It Costs</span>
           <h2 className="section-title">Commercial Well Drilling Cost</h2>
           <p className={styles.overviewP}>
-            Commercial and agricultural wells typically range from $15,000–$35,000+ complete,
-            depending on depth, casing diameter, pump specifications, and required yield. We
-            provide free, itemized written estimates — no guessing on what you are paying for.
+            Pricing depends on your location, well depth, static water level, and equipment
+            selection — call us to discuss your project. We quote every job in writing with an
+            itemized breakdown so you know exactly what you are paying for.
           </p>
           <div className={styles.costGrid}>
             <div className={styles.costCard}>
-              <div className={styles.costRange}>$15,000–$22,000</div>
               <div className={styles.costName}>Equestrian &amp; Small Farm</div>
               <p className={styles.costNote}>
-                Horse properties and small farm applications are often in this range.
+                Horse properties and small farm applications sized to your daily water demand.
               </p>
             </div>
             <div className={styles.costCard}>
-              <div className={styles.costRange}>$15,000–$35,000+</div>
               <div className={styles.costName}>Commercial &amp; Agricultural</div>
               <p className={styles.costNote}>
                 Depends on depth, casing diameter, pump specifications, and required yield.
               </p>
             </div>
             <div className={styles.costCard}>
-              <div className={styles.costRange}>$35,000+</div>
               <div className={styles.costName}>Large &amp; Multi-Zone</div>
               <p className={styles.costNote}>
-                Large commercial or multi-zone irrigation applications run higher.
+                Large commercial or multi-zone irrigation applications with multi-zone completion.
               </p>
             </div>
           </div>
@@ -482,7 +480,7 @@ export default function CommercialWellServicesHubPage() {
           <div className={styles.finalCtaInner}>
             <h2>Need a High-Capacity Well?</h2>
             <p>
-              Call us for a free estimate on your commercial, agricultural, ranch, or
+              Call us for a consultation on your commercial, agricultural, ranch, or
               equestrian well. We quote every job in writing and handle all
               high-capacity permitting — no surprise charges, no pressure.
             </p>
@@ -491,7 +489,7 @@ export default function CommercialWellServicesHubPage() {
                 📞 (281) 448-4447
               </a>
               <Link href="/contact" className="btn btn-outline">
-                Request Free Estimate
+                Get Consultation
               </Link>
             </div>
           </div>

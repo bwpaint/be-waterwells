@@ -28,7 +28,7 @@ const faqs = [
   {
     question: 'Do I need a permit to drill a water well in Texas?',
     answer:
-      'Yes. All new wells require a permit from your Groundwater Conservation District. In Montgomery County that is the Lone Star GCD (LSGCD). In most of Harris County it is the Harris-Galveston Subsidence District (HGSD). B-E Waterwell handles all permitting on your behalf — we file the application, pay the fee, and track approval.',
+      'Yes. Permitting and registration are handled through your local Groundwater Conservation District, and timelines vary by county — Harris County is typically just a few days for residential, while Montgomery County can take 2–3 weeks. B-E Waterwell handles all of it for you.',
   },
   {
     question: 'What exactly is included in my new well installation?',
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: 'How much does water well drilling cost in Houston, TX?',
     answer:
-      'A complete residential well — drill, case, pump, pressure tank, and permits — typically runs $8,000–$18,000 in the Houston area. The main cost drivers are depth (more feet = more casing and drilling time), casing diameter, and pump horsepower. We provide free, itemized written estimates before any work begins.',
+      'Pricing depends on your location, well depth, static water level, and equipment selection — call us to discuss your project.',
   },
   {
     question: 'Why should I choose B-E Waterwell for well drilling?',
     answer:
-      'We have drilled over 5,000 wells across the Houston area since 1979 and back every well with a 2-year workmanship warranty. Every well we drill is permitted, cased in Schedule 40 PVC, gravel-packed, and developed before the pump is set. We don&apos;t cut corners — your water supply is not the place to save $200 and regret it in 5 years.',
+      'We have serviced more than 5,000 wells across the Houston area since 1979 and back every well with a 2-year workmanship warranty. Every well we drill is permitted, cased in Schedule 40 PVC, gravel-packed, and developed before the pump is set. We don&apos;t cut corners — your water supply is not the place to cut corners and regret it in 5 years.',
   },
 ];
 
@@ -129,7 +129,7 @@ const steps = [
   {
     num: '03',
     title: 'Drilling Day',
-    desc: 'Our rotary rig mobilizes to your site. We drill to aquifer depth, set casing, and develop the well — usually completed same day.',
+    desc: 'Our rotary rig mobilizes to your site. We drill to aquifer depth, set casing, and develop the well — typically completed in one to two days.',
   },
   {
     num: '04',
@@ -230,17 +230,17 @@ export default function WaterWellDrillingPage() {
                 <span className={styles.h1Line3}>Residential · Irrigation · Commercial · Full Installation</span>
               </div>
               <p className={styles.heroSubtitle}>
-                45+ years of rotary rig drilling across Montgomery, Harris, and Waller
-                counties. As experienced water well drilling contractors, we drill to
-                depth, case it right, and stand behind every well with a 2-year
-                workmanship warranty. TDLR Licensed.
+                45+ years of rotary rig drilling across Montgomery, Harris, Waller,
+                Grimes, Washington, Anderson, and surrounding counties. As experienced
+                water well drilling contractors, we drill to depth, case it right, and
+                stand behind every well with a 2-year workmanship warranty. TDLR Licensed.
               </p>
               <div className={styles.heroBtns}>
                 <a href="tel:+12814484447" className="btn btn-primary">
                   📞 (281) 448-4447
                 </a>
                 <Link href="/contact" className="btn btn-outline">
-                  Free Estimate
+                  Get Consultation
                 </Link>
               </div>
             </div>
@@ -260,9 +260,10 @@ export default function WaterWellDrillingPage() {
           <span className="section-label">The Process</span>
           <h2 className="section-title">Water Well Drilling &amp; Installation in Houston, TX</h2>
           <p className={styles.overviewP}>
-            B-E Waterwell Services uses truck-mounted rotary drilling rigs to reach the
-            Jasper, Chicot, and Evangeline Aquifers beneath Houston&apos;s sandy
-            coastal plains. Every well we drill is permitted, cased in Schedule 40 PVC,
+            New construction or emergency redrill — B-E Waterwell drills new residential
+            and commercial wells across the greater Houston area and surrounding counties,
+            from permit to first drop of water in your glass. 45+ years, 1,000+ happy
+            customers. Every well we drill is permitted, cased in Schedule 40 PVC,
             gravel-packed, and fully developed before the pump is set.
           </p>
           <p className={styles.overviewP}>
@@ -271,12 +272,12 @@ export default function WaterWellDrillingPage() {
             in Conroe — the process is the same: we assess your site, pull the permit,
             drill to the right aquifer, and finish the job in writing with a workmanship
             warranty. We don&apos;t cut corners because your water supply is not the
-            place to save $200 and regret it in 5 years.
+            place to cut corners and regret it in 5 years.
           </p>
           <div className={styles.overviewStats}>
             {[
               { stat: '45+', label: 'Years Drilling' },
-              { stat: '5,000+', label: 'Wells Drilled' },
+              { stat: '5,000+', label: 'Wells Serviced' },
               { stat: '160–440 ft', label: 'Depth Range' },
               { stat: '2-Year', label: 'Warranty' },
             ].map((s) => (
@@ -293,9 +294,8 @@ export default function WaterWellDrillingPage() {
           <span className="section-label">Water Well Installation</span>
           <h2 className="section-title">Everything Included in Every New Well</h2>
           <p className={styles.overviewP}>
-            A new waterwell from B-E Waterwell is not a drill hole with a pump dropped
-            in. Every new well drilling job in Houston, TX includes a complete,
-            code-compliant installation — from rotary rig to final water test.
+            At B-E Waterwell, we know how important your water is — we take pride in
+            providing the best workmanship and quality materials for your well.
           </p>
           <div className={styles.subGrid}>
             {included.map((item) => (
@@ -351,12 +351,13 @@ export default function WaterWellDrillingPage() {
           <span className="section-label">What It Costs</span>
           <h2 className="section-title">Water Well Drilling Cost in Houston, TX</h2>
           <div className={styles.costLead}>
-            <strong>$8,000–$18,000 complete</strong>
+            <strong>Pricing built around your project</strong>
             <span>
-              New residential water well drilling in Houston, TX typically runs
-              $8,000–$18,000 complete — including drill, case, pump, pressure tank, and
-              all permits. We provide free, itemized written estimates with no surprises
-              on billing day.
+              Pricing depends on your location, well depth, static water level, and
+              equipment selection — call us to discuss your project. A complete
+              residential well includes drill, case, pump, pressure tank, and all
+              permits, quoted with an itemized written estimate and no surprises on
+              billing day.
             </span>
           </div>
           <div className={styles.costGrid}>
@@ -368,8 +369,8 @@ export default function WaterWellDrillingPage() {
             ))}
           </div>
           <p className={styles.costLink}>
-            Want exact numbers for your property? We provide free, itemized written
-            estimates — <Link href="/contact">request yours here</Link>.
+            Want details for your property? We provide itemized written estimates —{' '}
+            <Link href="/contact">request yours here</Link>.
           </p>
         </section>
 
@@ -423,7 +424,7 @@ export default function WaterWellDrillingPage() {
           <div className={styles.finalCtaInner}>
             <h2>Ready to Drill Your Well?</h2>
             <p>
-              Call us for a free estimate or fill out the contact form. We quote every
+              Call us for a consultation or fill out the contact form. We quote every
               job in writing — no surprise charges, no pressure.
             </p>
             <div className={styles.finalCtaBtns}>
@@ -431,7 +432,7 @@ export default function WaterWellDrillingPage() {
                 📞 (281) 448-4447
               </a>
               <Link href="/contact" className="btn btn-outline">
-                Request Free Estimate
+                Get Consultation
               </Link>
             </div>
           </div>

@@ -7,7 +7,7 @@ import ContactForm from './ContactForm';
 export const metadata: Metadata = {
   title: 'Contact Us | B-E Waterwell Services — Houston Area',
   description:
-    'Contact B-E Waterwell Services for waterwell drilling, pump repair, and 24/7 emergency service in the Houston area. Call (281) 448-4447 or request a free estimate online.',
+    'Contact B-E Waterwell Services for waterwell drilling, pump repair, and emergency service in the Houston area. Call (281) 448-4447 or get a consultation online.',
 };
 
 export default function ContactPage() {
@@ -25,7 +25,7 @@ export default function ContactPage() {
       }}>
         <div className="container">
           <p style={{ color: 'var(--orange)', fontFamily: 'var(--font-head)', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
-            Available 24/7 for Emergencies
+            Emergency Service Available
           </p>
           <h1 style={{ color: 'var(--white)', fontSize: 'clamp(2rem,5vw,3rem)', fontFamily: 'var(--font-head)', fontWeight: 900, marginBottom: '16px', lineHeight: 1.15 }}>
             Contact B-E Waterwell Services
@@ -51,7 +51,7 @@ export default function ContactPage() {
                     icon: '📞',
                     label: 'Phone',
                     value: '(281) 448-4447',
-                    sub: '24/7 for emergencies',
+                    sub: 'Emergency service available',
                     href: 'tel:+12814484447',
                   },
                   {
@@ -63,8 +63,8 @@ export default function ContactPage() {
                   {
                     icon: '🕐',
                     label: 'Business Hours',
-                    value: 'Mon–Fri: 7am – 6pm',
-                    sub: '24/7 emergency service available',
+                    value: 'Mon–Fri 7am–7pm',
+                    sub: 'Emergency Service Available',
                   },
                 ].map((item) => (
                   <div key={item.label} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
@@ -85,7 +85,7 @@ export default function ContactPage() {
               <div style={{ marginTop: '40px', padding: '24px', background: 'rgba(217,95,10,0.08)', border: '1px solid rgba(217,95,10,0.25)', borderRadius: 'var(--radius)' }}>
                 <div style={{ fontFamily: 'var(--font-head)', fontWeight: 800, color: 'var(--orange)', fontSize: '0.88rem', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: '8px' }}>⚡ Water Emergency?</div>
                 <p style={{ fontSize: '0.92rem', color: 'var(--dark-stone)', lineHeight: 1.6, margin: 0 }}>
-                  If you&apos;ve lost water or have a pump failure, call us directly at <a href="tel:+12814484447" style={{ color: 'var(--orange)', fontWeight: 700 }}>(281) 448-4447</a>. We have emergency crews available around the clock.
+                  If you&apos;ve lost water or have a pump failure, call us directly at <a href="tel:+12814484447" style={{ color: 'var(--orange)', fontWeight: 700 }}>(281) 448-4447</a>. Emergency service is available.
                 </p>
               </div>
             </div>

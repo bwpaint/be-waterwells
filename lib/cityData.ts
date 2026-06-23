@@ -94,7 +94,7 @@ export const cities: CityData[] = [
       {
         question: 'How quickly can you respond to a well emergency in Conroe?',
         answer:
-          'We offer 24/7 emergency service. For most Conroe locations, we can have a technician on-site within 2–4 hours for pump failures or no-water emergencies.',
+          'We handle emergency service for pump failures and no-water situations. Call us and we will get a technician scheduled to your Conroe property as quickly as possible.',
       },
       {
         question: 'Do you test water quality for Conroe wells?',
@@ -137,7 +137,7 @@ export const cities: CityData[] = [
       {
         question: 'How do I know if my Spring well pump needs replacing?',
         answer:
-          'Signs include low pressure, no water, cycling on/off rapidly, or unusually high electricity bills. We offer free diagnostic estimates for Spring-area customers.',
+          'Signs include low pressure, no water, cycling on/off rapidly, or unusually high electricity bills. We offer diagnostic estimates for Spring-area customers.',
       },
       {
         question: 'Can you install a well for a new construction home in Spring?',
@@ -223,7 +223,7 @@ export const cities: CityData[] = [
       {
         question: 'My Tomball well has low pressure — what should I check?',
         answer:
-          'Low pressure typically indicates a failing submersible pump, waterlogged pressure tank, or drop in aquifer yield. Call us for a free diagnostic.',
+          'Low pressure typically indicates a failing submersible pump, waterlogged pressure tank, or drop in aquifer yield. Call us for a diagnostic.',
       },
       {
         question: 'Do you offer financing for new well drilling near Tomball?',
@@ -314,7 +314,7 @@ export const cities: CityData[] = [
       {
         question: 'Do you offer emergency pump service in Humble, TX?',
         answer:
-          'Yes. We maintain 24/7 emergency coverage for all our service areas including Humble and the Lake Houston corridor.',
+          'Yes. We handle emergency pump service for all our service areas including Humble and the Lake Houston corridor — call us and we will respond as quickly as we can.',
       },
     ],
   },
@@ -357,7 +357,7 @@ export const cities: CityData[] = [
       {
         question: 'How fast can you respond to a well emergency in Kingwood?',
         answer:
-          'We maintain 24/7 emergency service. Most Kingwood emergency calls receive a technician within 2–4 hours.',
+          'We handle emergency service for Kingwood-area wells. Call us as soon as you notice a problem and we will get a technician scheduled to your property as quickly as possible.',
       },
     ],
   },
@@ -438,7 +438,7 @@ export const cities: CityData[] = [
       {
         question: 'Do you handle pressure tank replacement in Pinehurst?',
         answer:
-          'Yes — pressure tank replacement is one of our most common service calls in Pinehurst. We stock a full range of tanks and can typically complete the job same-day.',
+          'Yes — pressure tank replacement is one of our most common service calls in Pinehurst. We carry common parts and work to complete the job as efficiently as possible.',
       },
       {
         question: 'What groundwater district governs Pinehurst?',

@@ -33,12 +33,12 @@ const faqs = [
   {
     question: 'How much does well inspection and annual maintenance cost?',
     answer:
-      'A standard well inspection — site visit, pump performance test, pressure system check, water quality sample collection, and written report — typically costs $250–$450, with lab fees additional depending on the panel required. Annual maintenance service visits run $200–$350 depending on system complexity. Any repairs found are quoted separately in writing before we do anything.',
+      'Pricing depends on your location, well depth, static water level, and equipment selection — call us to discuss your project.',
   },
   {
     question: 'What happens if my well fails inspection?',
     answer:
-      'We provide a written summary of all issues found and what remediation is recommended. Many issues are fixable at reasonable cost — a waterlogged pressure tank ($400–$900), a failing pump ($800–$1,800), or a water quality treatment system. We quote remediation separately so buyers and sellers have clear information for negotiations. Not all "failures" mean a new well.',
+      'We provide a written summary of all issues found and what remediation is recommended. Many issues are fixable — a waterlogged pressure tank, a failing pump, or a water quality treatment system. We quote remediation separately so buyers and sellers have clear information for negotiations. Not all "failures" mean a new well.',
   },
   {
     question: 'How does documented maintenance affect my well equipment warranty and home sale?',
@@ -92,9 +92,9 @@ const checklist = [
 ];
 
 const costCompare = [
-  { type: 'Annual Preventive Maintenance', cost: '$200–$400/year', outcome: 'Catch problems early, extend equipment life 3–5 years, and maintain water quality.' },
-  { type: 'Emergency Pump Replacement', cost: '$800–$1,800', outcome: 'Unplanned, urgent, often includes overtime. Could have been prevented with regular inspection.' },
-  { type: 'Emergency System Repair', cost: '$1,500–$3,000+', outcome: 'Multiple component failures when one issue was ignored. The highest-cost outcome.' },
+  { type: 'Annual Preventive Maintenance', outcome: 'Catch problems early, extend equipment life 3–5 years, and maintain water quality.' },
+  { type: 'Emergency Pump Replacement', outcome: 'Unplanned, urgent, often includes overtime. Could have been prevented with regular inspection.' },
+  { type: 'Emergency System Repair', outcome: 'Multiple component failures when one issue was ignored. The highest-cost outcome.' },
 ];
 
 const inspectionSituations = [
@@ -202,7 +202,7 @@ export default function WellMaintenancePage() {
                   📞 (281) 448-4447
                 </a>
                 <Link href="/contact" className="btn btn-outline">
-                  Free Estimate
+                  Get Consultation
                 </Link>
               </div>
             </div>
@@ -221,11 +221,12 @@ export default function WellMaintenancePage() {
           <span className="section-label">Why Maintenance Matters</span>
           <h2 className="section-title">Maintained Wells Last Twice as Long</h2>
           <p className={styles.overviewP}>
+            Routine maintenance can catch pump wear and early problems before you lose
+            water. Over time, wells need to be maintained to keep optimal performance.
             A residential waterwell with annual inspection and proper maintenance
             regularly achieves 25–40 years of service. Neglected wells — where problems
             go undetected — often fail at 10–15 years, requiring expensive emergency
-            repairs or full replacement. The math is simple: a $250 annual inspection is
-            far cheaper than a $1,500 emergency repair or a $12,000 new well.
+            repairs or full replacement.
           </p>
           <p className={styles.overviewP}>
             In Houston, the Jasper Aquifer water is mineral-heavy with iron content that
@@ -236,7 +237,7 @@ export default function WellMaintenancePage() {
           <div className={styles.overviewStats}>
             {[
               { stat: '25–40 yr', label: 'Maintained Lifespan' },
-              { stat: '$250', label: 'Inspection vs. $1,500 Repair' },
+              { stat: 'Annual', label: 'Inspection Saves on Repairs' },
               { stat: '45+', label: 'Years Serving Houston' },
               { stat: 'TDLR', label: 'Licensed' },
             ].map((s) => (
@@ -278,7 +279,6 @@ export default function WellMaintenancePage() {
             {costCompare.map((row) => (
               <div key={row.type} className={styles.costRow}>
                 <div className={styles.costType}>{row.type}</div>
-                <div className={styles.costAmt}>{row.cost}</div>
                 <div className={styles.costOutcome}>{row.outcome}</div>
               </div>
             ))}
@@ -337,7 +337,7 @@ export default function WellMaintenancePage() {
               <strong>Tip for buyers:</strong> Schedule your well inspection at the same time
               as your general home inspection — not after the appraisal comes back. Lab
               results take 3–5 business days, and you do not want them on the critical path to
-              closing. A typical inspection runs <strong>$250–$450</strong> plus lab fees.
+              closing.
             </p>
           </div>
         </section>
@@ -348,7 +348,7 @@ export default function WellMaintenancePage() {
           <h2 className="section-title">Ongoing Maintenance &amp; Seasonal Care</h2>
           <p className={styles.bodyP}>
             Annual well maintenance is the single highest-ROI investment a Houston well owner
-            can make — catch a $40 pressure switch issue before it becomes a $1,200 pump
+            can make — catch a small pressure switch issue before it becomes a major pump
             failure. Houston&apos;s climate drives a natural maintenance calendar: freeze risk
             in January and February, hurricane season June through November, and the hottest
             high-demand months in summer.
@@ -409,7 +409,7 @@ export default function WellMaintenancePage() {
             <h2>Schedule Your Well Maintenance or Inspection</h2>
             <p>
               Annual maintenance, certified inspections for home buyers and FHA/VA loans,
-              and written service records. TDLR licensed. Free estimates. Serving Houston
+              and written service records. TDLR licensed. Serving Houston
               since 1979.
             </p>
             <div className={styles.finalCtaBtns}>
@@ -417,7 +417,7 @@ export default function WellMaintenancePage() {
                 📞 (281) 448-4447
               </a>
               <Link href="/contact" className="btn btn-outline">
-                Request Free Estimate
+                Get Consultation
               </Link>
             </div>
           </div>

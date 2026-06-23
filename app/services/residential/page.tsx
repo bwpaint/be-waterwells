@@ -10,7 +10,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Residential Water Well Services — Houston, TX | B-E Waterwell',
   description:
-    'Residential well water pump repair, pressure tanks, constant pressure systems, new wells, and maintenance in Houston, TX since 1979. Franklin Electric authorized, TDLR licensed, same-day service. (281) 448-4447.',
+    'Residential well water pump repair, pressure tanks, constant pressure systems, new wells, and maintenance in Houston, TX since 1979. Franklin Electric authorized dealer, TDLR licensed. Emergency service available. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/residential' },
 };
 
@@ -23,7 +23,7 @@ const faqs = [
   {
     question: 'Why does my well pump keep turning on and off?',
     answer:
-      'Rapid on/off cycling — called short-cycling — is almost always caused by a waterlogged pressure tank that has lost its air charge, or a pressure switch that is set incorrectly. Occasionally it indicates a pump that can no longer maintain pressure. We diagnose this on-site and can usually resolve it the same day.',
+      'Rapid on/off cycling — called short cycling — is almost always caused by a waterlogged pressure tank with a ruptured bladder or faulty air-system components. We diagnose this on-site and can usually resolve it quickly.',
   },
   {
     question: 'What causes low water pressure from a well?',
@@ -33,7 +33,7 @@ const faqs = [
   {
     question: 'How much does well pump replacement cost in the Houston area?',
     answer:
-      'Well pump replacement in the Houston area typically runs $1,200–$3,500 for a standard residential submersible pump, including parts and labor. Deeper wells (250–400 ft) or high-demand systems can run $2,500–$5,000. We provide a written estimate before any work begins.',
+      'Pricing depends on your location, well depth, static water level, and equipment selection — call us to discuss your project.',
   },
   {
     question: 'How long does a well pump last?',
@@ -41,9 +41,9 @@ const faqs = [
       'A quality submersible well pump lasts 10–15 years with proper maintenance. Pumps in Houston-area wells with iron-heavy water or that short-cycle frequently may fail sooner. Regular annual inspections catch early wear before you lose water completely.',
   },
   {
-    question: 'Can you repair my well pump the same day?',
+    question: 'Can you repair my well pump quickly?',
     answer:
-      'Yes — for most residential pump failures in the greater Houston area, we carry common pump models and parts on our service trucks and can complete same-day repairs. For 24/7 emergency service, call us directly at (281) 448-4447.',
+      'For most residential pump failures in the greater Houston area, we carry common parts to diagnose and repair efficiently. Emergency service available — call us directly at (281) 448-4447.',
   },
 ];
 
@@ -66,7 +66,7 @@ const jsonLd = {
       },
       areaServed: 'Houston, TX',
       description:
-        'Residential well services for Houston-area homeowners: well water pump repair and replacement, pressure tank installation, constant pressure systems, generator prep, new well drilling, and maintenance. Franklin Electric authorized, TDLR licensed, family-owned since 1979.',
+        'Residential well services for Houston-area homeowners: well water pump repair and replacement, pressure tank installation, constant pressure systems, generator prep, new well drilling, and maintenance. Franklin Electric authorized dealer, TDLR licensed, family-owned since 1979.',
     },
     {
       '@type': 'FAQPage',
@@ -106,7 +106,7 @@ const homeownerServices = [
 const pumpSigns = [
   {
     title: '💧 No Water at All',
-    desc: 'Turned on a faucet and nothing came out? Could be a tripped breaker, failed pump, or broken pressure switch. Call us — this is a same-day emergency.',
+    desc: 'Turned on a faucet and nothing came out? Could be a tripped breaker, failed pump, or broken pressure switch. Call us — this is an emergency.',
   },
   {
     title: '📉 Sudden Low Pressure',
@@ -118,11 +118,11 @@ const pumpSigns = [
   },
   {
     title: '🔄 Short Cycling',
-    desc: 'A pump that clicks on and off rapidly every few seconds has a waterlogged tank. Easy fix — but ignore it and you&apos;ll burn out a $1,500 pump.',
+    desc: 'A pump that clicks on and off rapidly every few seconds has a waterlogged tank. But ignore it and you run the risk of burning up the pump entirely.',
   },
   {
     title: '💨 Air Spitting from Faucets',
-    desc: 'Sputtering air mixed with water means your pump intake is near or above the water table, or you have a crack in the drop pipe. Both need immediate attention.',
+    desc: 'Sputtering air mixed with water usually means it&apos;s time for maintenance. Over time, wells need to be maintained to keep optimal performance.',
   },
   {
     title: '🌊 Discolored or Gritty Water',
@@ -146,15 +146,6 @@ const replaceWhen = [
   'You want a constant pressure upgrade',
 ];
 
-const pumpCosts = [
-  { service: 'Pressure switch replacement', price: '$150 – $350', note: 'Parts + labor, same-day' },
-  { service: 'Capacitor / control box repair', price: '$200 – $500', note: 'Common after lightning strikes' },
-  { service: 'Pressure tank replacement (40 gal)', price: '$600 – $1,100', note: 'Fixes short-cycling immediately' },
-  { service: 'Submersible pump replacement (< 200 ft)', price: '$1,200 – $2,200', note: 'Most common residential repair' },
-  { service: 'Submersible pump replacement (200–350 ft)', price: '$1,800 – $3,500', note: 'Deeper pull, heavier equipment' },
-  { service: 'Full pump + tank system replacement', price: '$2,500 – $5,000', note: 'Comprehensive system refresh' },
-];
-
 const pressureFeatures = [
   {
     title: '🔄 Rapid Pump Cycling',
@@ -169,7 +160,7 @@ const pressureFeatures = [
     desc: 'A 2-bedroom home needs ~20 gallons; 3-bedroom homes ~32; 4+ bedroom or irrigation properties 44–80 gallons. Undersizing is the #1 cause of premature pump failure.',
   },
   {
-    title: '💵 $400–$900 Installed',
+    title: '🛠️ Single-Visit Replacement',
     desc: 'Most pressure tank replacements are completed in a single visit — tank, fittings, pre-charge setup, and labor — and immediately stop the short-cycling that kills pumps.',
   },
   {
@@ -228,15 +219,15 @@ export default function ResidentialHubPage() {
               <p className={styles.heroSubtitle}>
                 Everything Houston-area homeowners need from one family-owned crew —
                 well water pump repair, pressure tanks, constant pressure upgrades, new
-                wells, and ongoing maintenance. Franklin Electric authorized, TDLR
-                licensed, same-day service available.
+                wells, and ongoing maintenance. Franklin Electric authorized dealer, TDLR
+                licensed. Emergency service available — call us.
               </p>
               <div className={styles.heroBtns}>
                 <a href="tel:+12814484447" className="btn btn-primary">
                   📞 (281) 448-4447
                 </a>
                 <Link href="/contact" className="btn btn-outline">
-                  Free Estimate
+                  Get Consultation
                 </Link>
               </div>
             </div>
@@ -254,9 +245,9 @@ export default function ResidentialHubPage() {
           <p className={styles.overviewP}>
             B-E Waterwell Services has kept Houston-area homes in clean, reliable water
             since 1979. We&apos;re family-owned, TDLR licensed, and a Franklin Electric
-            authorized service center — which means the same crew that drills your well
-            also repairs your pump, replaces your pressure tank, and answers the phone at
-            2 a.m. when the water stops.
+            authorized dealer — which means the same crew that drills your well
+            also repairs your pump, replaces your pressure tank, and helps when the
+            water stops.
           </p>
           <p className={styles.overviewP}>
             Whether you need fast well water pump repair, a new pressure tank to stop
@@ -266,9 +257,9 @@ export default function ResidentialHubPage() {
           <div className={styles.overviewStats}>
             {[
               { stat: '45+', label: 'Years Serving Houston' },
-              { stat: '24/7', label: 'Emergency Dispatch' },
-              { stat: 'Same-Day', label: 'Pump Service' },
-              { stat: 'Franklin', label: 'Authorized Center' },
+              { stat: 'Emergency', label: 'Service Available' },
+              { stat: '5,000+', label: 'Wells Serviced' },
+              { stat: 'Franklin', label: 'Authorized Dealer' },
             ].map((s) => (
               <div key={s.label} className={styles.overviewStat}>
                 <strong>{s.stat}</strong>
@@ -308,10 +299,10 @@ export default function ResidentialHubPage() {
           <p className={styles.overviewP}>
             Lost water pressure or no water at all? B-E Waterwell Services has diagnosed
             and repaired well pumps across the Houston area for over 45 years. We carry
-            most pump models on our service trucks — same-day well water pump repairs are
-            available, and we dispatch 24/7. As a Franklin Electric authorized service
-            center, our technicians are factory-trained to diagnose and repair Franklin
-            motors and control boxes, not just replace them.
+            common parts to diagnose and repair efficiently, and emergency service is
+            available. As a Franklin Electric authorized dealer, our technicians are
+            factory-trained to diagnose and repair Franklin motors and control boxes, not
+            just replace them.
           </p>
 
           <h3 className="section-title">Signs Your Well Pump Needs Repair</h3>
@@ -349,21 +340,11 @@ export default function ResidentialHubPage() {
             </div>
           </div>
 
-          <h3 className="section-title">Pump Repair &amp; Replacement Costs</h3>
-          <div className={styles.costTable}>
-            <div className={`${styles.costRow} ${styles.costRowHead}`}>
-              <span>Service</span>
-              <span>Typical Cost</span>
-              <span>Notes</span>
-            </div>
-            {pumpCosts.map((c) => (
-              <div key={c.service} className={styles.costRow}>
-                <div className={styles.costService}>{c.service}</div>
-                <div className={styles.costPrice}>{c.price}</div>
-                <div className={styles.costNote}>{c.note}</div>
-              </div>
-            ))}
-          </div>
+          <h3 className="section-title">Pump Repair &amp; Replacement Pricing</h3>
+          <p className={styles.overviewP}>
+            Pricing depends on your location, well depth, static water level, and
+            equipment selection — call us to discuss your project.
+          </p>
         </section>
 
         {/* ── PRESSURE TANKS & CONSTANT PRESSURE ── */}
@@ -374,9 +355,13 @@ export default function ResidentialHubPage() {
             A pressure tank stores a reserve of pressurized water so your pump isn&apos;t
             starting every time you wash your hands. When the tank&apos;s bladder fails,
             the pump short-cycles — the single biggest cause of premature motor failure in
-            Houston&apos;s mineral-heavy water. We replace tanks same-day and, for homes
+            Houston&apos;s mineral-heavy water. We replace tanks and, for homes
             tired of pressure swings, upgrade to a constant pressure (VFD) system that
             holds city-like pressure continuously.
+          </p>
+          <p className={styles.overviewP}>
+            Tank spring a leak? Waterlogged bladder tank? Quality tanks in stock and ready
+            for installation.
           </p>
           <div className={styles.featureGrid}>
             {pressureFeatures.map((f) => (
@@ -403,7 +388,7 @@ export default function ResidentialHubPage() {
           </p>
           <div className={styles.featureGrid}>
             <div className={styles.featureCard}>
-              <h3>01 Basic Portable Hookup — $300–$600</h3>
+              <h3>01 Basic Portable Hookup</h3>
               <p>
                 Transfer switch and dedicated generator inlet receptacle wired to your
                 well pump circuit. Connect your portable generator during an outage without
@@ -411,7 +396,7 @@ export default function ResidentialHubPage() {
               </p>
             </div>
             <div className={styles.featureCard}>
-              <h3>02 Manual Transfer Panel — $400–$800</h3>
+              <h3>02 Manual Transfer Panel</h3>
               <p>
                 A robust manual transfer panel that lets you select individual circuits —
                 better if you also want to run a refrigerator or lighting from the same
@@ -419,7 +404,7 @@ export default function ResidentialHubPage() {
               </p>
             </div>
             <div className={styles.featureCard}>
-              <h3>03 Whole-Home Standby — from $8,000</h3>
+              <h3>03 Whole-Home Standby</h3>
               <p>
                 Automatic transfer switch with a natural gas or propane standby generator —
                 power returns within seconds of an outage. We handle the well pump prep and
@@ -439,19 +424,17 @@ export default function ResidentialHubPage() {
 
         {/* ── EMERGENCY CALLOUT ───────────────── */}
         <div className={styles.emergencyBlock}>
-          <span className={styles.emergencyBadge}>⚡ 24/7 Emergency Dispatch</span>
-          <h2>No Water? We Answer Around the Clock.</h2>
+          <span className={styles.emergencyBadge}>⚡ Emergency Service</span>
+          <h2>No Water? Call Us.</h2>
           <p>
-            We maintain 24/7 dispatch coverage across all 11 Houston service areas. When
-            you call after hours, you reach a technician — not an answering service. We
-            target a 2-hour response in Montgomery, Harris, and Waller counties, 365 days
-            a year, with common pumps, switches, and control boxes on the truck.
+            Call us directly or fill out the request form, and a licensed technician will
+            respond as soon as possible.
           </p>
           <div className={styles.emergencyStats}>
             {[
-              { stat: '2 hr', label: 'Avg. Response Time' },
-              { stat: '24/7', label: 'Dispatch Coverage' },
-              { stat: 'Same Day', label: 'Parts On Hand' },
+              { stat: 'Emergency', label: 'Service Available' },
+              { stat: '5,000+', label: 'Wells Serviced' },
+              { stat: 'Common', label: 'Parts On Hand' },
               { stat: '45+', label: 'Years Since 1979' },
             ].map((s) => (
               <div key={s.label} className={styles.emergencyStat}>
@@ -465,7 +448,7 @@ export default function ResidentialHubPage() {
               📞 (281) 448-4447
             </a>
             <Link href="/contact" className="btn btn-outline">
-              Free Estimate
+              Get Consultation
             </Link>
           </div>
         </div>
@@ -502,7 +485,7 @@ export default function ResidentialHubPage() {
           <div className={styles.finalCtaInner}>
             <h2>Need a Well Pump Repaired Today?</h2>
             <p>
-              Call for a free estimate or fill out the contact form. Family-owned,
+              Call for a consultation or fill out the contact form. Family-owned,
               licensed, and guaranteed — Houston&apos;s trusted water well specialists
               since 1979. 30815 Collier Smith Rd., Magnolia, TX 77354.
             </p>
@@ -511,7 +494,7 @@ export default function ResidentialHubPage() {
                 📞 (281) 448-4447
               </a>
               <Link href="/contact" className="btn btn-outline">
-                Request Free Estimate
+                Get Consultation
               </Link>
             </div>
           </div>

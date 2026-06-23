@@ -7,17 +7,17 @@ import Footer from '../components/Footer';
 export const metadata: Metadata = {
   title: 'About B-E Waterwell Services | Houston Area Since 1979',
   description:
-    'Family-owned and operated since 1979, B-E Waterwell Services has drilled over 5,000 waterwells across the Houston area. Meet the team behind 45+ years of trusted waterwell expertise.',
+    'Family-owned and operated since 1979, B-E Waterwell Services has serviced over 5,000 waterwells across the Houston area. Meet the team behind 45+ years of trusted waterwell expertise.',
 };
 
 const milestones = [
   { year: '1979', event: 'B-E Waterwell Services founded in Magnolia, TX by the Benge family.' },
   { year: '1985', event: 'Expanded service area to cover all of Montgomery County.' },
-  { year: '1993', event: 'Reached 1,000 waterwells drilled milestone. Added irrigation well services.' },
+  { year: '1993', event: 'Reached 1,000 waterwells serviced milestone. Added irrigation well services.' },
   { year: '2001', event: 'Expanded into Harris and Waller counties. Added commercial drilling rigs.' },
-  { year: '2010', event: '3,000 waterwells drilled. Launched 24/7 emergency pump service.' },
-  { year: '2019', event: '40-year anniversary. 4,500+ waterwells drilled across the Houston area.' },
-  { year: '2024', event: 'Over 5,000 waterwells drilled. Still family-owned, still in Magnolia, TX.' },
+  { year: '2010', event: '3,000 waterwells serviced. Launched emergency pump service.' },
+  { year: '2019', event: '40-year anniversary. 4,500+ waterwells serviced across the Houston area.' },
+  { year: '2024', event: 'Over 5,000 waterwells serviced. Still family-owned, still in Magnolia, TX.' },
 ];
 
 const values = [
@@ -28,8 +28,8 @@ const values = [
   },
   {
     icon: '⏱️',
-    title: '24/7 Emergency Service',
-    desc: 'Water emergencies don\'t keep business hours. Our emergency team is available around the clock for well failures, pump outages, and loss of water pressure.',
+    title: 'Emergency Service',
+    desc: 'When water emergencies strike, our team responds quickly for well failures, pump outages, and loss of water pressure.',
   },
   {
     icon: '🎓',
@@ -64,7 +64,7 @@ export default function AboutPage() {
             Over 45 Years of Waterwell<br />Excellence in the Houston Area
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: '1.1rem', maxWidth: '640px', margin: '0 auto 32px', lineHeight: 1.7 }}>
-            B-E Waterwell Services is a family-owned, TDLR-licensed waterwell drilling and pump service company headquartered in Magnolia, TX. Since 1979, we&apos;ve drilled over 5,000 waterwells for homeowners, ranchers, and businesses across the greater Houston area.
+            B-E Waterwell Services is a family-owned, TDLR-licensed waterwell drilling and pump service company headquartered in Magnolia, TX. Since 1979, we&apos;ve serviced over 5,000 waterwells for homeowners, ranchers, and businesses across the greater Houston area.
           </p>
           <a href="tel:+12814484447" className="btn btn-primary">Call (281) 448-4447</a>
         </div>
@@ -76,8 +76,8 @@ export default function AboutPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 0, textAlign: 'center' }}>
             {[
               { val: '45+', label: 'Years in Business' },
-              { val: '5,000+', label: 'Waterwells Drilled' },
-              { val: '24/7', label: 'Emergency Service' },
+              { val: '5,000+', label: 'Waterwells Serviced' },
+              { val: 'Yes', label: 'Emergency Service' },
               { val: '11', label: 'Cities Served' },
             ].map((s, i) => (
               <div key={i} style={{ padding: '20px', borderRight: i < 3 ? '1px solid var(--mid-stone)' : 'none' }}>
@@ -139,10 +139,10 @@ export default function AboutPage() {
             Ready to Work With Houston&apos;s Waterwell Experts?
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '28px', fontSize: '1rem' }}>
-            Call us today or request a free estimate — we&apos;ll have someone out to your property fast.
+            Call us today to request a consultation — we&apos;ll have someone out to your property soon.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/contact" className="btn btn-primary">Get a Free Estimate</Link>
+            <Link href="/contact" className="btn btn-primary">Get Consultation</Link>
             <a href="tel:+12814484447" className="btn btn-secondary">(281) 448-4447</a>
           </div>
         </div>

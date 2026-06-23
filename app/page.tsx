@@ -50,9 +50,9 @@ export default function HomePage() {
               </span>
             </h1>
             <p className={styles.heroSubtitle}>
-              Family-owned since 1979. TDLR licensed. Over 5,000 waterwells drilled
-              across Montgomery and Harris counties. When your water goes out,
-              we come out.
+              Family-owned since 1979. TDLR licensed. We have serviced over 5,000
+              wells across Montgomery, Harris, Waller, Grimes, Washington, Anderson,
+              and surrounding counties. When your water goes out, we come out.
             </p>
             <div className={styles.heroCtas}>
               <a href="tel:+12814484447" className="btn btn-primary">
@@ -62,7 +62,6 @@ export default function HomePage() {
             <div className={styles.heroTrust}>
               <span>TDLR Licensed</span>
               <span>Fully Insured</span>
-              <span>Free Estimates</span>
               <span>2-Year Warranty</span>
             </div>
           </div>
@@ -151,10 +150,10 @@ export default function HomePage() {
             </p>
             <ul className={styles.whyList}>
               <li>TDLR Licensed Waterwell Driller</li>
-              <li>Franklin Electric Authorized Service Center</li>
+              <li>Franklin Electric Authorized Dealer</li>
               <li>All work permitted and inspected per Texas law</li>
               <li>Written estimates with no surprise charges</li>
-              <li>2-Year workmanship warranty on all drilling</li>
+              <li>2-year workmanship warranty on drilling; pump &amp; motor warranty in most cases</li>
               <li>Locally owned, same family, same number since 1979</li>
             </ul>
             <Link href="/about" className="btn btn-dark" style={{ marginTop: "28px", display: "inline-flex" }}>
@@ -174,7 +173,7 @@ export default function HomePage() {
             <div className={styles.whyStatCards}>
               <div className={styles.whyStatCard}>
                 <span className={styles.whyStatNum}>5,000+</span>
-                <span className={styles.whyStatLbl}>Waterwells Drilled</span>
+                <span className={styles.whyStatLbl}>Wells Serviced</span>
               </div>
               <div className={styles.whyStatCard}>
                 <span className={styles.whyStatNum}>45+</span>
@@ -258,15 +257,15 @@ export default function HomePage() {
           <div className={styles.finalCtaInner}>
             <h2>Ready to Get Started?</h2>
             <p>
-              Call us directly or fill out the estimate form. We respond
-              within 2 hours during business hours, immediately for emergencies.
+              Call us directly or fill out the form. We respond promptly
+              during business hours, and we are here when you have an emergency.
             </p>
             <div className={styles.finalCtaButtons}>
               <a href="tel:+12814484447" className="btn btn-primary">
                 (281) 448-4447
               </a>
               <Link href="/contact" className="btn btn-outline">
-                Request Free Estimate
+                Get Consultation
               </Link>
             </div>
           </div>

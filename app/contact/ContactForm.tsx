@@ -45,7 +45,7 @@ export default function ContactForm() {
       style={{ background: 'var(--white)', border: '1px solid var(--light-stone)', borderRadius: 'var(--radius)', padding: '36px', display: 'flex', flexDirection: 'column', gap: '16px' }}
     >
       <h3 style={{ fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '1.1rem', color: 'var(--dark-earth)', marginBottom: '4px' }}>
-        Request a Free Estimate
+        Get Consultation
       </h3>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
@@ -91,7 +91,7 @@ export default function ContactForm() {
       </div>
 
       <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '14px', fontSize: '0.9rem' }}>
-        Send Message — Get Free Estimate
+        Send Message
       </button>
 
       <p style={{ fontSize: '0.78rem', color: 'var(--dark-stone)', textAlign: 'center', marginTop: '-4px' }}>

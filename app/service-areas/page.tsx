@@ -9,7 +9,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Service Areas | B-E Waterwell Services — Houston, TX',
   description:
-    'B-E Waterwell Services provides waterwell drilling, pump repair, and well rehabilitation across 11 cities in the Houston area — Magnolia, Conroe, Tomball, The Woodlands, Spring, Cypress, Humble, Kingwood, Montgomery, Pinehurst, and Waller.',
+    'B-E Waterwell Services provides waterwell drilling, pump repair, and well rehabilitation across Montgomery, Harris, Waller, Grimes, Washington, Anderson, and surrounding counties in the Houston area — Magnolia, Conroe, Tomball, The Woodlands, Spring, Cypress, Humble, Kingwood, Montgomery, Pinehurst, and Waller.',
   alternates: { canonical: 'https://bewaterwells.com/service-areas' },
 };
 
@@ -62,7 +62,8 @@ export default function ServiceAreasPage() {
             <span className={styles.heroOrange}>Houston</span>
           </h1>
           <p className={styles.heroSubtitle}>
-            11 cities. 3 counties. One crew that knows this ground better than anyone.
+            Serving Montgomery, Harris, Waller, Grimes, Washington, Anderson, and
+            surrounding counties. One crew that knows this ground better than anyone.
             B-E Waterwell Services has been drilling and servicing waterwells in
             Houston since 1979.
           </p>
@@ -71,7 +72,7 @@ export default function ServiceAreasPage() {
               📞 (281) 448-4447
             </a>
             <Link href="/contact" className="btn btn-outline">
-              Free Estimate
+              Get Consultation
             </Link>
           </div>
         </div>
@@ -120,7 +121,7 @@ export default function ServiceAreasPage() {
             <span className={styles.statLbl}>Cities Served</span>
           </div>
           <div className={styles.statItem}>
-            <span className={styles.statVal}>3</span>
+            <span className={styles.statVal}>6+</span>
             <span className={styles.statLbl}>Counties Covered</span>
           </div>
           <div className={styles.statItem}>
@@ -128,8 +129,8 @@ export default function ServiceAreasPage() {
             <span className={styles.statLbl}>Years of Experience</span>
           </div>
           <div className={styles.statItem}>
-            <span className={styles.statVal}>24/7</span>
-            <span className={styles.statLbl}>Emergency Response</span>
+            <span className={styles.statVal}>Yes</span>
+            <span className={styles.statLbl}>Emergency Service</span>
           </div>
         </div>
       </section>

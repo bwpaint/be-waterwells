@@ -72,11 +72,11 @@ export default function Footer() {
             </li>
             <li>
               <span className={styles.contactIcon}>🕐</span>
-              <span>24/7 Emergency Service<br />Mon–Fri 7am–6pm Regular</span>
+              <span>Emergency Service Available<br />Mon–Fri 7am–7pm</span>
             </li>
           </ul>
           <Link href="/contact" className={`btn btn-primary ${styles.footerCta}`}>
-            Get Free Estimate
+            Get Consultation
           </Link>
         </div>
       </div>

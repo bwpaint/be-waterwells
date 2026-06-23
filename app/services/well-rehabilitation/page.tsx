@@ -10,7 +10,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Water Well Rehabilitation — Houston, TX | B-E Waterwell',
   description:
-    'Is your well producing less water than before? B-E Waterwell rehabilitates declining wells in Houston, TX — restore flow without drilling new. TDLR Licensed. (281) 448-4447.',
+    'Is your well producing less water than before? B-E Waterwell rehabilitates declining wells in Houston, TX — restore flow without drilling new. TDLR Licensed. Serving Montgomery, Harris, Waller, Grimes, Washington, Anderson, and surrounding counties. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/well-rehabilitation' },
 };
 
@@ -125,8 +125,8 @@ const methods = [
 const compare = [
   {
     label: 'Cost',
-    rehab: '$800–$2,500',
-    newWell: '$8,000–$18,000',
+    rehab: 'A fraction of the cost of a new well',
+    newWell: 'Significantly higher — full drilling project',
   },
   {
     label: 'Disruption',
@@ -218,7 +218,7 @@ export default function WellRehabilitationPage() {
                   📞 (281) 448-4447
                 </a>
                 <Link href="/contact" className="btn btn-outline">
-                  Free Estimate
+                  Get Consultation
                 </Link>
               </div>
             </div>
@@ -239,7 +239,7 @@ export default function WellRehabilitationPage() {
           <p className={styles.overviewP}>
             Well rehabilitation is a set of cleaning and treatment methods designed to
             restore the water yield and quality of a declining well. Rather than
-            abandoning a well and drilling new — at $8,000–$18,000 — rehabilitation
+            abandoning a well and drilling new — at a fraction of the cost — rehabilitation
             addresses the root cause of yield loss: biofouling, mineral encrustation,
             or sediment blockage.
           </p>
@@ -252,10 +252,10 @@ export default function WellRehabilitationPage() {
           </p>
           <div className={styles.overviewStats}>
             {[
-              { stat: '$800–$2,500', label: 'Typical Rehab Cost' },
-              { stat: '$8K–$18K', label: 'Cost of New Well' },
+              { stat: '5,000+', label: 'Wells Serviced' },
               { stat: '1–2 Days', label: 'Typical Disruption' },
               { stat: '45+', label: 'Years Experience' },
+              { stat: 'TDLR', label: 'Licensed' },
             ].map((s) => (
               <div key={s.label} className={styles.overviewStat}>
                 <strong>{s.stat}</strong>
@@ -401,16 +401,22 @@ export default function WellRehabilitationPage() {
           <div className={styles.finalCtaInner}>
             <h2>Getting Less Water Than You Used To?</h2>
             <p>
-              Call for a free diagnostic and estimate. We&apos;ll tell you honestly
+              Call for a diagnostic and estimate. We&apos;ll tell you honestly
               whether your well can be rehabilitated — or whether replacement is the
               smarter long-term call. No pressure, quoted in writing.
+            </p>
+            <p>
+              Time for a new well?{' '}
+              <Link href="/services/water-well-drilling" className={styles.crossLink}>
+                Call us to discuss today!
+              </Link>
             </p>
             <div className={styles.finalCtaBtns}>
               <a href="tel:+12814484447" className="btn btn-primary">
                 📞 (281) 448-4447
               </a>
               <Link href="/contact" className="btn btn-outline">
-                Request Free Estimate
+                Get Consultation
               </Link>
             </div>
           </div>

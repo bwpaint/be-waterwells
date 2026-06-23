@@ -1,46 +1,40 @@
 export const services = [
   {
     icon: 'drill',
-    title: 'Waterwell Drilling',
-    desc: 'Residential and commercial waterwell drilling using rotary rig technology. We drill to the Jasper and Evangeline Aquifers across 11 Houston service areas.',
-    href: '/water-well-drilling',
+    title: 'Water Well Drilling & Installation',
+    desc: 'New residential and commercial waterwell drilling and complete installation using rotary rig technology. We drill to the Jasper, Chicot, and Evangeline Aquifers across the greater Houston area.',
+    href: '/services/water-well-drilling',
   },
   {
     icon: 'pump',
-    title: 'Pump Installation & Repair',
-    desc: 'Submersible pump installation, motor replacement, and emergency repair. Franklin Electric certified. Most pump jobs completed same-day.',
-    href: '/pump-installation',
-  },
-  {
-    icon: 'rehab',
-    title: 'Well Rehabilitation',
-    desc: 'Restore aging wells to peak production with well shocking, acid treatment, and screen cleaning. Often a fraction of the cost of a new well.',
-    href: '/well-rehabilitation',
+    title: 'Residential Water Well Services',
+    desc: 'Pump repair and replacement, pressure tanks, constant pressure systems, and generator prep for homeowners. Franklin Electric authorized dealer.',
+    href: '/services/residential',
   },
   {
     icon: 'irrigation',
-    title: 'Irrigation Waterwells',
-    desc: 'Dedicated irrigation waterwells keep your landscape alive without municipal water bills. We design and drill systems for residential and agricultural properties.',
-    href: '/irrigation-wells',
+    title: 'Commercial & Agricultural',
+    desc: 'High-capacity wells for ranches, farms, equestrian properties, nurseries, and commercial sites — larger casing, higher-horsepower pumps, and high-capacity permits handled.',
+    href: '/services/commercial',
+  },
+  {
+    icon: 'rehab',
+    title: 'Water Well Rehabilitation',
+    desc: 'Restore aging wells to peak production with well shocking, acid treatment, and screen cleaning — often a fraction of the cost of a new well.',
+    href: '/services/well-rehabilitation',
   },
   {
     icon: 'inspect',
-    title: 'Well Inspection & Diagnostics',
-    desc: 'Pre-purchase inspections, pump performance tests, and water quality sampling. Written reports provided for real estate transactions.',
-    href: '/well-inspection',
-  },
-  {
-    icon: 'generator',
-    title: 'Generator Prep Kits',
-    desc: 'Keep your water flowing during power outages. We install generator transfer switches and prep kits for pump systems throughout Houston.',
-    href: '/generator-prep',
+    title: 'Maintenance & Inspection',
+    desc: 'Annual maintenance, real-estate and FHA/VA well inspections, and ongoing care to extend the life of your well and protect water quality.',
+    href: '/services/well-maintenance',
   },
 ];
 
 export const stats = [
   { value: '45+', label: 'Years in Business' },
-  { value: '5,000+', label: 'Waterwells Drilled' },
-  { value: '11', label: 'Cities Served' },
+  { value: '5,000+', label: 'Wells Serviced' },
+  { value: '1,000+', label: 'Satisfied Customers' },
 ];
 
 export const cityAreas = [

@@ -117,10 +117,10 @@ export default function BlogPage() {
             Have a Waterwell Question?
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '24px', fontSize: '0.95rem' }}>
-            Our team has 45+ years of answers. Call or request a free estimate.
+            Our team has 45+ years of answers. Call or request a consultation.
           </p>
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/contact" className="btn btn-primary">Free Estimate</Link>
+            <Link href="/contact" className="btn btn-primary">Get Consultation</Link>
             <a href="tel:+12814484447" className="btn btn-secondary">(281) 448-4447</a>
           </div>
         </div>
