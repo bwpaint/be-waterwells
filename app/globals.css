@@ -5,6 +5,31 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap');
 
+/* ── Copperplate (self-hosted) — used for headings only ── */
+@font-face {
+  font-family: 'Copperplate';
+  src: url('/fonts/Copperplate.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Copperplate';
+  src: url('/fonts/CopperplateCC-Bold.ttf') format('truetype'),
+       url('/fonts/CopperplateCC-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Copperplate';
+  src: url('/fonts/CopperplateCC-Heavy.ttf') format('truetype'),
+       url('/fonts/CopperplateCC-Heavy.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --charcoal:     #533B22;
   --dark-stone:   #533B22;
@@ -24,6 +49,7 @@
 
   --font-head: 'Montserrat', sans-serif;
   --font-body: 'Open Sans', sans-serif;
+  --font-display: 'Copperplate', 'Montserrat', sans-serif;
 
   --radius:      6px;
   --radius-lg:   12px;
@@ -152,9 +178,14 @@ a {
 .section-label.light::before { background: var(--sand-light); }
 
 .section-title {
-  font-family: var(--font-head);
+  font-family: var(--font-display);
   font-weight: 800;
   line-height: 1.15;
   color: var(--charcoal);
 }
 .section-title.light { color: var(--white); }
+
+/* Copperplate on every heading — nav, buttons, and small labels stay on Montserrat */
+h1, h2, h3 {
+  font-family: var(--font-display) !important;
+}
