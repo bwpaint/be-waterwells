@@ -15,6 +15,50 @@ export interface CityData {
 
 export const cities: CityData[] = [
   {
+    slug: 'houston-tx',
+    city: 'Houston',
+    state: 'TX',
+    county: 'Harris County',
+    isHQ: false,
+    tagline: 'Water Well Drilling & Service Across the Greater Houston Area',
+    heroSubtitle: 'Drilling · Pumps · Rehabilitation',
+    metaDescription:
+      'B-E Waterwell Services — water well drilling, pump repair, and well rehabilitation across the greater Houston, TX area. TDLR licensed since 1979. Call (281) 448-4447.',
+    intro:
+      'B-E Waterwell Services has drilled and serviced water wells across the greater Houston area for over 45 years. From rural acreage on the metro\'s edge to established properties beyond city water, we handle new wells, pump repair and replacement, pressure systems, and well rehabilitation. We are a family-owned, TDLR-licensed contractor and a Franklin Electric authorized dealer.',
+    aquiferDepth: '300–600 ft',
+    nearbyAreas: [
+      { city: 'Cypress', slug: 'cypress-tx', distance: '25 mi' },
+      { city: 'Spring', slug: 'spring-tx', distance: '22 mi' },
+      { city: 'Humble', slug: 'humble-tx', distance: '20 mi' },
+      { city: 'Tomball', slug: 'tomball-tx', distance: '30 mi' },
+      { city: 'Katy', slug: 'katy-tx', distance: '29 mi' },
+      { city: 'Magnolia', slug: 'magnolia-tx', distance: '45 mi' },
+    ],
+    faqs: [
+      {
+        question: 'Does B-E Waterwell Services drill water wells in the Houston area?',
+        answer:
+          'Yes. We drill and service water wells throughout the greater Houston area and surrounding counties — Harris, Montgomery, Waller, Grimes, Washington, and beyond. We have served this region since 1979.',
+      },
+      {
+        question: 'How deep are water wells in the Houston area?',
+        answer:
+          'Depth varies by location and the water-bearing formation beneath your property. We assess each site before drilling and recommend the right depth for a reliable, productive well.',
+      },
+      {
+        question: 'Do I need a permit to drill a water well near Houston?',
+        answer:
+          'Most new wells require a permit from the local Groundwater Conservation District or subsidence district, and timelines vary by county. B-E Waterwell handles all permitting on your behalf.',
+      },
+      {
+        question: 'How much does a water well cost in the Houston area?',
+        answer:
+          'Pricing depends on your location, well depth, static water level, and equipment selection — call us to discuss your project and we\'ll provide a written estimate.',
+      },
+    ],
+  },
+  {
     slug: 'magnolia-tx',
     city: 'Magnolia',
     state: 'TX',

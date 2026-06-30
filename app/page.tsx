@@ -151,7 +151,6 @@ export default function HomePage() {
             <ul className={styles.whyList}>
               <li>TDLR Licensed Water Well Driller / Pump Installer</li>
               <li>Franklin Electric Authorized Dealer</li>
-              <li>Written estimates with no surprise charges</li>
               <li>Two-year warranty on pump &amp; motors in most cases</li>
               <li>Locally owned, same family, same number since 1979</li>
             </ul>

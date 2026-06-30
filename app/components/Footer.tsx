@@ -40,6 +40,7 @@ export default function Footer() {
         <div>
           <h4 className={styles.footerHeading}>Service Areas</h4>
           <ul className={styles.footerLinks}>
+            <li><Link href="/service-area/houston-tx">Houston, TX</Link></li>
             <li><Link href="/service-area/magnolia-tx">Magnolia, TX</Link></li>
             <li><Link href="/service-area/conroe-tx">Conroe, TX</Link></li>
             <li><Link href="/service-area/tomball-tx">Tomball, TX</Link></li>

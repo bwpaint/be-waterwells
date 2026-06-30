@@ -2,7 +2,7 @@ export const services = [
   {
     icon: 'drill',
     title: 'Water Well Drilling & Installation',
-    desc: 'New residential and commercial waterwell drilling and complete installation using rotary rig technology. We drill to the Jasper, Chicot, and Evangeline Aquifers across the greater Houston area.',
+    desc: 'New residential and commercial waterwell drilling and complete installation using rotary rig technology across the greater Houston area.',
     href: '/services/water-well-drilling',
   },
   {
@@ -39,6 +39,7 @@ export const stats = [
 
 export const cityAreas = [
   { city: 'Magnolia', slug: 'magnolia-tx', hq: true },
+  { city: 'Houston', slug: 'houston-tx', hq: false },
   { city: 'Conroe', slug: 'conroe-tx', hq: false },
   { city: 'Tomball', slug: 'tomball-tx', hq: false },
   { city: 'The Woodlands', slug: 'woodlands-tx', hq: false },
@@ -129,7 +130,7 @@ export const jsonLd = {
 export const homeFaqs = [
   {
     question: 'How much does waterwell drilling cost in Houston?',
-    answer: 'A complete new waterwell installation in the greater Houston area typically costs $5,000–$18,000, with most residential projects running $8,000–$12,000. Drilling runs $30–$55 per foot. Most wells in Montgomery and Harris counties reach productive aquifers at 200–350 feet. B-E Waterwell Services provides free on-site estimates. Call (281) 448-4447.',
+    answer: 'Pricing depends on your location, well depth, static water level, and equipment selection — call us to discuss your project. B-E Waterwell Services provides written estimates. Call (281) 448-4447.',
   },
   {
     question: 'Does B-E Waterwell Services serve my area near Houston?',
@@ -141,11 +142,7 @@ export const homeFaqs = [
   },
   {
     question: 'Is B-E Waterwell Services licensed in Texas?',
-    answer: 'Yes. B-E Waterwell Services is licensed by the Texas Department of Licensing and Regulation (TDLR) as a water well driller and pump installer. We have operated in the greater Houston area since 1979 and have drilled over 5,000 wells across Montgomery, Harris, Waller, and surrounding counties.',
-  },
-  {
-    question: 'What aquifers do you drill into in the Houston area?',
-    answer: 'In the Houston area we primarily drill into the Jasper Aquifer (200–350 ft depth) for residential wells in Montgomery and Waller counties, and the Evangeline Aquifer (350–600 ft) for deeper or higher-demand applications. The aquifer and required depth depend on your specific property location — we assess this during the free estimate.',
+    answer: 'Yes. B-E Waterwell Services is licensed by the Texas Department of Licensing and Regulation (TDLR) as a water well driller and pump installer. We have operated in the greater Houston area since 1979 and have serviced more than 5,000 wells across Montgomery, Harris, Waller, and surrounding counties.',
   },
 ];
 
