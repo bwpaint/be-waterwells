@@ -31,18 +31,21 @@ export default function PrivacyPage() {
       <Navbar />
 
       <section style={{ background: 'var(--charcoal)', paddingTop: '140px', paddingBottom: '48px' }}>
-        <div className="container" style={{ maxWidth: '820px' }}>
-          <h1 style={{ color: 'var(--white)', fontSize: 'clamp(1.8rem,4vw,2.6rem)', fontFamily: 'var(--font-head)', fontWeight: 900 }}>
-            Privacy Policy
-          </h1>
-          <p style={{ color: 'rgba(255,255,255,0.7)', marginTop: '10px' }}>
-            Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
-          </p>
+        <div className="container">
+          <div style={{ maxWidth: '820px', marginRight: 'auto' }}>
+            <h1 style={{ color: 'var(--white)', fontSize: 'clamp(1.8rem,4vw,2.6rem)', fontFamily: 'var(--font-head)', fontWeight: 900 }}>
+              Privacy Policy
+            </h1>
+            <p style={{ color: 'rgba(255,255,255,0.7)', marginTop: '10px' }}>
+              Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+            </p>
+          </div>
         </div>
       </section>
 
       <section style={{ padding: '48px 0 64px', background: 'var(--off-white)' }}>
-        <div className="container" style={{ maxWidth: '820px' }}>
+        <div className="container">
+          <div style={{ maxWidth: '820px', marginRight: 'auto' }}>
           <p style={pStyle}>
             B-E Waterwell Services (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) respects your
             privacy. This policy explains what information we collect through our website and how we use it.
@@ -87,6 +90,7 @@ export default function PrivacyPage() {
             <a href="tel:+12814484447" style={{ color: 'var(--highlight)', fontWeight: 700 }}>(281) 448-4447</a>.
             B-E Waterwell Services is based in Magnolia, TX, and serves the greater Houston area.
           </p>
+          </div>
         </div>
       </section>
 

@@ -5,11 +5,59 @@ import AnnouncementBar from './components/AnnouncementBar';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomeHeroForm from './components/HomeHeroForm';
-import { services, stats, cityAreas, partners, testimonials, jsonLd, homeFaqs, SERVICE_ICONS } from '../lib/homeData';
+import { services, stats, cityAreas, partners, testimonials, jsonLd, homeFaqs } from '../lib/homeData';
 import { buildFaqSchema } from '../lib/seoData';
+import { COUNTIES, MAP_VIEWBOX } from '../lib/serviceAreaGeo';
 import styles from './page.module.css';
 
 const faqSchema = buildFaqSchema(homeFaqs);
+
+/* Monochrome "chrome" line icons (metallic gradient, no color) */
+const iconProps = {
+  viewBox: '0 0 24 24',
+  fill: 'none',
+  stroke: 'url(#chromeGrad)',
+  strokeWidth: 1.7,
+  strokeLinecap: 'round' as const,
+  strokeLinejoin: 'round' as const,
+  width: 34,
+  height: 34,
+};
+
+const SERVICE_SVG: Record<string, React.ReactNode> = {
+  drill: (
+    <svg {...iconProps}><path d="M12 21V6" /><path d="M12 6 7 3M12 6l5-3" /><path d="M6 21h12" /><path d="M9.5 13h5" /></svg>
+  ),
+  pump: (
+    <svg {...iconProps}><path d="M4 11 12 4l8 7" /><path d="M6 10v10h12V10" /><path d="M10 20v-5h4v5" /></svg>
+  ),
+  irrigation: (
+    <svg {...iconProps}><path d="M3 21V9l9-5 9 5v12" /><path d="M9 21v-6h6v6" /><path d="M3 21h18" /></svg>
+  ),
+  rehab: (
+    <svg {...iconProps}><path d="M20.5 12a8 8 0 1 1-2.3-5.6" /><path d="M20.5 4v4h-4" /></svg>
+  ),
+  inspect: (
+    <svg {...iconProps}><circle cx="10.5" cy="10.5" r="6.5" /><path d="M21 21l-5.6-5.6" /></svg>
+  ),
+};
+
+/* Static (non-interactive) mini county map for the service-areas teaser */
+function MiniServiceMap() {
+  return (
+    <svg viewBox={MAP_VIEWBOX} className={styles.miniMapSvg} role="img" aria-label="Map of Greater Houston service area counties">
+      {COUNTIES.map((c) => (
+        <path
+          key={c.name}
+          d={c.d}
+          fill={c.hq ? 'var(--highlight)' : c.tier === 'prime' ? '#c4aa88' : '#ddd0b4'}
+          stroke="#f8f4ec"
+          strokeWidth={2}
+        />
+      ))}
+    </svg>
+  );
+}
 
 export const metadata: Metadata = {
   title: 'Houston Area Waterwell Drilling & Pump Services | B-E Waterwell Services',
@@ -29,6 +77,17 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+
+      {/* Shared chrome gradient for monochrome service icons */}
+      <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
+        <defs>
+          <linearGradient id="chromeGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#cfd4db" />
+            <stop offset="0.5" stopColor="#8d929b" />
+            <stop offset="1" stopColor="#565b63" />
+          </linearGradient>
+        </defs>
+      </svg>
 
       <AnnouncementBar />
       <Navbar transparent />
@@ -91,7 +150,7 @@ export default function HomePage() {
           <div className={styles.partnersGrid}>
             {partners.map((p) => (
               <div key={p.alt} className={styles.partnerItem}>
-                <Image src={p.src} alt={p.alt} width={120} height={60} style={{ objectFit: "contain" }} />
+                <Image src={p.src} alt={p.alt} width={172} height={86} style={{ objectFit: "contain" }} />
               </div>
             ))}
           </div>
@@ -126,12 +185,38 @@ export default function HomePage() {
           <div className={styles.servicesGrid}>
             {services.map((svc) => (
               <Link key={svc.href} href={svc.href} className={styles.serviceCard}>
-                <span className={styles.serviceIcon}>{SERVICE_ICONS[svc.icon]}</span>
+                <span className={styles.serviceIcon}>{SERVICE_SVG[svc.icon]}</span>
                 <h3 className={styles.serviceCardTitle}>{svc.title}</h3>
                 <p className={styles.serviceCardDesc}>{svc.desc}</p>
                 <span className={styles.serviceCardLink}>Learn More</span>
               </Link>
             ))}
+
+            {/* 6th tile — service-area map teaser */}
+            <Link href="/service-areas" className={`${styles.serviceCard} ${styles.mapTile}`}>
+              <span className={styles.mapTileGraphic} aria-hidden="true">
+                <svg viewBox={MAP_VIEWBOX} className={styles.mapTileMap}>
+                  {COUNTIES.map((c) => (
+                    <path
+                      key={c.name}
+                      d={c.d}
+                      fill={c.hq ? 'var(--highlight)' : c.tier === 'prime' ? '#c4aa88' : '#ddd0b4'}
+                      stroke="rgba(255,255,255,0.85)"
+                      strokeWidth={2}
+                    />
+                  ))}
+                </svg>
+                <svg viewBox="0 0 24 24" className={styles.mapTilePin} fill="var(--highlight)" stroke="#fff" strokeWidth={1.3}>
+                  <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" />
+                  <circle cx="12" cy="10" r="2.6" fill="#fff" stroke="none" />
+                </svg>
+              </span>
+              <h3 className={styles.serviceCardTitle}>See Our Service Areas</h3>
+              <p className={styles.serviceCardDesc}>
+                Explore the cities and counties we cover across the Greater Houston region.
+              </p>
+              <span className={styles.serviceCardLink}>View Service Areas</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -212,22 +297,23 @@ export default function HomePage() {
           <p className={styles.areasSubtext}>
             From the Brazos Valley to the Lake Houston corridor.
           </p>
-          <div className={styles.areasGrid}>
-            {cityAreas.map((a) => (
-              <Link
-                key={a.slug}
-                href={`/service-area/${a.slug}`}
-                className={`${styles.areaCard} ${a.hq ? styles.areaCardHQ : ""}`}
-              >
-                <span className={styles.areaCity}>{a.city}, TX</span>
-                {a.hq && <span className={styles.hqBadge}>HQ</span>}
-                <span className={styles.areaArrow}>go</span>
-              </Link>
-            ))}
-          </div>
-          <div style={{ textAlign: "center", marginTop: "40px" }}>
-            <Link href="/service-areas" className="btn btn-dark">
-              View Interactive Service Area Map
+          <div className={styles.areasLayout}>
+            <div className={styles.areasCityCols}>
+              {cityAreas.map((a) => (
+                <Link
+                  key={a.slug}
+                  href={`/service-area/${a.slug}`}
+                  className={`${styles.areaCard} ${a.hq ? styles.areaCardHQ : ""}`}
+                >
+                  <span className={styles.areaCity}>{a.city}, TX</span>
+                  {a.hq && <span className={styles.hqBadge}>HQ</span>}
+                  <span className={styles.areaArrow}>go</span>
+                </Link>
+              ))}
+            </div>
+            <Link href="/service-areas" className={styles.areasMapLink} aria-label="View full service area map">
+              <MiniServiceMap />
+              <span className={styles.areasMapCta}>View Full Service Area Map →</span>
             </Link>
           </div>
         </div>

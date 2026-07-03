@@ -6,9 +6,13 @@
 
 .footerGrid {
   display: grid;
-  grid-template-columns: 280px 1fr 1fr 260px;
+  grid-template-columns: 300px 1fr 1.7fr;
   gap: 48px;
-  padding-bottom: 48px;
+  padding-bottom: 40px;
+}
+
+.brandContact {
+  margin-top: 30px;
 }
 
 .footerBrand {}
@@ -114,6 +118,62 @@
   justify-content: center;
 }
 
+/* Contact form (two right columns) */
+.footerFormCol {}
+.footerForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.footerInput {
+  width: 100%;
+  padding: 11px 13px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.footerInput::placeholder { color: rgba(255, 255, 255, 0.5); }
+.footerInput:focus { border-color: var(--orange); }
+.footerTextarea {
+  grid-column: 1 / -1;
+  resize: vertical;
+  min-height: 96px;
+}
+.footerFormBtn {
+  grid-column: 1 / -1;
+  width: 100%;
+  justify-content: center;
+  margin-top: 2px;
+}
+.formSent {
+  color: var(--white);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.formSent a { color: var(--orange); font-weight: 700; }
+
+/* Service Areas — full-width row */
+.areasRowWrap {
+  border-top: 1px solid var(--mid-stone);
+  padding: 28px 0 6px;
+}
+.areasRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+}
+.areasRow a {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  transition: var(--transition);
+}
+.areasRow a:hover { color: var(--orange); }
+
 /* Bottom bar */
 .footerBottom {
   border-top: 1px solid var(--mid-stone);
@@ -147,11 +207,14 @@
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
-  .footerBrand { grid-column: 1 / -1; }
+  .footerFormCol { grid-column: 1 / -1; }
 }
 
 @media (max-width: 600px) {
   .footerGrid {
+    grid-template-columns: 1fr;
+  }
+  .footerForm {
     grid-template-columns: 1fr;
   }
   .footerBottomInner {

@@ -302,7 +302,7 @@
   gap: 24px;
 }
 .serviceCard {
-  background: var(--white);
+  background: #f7f2e9;
   border: 1px solid var(--stone-light);
   border-radius: var(--radius-lg);
   padding: 32px 28px;
@@ -313,6 +313,7 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 6px 22px rgba(26, 23, 20, 0.07);
 }
 .serviceCard::before {
   content: '';
@@ -329,7 +330,33 @@
   transform: translateY(-4px);
 }
 .serviceCard:hover::before { transform: scaleX(1); }
-.serviceIcon { font-size: 2rem; }
+.serviceIcon { display: inline-flex; margin-bottom: 2px; }
+.serviceIcon svg { display: block; }
+
+/* 6th tile — service-area map teaser */
+.mapTile { justify-content: flex-start; }
+.mapTileGraphic {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #efe7d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+.mapTileMap { height: 150px; width: auto; opacity: 0.92; display: block; }
+.mapTilePin {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -62%);
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+}
 .serviceCardTitle {
   font-family: var(--font-head);
   font-size: 1.05rem;
@@ -522,6 +549,48 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
+.areasLayout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.areasCityCols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.areasMapLink {
+  display: block;
+  border: 1px solid var(--stone-light);
+  border-radius: var(--radius-lg);
+  background: var(--cream);
+  padding: 22px 20px;
+  text-align: center;
+  transition: var(--transition);
+}
+.areasMapLink:hover {
+  border-color: var(--orange);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.miniMapSvg {
+  display: block;
+  margin: 0 auto;
+  height: 400px;
+  width: auto;
+  max-width: 100%;
+}
+.areasMapCta {
+  display: block;
+  margin-top: 16px;
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--highlight);
+}
 .areaCard {
   display: flex;
   align-items: center;
@@ -603,6 +672,8 @@
   .servicesGrid { grid-template-columns: repeat(2, 1fr); }
   .testimonialsGrid { grid-template-columns: repeat(2, 1fr); }
   .areasGrid { grid-template-columns: repeat(3, 1fr); }
+  .areasLayout { grid-template-columns: 1fr; }
+  .miniMapSvg { height: 340px; }
   .whyGrid { grid-template-columns: 1fr; }
   .ctaBandGrid { grid-template-columns: 1fr; }
 }
