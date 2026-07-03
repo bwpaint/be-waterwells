@@ -8,7 +8,7 @@ import CityFaqAccordion from '../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Water Well Drilling & Installation — Houston, TX | B-E Waterwell',
+  title: 'Water Well Drilling & Installation — Houston, TX | B-E Waterwell Services',
   description:
     'Water well drilling contractors in Houston, TX since 1979. New residential wells, full installation, irrigation, and commercial drilling. TDLR Licensed. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/water-well-drilling' },

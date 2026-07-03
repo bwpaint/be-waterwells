@@ -8,7 +8,7 @@ import CityFaqAccordion from '../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Residential Water Well Services — Houston, TX | B-E Waterwell',
+  title: 'Residential Water Well Services — Houston, TX | B-E Waterwell Services',
   description:
     'Residential well water pump repair, pressure tanks, constant pressure systems, new wells, and maintenance in Houston, TX since 1979. Franklin Electric authorized dealer, TDLR licensed. Emergency service available. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/residential' },

@@ -8,7 +8,7 @@ import CityFaqAccordion from '../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Commercial & Agricultural Water Well Services — Houston, TX | B-E Waterwell',
+  title: 'Commercial & Agricultural Water Well Services — Houston, TX | B-E Waterwell Services',
   description:
     'Commercial, agricultural, ranch & equestrian high-capacity water wells in Houston, TX. Water well drilling contractors since 1979. High-capacity GCD permits handled. TDLR Licensed. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/commercial' },

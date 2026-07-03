@@ -4,7 +4,9 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | B-E Waterwell Services",
+    // Each page authors its full title (brand included), so the template is a pass-through.
+    // This prevents the brand name from being appended a second time.
+    template: "%s",
     default: "Houston Area Waterwell Drilling & Pump Services | B-E Waterwell Services",
   },
   description:

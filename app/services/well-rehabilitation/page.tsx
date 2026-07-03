@@ -8,7 +8,7 @@ import CityFaqAccordion from '../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Water Well Rehabilitation — Houston, TX | B-E Waterwell',
+  title: 'Water Well Rehabilitation — Houston, TX | B-E Waterwell Services',
   description:
     'Is your well producing less water than before? B-E Waterwell rehabilitates declining wells in Houston, TX — restore flow without drilling new. TDLR Licensed. Serving Montgomery, Harris, Waller, Grimes, Washington, Anderson, and surrounding counties. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/well-rehabilitation' },

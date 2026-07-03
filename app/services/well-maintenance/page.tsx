@@ -8,7 +8,7 @@ import CityFaqAccordion from '../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Water Well Maintenance & Inspection — Houston, TX | B-E Waterwell',
+  title: 'Water Well Maintenance & Inspection — Houston, TX | B-E Waterwell Services',
   description:
     'Annual water well maintenance and well inspection in Houston, TX — for home buyers, FHA/VA/USDA loans, and well owners. Rehabilitation referral. TDLR licensed since 1979. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/well-maintenance' },
