@@ -100,9 +100,6 @@ export default function CityPage({ params }: Props) {
       <section className={styles.hero}>
         <div className={styles.heroBg} />
         <div className={styles.heroGrid}>
-          {/* Left gutter */}
-          <div />
-
           {/* Content */}
           <div className={styles.heroContent}>
             {/* Breadcrumb */}
@@ -140,9 +137,6 @@ export default function CityPage({ params }: Props) {
 
           {/* Form */}
           <CityHeroForm city={city.city} />
-
-          {/* Right gutter */}
-          <div />
         </div>
       </section>
 
