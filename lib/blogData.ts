@@ -13,7 +13,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'water-well-drilling-cost-north-houston-2025',
     categorySlug: 'water-well-drilling',
     date: '2025-04-10',
-    excerpt: "Residential waterwells in Montgomery and Harris counties range $8,000–$18,000. Here's exactly what drives cost and what to watch out for.",
+    excerpt: "Residential waterwell cost in Montgomery and Harris counties comes down to depth, casing, and pump spec. Here's exactly what drives it and what to watch out for.",
   },
   {
     title: 'Switching from City Water to a Private Well in Houston TX',
@@ -114,7 +114,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'pressure-tank-replacement-cost-texas',
     categorySlug: 'water-well-systems',
     date: '2025-02-05',
-    excerpt: 'Most pressure tank replacements in the Houston area run $400–$900 including labor. Here is what drives the price and red flags to avoid.',
+    excerpt: 'Pressure tank replacement cost in the Houston area depends on tank size and labor. Here is what drives it and the red flags to avoid.',
   },
   // ── Well Maintenance ──
   {
@@ -159,4 +159,8 @@ export function getRecentBlogPosts(count = 4): BlogPost[] {
 
 export function getAllBlogPosts(): BlogPost[] {
   return [...blogPosts].sort((a, b) => b.date.localeCompare(a.date));
+}
+
+export function getBlogPostBySlug(slug: string): BlogPost | undefined {
+  return blogPosts.find((p) => p.slug === slug);
 }

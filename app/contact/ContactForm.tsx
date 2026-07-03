@@ -44,10 +44,6 @@ export default function ContactForm() {
       onSubmit={handleSubmit}
       style={{ background: 'var(--white)', border: '1px solid var(--light-stone)', borderRadius: 'var(--radius)', padding: '36px', display: 'flex', flexDirection: 'column', gap: '16px' }}
     >
-      <h3 style={{ fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '1.1rem', color: 'var(--dark-earth)', marginBottom: '4px' }}>
-        Get Consultation
-      </h3>
-
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
           <label style={labelStyle}>First Name *</label>

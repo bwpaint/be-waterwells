@@ -18,7 +18,7 @@
   position: relative;
   z-index: 1;
   padding-top: 60px;
-  max-width: 760px;
+  text-align: left;
 }
 .breadcrumb {
   display: flex;

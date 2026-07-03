@@ -22,8 +22,7 @@
 
 .bar a {
   color: var(--white);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
 }
 .bar a:hover {
   opacity: 0.85;

@@ -91,7 +91,10 @@ export default function ContactPage() {
             </div>
 
             {/* Right: form */}
-            <ContactForm />
+            <div>
+              <h2 style={{ fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '1.6rem', color: 'var(--dark-earth)', marginBottom: '24px' }}>Get Consultation</h2>
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>

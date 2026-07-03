@@ -33,7 +33,9 @@ export default function ServiceSidebar({
   const [search, setSearch] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
   const [service, setService] = useState(defaultService);
+  const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
   const posts = category
@@ -107,6 +109,14 @@ export default function ServiceSidebar({
               className={styles.formInput}
               autoComplete="tel"
             />
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className={styles.formInput}
+              autoComplete="email"
+            />
             <select
               value={service}
               onChange={(e) => setService(e.target.value)}
@@ -117,6 +127,14 @@ export default function ServiceSidebar({
                 <option key={opt} value={opt}>{opt}</option>
               ))}
             </select>
+            <textarea
+              placeholder="Comments / what you're interested in"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className={styles.formInput}
+              rows={3}
+              style={{ resize: 'vertical' }}
+            />
             <button type="submit" className={styles.submitBtn}>
               Request Callback
             </button>
@@ -136,7 +154,7 @@ export default function ServiceSidebar({
           {posts.map((post) => (
             <li key={post.slug} className={styles.postItem}>
               <Link
-                href={`/blog/${post.categorySlug}/${post.slug}`}
+                href={`/blog/${post.slug}`}
                 className={styles.postLink}
               >
                 {post.title}

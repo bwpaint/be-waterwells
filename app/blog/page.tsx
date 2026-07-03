@@ -19,6 +19,19 @@ const categories = [
   { slug: 'emergency-well-services', label: 'Emergency Service' },
 ];
 
+// Branded card headers (stand in for photography until the CMS media library is wired)
+const CATEGORY_STYLES: Record<string, { gradient: string; icon: string }> = {
+  'water-well-drilling': { gradient: 'linear-gradient(135deg,#4a3a2a 0%,#6B4F33 100%)', icon: '🔩' },
+  'well-pump-services':  { gradient: 'linear-gradient(135deg,#3d4b52 0%,#55636d 100%)', icon: '⚙️' },
+  'water-well-systems':  { gradient: 'linear-gradient(135deg,#4a4030 0%,#6b5a3b 100%)', icon: '💧' },
+  'well-maintenance':    { gradient: 'linear-gradient(135deg,#3f4a3a 0%,#55634f 100%)', icon: '🔧' },
+  'emergency-well-services': { gradient: 'linear-gradient(135deg,#7a3a1a 0%,#b84e08 100%)', icon: '⚡' },
+};
+
+function formatDate(d: string): string {
+  return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
 export default function BlogPage() {
   const posts = getAllBlogPosts();
 
@@ -78,33 +91,37 @@ export default function BlogPage() {
             </div>
           ) : (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(320px,1fr))', gap: '28px' }}>
-              {posts.map((post) => (
-                <article
+              {posts.map((post) => {
+                const cat = categories.find(c => c.slug === post.categorySlug);
+                const cs = CATEGORY_STYLES[post.categorySlug] ?? { gradient: 'linear-gradient(135deg,#4a3a2a 0%,#6B4F33 100%)', icon: '💧' };
+                return (
+                <Link
                   key={post.slug}
-                  style={{ background: 'var(--white)', border: '1px solid var(--light-stone)', borderRadius: 'var(--radius)', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}
+                  href={`/blog/${post.slug}`}
+                  style={{ background: 'var(--white)', border: '1px solid var(--light-stone)', borderRadius: 'var(--radius)', overflow: 'hidden', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit' }}
                 >
-                  <div style={{ padding: '28px 28px 20px' }}>
-                    <div style={{ display: 'flex', gap: '10px', marginBottom: '12px', alignItems: 'center' }}>
-                      <span style={{ fontFamily: 'var(--font-head)', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--orange)', background: 'rgba(217,95,10,0.08)', padding: '3px 10px', borderRadius: '20px' }}>
-                        {categories.find(c => c.slug === post.categorySlug)?.label ?? post.categorySlug}
-                      </span>
-                      <span style={{ fontSize: '0.75rem', color: 'var(--dark-stone)' }}>{post.date}</span>
-                    </div>
-                    <h2 style={{ fontFamily: 'var(--font-head)', fontWeight: 800, fontSize: '1.05rem', color: 'var(--dark-earth)', lineHeight: 1.4, marginBottom: '10px' }}>
+                  {/* Card header (branded visual) */}
+                  <div style={{ position: 'relative', height: '150px', background: cs.gradient, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <span style={{ fontSize: '3rem', opacity: 0.9 }} aria-hidden="true">{cs.icon}</span>
+                    <span style={{ position: 'absolute', left: '16px', bottom: '14px', fontFamily: 'var(--font-head)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--white)', background: 'rgba(0,0,0,0.35)', padding: '4px 12px', borderRadius: '20px' }}>
+                      {cat?.label ?? post.categorySlug}
+                    </span>
+                  </div>
+                  <div style={{ padding: '24px 28px 16px' }}>
+                    <span style={{ fontSize: '0.75rem', color: 'var(--warm-gray)', fontWeight: 600 }}>{formatDate(post.date)}</span>
+                    <h2 style={{ fontFamily: 'var(--font-head)', fontWeight: 800, fontSize: '1.05rem', color: 'var(--dark-earth)', lineHeight: 1.4, margin: '8px 0 10px' }}>
                       {post.title}
                     </h2>
                     <p style={{ fontSize: '0.88rem', color: 'var(--dark-stone)', lineHeight: 1.65 }}>{post.excerpt}</p>
                   </div>
-                  <div style={{ padding: '16px 28px 24px', marginTop: 'auto' }}>
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      style={{ fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: '0.78rem', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--orange)', textDecoration: 'none' }}
-                    >
+                  <div style={{ padding: '4px 28px 24px', marginTop: 'auto' }}>
+                    <span style={{ fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: '0.78rem', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--highlight)' }}>
                       Read Article →
-                    </Link>
+                    </span>
                   </div>
-                </article>
-              ))}
+                </Link>
+                );
+              })}
             </div>
           )}
         </div>

@@ -58,8 +58,8 @@ export default function ServiceAreasPage() {
           </nav>
           <span className={styles.heroLabel}>Where We Work</span>
           <h1 className={styles.heroH1}>
-            Waterwell Services Across<br />
-            <span className={styles.heroOrange}>Houston</span>
+            Greater Waterwell Services Across<br />
+            <span className={styles.heroOrange}>the Greater Houston Service Region</span>
           </h1>
           <p className={styles.heroSubtitle}>
             Serving Montgomery, Harris, Waller, Grimes, Washington, Anderson, and

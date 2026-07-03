@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ServiceLayout from '../components/ServiceLayout';
 import CityFaqAccordion from '../components/CityFaqAccordion';
+import { buildFaqSchema } from '../../lib/seoData';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -115,6 +116,8 @@ const faqs = [
   },
 ];
 
+const faqSchema = buildFaqSchema(faqs);
+
 const serviceAreas = [
   { city: 'Magnolia', slug: 'magnolia-tx', hq: true },
   { city: 'Conroe', slug: 'conroe-tx' },
@@ -135,6 +138,10 @@ export default function ServicesHubPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <AnnouncementBar />
