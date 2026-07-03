@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Script from "next/script";
+import { SITE_URL } from "../lib/siteConfig";
 
 export const metadata: Metadata = {
   title: {
@@ -11,11 +12,14 @@ export const metadata: Metadata = {
   },
   description:
     "B-E Waterwell Services - Houston's trusted waterwell drilling, pump installation, and repair specialists since 1979. Serving Magnolia, Tomball, The Woodlands, Spring and Conroe. Call (281) 448-4447.",
-  metadataBase: new URL("https://bewaterwells.com"),
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     siteName: "B-E Waterwell Services",
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 

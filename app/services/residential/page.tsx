@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AnnouncementBar from '../../components/AnnouncementBar';
+import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import ServiceLayout from '../../components/ServiceLayout';
@@ -194,6 +195,8 @@ export default function ResidentialHubPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }, { name: 'Residential Water Well Services', path: '/services/residential' }]} />
 
       <AnnouncementBar />
       <Navbar />

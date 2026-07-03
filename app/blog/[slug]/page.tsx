@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import AnnouncementBar from '../../components/AnnouncementBar';
+import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { blogPosts, getBlogPostBySlug, getBlogPostsByCategory } from '../../../lib/blogData';
@@ -50,6 +51,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog' }, { name: post.title, path: `/blog/${post.slug}` }]} />
+
       <AnnouncementBar />
       <Navbar />
 

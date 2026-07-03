@@ -113,6 +113,11 @@ export const jsonLd = {
     addressCountry: 'US',
   },
   geo: { '@type': 'GeoCoordinates', latitude: 30.2158, longitude: -95.7522 },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    reviewCount: '64',
+  },
   openingHoursSpecification: [
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '07:00', closes: '18:00' },
   ],
@@ -125,6 +130,25 @@ export const jsonLd = {
     { '@type': 'AdministrativeArea', name: 'Liberty County, Texas' },
   ],
   sameAs: ['https://www.facebook.com/bewaterwells'],
+};
+
+export const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://bewaterwells.com/#organization',
+  name: 'B-E Waterwell Services',
+  url: 'https://bewaterwells.com',
+  logo: 'https://bewaterwells.com/wp-content/uploads/2024/08/be-waterwell-logo_dkor-250x99.png',
+  sameAs: ['https://www.facebook.com/bewaterwells'],
+};
+
+export const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://bewaterwells.com/#website',
+  name: 'B-E Waterwell Services',
+  url: 'https://bewaterwells.com',
+  publisher: { '@id': 'https://bewaterwells.com/#organization' },
 };
 
 export const homeFaqs = [

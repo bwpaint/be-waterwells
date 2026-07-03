@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import AnnouncementBar from '../../components/AnnouncementBar';
+import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import CityHeroForm from '../../components/CityHeroForm';
@@ -92,6 +93,8 @@ export default function CityPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Service Areas', path: '/service-areas' }, { name: `${city.city}, ${city.state}`, path: `/service-area/${city.slug}` }]} />
 
       <AnnouncementBar />
       <Navbar />

@@ -5,7 +5,7 @@ import AnnouncementBar from './components/AnnouncementBar';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomeHeroForm from './components/HomeHeroForm';
-import { services, stats, cityAreas, partners, testimonials, jsonLd, homeFaqs } from '../lib/homeData';
+import { services, stats, cityAreas, partners, testimonials, jsonLd, homeFaqs, organizationSchema, websiteSchema } from '../lib/homeData';
 import { buildFaqSchema } from '../lib/seoData';
 import { COUNTIES, MAP_VIEWBOX } from '../lib/serviceAreaGeo';
 import styles from './page.module.css';
@@ -76,6 +76,14 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
 
       {/* Shared chrome gradient for monochrome service icons */}
