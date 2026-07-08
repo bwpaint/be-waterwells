@@ -70,7 +70,7 @@ export default function ServiceAreasPage() {
           </nav>
           <span className={styles.heroLabel}>Where We Work</span>
           <h1 className={styles.heroH1}>
-            <span className={styles.heroOrange}>BE Waterwells Service Areas</span>
+            <span className={styles.heroOrange}>BE Water Well Service Areas</span>
           </h1>
           <p className={styles.heroSubtitle}>
             Serving Montgomery, Harris, Waller, Grimes, Washington, Anderson, and
@@ -171,4 +171,3 @@ export default function ServiceAreasPage() {
     </>
   );
 }
-                                                            

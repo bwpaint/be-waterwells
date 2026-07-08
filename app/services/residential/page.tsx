@@ -504,4 +504,11 @@ export default function ResidentialHubPage() {
                 Get Consultation
               </Link>
             </div>
-      
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}
