@@ -223,13 +223,16 @@
   align-items: center;
   gap: 8px;
   font-family: var(--font-head);
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--white) !important;
+  background: #D95F0A;
+  padding: 10px 18px;
+  border-radius: var(--radius);
   white-space: nowrap;
   transition: var(--transition);
 }
-.phoneLink:hover { color: var(--orange) !important; }
+.phoneLink:hover { background: #B94F08; color: var(--white) !important; }
 .phoneIcon { font-size: 0.85rem; }
 
 /* ── Hamburger ────────────────────────────── */

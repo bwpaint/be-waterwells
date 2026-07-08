@@ -319,10 +319,19 @@ export default function HomePage() {
                 </Link>
               ))}
             </div>
-            <Link href="/service-areas" className={styles.areasMapLink} aria-label="View full service area map">
-              <MiniServiceMap />
-              <span className={styles.areasMapCta}>View Full Service Area Map →</span>
-            </Link>
+            <div className={styles.areasMapCol}>
+              <Link href="/service-areas" className={styles.areasMapLink} aria-label="View full service area map">
+                <MiniServiceMap />
+                <span className={styles.areasMapCta}>View Full Service Area Map →</span>
+              </Link>
+              <Image
+                src="/images/be-logo-brown.svg"
+                alt="B-E Waterwell Services — since 1979"
+                width={700}
+                height={393}
+                className={styles.areasLogo}
+              />
+            </div>
           </div>
         </div>
       </section>

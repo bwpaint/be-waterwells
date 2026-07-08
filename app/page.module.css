@@ -26,8 +26,8 @@
   inset: 0;
   background: linear-gradient(
     105deg,
-    rgba(20,16,12,0.88) 0%,
-    rgba(26,20,14,0.80) 45%,
+    rgba(20,16,12,0.78) 0%,
+    rgba(26,20,14,0.70) 45%,
     rgba(30,22,14,0.55) 70%,
     rgba(36,26,16,0.35) 100%
   );
@@ -375,7 +375,7 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--dark-earth);
   margin-top: 4px;
 }
 
@@ -728,4 +728,28 @@
   .faqItem:nth-child(odd) {
     padding-right: 0;
   }
+
+/* Orange phone CTA in hero */
+.heroCtas :global(.btn-primary) {
+  background: #D95F0A;
+  border-color: #D95F0A;
+  color: var(--white);
+  font-size: 1.05rem;
+}
+.heroCtas :global(.btn-primary):hover {
+  background: #B94F08;
+  border-color: #B94F08;
+  box-shadow: 0 8px 24px rgba(217, 95, 10, 0.35);
+}
+
+/* Logo under mini map in areas section */
+.areasMapCol {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.areasLogo {
+  width: 100%;
+  height: auto;
+  display: block;
 }
