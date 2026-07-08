@@ -15,9 +15,9 @@
 .heroBg {
   position: absolute;
   inset: 0;
-  background-image: url('https://bewaterwells.com/wp-content/uploads/2024/09/bewater2-1024x768.jpg');
+  background-image: url('/images/hero-home-rig.jpg');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 55%;
   z-index: 0;
 }
 .heroBg::after {

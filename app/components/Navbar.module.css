@@ -148,6 +148,18 @@
   position: relative;
 }
 
+/* Bridge the gap between a dropdown item and its flyout so the pointer
+   never leaves the hover area while traveling right */
+.hasFlyout::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 100%;
+  width: 14px;
+  height: calc(100% + 20px);
+  background: transparent;
+}
+
 .flyoutCaret {
   margin-left: 8px;
   font-size: 0.95rem;
