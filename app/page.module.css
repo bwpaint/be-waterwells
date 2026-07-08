@@ -26,10 +26,10 @@
   inset: 0;
   background: linear-gradient(
     105deg,
-    rgba(20,16,12,0.78) 0%,
-    rgba(26,20,14,0.70) 45%,
-    rgba(30,22,14,0.55) 70%,
-    rgba(36,26,16,0.35) 100%
+    rgba(36,26,16,0.35) 0%,
+    rgba(30,22,14,0.55) 30%,
+    rgba(26,20,14,0.70) 55%,
+    rgba(20,16,12,0.78) 100%
   );
 }
 
@@ -728,6 +728,7 @@
   .faqItem:nth-child(odd) {
     padding-right: 0;
   }
+}
 
 /* Orange phone CTA in hero */
 .heroCtas :global(.btn-primary) {
