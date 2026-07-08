@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import AnnouncementBar from '../../components/AnnouncementBar';
 import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
 import Navbar from '../../components/Navbar';
@@ -242,6 +243,9 @@ export default function CommercialWellServicesHubPage() {
                   Get Consultation
                 </Link>
               </div>
+            </div>
+          <div className={styles.heroPhoto}>
+              <Image src="/images/hero-commercial-tank.webp" alt="Commercial water storage tank and pump skid installed by B-E Waterwell" width={700} height={525} priority />
             </div>
           </div>
         </div>

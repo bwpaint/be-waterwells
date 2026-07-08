@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import AnnouncementBar from '../components/AnnouncementBar';
 import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
 import Navbar from '../components/Navbar';
@@ -155,6 +156,7 @@ export default function ServicesHubPage() {
         <div className={styles.heroBg} />
         <div className="container">
           <div className={styles.heroInner}>
+            <div>
             <span className={styles.heroEyebrow}>Since 1979 · TDLR Licensed · Houston, TX</span>
             <h1 className={styles.heroH1}>
               Houston&apos;s Complete<br />
@@ -172,6 +174,10 @@ export default function ServicesHubPage() {
               <Link href="/contact" className="btn btn-outline">
                 Get Consultation
               </Link>
+            </div>
+            </div>
+            <div className={styles.heroPhoto}>
+              <Image src="/images/hero-service-truck.webp" alt="B-E Waterwell service truck on a residential job in the Houston area" width={700} height={525} priority />
             </div>
           </div>
         </div>

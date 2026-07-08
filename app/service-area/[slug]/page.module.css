@@ -1,7 +1,7 @@
 /* ── HERO ─────────────────────────────────────────────────── */
 .hero {
   position: relative;
-  padding-top: 80px; /* navbar height */
+  padding-top: 120px; /* navbar height */
   background: var(--charcoal);
   overflow: hidden;
 }

@@ -106,7 +106,7 @@ export default function CostEstimator() {
 
         {/* Depth slider */}
         <div>
-          <label style={labelSt}>Estimated Well Depth: <strong style={{ color: 'var(--orange)' }}>{inputs.depth} ft</strong></label>
+          <label style={labelSt}>Estimated Well Depth: <strong style={{ color: 'var(--dark-earth)' }}>{inputs.depth} ft</strong></label>
           <p style={{ fontSize: '0.75rem', color: 'var(--dark-stone)', margin: '4px 0 8px' }}>
             Houston area typical: 150–300 ft · Montgomery Co: 100–250 ft · Harris Co: 80–200 ft
           </p>
@@ -175,7 +175,7 @@ export default function CostEstimator() {
           <div style={{ fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: '0.72rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '4px' }}>
             Estimated Project Range
           </div>
-          <div style={{ fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '2rem', color: 'var(--orange)', marginBottom: '2px' }}>
+          <div style={{ fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '2rem', color: 'var(--dark-earth)', marginBottom: '2px' }}>
             {fmt(low)} – {fmt(high)}
           </div>
           <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.5)', marginBottom: '16px' }}>

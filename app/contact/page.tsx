@@ -19,7 +19,7 @@ export default function ContactPage() {
       {/* Hero */}
       <section style={{
         background: 'var(--charcoal)',
-        paddingTop: '140px',
+        paddingTop: '180px',
         paddingBottom: '60px',
         textAlign: 'center',
       }}>
@@ -70,7 +70,7 @@ export default function ContactPage() {
                   <div key={item.label} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
                     <span style={{ fontSize: '1.6rem', lineHeight: 1 }}>{item.icon}</span>
                     <div>
-                      <div style={{ fontFamily: 'var(--font-head)', fontWeight: 800, fontSize: '0.78rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: '2px' }}>{item.label}</div>
+                      <div style={{ fontFamily: 'var(--font-head)', fontWeight: 800, fontSize: '0.78rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--dark-earth)', marginBottom: '2px' }}>{item.label}</div>
                       {item.href ? (
                         <a href={item.href} style={{ fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: '1.15rem', color: 'var(--dark-earth)', textDecoration: 'none' }}>{item.value}</a>
                       ) : (
@@ -83,9 +83,9 @@ export default function ContactPage() {
               </div>
 
               <div style={{ marginTop: '40px', padding: '24px', background: 'rgba(217,95,10,0.08)', border: '1px solid rgba(217,95,10,0.25)', borderRadius: 'var(--radius)' }}>
-                <div style={{ fontFamily: 'var(--font-head)', fontWeight: 800, color: 'var(--orange)', fontSize: '0.88rem', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: '8px' }}>⚡ Water Emergency?</div>
+                <div style={{ fontFamily: 'var(--font-head)', fontWeight: 800, color: 'var(--dark-earth)', fontSize: '0.88rem', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: '8px' }}>⚡ Water Emergency?</div>
                 <p style={{ fontSize: '0.92rem', color: 'var(--dark-stone)', lineHeight: 1.6, margin: 0 }}>
-                  If you&apos;ve lost water or have a pump failure, call us directly at <a href="tel:+12814484447" style={{ color: 'var(--orange)', fontWeight: 700 }}>(281) 448-4447</a>. Emergency service is available.
+                  If you&apos;ve lost water or have a pump failure, call us directly at <a href="tel:+12814484447" style={{ color: 'var(--dark-earth)', fontWeight: 700 }}>(281) 448-4447</a>. Emergency service is available.
                 </p>
               </div>
             </div>

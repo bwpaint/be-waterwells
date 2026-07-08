@@ -142,7 +142,7 @@ export default function WellPumpRepairPage() {
             ))}
           </div>
           <div style={{ marginTop: '20px', padding: '16px 20px', background: 'rgba(217,95,10,0.06)', border: '1px solid rgba(217,95,10,0.2)', borderRadius: '8px' }}>
-            <strong style={{ fontFamily: 'var(--font-head)', color: 'var(--orange)', fontSize: '0.88rem' }}>Don\'t wait.</strong>
+            <strong style={{ fontFamily: 'var(--font-head)', color: 'var(--dark-earth)', fontSize: '0.88rem' }}>Don\'t wait.</strong>
             <span style={{ fontSize: '0.88rem', color: 'var(--dark-stone)', marginLeft: '8px' }}>A short-cycling pump or one running continuously will burn out its motor within days. Most pump failures that get addressed quickly are a repair — ones that get ignored become a full replacement.</span>
           </div>
         </section>
@@ -199,14 +199,14 @@ export default function WellPumpRepairPage() {
               ].map(([svc, range, note], i) => (
                 <tr key={svc} style={{ background: i % 2 === 0 ? 'var(--white)' : 'var(--off-white)', borderBottom: '1px solid var(--light-stone)' }}>
                   <td style={{ padding: '12px 16px', fontWeight: 600, color: 'var(--dark-earth)' }}>{svc}</td>
-                  <td style={{ padding: '12px 16px', color: 'var(--orange)', fontWeight: 700, fontFamily: 'var(--font-head)' }}>{range}</td>
+                  <td style={{ padding: '12px 16px', color: 'var(--dark-earth)', fontWeight: 700, fontFamily: 'var(--font-head)' }}>{range}</td>
                   <td style={{ padding: '12px 16px', color: 'var(--dark-stone)', fontSize: '0.85rem' }}>{note}</td>
                 </tr>
               ))}
             </tbody>
           </table>
           <p style={{ fontSize: '0.82rem', color: 'var(--dark-stone)', marginTop: '10px' }}>
-            Need a more detailed estimate? Use our <Link href="/resources/water-well-cost" style={{ color: 'var(--orange)', fontWeight: 700 }}>cost estimator tool</Link> or call us for a free on-site quote.
+            Need a more detailed estimate? Use our <Link href="/resources/water-well-cost" style={{ color: 'var(--dark-earth)', fontWeight: 700 }}>cost estimator tool</Link> or call us for a free on-site quote.
           </p>
         </section>
 
@@ -241,7 +241,7 @@ export default function WellPumpRepairPage() {
               { label: 'New Well Drilling', href: '/services/water-well-drilling/new-well-drilling', desc: 'Time for a new well? We drill and complete in one mobilization.' },
             ].map(link => (
               <Link key={link.href} href={link.href} style={{ display: 'block', padding: '18px', background: 'var(--off-white)', border: '1px solid var(--light-stone)', borderRadius: '8px', textDecoration: 'none', transition: 'border-color 0.15s' }}>
-                <div style={{ fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: '0.88rem', color: 'var(--orange)', marginBottom: '6px' }}>{link.label} →</div>
+                <div style={{ fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: '0.88rem', color: 'var(--dark-earth)', marginBottom: '6px' }}>{link.label} →</div>
                 <div style={{ fontSize: '0.82rem', color: 'var(--dark-stone)', lineHeight: 1.55 }}>{link.desc}</div>
               </Link>
             ))}

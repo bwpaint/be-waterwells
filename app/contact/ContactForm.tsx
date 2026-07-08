@@ -32,7 +32,7 @@ export default function ContactForm() {
         <p style={{ color: 'var(--dark-stone)', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '20px' }}>
           We&apos;ll be in touch shortly. For urgent issues, call us directly:
         </p>
-        <a href="tel:+12814484447" style={{ fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '1.2rem', color: 'var(--orange)', textDecoration: 'none' }}>
+        <a href="tel:+12814484447" style={{ fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '1.2rem', color: 'var(--dark-earth)', textDecoration: 'none' }}>
           (281) 448-4447
         </a>
       </div>
@@ -91,7 +91,7 @@ export default function ContactForm() {
       </button>
 
       <p style={{ fontSize: '0.78rem', color: 'var(--dark-stone)', textAlign: 'center', marginTop: '-4px' }}>
-        Or call us directly: <a href="tel:+12814484447" style={{ color: 'var(--orange)', fontWeight: 700 }}>(281) 448-4447</a>
+        Or call us directly: <a href="tel:+12814484447" style={{ color: 'var(--dark-earth)', fontWeight: 700 }}>(281) 448-4447</a>
       </p>
     </form>
   );

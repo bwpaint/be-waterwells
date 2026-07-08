@@ -41,7 +41,7 @@ export default function BlogPage() {
       <Navbar />
 
       {/* Hero */}
-      <section style={{ background: 'var(--charcoal)', paddingTop: '140px', paddingBottom: '56px', textAlign: 'center' }}>
+      <section style={{ background: 'var(--charcoal)', paddingTop: '180px', paddingBottom: '56px', textAlign: 'center' }}>
         <div className="container">
           <p style={{ color: 'var(--orange)', fontFamily: 'var(--font-head)', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
             Tips, Guides & Insights

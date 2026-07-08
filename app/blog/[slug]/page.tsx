@@ -57,7 +57,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <Navbar />
 
       {/* Hero */}
-      <section style={{ position: 'relative', background: cs.gradient, paddingTop: '150px', paddingBottom: '56px' }}>
+      <section style={{ position: 'relative', background: cs.gradient, paddingTop: '190px', paddingBottom: '56px' }}>
         <div className="container" style={{ maxWidth: '820px' }}>
           <Link href="/blog" style={{ color: 'rgba(255,255,255,0.8)', fontFamily: 'var(--font-head)', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none' }}>
             ← Back to Blog

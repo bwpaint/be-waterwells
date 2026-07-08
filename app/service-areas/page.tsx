@@ -25,6 +25,18 @@ const cities = [
   { city: 'Montgomery', slug: 'montgomery-tx', county: 'Montgomery County', desc: 'Rural acreage and agriculture. Farm, ranch, and livestock waterwells.' },
   { city: 'Pinehurst', slug: 'pinehurst-tx', county: 'Montgomery County', desc: 'Central Montgomery County. Mixed-age well inventory, rehab specialists.' },
   { city: 'Waller', slug: 'waller-tx', county: 'Waller County', desc: 'Wide-open Waller County. Agricultural and rural residential wells.' },
+
+  { city: 'Houston', slug: 'houston-tx', county: 'Harris County', desc: 'Greater Houston metro. Well service for acreage and legacy properties.' },
+  { city: 'Hockley', slug: 'hockley-tx', county: 'Harris County', desc: 'NW Harris County prairie. Rural residential and irrigation wells.' },
+  { city: 'Katy', slug: 'katy-tx', county: 'Fort Bend County', desc: 'West Houston growth corridor. New wells and pump service.' },
+  { city: 'Hempstead', slug: 'hempstead-tx', county: 'Waller County', desc: 'Waller County seat. Farm, ranch, and residential waterwells.' },
+  { city: 'Anderson', slug: 'anderson-tx', county: 'Grimes County', desc: 'Historic Grimes County seat. Four decades of rural well work.' },
+  { city: 'Navasota', slug: 'navasota-tx', county: 'Grimes County', desc: 'Brazos Valley gateway. Drilling, rehab, and pump repair.' },
+  { city: 'Millican', slug: 'millican-tx', county: 'Brazos County', desc: 'South Brazos County. Rural residential and agricultural wells.' },
+  { city: 'Washington', slug: 'washington-tx', county: 'Washington County', desc: 'Washington-on-the-Brazos country. Ranch and homestead wells.' },
+  { city: 'Chappell Hill', slug: 'chappell-hill-tx', county: 'Washington County', desc: 'Historic Chappell Hill. Estate and acreage well service.' },
+  { city: 'Brenham', slug: 'brenham-tx', county: 'Washington County', desc: 'Washington County hub. Full-service drilling and maintenance.' },
+  { city: 'Somerville', slug: 'somerville-tx', county: 'Burleson County', desc: 'Lake Somerville area. Rural wells, pumps, and rehabilitation.' },
 ];
 
 const jsonLd = {
@@ -58,8 +70,7 @@ export default function ServiceAreasPage() {
           </nav>
           <span className={styles.heroLabel}>Where We Work</span>
           <h1 className={styles.heroH1}>
-            Greater Waterwell Services Across<br />
-            <span className={styles.heroOrange}>the Greater Houston Service Region</span>
+            <span className={styles.heroOrange}>BE Waterwells Service Areas</span>
           </h1>
           <p className={styles.heroSubtitle}>
             Serving Montgomery, Harris, Waller, Grimes, Washington, Anderson, and
@@ -94,7 +105,7 @@ export default function ServiceAreasPage() {
       <section className={styles.citiesSection}>
         <div className="container">
           <span className="section-label">All Service Areas</span>
-          <h2 className="section-title">11 Cities, One Team</h2>
+          <h2 className="section-title">22 Cities, One Team</h2>
           <div className={styles.citiesGrid}>
             {cities.map((c) => (
               <Link
@@ -117,7 +128,7 @@ export default function ServiceAreasPage() {
       <section className={styles.statsSection}>
         <div className={`container ${styles.statsGrid}`}>
           <div className={styles.statItem}>
-            <span className={styles.statVal}>11</span>
+            <span className={styles.statVal}>22</span>
             <span className={styles.statLbl}>Cities Served</span>
           </div>
           <div className={styles.statItem}>
@@ -160,3 +171,4 @@ export default function ServiceAreasPage() {
     </>
   );
 }
+                                                            

@@ -30,7 +30,7 @@ export default function PrivacyPage() {
       <AnnouncementBar />
       <Navbar />
 
-      <section style={{ background: 'var(--charcoal)', paddingTop: '140px', paddingBottom: '48px' }}>
+      <section style={{ background: 'var(--charcoal)', paddingTop: '180px', paddingBottom: '48px' }}>
         <div className="container">
           <div style={{ maxWidth: '820px', marginRight: 'auto' }}>
             <h1 style={{ color: 'var(--white)', fontSize: 'clamp(1.8rem,4vw,2.6rem)', fontFamily: 'var(--font-head)', fontWeight: 900 }}>

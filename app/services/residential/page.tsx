@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import AnnouncementBar from '../../components/AnnouncementBar';
 import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
 import Navbar from '../../components/Navbar';
@@ -234,6 +235,9 @@ export default function ResidentialHubPage() {
                 </Link>
               </div>
             </div>
+          <div className={styles.heroPhoto}>
+              <Image src="/images/hero-residential-tank.webp" alt="Residential pressure tank and SubDrive system installed by B-E Waterwell" width={700} height={525} priority />
+            </div>
           </div>
         </div>
       </section>
@@ -323,7 +327,7 @@ export default function ResidentialHubPage() {
             quickly are a repair — ones that get ignored become a full replacement.
           </div>
 
-          <h3 className="section-title">Repair or Replace?</h3>
+          <h3 className={`section-title ${styles.subheadSpaced}`}>Repair or Replace?</h3>
           <div className={styles.compareGrid}>
             <div className={styles.compareCol}>
               <h3>Repair Makes Sense When</h3>
@@ -343,7 +347,7 @@ export default function ResidentialHubPage() {
             </div>
           </div>
 
-          <h3 className="section-title">Pump Repair &amp; Replacement Pricing</h3>
+          <h3 className={`section-title ${styles.subheadSpaced}`}>Pump Repair &amp; Replacement Pricing</h3>
           <p className={styles.overviewP}>
             Pricing depends on your location, well depth, static water level, and
             equipment selection — call us to discuss your project.
@@ -459,7 +463,7 @@ export default function ResidentialHubPage() {
         {/* ── FAQ ─────────────────────────────── */}
         <section className={styles.faqSection}>
           <span className="section-label">Common Questions</span>
-          <h2 className="section-title">Residential Well FAQs</h2>
+          <h2 className={`section-title ${styles.faqTitle}`}>Residential Water Well FAQs</h2>
           <CityFaqAccordion faqs={faqs} />
         </section>
 
@@ -486,7 +490,7 @@ export default function ResidentialHubPage() {
       <section className={styles.finalCta}>
         <div className="container">
           <div className={styles.finalCtaInner}>
-            <h2>Need a Well Pump Repaired Today?</h2>
+            <h2>Need a Waterwell Pump Repaired Today?</h2>
             <p>
               Call for a consultation or fill out the contact form. Family-owned,
               licensed, and guaranteed — Houston&apos;s trusted water well specialists
@@ -500,11 +504,4 @@ export default function ResidentialHubPage() {
                 Get Consultation
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </>
-  );
-}
+      

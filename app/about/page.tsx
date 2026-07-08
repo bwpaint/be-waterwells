@@ -52,7 +52,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section style={{
         background: 'var(--charcoal)',
-        paddingTop: '140px',
+        paddingTop: '180px',
         paddingBottom: '60px',
         textAlign: 'center',
       }}>
@@ -78,7 +78,7 @@ export default function AboutPage() {
               { val: '45+', label: 'Years in Business' },
               { val: '5,000+', label: 'Waterwells Serviced' },
               { val: 'Yes', label: 'Emergency Service' },
-              { val: '11', label: 'Cities Served' },
+              { val: '22', label: 'Cities Served' },
             ].map((s, i) => (
               <div key={i} style={{ padding: '20px', borderRight: i < 3 ? '1px solid var(--mid-stone)' : 'none' }}>
                 <div style={{ fontFamily: 'var(--font-head)', fontSize: '2.2rem', fontWeight: 900, color: 'var(--orange)' }}>{s.val}</div>
@@ -93,7 +93,7 @@ export default function AboutPage() {
       <section style={{ padding: '80px 0', background: 'var(--off-white)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-            <p style={{ color: 'var(--orange)', fontFamily: 'var(--font-head)', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>Why Choose B-E</p>
+            <p style={{ color: 'var(--dark-earth)', fontFamily: 'var(--font-head)', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>Why Choose B-E</p>
             <h2 style={{ fontFamily: 'var(--font-head)', fontSize: 'clamp(1.6rem,3.5vw,2.4rem)', fontWeight: 900, color: 'var(--dark-earth)' }}>What Sets Us Apart</h2>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '28px' }}>
@@ -112,7 +112,7 @@ export default function AboutPage() {
       <section style={{ padding: '80px 0', background: 'var(--white)' }}>
         <div className="container" style={{ maxWidth: '760px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-            <p style={{ color: 'var(--orange)', fontFamily: 'var(--font-head)', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>Our Story</p>
+            <p style={{ color: 'var(--dark-earth)', fontFamily: 'var(--font-head)', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>Our Story</p>
             <h2 style={{ fontFamily: 'var(--font-head)', fontSize: 'clamp(1.6rem,3.5vw,2.4rem)', fontWeight: 900, color: 'var(--dark-earth)' }}>45 Years of History</h2>
           </div>
           <div style={{ position: 'relative', paddingLeft: '32px', borderLeft: '2px solid var(--light-stone)' }}>
@@ -124,7 +124,7 @@ export default function AboutPage() {
                   background: 'var(--orange)', border: '3px solid var(--white)',
                   boxShadow: '0 0 0 2px var(--orange)',
                 }} />
-                <span style={{ fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '0.82rem', color: 'var(--orange)', letterSpacing: '0.08em' }}>{m.year}</span>
+                <span style={{ fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '0.82rem', color: 'var(--dark-earth)', letterSpacing: '0.08em' }}>{m.year}</span>
                 <p style={{ marginTop: '4px', color: 'var(--dark-stone)', fontSize: '0.95rem', lineHeight: 1.6 }}>{m.event}</p>
               </div>
             ))}

@@ -24,28 +24,6 @@ export default function Footer() {
             <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
             <a href="https://google.com/maps" aria-label="Google Reviews" target="_blank" rel="noopener noreferrer">G</a>
           </div>
-
-          <div className={styles.brandContact}>
-            <h4 className={styles.footerHeading}>Contact Us</h4>
-            <ul className={styles.footerContact}>
-              <li>
-                <span className={styles.contactIcon}>📞</span>
-                <a href="tel:+12814484447">(281) 448-4447</a>
-              </li>
-              <li>
-                <span className={styles.contactIcon}>✉️</span>
-                <a href="mailto:info@bewaterwells.com">info@bewaterwells.com</a>
-              </li>
-              <li>
-                <span className={styles.contactIcon}>📍</span>
-                <span>Magnolia, TX 77354<br />Serving Greater Houston</span>
-              </li>
-              <li>
-                <span className={styles.contactIcon}>🕐</span>
-                <span>Emergency Service Available<br />Mon–Fri 7am–7pm</span>
-              </li>
-            </ul>
-          </div>
         </div>
 
         {/* Column 2 — Services */}
@@ -64,6 +42,29 @@ export default function Footer() {
         <div className={styles.footerFormCol}>
           <h4 className={styles.footerHeading}>Request Service</h4>
           <FooterContactForm />
+        </div>
+
+        {/* Contact bar — spans columns 1–2, bordered */}
+        <div className={styles.footerContactBar}>
+          <ul className={styles.footerContact}>
+            <li>
+              <span className={styles.contactIcon}>📞</span>
+              <a href="tel:+17134167111">713-416-7111</a>
+            </li>
+            <li>
+              <span className={styles.contactIcon}>✉️</span>
+              <a href="mailto:info@bewaterwells.com">info@bewaterwells.com</a>
+            </li>
+            <li>
+              <span className={styles.contactIcon}>🕐</span>
+              <span>Emergency Service Available</span>
+            </li>
+          </ul>
+          <div className={styles.footerAddress}>
+            <span>B-E Waterwell Services</span>
+            <span>Serving the Greater Houston Area</span>
+            <span>Magnolia, Texas</span>
+          </div>
         </div>
       </div>
 

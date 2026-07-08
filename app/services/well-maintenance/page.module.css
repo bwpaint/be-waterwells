@@ -1,7 +1,7 @@
 /* ── HERO ──────────────────────────────────────────────────── */
-.hero { position: relative; padding-top: 80px; background: var(--charcoal); overflow: hidden; }
+.hero { position: relative; padding-top: 120px; background: var(--charcoal); overflow: hidden; }
 .heroBg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.18; }
-.heroGrid { position: relative; z-index: 1; padding: 72px 0 88px; max-width: 760px; }
+.heroGrid { position: relative; z-index: 1; padding: 72px 0 88px; display: grid; grid-template-columns: 1fr 400px; gap: 48px; align-items: center; }
 .breadcrumb { display: flex; align-items: center; gap: 8px; font-family: var(--font-head); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 28px; flex-wrap: wrap; }
 .breadcrumb a { color: rgba(255,255,255,0.45); transition: var(--transition); }
 .breadcrumb a:hover { color: var(--orange); }
@@ -118,4 +118,18 @@
   .subServicesSection { padding: 28px 16px; }
   .overviewStats { grid-template-columns: repeat(2, 1fr); }
   .calloutBox { padding: 22px 18px; }
+}
+
+/* Hero photo — right column */
+.heroPhoto {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  align-self: center;
+}
+.heroPhoto img { display: block; width: 100%; height: auto; }
+@media (max-width: 900px) {
+  .heroGrid { grid-template-columns: 1fr; }
+  .heroPhoto { max-width: 480px; }
 }
