@@ -105,7 +105,7 @@
   font-family: var(--font-head);
   font-size: 1.25rem;
   font-weight: 900;
-  color: var(--orange);
+  color: var(--dark-earth);
 }
 .overviewStat span {
   font-family: var(--font-head);
@@ -315,11 +315,12 @@
   margin: 0;
 }
 .crossLink {
-  color: var(--orange);
+  color: var(--dark-earth);
   font-weight: 700;
+  text-decoration: underline;
   transition: var(--transition);
 }
-.crossLink:hover { color: var(--orange-hover); }
+.crossLink:hover { color: #D95F0A; }
 
 /* ── SERVICE AREAS ─────────────────────────────────────────── */
 .areasSection { margin-bottom: 8px; }

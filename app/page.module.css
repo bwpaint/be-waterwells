@@ -16,8 +16,8 @@
   position: absolute;
   inset: 0;
   background-image: url('/images/hero-home-rig.jpg');
-  background-size: cover;
-  background-position: center 55%;
+  background-size: auto calc(100% + 300px);
+  background-position: center top;
   z-index: 0;
 }
 .heroBg::after {
@@ -26,8 +26,8 @@
   inset: 0;
   background: linear-gradient(
     105deg,
-    rgba(36,26,16,0.35) 0%,
-    rgba(30,22,14,0.55) 30%,
+    rgba(36,26,16,0.45) 0%,
+    rgba(30,22,14,0.60) 30%,
     rgba(26,20,14,0.70) 55%,
     rgba(20,16,12,0.78) 100%
   );
@@ -96,6 +96,13 @@
   color: var(--white);
   margin-bottom: 6px;
   -webkit-text-stroke: 0.7px currentColor;
+  display: inline-block;
+  background: rgba(20, 16, 12, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 14px 20px;
+  margin-left: -20px;
+  border-radius: var(--radius);
 }
 .heroOrange {
   color: var(--highlight);

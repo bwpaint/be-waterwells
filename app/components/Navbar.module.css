@@ -233,6 +233,18 @@
   transition: var(--transition);
 }
 .phoneLink:hover { background: #B94F08; color: var(--white) !important; }
+
+/* Orange phone CTA button in nav (markup uses .btn-primary) */
+.navCta :global(.btn-primary) {
+  background: #D95F0A !important;
+  border-color: #D95F0A !important;
+  color: var(--white) !important;
+  font-size: 1.05rem;
+}
+.navCta :global(.btn-primary):hover {
+  background: #B94F08 !important;
+  border-color: #B94F08 !important;
+}
 .phoneIcon { font-size: 0.85rem; }
 
 /* ── Hamburger ────────────────────────────── */

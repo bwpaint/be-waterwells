@@ -123,15 +123,16 @@ a {
 }
 
 .btn-primary {
-  background: var(--orange);
-  color: var(--charcoal);
-  border-color: var(--orange);
+  background: #D95F0A;
+  color: var(--white);
+  border-color: #D95F0A;
+  font-size: 1.05rem;
 }
 .btn-primary:hover {
-  background: var(--orange-hover);
-  border-color: var(--orange-hover);
+  background: #B94F08;
+  border-color: #B94F08;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(221,208,172,0.35);
+  box-shadow: 0 8px 24px rgba(217,95,10,0.35);
 }
 
 .btn-outline {
