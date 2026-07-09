@@ -104,9 +104,9 @@
 }
 .heroH1Sub {
   display: block;
-  font-size: clamp(1.1rem, 2vw, 1.7rem);
+  font-size: clamp(0.88rem, 1.6vw, 1.36rem);
   font-weight: 600;
-  color: rgba(255,255,255,0.65);
+  color: var(--white);
   margin-top: 10px;
   letter-spacing: 0.02em;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
@@ -118,6 +118,7 @@
   line-height: 1.7;
   margin: 22px 0 32px;
   max-width: 560px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .heroCtas {
