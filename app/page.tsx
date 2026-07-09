@@ -110,10 +110,10 @@ export default function HomePage() {
             </div>
             <h1 className={styles.heroH1}>
               Houston Area<br />
-              <span className={styles.heroOrange}>Waterwell Services</span><br />
+              <span className={styles.heroOrange}>Waterwell Service</span><br />
               Experts
               <span className={styles.heroH1Sub}>
-                Drilling &middot; Pumps &middot; Rehabilitation
+                Drilling &middot; Installation &middot; Pumps &middot; Rehabilitation
               </span>
             </h1>
             <p className={styles.heroSubtitle}>
