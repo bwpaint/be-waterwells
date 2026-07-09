@@ -22,7 +22,7 @@
 .overviewP { font-size: 0.97rem; color: var(--warm-gray); line-height: 1.75; margin-top: 14px; }
 .overviewStats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 28px; }
 .overviewStat { background: var(--cream); border: 1px solid var(--stone-light); border-radius: var(--radius); padding: 16px 12px; text-align: center; display: flex; flex-direction: column; gap: 4px; }
-.overviewStat strong { font-family: var(--font-head); font-size: 1.25rem; font-weight: 900; color: var(--orange); }
+.overviewStat strong { font-family: var(--font-head); font-size: 1.25rem; font-weight: 900; color: var(--dark-earth); }
 .overviewStat span { font-family: var(--font-head); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--warm-gray); }
 
 /* ── WHY ───────────────────────────────────────────────────── */
