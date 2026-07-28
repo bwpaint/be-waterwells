@@ -99,7 +99,7 @@ export const jsonLd = {
   description: 'Family-owned waterwell drilling, pump repair, and well service company serving the greater Houston area since 1979. Licensed by the Texas Department of Licensing and Regulation (TDLR).',
   url: 'https://bewaterwells.com',
   telephone: '+12814484447',
-  email: 'info@bewaterwells.com',
+  email: 'zack@bewaterwells.com',
   foundingDate: '1979',
   priceRange: '$$',
   image: 'https://bewaterwells.com/wp-content/uploads/2024/09/bewater2-1024x768.jpg',

@@ -20,17 +20,17 @@ const faqs = [
   {
     question: 'How do I know if my declining well can be rehabilitated?',
     answer:
-      'The main factors are well age, structural integrity, and cause of decline. Wells under 20 years old with intact PVC casing are usually good rehab candidates. If decline is due to biofouling or mineral encrustation — the most common causes in the Houston area Jasper Aquifer wells — rehabilitation success rates are high. We perform a diagnostic before recommending any approach.',
+      'The main factors are well age, structural integrity, and cause of decline. Wells under 20 years old with intact PVC casing are usually good rehab candidates. If decline is due to biofouling or mineral encrustation — the most common causes in Houston-area wells — rehabilitation success rates are high. We perform a diagnostic before recommending any approach.',
   },
   {
     question: 'How long does well rehabilitation last?',
     answer:
-      'It depends on the method and the underlying cause. Shock chlorination for iron bacteria typically lasts 2–5 years before re-treatment is needed, especially in high-iron Jasper Aquifer water. Mechanical jetting for mineral deposits often restores yield for 5–10 years. We monitor performance after rehabilitation and recommend annual inspection to track results.',
+      'It depends on the method and the underlying cause. Shock chlorination for iron bacteria typically lasts 2–5 years before re-treatment is needed, especially in high-iron well water. Mechanical jetting for mineral deposits often restores yield for 5–10 years. We monitor performance after rehabilitation and recommend annual inspection to track results.',
   },
   {
     question: 'What is iron bacteria and why is it so common in the Houston area?',
     answer:
-      'Iron bacteria are microorganisms that oxidize dissolved iron in groundwater, producing reddish-brown slime that clogs well screens. The Jasper Aquifer under Montgomery County and Houston has elevated dissolved iron, making iron bacteria a common problem in wells over 8–10 years old. Signs include red or orange staining in toilet tanks, sulfur or rotten egg odor, and declining yield.',
+      'Iron bacteria are microorganisms that oxidize dissolved iron in groundwater, producing reddish-brown slime that clogs well screens. Groundwater under Montgomery County and Houston often has elevated dissolved iron, making iron bacteria a common problem in wells over 8–10 years old. Signs include red or orange staining in toilet tanks, sulfur or rotten egg odor, and declining yield.',
   },
   {
     question: 'Can I treat iron bacteria in my well myself?',
@@ -78,12 +78,12 @@ const reasons = [
   {
     num: '01',
     title: 'Biofouling',
-    desc: 'Iron bacteria and sulfate-reducing bacteria (SRB) colonize the well screen and perforations. They produce slime that physically blocks water entry. Common in the Houston area Jasper Aquifer wells after 8–10 years.',
+    desc: 'Iron bacteria and sulfate-reducing bacteria (SRB) colonize the well screen and perforations. They produce slime that physically blocks water entry. Common in Houston-area wells after 8–10 years.',
   },
   {
     num: '02',
     title: 'Mineral Encrustation',
-    desc: 'Calcium carbonate and iron oxide deposits build up on the well screen over time, reducing the effective open area. Most common in high-mineral Jasper and Evangeline aquifer zones.',
+    desc: 'Calcium carbonate and iron oxide deposits build up on the well screen over time, reducing the effective open area. Most common in high-mineral aquifer zones across our service area.',
   },
   {
     num: '03',
@@ -113,7 +113,7 @@ const methods = [
   {
     icon: '⚗️',
     title: 'Acid Treatment',
-    desc: 'Food-grade or weak acid solution dissolves calcium carbonate and iron oxide mineral scale from the screen and perforations. Followed by full neutralization and flushing.',
+    desc: 'A controlled acid solution dissolves calcium carbonate and iron oxide mineral scale from the screen and perforations. Followed by full neutralization and flushing.',
     highlights: ['Best for mineral encrustation', 'Dissolves carbonate scale', 'Neutralized and flushed'],
   },
   {
@@ -253,9 +253,8 @@ export default function WellRehabilitationPage() {
           <p className={styles.overviewP}>
             Not every well can be rehabilitated. Structural failures, severe casing
             damage, and contamination may require a new well. But for the most common
-            causes of decline in Houston — iron bacteria from the Jasper Aquifer and
-            mineral buildup — rehab is often the right call, including targeted well
-            screen repair and cleaning.
+            causes of decline in Houston — iron bacteria and mineral buildup — rehab is
+            often the right call, including targeted well screen repair and cleaning.
           </p>
           <div className={styles.overviewStats}>
             {[
@@ -342,8 +341,8 @@ export default function WellRehabilitationPage() {
           <span className="section-label">The Houston Problem</span>
           <h2 className="section-title">Iron Bacteria in Houston-Area Wells</h2>
           <p className={styles.overviewP}>
-            The Jasper Aquifer beneath Montgomery County contains elevated dissolved iron
-            — a natural characteristic of the sandy coastal plain formation. This creates
+            Groundwater beneath Montgomery County contains elevated dissolved iron in many
+            wells — a natural characteristic of the sandy coastal plain formation. This creates
             ideal conditions for iron bacteria, which oxidize the iron and produce
             reddish-brown slime colonies inside wells over time. Left untreated, that slime
             clogs the well screen and is a leading cause of brown or discolored well water

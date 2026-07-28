@@ -155,7 +155,7 @@ const pressureFeatures = [
   },
   {
     title: '💧 Waterlogged Tank',
-    desc: 'The bladder has failed and the tank is full of water with no air cushion. Tap the tank — no hollow sound means it is waterlogged and due for replacement.',
+    desc: 'The bladder has failed and the tank is full of water with no air cushion, and it is due for replacement.',
   },
   {
     title: '📏 Sized to Your Home',

@@ -49,11 +49,11 @@ export default function Footer() {
           <ul className={styles.footerContact}>
             <li>
               <span className={styles.contactIcon}>📞</span>
-              <a href="tel:+17134167111">713-416-7111</a>
+              <a href="tel:+12814484447">281-448-4447</a>
             </li>
             <li>
               <span className={styles.contactIcon}>✉️</span>
-              <a href="mailto:info@bewaterwells.com">info@bewaterwells.com</a>
+              <a href="mailto:zack@bewaterwells.com">zack@bewaterwells.com</a>
             </li>
             <li>
               <span className={styles.contactIcon}>🕐</span>

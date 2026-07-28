@@ -76,7 +76,7 @@ const jsonLd = {
 
 const signs = [
   { icon: '🔄', title: 'Rapid Pump Cycling', desc: 'Pump turns on and off every few seconds — the classic sign of a waterlogged or undersized tank. This rapidly wears out the motor.' },
-  { icon: '💧', title: 'Waterlogged Tank', desc: 'The bladder has failed and the tank is filled with water with no air cushion. Tap the tank — no hollow sound means it is waterlogged.' },
+  { icon: '💧', title: 'Waterlogged Tank', desc: 'The bladder has failed and the tank is filled with water with no air cushion.' },
   { icon: '🔩', title: 'Visible Corrosion or Leaks', desc: 'Rust streaks, corrosion at fittings, or dripping water around the tank base. A leaking tank needs immediate replacement.' },
   { icon: '🚿', title: 'Pressure Drops in Shower', desc: 'Dramatic pressure loss when a second fixture opens. A proper-sized tank buffers demand so pressure stays steady throughout the house.' },
   { icon: '📅', title: 'Tank Over 10 Years Old', desc: 'Even a functioning tank over 10 years old in Houston\'s mineral-heavy water should be inspected — bladder failure is unpredictable.' },

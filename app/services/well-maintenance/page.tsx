@@ -25,7 +25,7 @@ const faqs = [
   {
     question: 'What does a water well inspection include?',
     answer:
-      'Our inspection covers visual inspection of the wellhead and casing (sanitary cap, vent screen, setback from structures), a pump performance test (flow rate and motor amp draw), a pressure system check (tank pre-charge, switch calibration), a water quality sample collection, and a written report with photos. For FHA/VA/USDA requirements, we test for bacteria and nitrates as required by the applicable program.',
+      'Our inspection covers visual inspection of the wellhead and casing (sanitary cap, vent screen, setback from structures), a pump performance test (flow rate and motor amp draw), a pressure system check (tank pre-charge, switch calibration), a water quality sample collection, and a written report. For FHA/VA/USDA requirements, we test for bacteria and nitrates as required by the applicable program.',
   },
   {
     question: 'Can I set up an ongoing annual maintenance plan with B-E Waterwell?',
@@ -90,7 +90,7 @@ const checklist = [
   { icon: '🔍', item: 'Wellhead & Casing Visual', detail: 'Inspect sanitary cap, vent screen, surface seal, and casing condition. Check for pest entry points or surface water intrusion risks.' },
   { icon: '📊', item: 'Pressure & Flow Rate Test', detail: 'Measure system pressure at multiple points, verify cut-in and cut-out settings, and check for pressure loss across distribution.' },
   { icon: '🔧', item: 'Pressure Switch Calibration', detail: 'Verify and adjust cut-in and cut-out pressure settings. An out-of-spec switch causes short cycling or inadequate system pressure.' },
-  { icon: '💧', item: 'Water Quality Visual', detail: 'Assess color, clarity, and odor. Flag any changes from prior visits for targeted lab testing if needed.' },
+  { icon: '💧', item: 'Water Quality Visual', detail: 'Assess color, clarity, and odor, and flag any changes for targeted lab testing if needed.' },
 ];
 
 const costCompare = [
@@ -113,7 +113,7 @@ const inspectionCovers = [
   { item: 'Recovery rate assessment', detail: 'How quickly the water level recovers after pumping' },
   { item: 'Pressure system check', detail: 'Tank pre-charge, pressure switch calibration, cut-in/cut-out settings' },
   { item: 'Water quality sample', detail: 'Collected for lab analysis — bacteria, nitrates, and basic chemistry' },
-  { item: 'Written report with photos', detail: 'Delivered within 24 hours of site visit, formatted for lenders' },
+  { item: 'Written report', detail: 'Delivered within 24 hours of site visit, formatted for lenders' },
 ];
 
 const seasonalCalendar = [
@@ -145,7 +145,7 @@ const seasonalCalendar = [
     season: 'Annual 📅',
     items: [
       'Full inspection per the B-E Waterwell checklist',
-      'Written report with photos and prior-year comparison',
+      'Written report',
       'Recommendations for upcoming service needs',
     ],
   },
@@ -262,8 +262,7 @@ export default function WellMaintenancePage() {
           <h2 className="section-title">The B-E Maintenance Checklist</h2>
           <p className={styles.bodyP}>
             Every maintenance visit follows a documented checklist. You receive a written
-            report with findings, photos, test results, and prior-visit comparison after
-            every call.
+            report with findings and test results after every call.
           </p>
           <div className={styles.checkGrid}>
             {checklist.map((c) => (

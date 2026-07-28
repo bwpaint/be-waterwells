@@ -25,17 +25,17 @@ const faqs = [
   {
     question: 'How long does the entire new well installation take?',
     answer:
-      'Start to finish — including permit — typically runs 1–2 weeks. Permit approval from LSGCD or HGSD usually takes 5–10 business days. Once the permit is in hand, drilling and full system installation is completed in 1–2 days on-site. Commercial or large agricultural wells may take 2–3 days to drill.',
+      'Start to finish — including permit — typically runs 1–2 weeks. Permit approval from your local groundwater conservation district usually takes 5–10 business days. Once the permit is in hand, drilling and system installation is typically completed in 3-4 days on-site.',
   },
   {
     question: 'Do I need a permit to drill a water well in Texas?',
     answer:
-      'Yes. Permitting and registration are handled through your local Groundwater Conservation District, and timelines vary by county — Harris County is typically just a few days for residential, while Montgomery County can take 2–3 weeks. B-E Waterwell handles all of it for you.',
+      'Registration is always required through your local Groundwater Conservation District. Whether a permit is also required depends on your county and well type, and timelines vary accordingly. B-E Waterwell handles all of it for you.',
   },
   {
     question: 'What exactly is included in my new well installation?',
     answer:
-      'Every well includes: rotary rig drilling, geological log, Schedule 40 PVC casing, gravel pack, stainless screen, full well development, a Franklin Electric submersible pump and motor, drop pipe, pitless adapter, pressure tank, pressure switch and gauge, main shut-off, electrical wiring at the wellhead, all GCD permits, the driller&apos;s completion report, and an initial water quality test.',
+      'Every well includes: rotary rig drilling, geological log, proper casing, pressure cementing, appropriate screening, full well development, a Franklin Electric submersible pump and motor, drop pipe, pressure tank, pressure switch and gauge, main shut-off, electrical wiring at the wellhead, all GCD permits, and the driller&apos;s completion report.',
   },
   {
     question: 'How much does water well drilling cost in Houston, TX?',
@@ -45,7 +45,7 @@ const faqs = [
   {
     question: 'Why should I choose B-E Waterwell for well drilling?',
     answer:
-      'We have serviced more than 5,000 wells across the Houston area since 1979 and back every well with a 2-year workmanship warranty. Every well we drill is permitted, cased in Schedule 40 PVC, gravel-packed, and developed before the pump is set. We don&apos;t cut corners — your water supply is not the place to cut corners and regret it in 5 years.',
+      'We have serviced more than 5,000 wells across the Houston area since 1979 and back every well with a guaranteed workmanship warranty. Every well we drill is registered, properly cased and pressure cemented, and developed before the pump is set. We don&apos;t cut corners — your water supply is not the place to cut corners and regret it in 5 years.',
   },
 ];
 
@@ -68,7 +68,7 @@ const jsonLd = {
       },
       areaServed: 'Houston, TX',
       description:
-        'Rotary rig water well drilling and complete installation for residential, irrigation, and commercial properties across the Houston area. TDLR licensed, 45+ years experience, 2-year workmanship warranty.',
+        'Rotary rig water well drilling and complete installation for residential, irrigation, and commercial properties across the Houston area. TDLR licensed, 45+ years experience, guaranteed workmanship.',
     },
     {
       '@type': 'FAQPage',
@@ -92,8 +92,8 @@ const included = [
   },
   {
     icon: '🪛',
-    title: 'PVC Casing & Screen',
-    desc: 'Schedule 40 PVC casing with gravel pack and properly placed stainless screen for long-term performance.',
+    title: 'Proper Casing & Screen',
+    desc: 'Casing and screen type matched to your well conditions, pressure cemented in place for long-term performance.',
   },
   {
     icon: '💧',
@@ -112,8 +112,8 @@ const included = [
   },
   {
     icon: '📋',
-    title: 'Permits & Water Test',
-    desc: 'All GCD permits, the driller’s completion report, and an initial bacteriological and basic water quality test.',
+    title: 'Permits',
+    desc: 'All GCD permits and the driller’s completion report.',
   },
 ];
 
@@ -126,12 +126,12 @@ const steps = [
   {
     num: '02',
     title: 'Permit Application',
-    desc: 'We file with your Groundwater Conservation District (LSGCD or HGSD). Approval typically takes 5–10 business days.',
+    desc: 'We file with your local Groundwater Conservation District. Approval typically takes 5–10 business days.',
   },
   {
     num: '03',
     title: 'Drilling Day',
-    desc: 'Our rotary rig mobilizes to your site. We drill to aquifer depth, set casing, and develop the well — typically completed in one to two days.',
+    desc: 'Our rotary rig mobilizes to your site. We drill to aquifer depth, set casing, and develop the well — typically completed in 3-4 days.',
   },
   {
     num: '04',
@@ -141,15 +141,8 @@ const steps = [
   {
     num: '05',
     title: 'Final Inspection',
-    desc: 'System pressure test, water quality sample collected, completion paperwork signed. Your well is live.',
+    desc: 'System pressure test and completion paperwork signed. Your well is live.',
   },
-];
-
-const aquifers = [
-  { county: 'Montgomery County', range: '180–320 ft', aquifer: 'Jasper Aquifer', notes: 'LSGCD regulated. Sandy loam soils. Reliable yields for residential and ag use.' },
-  { county: 'Harris County (NW)', range: '180–360 ft', aquifer: 'Chicot / Jasper', notes: 'HGSD regulated. Tomball, Spring, Cypress corridor. Good residential yield.' },
-  { county: 'Harris County (East)', range: '240–440 ft', aquifer: 'Evangeline Aquifer', notes: 'Humble, Kingwood area. Deeper wells required. Iron and sulfur treatment common.' },
-  { county: 'Waller County', range: '160–300 ft', aquifer: 'Trinity Group', notes: 'LSGCD / BVGCD regulated. Sandy coastal plains. Farm and ranch applications.' },
 ];
 
 const costDrivers = [
@@ -159,7 +152,7 @@ const costDrivers = [
   },
   {
     title: 'Casing Diameter',
-    desc: 'Standard residential wells use 6" casing. Higher-demand applications may require 8" or larger casing.',
+    desc: 'Standard residential wells use 4" casing. Higher-demand applications may require larger casing.',
   },
   {
     title: 'Pump Specification',
@@ -237,7 +230,7 @@ export default function WaterWellDrillingPage() {
                 45+ years of rotary rig drilling across Montgomery, Harris, Waller,
                 Grimes, Washington, Anderson, and surrounding counties. As experienced
                 water well drilling contractors, we drill to depth, case it right, and
-                stand behind every well with a 2-year workmanship warranty. TDLR Licensed.
+                stand behind every well with a guaranteed workmanship warranty. TDLR Licensed.
               </p>
               <div className={styles.heroBtns}>
                 <a href="tel:+12814484447" className="btn btn-primary">
@@ -270,8 +263,8 @@ export default function WaterWellDrillingPage() {
             New construction or emergency redrill — B-E Waterwell drills new residential
             and commercial wells across the greater Houston area and surrounding counties,
             from permit to first drop of water in your glass. 45+ years, 1,000+ happy
-            customers. Every well we drill is permitted, cased in Schedule 40 PVC,
-            gravel-packed, and fully developed before the pump is set.
+            customers. Every well we drill is registered, cased to fit your needs and
+            pressure cemented, and fully developed before the pump is set.
           </p>
           <p className={styles.overviewP}>
             Whether you need new residential well drilling in Magnolia, an irrigation
@@ -281,19 +274,6 @@ export default function WaterWellDrillingPage() {
             warranty. We don&apos;t cut corners because your water supply is not the
             place to cut corners and regret it in 5 years.
           </p>
-          <div className={styles.overviewStats}>
-            {[
-              { stat: '45+', label: 'Years Drilling' },
-              { stat: '5,000+', label: 'Wells Serviced' },
-              { stat: '160–440 ft', label: 'Depth Range' },
-              { stat: '2-Year', label: 'Warranty' },
-            ].map((s) => (
-              <div key={s.label} className={styles.overviewStat}>
-                <strong>{s.stat}</strong>
-                <span>{s.label}</span>
-              </div>
-            ))}
-          </div>
         </section>
 
         {/* ── EVERYTHING INCLUDED ─────────────── */}
@@ -327,27 +307,6 @@ export default function WaterWellDrillingPage() {
                   <h3 className={styles.stepTitle}>{step.title}</h3>
                   <p className={styles.stepDesc}>{step.desc}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ── AQUIFER TABLE ───────────────────── */}
-        <section className={styles.aquiferSection}>
-          <span className="section-label">Houston Geology</span>
-          <h2 className="section-title">Aquifer Depths by County</h2>
-          <p className={styles.overviewP}>
-            Well depth is determined by your property location and target aquifer.
-            Understanding local geology is key to drilling a productive well — here is
-            what we typically encounter across our service area.
-          </p>
-          <div className={styles.aquiferGrid}>
-            {aquifers.map((row) => (
-              <div key={row.county} className={styles.aquiferCard}>
-                <h3 className={styles.aquiferCounty}>{row.county}</h3>
-                <div className={styles.aquiferDepth}>{row.range}</div>
-                <div className={styles.aquiferName}>{row.aquifer}</div>
-                <p className={styles.aquiferNotes}>{row.notes}</p>
               </div>
             ))}
           </div>

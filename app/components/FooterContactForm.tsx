@@ -33,7 +33,7 @@ export default function FooterContactForm() {
         rows={4}
       />
       <button type="submit" className={`btn btn-primary ${styles.footerFormBtn}`}>
-        Request Service
+        Send Request
       </button>
     </form>
   );
