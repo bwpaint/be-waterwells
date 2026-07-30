@@ -214,8 +214,8 @@ export default function CityPage({ params }: Props) {
               { n: '01', title: 'Phone Consultation', desc: 'Call or submit the form. We discuss your property, service needs, and give a ballpark estimate on the spot.' },
               { n: '02', title: 'Site Assessment', desc: 'We visit your property, assess soil conditions, aquifer access, and determine the right drill plan.' },
               { n: '03', title: 'Permitting', desc: 'We pull all required permits from the appropriate groundwater conservation district on your behalf.' },
-              { n: '04', title: 'Drilling & Completion', desc: 'Our rig crew drills, installs casing, pump, and pressure tank. Most residential jobs complete in 1–2 days.' },
-              { n: '05', title: 'Test & Certify', desc: 'We test yield and water quality, provide documentation, and walk you through your new system.' },
+              { n: '04', title: 'Drilling & Completion', desc: 'Our rig crew drills, installs casing, pump, and pressure tank. Most residential jobs complete in 3 to 4 days.' },
+              { n: '05', title: 'Test & Certify', desc: 'No water quality testing is performed on newly drilled wells unless requested at an additional cost.' },
             ].map((step) => (
               <div key={step.n} className={styles.processStep}>
                 <span className={styles.stepNum}>{step.n}</span>

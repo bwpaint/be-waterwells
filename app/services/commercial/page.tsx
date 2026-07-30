@@ -110,33 +110,6 @@ const wellTypes = [
   },
 ];
 
-const specRows = [
-  {
-    label: 'Casing Diameter',
-    residential: '6-inch PVC',
-    commercial: '8-inch or 10-inch steel or PVC',
-    notes: 'Larger casing accommodates higher-horsepower pumps and higher flow rates.',
-  },
-  {
-    label: 'Pump Horsepower',
-    residential: '½ – 1½ HP',
-    commercial: '2 – 20+ HP',
-    notes: 'High-yield applications require larger pumps sized to your GPM demand.',
-  },
-  {
-    label: 'Aquifer Target',
-    residential: 'Jasper (180–320 ft)',
-    commercial: 'Jasper, Evangeline, or Trinity depending on yield requirement',
-    notes: 'Higher-yield applications may require deeper aquifer targeting.',
-  },
-  {
-    label: 'Permit Type',
-    residential: 'Standard GCD permit',
-    commercial: 'High-capacity permit — additional documentation required',
-    notes: 'LSGCD or HGSD high-capacity permit process. We handle all filings.',
-  },
-];
-
 const relatedServices = [
   {
     icon: '🛠️',
@@ -306,75 +279,6 @@ export default function CommercialWellServicesHubPage() {
                 </ul>
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* ── COMMERCIAL VS RESIDENTIAL ───────── */}
-        <section className={styles.specSection}>
-          <span className="section-label">The Difference</span>
-          <h2 className="section-title">Commercial vs. Residential Drilling</h2>
-          <p className={styles.overviewP}>
-            High-capacity wells are not just bigger residential wells. The casing, pump,
-            aquifer target, and permitting all change once you move into commercial and
-            agricultural production. Here is what sets a commercial job apart.
-          </p>
-          <div className={styles.specGrid}>
-            <div className={`${styles.specRow} ${styles.specHead}`}>
-              <div className={styles.specCell}>Spec</div>
-              <div className={styles.specCell}>Residential</div>
-              <div className={styles.specCell}>Commercial / Agricultural</div>
-              <div className={styles.specCell}>Why It Matters</div>
-            </div>
-            {specRows.map((row) => (
-              <div key={row.label} className={styles.specRow}>
-                <div className={`${styles.specCell} ${styles.specLabel}`}>{row.label}</div>
-                <div className={styles.specCell} data-th="Residential">{row.residential}</div>
-                <div className={styles.specCell} data-th="Commercial / Ag">{row.commercial}</div>
-                <div className={`${styles.specCell} ${styles.specNotes}`} data-th="Why it matters">{row.notes}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ── EQUESTRIAN ──────────────────────── */}
-        <section className={styles.equestrianSection}>
-          <span className="section-label">Horse Country</span>
-          <h2 className="section-title">Well Drilling for Equestrian Properties</h2>
-          <p className={styles.overviewP}>
-            Houston — particularly Magnolia, Montgomery, and Waller County — is equestrian
-            country. Horse properties have specific water demands that residential well
-            systems are not designed for. We plan the well for your actual daily water
-            demand and distribution needs from the start.
-          </p>
-          <div className={styles.equestrianGrid}>
-            <div className={styles.equestrianCard}>
-              <h3 className={styles.equestrianTitle}>Daily Water Per Horse</h3>
-              <p className={styles.equestrianDesc}>
-                10–15 gallons minimum per horse per day for drinking; up to 30 gallons
-                including washing.
-              </p>
-            </div>
-            <div className={styles.equestrianCard}>
-              <h3 className={styles.equestrianTitle}>Trough Systems</h3>
-              <p className={styles.equestrianDesc}>
-                Automatic trough fill systems fed from the well require consistent flow
-                and pressure.
-              </p>
-            </div>
-            <div className={styles.equestrianCard}>
-              <h3 className={styles.equestrianTitle}>Multiple Outlet Design</h3>
-              <p className={styles.equestrianDesc}>
-                Stall lines, wash racks, arena dust control, and pasture troughs — design
-                the distribution at drill time.
-              </p>
-            </div>
-            <div className={styles.equestrianCard}>
-              <h3 className={styles.equestrianTitle}>Water Quality for Horses</h3>
-              <p className={styles.equestrianDesc}>
-                High iron content from the Jasper Aquifer can affect palatability — water
-                treatment planning at installation.
-              </p>
-            </div>
           </div>
         </section>
 

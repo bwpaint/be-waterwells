@@ -4,6 +4,7 @@ export interface BlogPost {
   categorySlug: string;
   date: string;
   excerpt: string;
+  published?: boolean;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -21,6 +22,7 @@ export const blogPosts: BlogPost[] = [
     categorySlug: 'water-well-drilling',
     date: '2025-03-22',
     excerpt: 'Thinking about going off the municipal water grid? Here is the real ROI calculation for the Houston area homeowners with acreage.',
+    published: false,
   },
   {
     title: 'How Deep Does a Water Well Need to Be in Montgomery County TX?',
@@ -123,6 +125,7 @@ export const blogPosts: BlogPost[] = [
     categorySlug: 'well-maintenance',
     date: '2025-04-28',
     excerpt: 'The Texas Department of Licensing recommends annual inspection. Here is a practical maintenance calendar for the Houston area well owners.',
+    published: false,
   },
   {
     title: 'Water Well Inspection for Home Buyers in Texas: Complete Guide',
@@ -130,6 +133,7 @@ export const blogPosts: BlogPost[] = [
     categorySlug: 'well-maintenance',
     date: '2025-03-18',
     excerpt: 'FHA, VA, and USDA loans all have specific well inspection requirements. Here is what buyers, sellers, and realtors need to know in the Houston area.',
+    published: false,
   },
   {
     title: 'Well Rehabilitation vs. Drilling a New Well: The Cost Comparison',
@@ -148,17 +152,22 @@ export const blogPosts: BlogPost[] = [
 ];
 
 export function getBlogPostsByCategory(categorySlug: string, count = 4): BlogPost[] {
-  return blogPosts.filter((p) => p.categorySlug === categorySlug).slice(0, count);
+  return blogPosts
+    .filter((p) => p.categorySlug === categorySlug && p.published !== false)
+    .slice(0, count);
 }
 
 export function getRecentBlogPosts(count = 4): BlogPost[] {
   return [...blogPosts]
+    .filter((p) => p.published !== false)
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, count);
 }
 
 export function getAllBlogPosts(): BlogPost[] {
-  return [...blogPosts].sort((a, b) => b.date.localeCompare(a.date));
+  return [...blogPosts]
+    .filter((p) => p.published !== false)
+    .sort((a, b) => b.date.localeCompare(a.date));
 }
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {

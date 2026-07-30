@@ -10,16 +10,6 @@ export const metadata: Metadata = {
     'Family-owned and operated since 1979, B-E Waterwell Services has serviced over 5,000 waterwells across the Houston area. Meet the team behind 45+ years of trusted waterwell expertise.',
 };
 
-const milestones = [
-  { year: '1979', event: 'B-E Waterwell Services founded in Magnolia, TX by the Benge family.' },
-  { year: '1985', event: 'Expanded service area to cover all of Montgomery County.' },
-  { year: '1993', event: 'Reached 1,000 waterwells serviced milestone. Added irrigation well services.' },
-  { year: '2001', event: 'Expanded into Harris and Waller counties. Added commercial drilling rigs.' },
-  { year: '2010', event: '3,000 waterwells serviced. Launched emergency pump service.' },
-  { year: '2019', event: '40-year anniversary. 4,500+ waterwells serviced across the Houston area.' },
-  { year: '2024', event: 'Over 5,000 waterwells serviced. Still family-owned, still in Magnolia, TX.' },
-];
-
 const values = [
   {
     icon: '🏡',
@@ -102,30 +92,6 @@ export default function AboutPage() {
                 <div style={{ fontSize: '2rem', marginBottom: '14px' }}>{v.icon}</div>
                 <h3 style={{ fontFamily: 'var(--font-head)', fontWeight: 800, fontSize: '1rem', color: 'var(--dark-earth)', marginBottom: '10px', letterSpacing: '0.02em' }}>{v.title}</h3>
                 <p style={{ color: 'var(--dark-stone)', fontSize: '0.92rem', lineHeight: 1.7 }}>{v.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section style={{ padding: '80px 0', background: 'var(--white)' }}>
-        <div className="container" style={{ maxWidth: '760px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-            <p style={{ color: 'var(--dark-earth)', fontFamily: 'var(--font-head)', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>Our Story</p>
-            <h2 style={{ fontFamily: 'var(--font-head)', fontSize: 'clamp(1.6rem,3.5vw,2.4rem)', fontWeight: 900, color: 'var(--dark-earth)' }}>45 Years of History</h2>
-          </div>
-          <div style={{ position: 'relative', paddingLeft: '32px', borderLeft: '2px solid var(--light-stone)' }}>
-            {milestones.map((m) => (
-              <div key={m.year} style={{ marginBottom: '32px', position: 'relative' }}>
-                <div style={{
-                  position: 'absolute', left: '-41px', top: '4px',
-                  width: '18px', height: '18px', borderRadius: '50%',
-                  background: 'var(--orange)', border: '3px solid var(--white)',
-                  boxShadow: '0 0 0 2px var(--orange)',
-                }} />
-                <span style={{ fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '0.82rem', color: 'var(--dark-earth)', letterSpacing: '0.08em' }}>{m.year}</span>
-                <p style={{ marginTop: '4px', color: 'var(--dark-stone)', fontSize: '0.95rem', lineHeight: 1.6 }}>{m.event}</p>
               </div>
             ))}
           </div>

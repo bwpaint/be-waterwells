@@ -162,7 +162,7 @@ export const homeFaqs = [
   },
   {
     question: 'How long does it take to drill a new waterwell?',
-    answer: 'Most residential waterwell projects in Houston take 1–3 days from drilling through pump installation and hookup. Permitting through the Texas Department of Licensing and Regulation (TDLR) typically takes 3–5 business days before drilling can begin. We handle all permits for you.',
+    answer: 'Drilling takes three to four days. Permitting is done through the local groundwater district, and approval times vary greatly by district.',
   },
   {
     question: 'Is B-E Waterwell Services licensed in Texas?',
