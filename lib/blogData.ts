@@ -1,3 +1,10 @@
+/** A block of article body copy. `heading` is optional for lead paragraphs. */
+export interface BlogSection {
+  heading?: string;
+  paragraphs?: string[];
+  bullets?: string[];
+}
+
 export interface BlogPost {
   title: string;
   slug: string;
@@ -5,9 +12,73 @@ export interface BlogPost {
   date: string;
   excerpt: string;
   published?: boolean;
+  /** Full article body. Posts without one fall back to showing the excerpt. */
+  body?: BlogSection[];
 }
 
 export const blogPosts: BlogPost[] = [
+  // ── Well Pump Services ──
+  {
+    title: 'Why We Replace Water Well Pumps Instead of Repairing Them',
+    slug: 'why-we-replace-well-pumps-instead-of-repairing',
+    categorySlug: 'well-pump-services',
+    date: '2026-07-30',
+    excerpt:
+      'If you searched for well pump repair, you probably just want your water back. Here is why we replace a failed submersible pump rather than rebuild it — and why that usually costs you less over the life of the well.',
+    body: [
+      {
+        paragraphs: [
+          'Most people who call us have typed "well pump repair" into their phone about ten minutes earlier. That is a completely reasonable thing to search for. But when the pump itself has failed, we replace it — we do not rebuild it and put it back down the hole. Here is the honest reasoning.',
+        ],
+      },
+      {
+        heading: 'The expensive part is pulling the pump, not the pump',
+        paragraphs: [
+          'Your submersible pump is not in the garage. It is hanging on the drop pipe somewhere between 180 and 440 feet down, depending on which aquifer your well reaches. Getting it to the surface takes a rig, a crew, and time.',
+          'That pull cost is identical whether we bring the pump up to rebuild it or bring it up to replace it. The pump itself is a modest share of the total. So the decision is not "cheap repair versus expensive replacement" — it is "same labor, then which piece of equipment goes back in the ground."',
+        ],
+      },
+      {
+        heading: 'Submersible motors are sealed units',
+        paragraphs: [
+          'A submersible motor is not a shop motor you can open on a bench. The stator and windings are sealed inside a stainless shell and filled with liquid, with a diaphragm to handle heat expansion. That construction is exactly what lets it sit underwater for a decade.',
+          'It also means there is no meaningful field repair. A rewind is a specialty shop job, which means your pump leaves town and you are without water while it travels, gets torn down, gets rebuilt, and comes back.',
+        ],
+      },
+      {
+        heading: 'A rebuilt pump restarts an unknown clock',
+        paragraphs: [
+          'A quality submersible pump lasts roughly 10 to 15 years. Most failures we are called to happen at the back end of that window, which means the components that did not fail are also near the end of their service life.',
+          'Rebuild it and you have a pump with unknown remaining life going back down 300 feet. If it fails again in eighteen months, you pay the pull cost a second time. A new pump goes in with a known service life and a warranty behind it.',
+        ],
+      },
+      {
+        heading: 'The industry rule of thumb',
+        paragraphs: [
+          'The standard guidance across the pump industry is that when a repair approaches half the cost of replacement, replacement is the better decision. With a submersible pump — where the labor to reach it dominates the bill — that threshold gets crossed almost every time.',
+        ],
+      },
+      {
+        heading: 'What we do repair',
+        paragraphs: [
+          'This is worth being precise about, because "we do not repair pumps" is easy to misread. Plenty of no-water calls are not the pump at all, and those we absolutely fix:',
+        ],
+        bullets: [
+          'Pressure switches that are out of calibration or failed',
+          'Pressure tanks that have lost their air charge or failed a bladder',
+          'Wiring, control boxes, and connections at the wellhead',
+          'Constant-pressure controllers and related equipment',
+        ],
+      },
+      {
+        paragraphs: [
+          'We diagnose before we quote. If the pump is fine and the problem is a twenty-dollar switch, that is what we tell you. But when the downhole pump or motor has failed, replacement is the honest recommendation — not an upsell.',
+          'Serving Magnolia, Conroe, Tomball, The Woodlands, and the greater Houston area since 1979. Call (281) 448-4447 and we will tell you straight what your well needs.',
+        ],
+      },
+    ],
+  },
+
   // ── Water Well Drilling ──
   {
     title: 'How Much Does Water Well Drilling Cost in the Houston area? (2025 Guide)',

@@ -45,7 +45,7 @@
 .seasonTitle { font-family: var(--font-head); font-size: 0.95rem; font-weight: 800; color: var(--charcoal); margin-bottom: 12px; }
 .seasonList { list-style: none; display: flex; flex-direction: column; gap: 8px; }
 .seasonList li { font-size: 0.84rem; color: var(--warm-gray); line-height: 1.55; padding-left: 16px; position: relative; }
-.seasonList li::before { content: "→"; position: absolute; left: 0; color: var(--orange); font-weight: 700; }
+.seasonList li::before { content: "→"; position: absolute; left: 0; color: var(--accent-on-light); font-weight: 700; }
 
 /* ── CROSS-LINKS ───────────────────────────────────────────── */
 .crossLinkSection { margin-bottom: 40px; }
@@ -53,7 +53,7 @@
 /* Orange-on-cream failed contrast in this callout. Black + bold reads clearly;
    orange is reserved for the hover state. */
 .crossLinkP a { color: var(--charcoal); font-weight: 800; text-decoration: underline; }
-.crossLinkP a:hover { color: var(--orange); }
+.crossLinkP a:hover { color: var(--accent-on-light); }
 
 /* ── SUB-SERVICE CARDS ─────────────────────────────────────── */
 .subServicesSection { background: var(--cream); border-radius: var(--radius-lg); padding: 40px 32px; margin-bottom: 40px; }
@@ -65,15 +65,15 @@
 .subDesc { font-size: 0.85rem; color: var(--warm-gray); line-height: 1.65; margin-bottom: 16px; flex: 1; }
 .subHighlights { list-style: none; display: flex; flex-direction: column; gap: 5px; margin-bottom: 18px; }
 .subHighlights li { font-size: 0.8rem; color: var(--dark-stone); padding-left: 16px; position: relative; }
-.subHighlights li::before { content: "✓"; position: absolute; left: 0; color: var(--orange); font-weight: 700; }
-.subLink { font-family: var(--font-head); font-size: 0.8rem; font-weight: 800; color: var(--orange); transition: var(--transition); align-self: flex-start; }
-.subLink:hover { color: var(--orange-hover); }
+.subHighlights li::before { content: "✓"; position: absolute; left: 0; color: var(--accent-on-light); font-weight: 700; }
+.subLink { font-family: var(--font-head); font-size: 0.8rem; font-weight: 800; color: var(--accent-on-light); transition: var(--transition); align-self: flex-start; }
+.subLink:hover { color: var(--accent-on-light-hover); }
 
 /* ── CHECKLIST ─────────────────────────────────────────────── */
 .checkSection { margin-bottom: 40px; }
 .checkGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 22px; }
 .checkCard { display: grid; grid-template-columns: 28px 1fr; gap: 14px; align-items: start; background: var(--white); border: 1px solid var(--stone-light); border-radius: var(--radius); padding: 18px 16px; }
-.checkIcon { font-family: var(--font-head); font-size: 1rem; font-weight: 900; color: var(--orange); padding-top: 2px; }
+.checkIcon { font-family: var(--font-head); font-size: 1rem; font-weight: 900; color: var(--accent-on-light); padding-top: 2px; }
 .checkItem { font-family: var(--font-head); font-size: 0.85rem; font-weight: 800; color: var(--charcoal); margin-bottom: 4px; }
 .checkDetail { font-size: 0.8rem; color: var(--warm-gray); line-height: 1.55; }
 
@@ -89,7 +89,7 @@
 .costRow:nth-child(2) { background: rgba(255,140,0,0.05); }
 .costRow:last-child { background: rgba(220,50,50,0.05); }
 .costType { font-family: var(--font-head); font-size: 0.88rem; font-weight: 800; color: var(--charcoal); }
-.costAmt { font-family: var(--font-head); font-size: 0.95rem; font-weight: 900; color: var(--orange); white-space: nowrap; }
+.costAmt { font-family: var(--font-head); font-size: 0.95rem; font-weight: 900; color: var(--accent-on-light); white-space: nowrap; }
 .costOutcome { font-size: 0.82rem; color: var(--warm-gray); line-height: 1.6; }
 
 /* ── FAQ ───────────────────────────────────────────────────── */
@@ -99,8 +99,8 @@
 .areasSection { margin-bottom: 8px; }
 .areasGrid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
 .areaChip { background: var(--white); border: 1px solid var(--stone-light); border-radius: 100px; padding: 9px 20px; font-family: var(--font-head); font-size: 0.8rem; font-weight: 700; color: var(--charcoal); transition: var(--transition); }
-.areaChip:hover { background: var(--orange); border-color: var(--orange); color: var(--white); transform: translateY(-2px); }
-.areaChipHQ { border-color: var(--orange); color: var(--orange); }
+.areaChip:hover { background: var(--orange); border-color: var(--orange); color: var(--charcoal); transform: translateY(-2px); }
+.areaChipHQ { border-color: var(--orange); color: var(--accent-on-light); }
 
 /* ── FINAL CTA ─────────────────────────────────────────────── */
 .finalCta { background: var(--dark-stone); padding: 80px 0; }

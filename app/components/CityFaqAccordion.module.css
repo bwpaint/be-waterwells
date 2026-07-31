@@ -37,7 +37,7 @@
   background: var(--cream);
 }
 .item.open .question span:first-child {
-  color: var(--orange);
+  color: var(--accent-on-light);
 }
 
 .question:hover {
@@ -48,7 +48,7 @@
   font-family: var(--font-head);
   font-size: 1.3rem;
   font-weight: 400;
-  color: var(--orange);
+  color: var(--accent-on-light);
   flex-shrink: 0;
   width: 24px;
   text-align: center;

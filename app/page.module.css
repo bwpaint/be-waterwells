@@ -766,7 +766,10 @@
   gap: 28px;
 }
 .areasLogo {
-  width: 100%;
+  /* Reduced 30% from full container width. */
+  width: 70%;
+  max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
 }

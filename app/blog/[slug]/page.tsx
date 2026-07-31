@@ -7,6 +7,7 @@ import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { blogPosts, getBlogPostBySlug, getBlogPostsByCategory } from '../../../lib/blogData';
+import { linkifyPhone } from '../../../lib/linkifyPhone';
 
 const CATEGORY_LABELS: Record<string, string> = {
   'water-well-drilling': 'Well Drilling',
@@ -81,6 +82,34 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <p style={{ fontSize: '1.15rem', color: 'var(--dark-earth)', lineHeight: 1.75, fontWeight: 500, marginBottom: '28px' }}>
             {post.excerpt}
           </p>
+
+          {/* Full article body, when the post has one. Posts without a body
+              fall back to showing only the excerpt above. */}
+          {post.body && post.body.length > 0 && (
+            <div style={{ marginBottom: '36px' }}>
+              {post.body.map((section, si) => (
+                <div key={si} style={{ marginBottom: '28px' }}>
+                  {section.heading && (
+                    <h2 style={{ fontFamily: 'var(--font-head)', fontWeight: 800, fontSize: '1.3rem', color: 'var(--dark-earth)', marginTop: '32px', marginBottom: '12px', lineHeight: 1.25 }}>
+                      {section.heading}
+                    </h2>
+                  )}
+                  {section.paragraphs?.map((para, pi) => (
+                    <p key={pi} style={{ color: 'var(--dark-stone)', fontSize: '1rem', lineHeight: 1.8, marginBottom: '16px' }}>
+                      {linkifyPhone(para)}
+                    </p>
+                  ))}
+                  {section.bullets && section.bullets.length > 0 && (
+                    <ul style={{ margin: '4px 0 16px', paddingLeft: '22px', color: 'var(--dark-stone)', lineHeight: 1.8 }}>
+                      {section.bullets.map((b, bi) => (
+                        <li key={bi} style={{ marginBottom: '6px' }}>{b}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
 
           <div style={{ background: 'var(--white)', border: '1px solid var(--light-stone)', borderLeft: '4px solid var(--highlight)', borderRadius: 'var(--radius)', padding: '28px 32px' }}>
             <h2 style={{ fontFamily: 'var(--font-head)', fontWeight: 800, fontSize: '1.15rem', color: 'var(--dark-earth)', marginBottom: '10px' }}>

@@ -74,7 +74,7 @@
   padding: 14px 18px;
   border-radius: var(--radius);
 }
-.signsCta a { color: var(--orange); font-weight: 700; }
+.signsCta a { color: var(--accent-on-light); font-weight: 700; }
 
 /* ── TANK TYPES ────────────────────────────────────────────── */
 .typesSection {
@@ -138,8 +138,8 @@
   color: var(--charcoal);
   transition: var(--transition);
 }
-.areaChip:hover { background: var(--orange); border-color: var(--orange); color: var(--white); transform: translateY(-2px); }
-.areaChipHQ { border-color: var(--orange); color: var(--orange); }
+.areaChip:hover { background: var(--orange); border-color: var(--orange); color: var(--charcoal); transform: translateY(-2px); }
+.areaChipHQ { border-color: var(--orange); color: var(--accent-on-light); }
 
 /* ── FINAL CTA ─────────────────────────────────────────────── */
 .finalCta { background: var(--dark-stone); padding: 80px 0; }

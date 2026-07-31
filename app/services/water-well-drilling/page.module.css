@@ -169,18 +169,18 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: var(--orange);
+  color: var(--accent-on-light);
   font-weight: 700;
 }
 .subLink {
   font-family: var(--font-head);
   font-size: 0.8rem;
   font-weight: 800;
-  color: var(--orange);
+  color: var(--accent-on-light);
   transition: var(--transition);
   align-self: flex-start;
 }
-.subLink:hover { color: var(--orange-hover); }
+.subLink:hover { color: var(--accent-on-light-hover); }
 
 /* ── AQUIFER ───────────────────────────────────────────────── */
 .aquiferSection { margin-bottom: 40px; }
@@ -359,7 +359,7 @@
   color: var(--white);
   transform: translateY(-2px);
 }
-.areaChipHQ { border-color: var(--orange); color: var(--orange); }
+.areaChipHQ { border-color: var(--orange); color: var(--accent-on-light); }
 
 /* ── FINAL CTA ─────────────────────────────────────────────── */
 .finalCta { background: var(--dark-stone); padding: 80px 0; }
@@ -379,6 +379,12 @@
      narrow enough to break it. Wrapping is re-enabled on small screens
      below so it can never overflow the viewport. */
   white-space: nowrap;
+  /* nowrap makes this wider than the 600px container; width:max-content plus
+     auto margins keeps it centred on the same axis as the copy below. */
+  width: max-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .finalCtaInner p {
   color: rgba(255,255,255,0.65);

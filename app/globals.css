@@ -46,6 +46,11 @@
   --white:        #ffffff;
   --orange:       #DDD0AC;
   --orange-hover: #C9B891;
+  /* --orange is a pale sand. It reads well on the dark charcoal surfaces
+     (6.79:1) but fails badly as text on cream or white (1.32:1 — WCAG AA
+     needs 4.5:1). Use --accent-on-light for accent text on light backgrounds. */
+  --accent-on-light: #A85408;
+  --accent-on-light-hover: #7A3D06;
   --orange-glow:  rgba(221,208,172,0.20);
   --highlight:        #d95f0a;
   --highlight-hover:  #b84e08;

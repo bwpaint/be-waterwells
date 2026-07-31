@@ -68,8 +68,8 @@
 .areasSection { margin-bottom: 8px; }
 .areasGrid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
 .areaChip { background: var(--white); border: 1px solid var(--stone-light); border-radius: 100px; padding: 9px 20px; font-family: var(--font-head); font-size: 0.8rem; font-weight: 700; color: var(--charcoal); transition: var(--transition); }
-.areaChip:hover { background: var(--orange); border-color: var(--orange); color: var(--white); transform: translateY(-2px); }
-.areaChipHQ { border-color: var(--orange); color: var(--orange); }
+.areaChip:hover { background: var(--orange); border-color: var(--orange); color: var(--charcoal); transform: translateY(-2px); }
+.areaChipHQ { border-color: var(--orange); color: var(--accent-on-light); }
 
 /* ── FINAL CTA ─────────────────────────────────────────────── */
 .finalCta { background: var(--dark-stone); padding: 80px 0; }

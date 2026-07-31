@@ -341,8 +341,18 @@
   font-family: var(--font-head);
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 900;
+  line-height: 1.15;
   color: var(--white);
   margin-bottom: 16px;
+  /* City names were breaking onto their own line ("Need a Waterwell in /
+     Cypress?"). Keep the headline intact; wrapping returns on small screens. */
+  white-space: nowrap;
+  /* nowrap makes this wider than the 600px container; width:max-content plus
+     auto margins keeps it centred on the same axis as the copy below. */
+  width: max-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .finalCtaInner p {
   color: rgba(255,255,255,0.65);
@@ -378,4 +388,6 @@
   .servicesGrid { grid-template-columns: 1fr; }
   .nearbyGrid { grid-template-columns: 1fr 1fr; }
   .introImageWrap { height: 280px; }
+  /* Long city names can overflow a phone — allow wrapping again. */
+  .finalCtaInner h2 { white-space: normal; }
 }

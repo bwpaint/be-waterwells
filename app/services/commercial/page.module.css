@@ -169,18 +169,18 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: var(--orange);
+  color: var(--accent-on-light);
   font-weight: 700;
 }
 .subLink {
   font-family: var(--font-head);
   font-size: 0.8rem;
   font-weight: 800;
-  color: var(--orange);
+  color: var(--accent-on-light);
   transition: var(--transition);
   align-self: flex-start;
 }
-.subLink:hover { color: var(--orange-hover); }
+.subLink:hover { color: var(--accent-on-light-hover); }
 
 /* ── SPEC TABLE (Commercial vs. Residential) ───────────────── */
 .specSection { margin-bottom: 40px; }
@@ -326,7 +326,7 @@
   color: var(--white);
   transform: translateY(-2px);
 }
-.areaChipHQ { border-color: var(--orange); color: var(--orange); }
+.areaChipHQ { border-color: var(--orange); color: var(--accent-on-light); }
 
 /* ── FINAL CTA ─────────────────────────────────────────────── */
 .finalCta { background: var(--dark-stone); padding: 80px 0; }
@@ -344,6 +344,12 @@
   margin-bottom: 16px;
   /* Short headline — keep on one line; re-enabled to wrap on small screens. */
   white-space: nowrap;
+  /* nowrap makes this wider than the 600px container; width:max-content plus
+     auto margins keeps it centred on the same axis as the copy below. */
+  width: max-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .finalCtaInner p {
   color: rgba(255,255,255,0.65);

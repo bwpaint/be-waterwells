@@ -140,7 +140,7 @@
   font-family: var(--font-head);
   font-size: 1.6rem;
   font-weight: 900;
-  color: var(--orange);
+  color: var(--accent-on-light);
   line-height: 1;
   display: block;
   margin-bottom: 10px;
@@ -207,18 +207,18 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: var(--orange);
+  color: var(--accent-on-light);
   font-weight: 700;
 }
 .subLink {
   font-family: var(--font-head);
   font-size: 0.8rem;
   font-weight: 800;
-  color: var(--orange);
+  color: var(--accent-on-light);
   transition: var(--transition);
   align-self: flex-start;
 }
-.subLink:hover { color: var(--orange-hover); }
+.subLink:hover { color: var(--accent-on-light-hover); }
 
 /* ── REHAB VS NEW WELL ─────────────────────────────────────── */
 .compareSection { margin-bottom: 40px; }
@@ -347,7 +347,7 @@
   color: var(--white);
   transform: translateY(-2px);
 }
-.areaChipHQ { border-color: var(--orange); color: var(--orange); }
+.areaChipHQ { border-color: var(--orange); color: var(--accent-on-light); }
 
 /* ── FINAL CTA ─────────────────────────────────────────────── */
 .finalCta { background: var(--dark-stone); padding: 80px 0; }
