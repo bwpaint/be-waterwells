@@ -15,11 +15,24 @@
 .heroBg {
   position: absolute;
   inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+/* Blurred + warm-toned photo layer. Overscanned by -12px on all sides so the
+   blur's feathered edges fall outside the visible area instead of showing a
+   soft/transparent fringe at the hero borders.
+   saturate() runs before sepia() so the warm cast lands on already-muted
+   color — that ordering is what produces tan rather than gray. */
+.heroBg::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
   background-image: url('/images/hero-home-rig.jpg');
   background-size: auto calc(100% + 300px);
   background-position: center top;
-  z-index: 0;
+  filter: blur(2px) saturate(0.25) sepia(0.25);
 }
+/* Gradient overlay stays crisp — sits above the blurred photo layer. */
 .heroBg::after {
   content: '';
   position: absolute;
