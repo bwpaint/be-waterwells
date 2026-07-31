@@ -23,9 +23,9 @@ export const cities: CityData[] = [
     tagline: 'Water Well Drilling & Service Across the Greater Houston Area',
     heroSubtitle: 'Drilling · Pumps · Rehabilitation',
     metaDescription:
-      'B-E Waterwell Services — water well drilling, pump repair, and well rehabilitation across the greater Houston, TX area. TDLR licensed since 1979. Call (281) 448-4447.',
+      'B-E Waterwell Services — water well drilling, pump replacement, and well rehabilitation across the greater Houston, TX area. TDLR licensed since 1979. Call (281) 448-4447.',
     intro:
-      'B-E Waterwell Services has drilled and serviced water wells across the greater Houston area for over 45 years. From rural acreage on the metro\'s edge to established properties beyond city water, we handle new wells, pump repair and replacement, pressure systems, and well rehabilitation. We are a family-owned, TDLR-licensed contractor and a Franklin Electric authorized dealer.',
+      'B-E Waterwell Services has drilled and serviced water wells across the greater Houston area for over 45 years. From rural acreage on the metro\'s edge to established properties beyond city water, we handle new wells, pump replacement and replacement, pressure systems, and well rehabilitation. We are a family-owned, TDLR-licensed contractor and a Franklin Electric authorized dealer.',
     aquiferDepth: '300–600 ft',
     nearbyAreas: [
       { city: 'Cypress', slug: 'cypress-tx', distance: '25 mi' },
@@ -67,7 +67,7 @@ export const cities: CityData[] = [
     tagline: 'Our Home Base — Serving Magnolia Since 1979',
     heroSubtitle: 'Drilling · Pumps · Rehabilitation',
     metaDescription:
-      'B-E Waterwell Services — Magnolia, TX water well drilling, pump repair, and well rehabilitation. Our home base since 1979. Licensed TDLR contractor. Call (281) 448-4447.',
+      'B-E Waterwell Services — Magnolia, TX water well drilling, pump replacement, and well rehabilitation. Our home base since 1979. Licensed TDLR contractor. Call (281) 448-4447.',
     intro:
       'Magnolia, TX is home base for B-E Waterwell Services. We have been drilling water wells and servicing pumps in this community for over 45 years — longer than most of the subdivisions out here have existed. The sandy loam soils and Jasper Aquifer make for reliable wells when drilled right, and we know every foot of this ground.',
     aquiferDepth: '180–320 ft',
@@ -155,7 +155,7 @@ export const cities: CityData[] = [
     tagline: 'Harris County Water Well Specialists',
     heroSubtitle: 'Drilling · Pumps · Rehabilitation',
     metaDescription:
-      'Water well drilling and pump repair in Spring, TX. B-E Waterwell Services serves all of Spring and North Harris County. Licensed TDLR. Call (281) 448-4447.',
+      'Water well drilling and pump replacement in Spring, TX. B-E Waterwell Services serves all of Spring and North Harris County. Licensed TDLR. Call (281) 448-4447.',
     intro:
       'Spring, TX sits at the crossroads of North Harris County — a rapidly expanding community where older wells frequently need attention and new construction demands reliable water sources. B-E Waterwell Services has been the go-to contractor for Spring-area residential and commercial well work for decades, with deep knowledge of the local geology and Harris County regulations.',
     aquiferDepth: '220–380 ft',
@@ -241,7 +241,7 @@ export const cities: CityData[] = [
     tagline: 'Northwest Houston Water Well Experts',
     heroSubtitle: 'Drilling · Pumps · Rehabilitation',
     metaDescription:
-      'Water well drilling and pump repair in Tomball, TX. 45+ years serving NW Houston and Harris County. Licensed TDLR. Call (281) 448-4447.',
+      'Water well drilling and pump replacement in Tomball, TX. 45+ years serving NW Houston and Harris County. Licensed TDLR. Call (281) 448-4447.',
     intro:
       'Tomball sits at the edge of the Houston metro in northwest Harris County — a community that still has roots in rural Texas while growing fast. Many properties here have water wells that predate current TDLR standards, and owners are often surprised to learn how much a well rehabilitation can restore. B-E Waterwell Services knows the local geology inside out and has been a trusted name in Tomball since the 1970s.',
     aquiferDepth: '180–320 ft',
@@ -370,7 +370,7 @@ export const cities: CityData[] = [
     tagline: 'Kingwood & Lake Houston Water Well Services',
     heroSubtitle: 'Drilling · Pumps · Rehabilitation',
     metaDescription:
-      'Water well drilling, pump repair, and well rehabilitation in Kingwood, TX. Serving the Lake Houston area since 1979. Licensed TDLR. Call (281) 448-4447.',
+      'Water well drilling, pump replacement, and well rehabilitation in Kingwood, TX. Serving the Lake Houston area since 1979. Licensed TDLR. Call (281) 448-4447.',
     intro:
       'Kingwood — the "Livable Forest" — is a master-planned community in northeast Harris County that borders the San Jacinto River and Lake Houston. Properties on the outer edges and in the unincorporated areas east of FM 1960 frequently rely on private wells. B-E Waterwell Services has served the Kingwood area for decades and understands the unique water table conditions near the river corridor.',
     aquiferDepth: '260–440 ft',
@@ -542,7 +542,7 @@ export const cities: CityData[] = [
     tagline: 'Grimes County Water Well Experts',
     heroSubtitle: 'Drilling · Pumps · Rehabilitation',
     metaDescription:
-      'Water well drilling, pump repair, and well rehabilitation in Anderson, TX. B-E Waterwell Services has served Grimes County since 1979. Licensed TDLR contractor. Call (281) 448-4447.',
+      'Water well drilling, pump replacement, and well rehabilitation in Anderson, TX. B-E Waterwell Services has served Grimes County since 1979. Licensed TDLR contractor. Call (281) 448-4447.',
     intro:
       'Anderson is the historic county seat of Grimes County — a small, rural community where private water wells have always been a way of life. The rolling terrain west of Houston here is different country than the Gulf Coast plain, and well depth varies considerably from one property to the next. B-E Waterwell Services has drilled and serviced wells across Grimes County for over four decades, and we assess every site before we drill.',
     aquiferDepth: 'Varies by location',
@@ -626,7 +626,7 @@ export const cities: CityData[] = [
     tagline: 'Hockley & Northwest Harris County Well Services',
     heroSubtitle: 'Drilling · Pumps · Rehabilitation',
     metaDescription:
-      'Water well drilling, pump repair, and rehabilitation in Hockley, TX. B-E Waterwell Services serves northwest Harris County since 1979. Licensed TDLR. Call (281) 448-4447.',
+      'Water well drilling, pump replacement, and rehabilitation in Hockley, TX. B-E Waterwell Services serves northwest Harris County since 1979. Licensed TDLR. Call (281) 448-4447.',
     intro:
       'Hockley is rural northwest Harris County — open land along US-290 where ranchettes and acreage homesites rely heavily on private water wells. As this corridor develops, both new drilling and rehabilitation of older wells keep our crews busy. B-E Waterwell Services has worked the Hockley area for decades and knows how local conditions vary from one tract to the next.',
     aquiferDepth: '200–360 ft',
@@ -710,7 +710,7 @@ export const cities: CityData[] = [
     tagline: 'Washington & Washington County Well Services',
     heroSubtitle: 'Drilling · Pumps · Rehabilitation',
     metaDescription:
-      'Water well drilling, pump repair, and rehabilitation in Washington, TX. B-E Waterwell Services serves Washington County since 1979. Licensed TDLR. Call (281) 448-4447.',
+      'Water well drilling, pump replacement, and rehabilitation in Washington, TX. B-E Waterwell Services serves Washington County since 1979. Licensed TDLR. Call (281) 448-4447.',
     intro:
       'Washington, TX — historic Washington-on-the-Brazos — anchors a stretch of rural Washington County where ranches and rural homes depend on private wells. The terrain here, west of Houston along the Brazos, differs from the Gulf Coast, and well conditions vary from tract to tract. B-E Waterwell Services assesses every property before drilling and has served this region for over four decades.',
     aquiferDepth: 'Varies by location',
@@ -836,7 +836,7 @@ export const cities: CityData[] = [
     tagline: 'Katy & Fort Bend County Well Services',
     heroSubtitle: 'Drilling · Pumps · Rehabilitation',
     metaDescription:
-      'Water well drilling, pump repair, and rehabilitation in Katy, TX. B-E Waterwell Services serves the Fort Bend County area since 1979. Licensed TDLR. Call (281) 448-4447.',
+      'Water well drilling, pump replacement, and rehabilitation in Katy, TX. B-E Waterwell Services serves the Fort Bend County area since 1979. Licensed TDLR. Call (281) 448-4447.',
     intro:
       'Katy spans the western edge of the Houston metro across parts of Fort Bend, Harris, and Waller counties. While much of the area is on municipal water, acreage properties and rural tracts on the outskirts still rely on private wells. B-E Waterwell Services brings the same licensed, fully insured service to the Katy area that we deliver across our service region, and we assess each property before drilling.',
     aquiferDepth: '200–400 ft',
@@ -920,7 +920,7 @@ export const cities: CityData[] = [
     tagline: 'Brenham & Washington County Well Experts',
     heroSubtitle: 'Drilling · Pumps · Rehabilitation',
     metaDescription:
-      'Water well drilling, pump repair, and rehabilitation in Brenham, TX. B-E Waterwell Services serves Washington County since 1979. Licensed TDLR. Call (281) 448-4447.',
+      'Water well drilling, pump replacement, and rehabilitation in Brenham, TX. B-E Waterwell Services serves Washington County since 1979. Licensed TDLR. Call (281) 448-4447.',
     intro:
       'Brenham is the heart of Washington County — a thriving small city surrounded by rolling ranch country, dairies, and rural acreage that depends on private water wells. The terrain here, west of the Houston metro, differs from the Gulf Coast, so we evaluate each property individually. B-E Waterwell Services has served the Brenham area for over four decades and assesses every site before drilling.',
     aquiferDepth: 'Varies by location',

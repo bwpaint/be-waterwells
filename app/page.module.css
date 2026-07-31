@@ -26,11 +26,11 @@
 .heroBg::before {
   content: '';
   position: absolute;
-  inset: -12px;
+  inset: -8px;
   background-image: url('/images/hero-home-rig.jpg');
   background-size: auto calc(100% + 300px);
   background-position: center top;
-  filter: blur(2px) saturate(0.25) sepia(0.25);
+  filter: blur(1px) saturate(0.25) sepia(0.25);
 }
 /* Gradient overlay stays crisp — sits above the blurred photo layer. */
 .heroBg::after {

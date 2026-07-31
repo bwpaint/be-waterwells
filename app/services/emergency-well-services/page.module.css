@@ -12,8 +12,14 @@
 .heroBg {
   position: absolute;
   inset: 0;
+  /* Photo sits beneath the existing tint gradients (last layer = bottom). */
   background: radial-gradient(ellipse at 60% 40%, rgba(180,30,10,0.28) 0%, transparent 70%),
-              radial-gradient(ellipse at 20% 80%, rgba(221,208,172,0.18) 0%, transparent 60%);
+              radial-gradient(ellipse at 20% 80%, rgba(221,208,172,0.18) 0%, transparent 60%),
+              url('/images/hero-service-truck.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  filter: saturate(0.25) sepia(0.25);
 }
 .heroInner {
   position: relative;

@@ -113,10 +113,15 @@
   color: var(--orange);
 }
 
+/* Inline SVG icons (not emoji) so they inherit the muted footer text color
+   via currentColor. Emoji glyphs carry baked-in colors that CSS can't override,
+   which is why the phone icon previously rendered red. */
 .contactIcon {
-  font-size: 1rem;
   flex-shrink: 0;
   margin-top: 2px;
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .footerCta {

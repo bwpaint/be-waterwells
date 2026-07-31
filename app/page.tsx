@@ -5,41 +5,23 @@ import AnnouncementBar from './components/AnnouncementBar';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomeHeroForm from './components/HomeHeroForm';
+import Icon from './components/Icon';
 import { services, stats, cityAreas, partners, testimonials, jsonLd, homeFaqs, organizationSchema, websiteSchema } from '../lib/homeData';
 import { buildFaqSchema } from '../lib/seoData';
+import { linkifyPhone } from '../lib/linkifyPhone';
 import { COUNTIES, MAP_VIEWBOX } from '../lib/serviceAreaGeo';
 import styles from './page.module.css';
 
 const faqSchema = buildFaqSchema(homeFaqs);
 
-/* Monochrome "chrome" line icons (metallic gradient, no color) */
-const iconProps = {
-  viewBox: '0 0 24 24',
-  fill: 'none',
-  stroke: 'url(#chromeGrad)',
-  strokeWidth: 1.7,
-  strokeLinecap: 'round' as const,
-  strokeLinejoin: 'round' as const,
-  width: 34,
-  height: 34,
-};
-
+/* Service icons — monotone, inheriting currentColor (previously a metallic
+   gradient stroke). Sized 68px, double the former 34px. */
 const SERVICE_SVG: Record<string, React.ReactNode> = {
-  drill: (
-    <svg {...iconProps}><path d="M12 21V6" /><path d="M12 6 7 3M12 6l5-3" /><path d="M6 21h12" /><path d="M9.5 13h5" /></svg>
-  ),
-  pump: (
-    <svg {...iconProps}><path d="M4 11 12 4l8 7" /><path d="M6 10v10h12V10" /><path d="M10 20v-5h4v5" /></svg>
-  ),
-  irrigation: (
-    <svg {...iconProps}><path d="M3 21V9l9-5 9 5v12" /><path d="M9 21v-6h6v6" /><path d="M3 21h18" /></svg>
-  ),
-  rehab: (
-    <svg {...iconProps}><path d="M20.5 12a8 8 0 1 1-2.3-5.6" /><path d="M20.5 4v4h-4" /></svg>
-  ),
-  inspect: (
-    <svg {...iconProps}><circle cx="10.5" cy="10.5" r="6.5" /><path d="M21 21l-5.6-5.6" /></svg>
-  ),
+  drill: <Icon name="drill" size={68} />,
+  pump: <Icon name="pump" size={68} />,
+  irrigation: <Icon name="irrigation" size={68} />,
+  rehab: <Icon name="rehab" size={68} />,
+  inspect: <Icon name="inspect" size={68} />,
 };
 
 /* Static (non-interactive) mini county map for the service-areas teaser */
@@ -85,17 +67,6 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
-
-      {/* Shared chrome gradient for monochrome service icons */}
-      <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
-        <defs>
-          <linearGradient id="chromeGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#cfd4db" />
-            <stop offset="0.5" stopColor="#8d929b" />
-            <stop offset="1" stopColor="#565b63" />
-          </linearGradient>
-        </defs>
-      </svg>
 
       <AnnouncementBar />
       <Navbar transparent />
@@ -345,7 +316,7 @@ export default function HomePage() {
             {homeFaqs.map((faq, i) => (
               <div key={i} className={styles.faqItem}>
                 <h3>{faq.question}</h3>
-                <p>{faq.answer}</p>
+                <p>{linkifyPhone(faq.answer)}</p>
               </div>
             ))}
           </div>

@@ -5,6 +5,7 @@ import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import ServiceLayout from '../../../components/ServiceLayout';
 import { buildFaqSchema, buildServiceSchema, LOCAL_BUSINESS_SCHEMA } from '../../../../lib/seoData';
+import { linkifyPhone } from '../../../../lib/linkifyPhone';
 
 export const metadata: Metadata = {
   title: 'Well Pump Repair & Replacement | Houston Area | B-E Waterwell Services',
@@ -275,7 +276,7 @@ export default function WellPumpRepairPage() {
                   {faq.question}
                 </div>
                 <div style={{ padding: '16px 20px', fontSize: '0.92rem', color: 'var(--dark-stone)', lineHeight: 1.7 }}>
-                  {faq.answer}
+                  {linkifyPhone(faq.answer)}
                 </div>
               </div>
             ))}

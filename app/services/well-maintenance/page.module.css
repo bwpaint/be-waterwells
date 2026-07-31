@@ -1,7 +1,7 @@
 /* ── HERO ──────────────────────────────────────────────────── */
 .hero { position: relative; padding-top: 120px; background: var(--charcoal); overflow: hidden; }
-.heroBg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.18; }
-.heroGrid { position: relative; z-index: 1; padding: 72px 0 88px; display: grid; grid-template-columns: 1fr 400px; gap: 48px; align-items: center; }
+.heroBg { background-image: url('/images/hero-windmill-service.webp'); position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.18; filter: saturate(0.25) sepia(0.25); }
+.heroGrid { position: relative; z-index: 1; padding: 72px 0 88px; display: grid; grid-template-columns: 2fr 1fr; gap: 48px; align-items: center; }
 .breadcrumb { display: flex; align-items: center; gap: 8px; font-family: var(--font-head); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 28px; flex-wrap: wrap; }
 .breadcrumb a { color: rgba(255,255,255,0.45); transition: var(--transition); }
 .breadcrumb a:hover { color: var(--orange); }
@@ -78,7 +78,10 @@
 /* ── COST TABLE ────────────────────────────────────────────── */
 .costSection { margin-bottom: 40px; }
 .costTable { display: flex; flex-direction: column; gap: 0; margin-top: 20px; border: 1px solid var(--stone-light); border-radius: var(--radius-lg); overflow: hidden; }
-.costRow { display: grid; grid-template-columns: 1fr auto 2fr; gap: 20px; align-items: start; padding: 20px; border-bottom: 1px solid var(--stone-light); }
+/* Two cells are rendered (type + outcome). The old third column was for a
+   price that is no longer shown; leaving it in squeezed the label column and
+   forced it to wrap. minmax gives the label a floor so it stays on one line. */
+.costRow { display: grid; grid-template-columns: minmax(250px, 1fr) 2fr; gap: 20px; align-items: start; padding: 20px; border-bottom: 1px solid var(--stone-light); }
 .costRow:last-child { border-bottom: none; }
 .costRow:first-child { background: rgba(212,97,30,0.05); }
 .costRow:nth-child(2) { background: rgba(255,140,0,0.05); }
@@ -100,7 +103,7 @@
 /* ── FINAL CTA ─────────────────────────────────────────────── */
 .finalCta { background: var(--dark-stone); padding: 80px 0; }
 .finalCtaInner { text-align: center; max-width: 600px; margin: 0 auto; }
-.finalCtaInner h2 { font-family: var(--font-head); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 900; color: var(--white); margin-bottom: 16px; }
+.finalCtaInner h2 { font-family: var(--font-head); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 900; line-height: 1.15; color: var(--white); margin-bottom: 16px; }
 .finalCtaInner p { color: rgba(255,255,255,0.65); font-size: 1rem; line-height: 1.7; margin-bottom: 32px; }
 .finalCtaBtns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
@@ -111,8 +114,9 @@
   .checkGrid { grid-template-columns: 1fr; }
   .seasonGrid { grid-template-columns: 1fr; }
   .overviewStats { grid-template-columns: repeat(2, 1fr); }
-  .costRow { grid-template-columns: 1fr auto; }
-  .costOutcome { display: none; }
+  /* Stack instead of hiding — the outcome text is the substance of this
+     table, and hiding it left mobile users with three bare labels. */
+  .costRow { grid-template-columns: 1fr; gap: 8px; }
 }
 @media (max-width: 600px) {
   .subServicesSection { padding: 28px 16px; }

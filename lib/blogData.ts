@@ -96,6 +96,7 @@ export const blogPosts: BlogPost[] = [
     categorySlug: 'water-well-systems',
     date: '2025-04-20',
     excerpt: "If your pump kicks on and off every few seconds, your pressure tank is the likely culprit. Here's the full diagnostic guide.",
+    published: false,
   },
   {
     title: 'What Size Generator Do I Need for My Well Pump in Texas?',

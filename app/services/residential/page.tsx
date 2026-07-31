@@ -12,7 +12,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Residential Water Well Services — Houston, TX | B-E Waterwell Services',
   description:
-    'Residential well water pump repair, pressure tanks, constant pressure systems, new wells, and maintenance in Houston, TX since 1979. Franklin Electric authorized dealer, TDLR licensed. Emergency service available. (281) 448-4447.',
+    'Residential well water pump replacement, pressure tanks, constant pressure systems, new wells, and maintenance in Houston, TX since 1979. Franklin Electric authorized dealer, TDLR licensed. Emergency service available. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/residential' },
 };
 
@@ -43,9 +43,9 @@ const faqs = [
       'A quality submersible well pump lasts 10–15 years with proper maintenance. Pumps in Houston-area wells with iron-heavy water or that short-cycle frequently may fail sooner. Regular annual inspections catch early wear before you lose water completely.',
   },
   {
-    question: 'Can you repair my well pump quickly?',
+    question: 'Can you replace my well pump quickly?',
     answer:
-      'For most residential pump failures in the greater Houston area, we carry common parts to diagnose and repair efficiently. Emergency service available — call us directly at (281) 448-4447.',
+      'For most residential pump failures in the greater Houston area, we carry common equipment to diagnose and replace efficiently. Emergency service available — call us directly at (281) 448-4447.',
   },
 ];
 
@@ -68,7 +68,7 @@ const jsonLd = {
       },
       areaServed: 'Houston, TX',
       description:
-        'Residential well services for Houston-area homeowners: well water pump repair and replacement, pressure tank installation, constant pressure systems, generator prep, new well drilling, and maintenance. Franklin Electric authorized dealer, TDLR licensed, family-owned since 1979.',
+        'Residential well services for Houston-area homeowners: well water pump replacement and new installation, pressure tank installation, constant pressure systems, generator prep, new well drilling, and maintenance. Franklin Electric authorized dealer, TDLR licensed, family-owned since 1979.',
     },
     {
       '@type': 'FAQPage',
@@ -132,19 +132,11 @@ const pumpSigns = [
   },
 ];
 
-const repairWhen = [
-  'Pump is under 10 years old',
-  'Failure is a pressure switch or capacitor',
-  'Tank bladder failed (not the pump)',
-  'Motor windings are intact (amperage test)',
-  'Well itself is in good condition',
-];
-
 const replaceWhen = [
   'Pump is 12+ years old',
   'Motor windings have failed',
   'Pump is undersized for your household',
-  'Multiple repairs in the past 2 years',
+  'Recurring failures over the past 2 years',
   'You want a constant pressure upgrade',
 ];
 
@@ -216,13 +208,13 @@ export default function ResidentialHubPage() {
                 <span>Residential Water Well Services</span>
               </nav>
               <div className={styles.h1Wrap}>
-                <span className={styles.h1Line1}>Houston, TX · Since 1979</span>
+                <span className={styles.h1Line1}>Magnolia and Houston, TX Area · Since 1979</span>
                 <h1 className={styles.h1Line2}>Residential Water Well Services</h1>
-                <span className={styles.h1Line3}>Pump Repair · Pressure Systems · New Wells · Maintenance</span>
+                <span className={styles.h1Line3}>Pump Replacement · Pressure Systems · New Wells · Maintenance</span>
               </div>
               <p className={styles.heroSubtitle}>
                 Everything Houston-area homeowners need from one family-owned crew —
-                well water pump repair, pressure tanks, constant pressure upgrades, new
+                well water pump replacement, pressure tanks, constant pressure upgrades, new
                 wells, and ongoing maintenance. Franklin Electric authorized dealer, TDLR
                 licensed. Emergency service available — call us.
               </p>
@@ -243,7 +235,7 @@ export default function ResidentialHubPage() {
       </section>
 
       {/* ── SERVICELAYOUT ─────────────────────── */}
-      <ServiceLayout categoryLabel="Residential" defaultService="Well Pump Repair">
+      <ServiceLayout categoryLabel="Residential" defaultService="Well Pump Replacement">
 
         {/* ── OVERVIEW ────────────────────────── */}
         <section className={styles.overviewSection}>
@@ -253,11 +245,11 @@ export default function ResidentialHubPage() {
             B-E Waterwell Services has kept Houston-area homes in clean, reliable water
             since 1979. We&apos;re family-owned, TDLR licensed, and a Franklin Electric
             authorized dealer — which means the same crew that drills your well
-            also repairs your pump, replaces your pressure tank, and helps when the
+            also replaces your pump, replaces your pressure tank, and helps when the
             water stops.
           </p>
           <p className={styles.overviewP}>
-            Whether you need fast well water pump repair, a new pressure tank to stop
+            Whether you need a fast well water pump replacement, a new pressure tank to stop
             that short-cycling, a constant pressure upgrade, or a brand-new well, we quote
             every job in writing before any work begins — no surprise charges, no pressure.
           </p>
@@ -299,20 +291,19 @@ export default function ResidentialHubPage() {
           </div>
         </section>
 
-        {/* ── WELL PUMP REPAIR & REPLACEMENT ──── */}
+        {/* ── WELL PUMP REPLACEMENT & INSTALLATION ──── */}
         <section className={styles.pumpSection}>
-          <span className="section-label">Well Pump Repair</span>
-          <h2 className="section-title">Well Pump Repair &amp; Replacement</h2>
+          <span className="section-label">Well Pump Replacement</span>
+          <h2 className="section-title">Well Pump Replacement &amp; Installation</h2>
           <p className={styles.overviewP}>
             Lost water pressure or no water at all? B-E Waterwell Services has diagnosed
-            and repaired well pumps across the Houston area for over 45 years. We carry
-            common parts to diagnose and repair efficiently, and emergency service is
+            and replaced well pumps across the Houston area for over 45 years. We carry
+            common equipment to diagnose and replace efficiently, and emergency service is
             available. As a Franklin Electric authorized dealer, our technicians are
-            factory-trained to diagnose and repair Franklin motors and control boxes, not
-            just replace them.
+            factory-trained on Franklin motors and control boxes.
           </p>
 
-          <h3 className="section-title">Signs Your Well Pump Needs Repair</h3>
+          <h3 className="section-title">Signs Your Well Pump Is Failing</h3>
           <div className={styles.signGrid}>
             {pumpSigns.map((s) => (
               <div key={s.title} className={styles.signCard}>
@@ -323,22 +314,13 @@ export default function ResidentialHubPage() {
           </div>
           <div className={styles.calloutBox}>
             <strong>Don&apos;t wait.</strong> A short-cycling pump or one running
-            continuously will burn out its motor within days. Most pump failures addressed
-            quickly are a repair — ones that get ignored become a full replacement.
+            continuously will burn out its motor within days. Addressing a failing pump
+            quickly keeps the problem contained to the pump itself.
           </div>
 
-          <h3 className={`section-title ${styles.subheadSpaced}`}>Repair or Replace?</h3>
+          <h3 className={`section-title ${styles.subheadSpaced}`}>When Replacement Makes Sense</h3>
           <div className={styles.compareGrid}>
             <div className={styles.compareCol}>
-              <h3>Repair Makes Sense When</h3>
-              <ul>
-                {repairWhen.map((r) => (
-                  <li key={r}>{r}</li>
-                ))}
-              </ul>
-            </div>
-            <div className={styles.compareCol}>
-              <h3>Replacement Makes More Sense When</h3>
               <ul>
                 {replaceWhen.map((r) => (
                   <li key={r}>{r}</li>
@@ -347,7 +329,7 @@ export default function ResidentialHubPage() {
             </div>
           </div>
 
-          <h3 className={`section-title ${styles.subheadSpaced}`}>Pump Repair &amp; Replacement Pricing</h3>
+          <h3 className={`section-title ${styles.subheadSpaced}`}>Pump Replacement Pricing</h3>
           <p className={styles.overviewP}>
             Pricing depends on your location, well depth, static water level, and
             equipment selection — call us to discuss your project.
@@ -490,7 +472,7 @@ export default function ResidentialHubPage() {
       <section className={styles.finalCta}>
         <div className="container">
           <div className={styles.finalCtaInner}>
-            <h2>Need a Waterwell Pump Repaired Today?</h2>
+            <h2>Need a Waterwell Pump Replaced Today?</h2>
             <p>
               Call for a consultation or fill out the contact form. Family-owned,
               licensed, and guaranteed — Houston&apos;s trusted water well specialists

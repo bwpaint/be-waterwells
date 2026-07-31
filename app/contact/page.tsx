@@ -3,11 +3,12 @@ import AnnouncementBar from '../components/AnnouncementBar';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ContactForm from './ContactForm';
+import Icon from '../components/Icon';
 
 export const metadata: Metadata = {
   title: 'Contact Us | B-E Waterwell Services — Houston Area',
   description:
-    'Contact B-E Waterwell Services for waterwell drilling, pump repair, and emergency service in the Houston area. Call (281) 448-4447 or get a consultation online.',
+    'Contact B-E Waterwell Services for waterwell drilling, pump replacement, and emergency service in the Houston area. Call (281) 448-4447 or get a consultation online.',
 };
 
 export default function ContactPage() {
@@ -46,29 +47,31 @@ export default function ContactPage() {
               <h2 style={{ fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '1.6rem', color: 'var(--dark-earth)', marginBottom: '24px' }}>How to Reach Us</h2>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                {[
+                {([
                   {
-                    icon: '📞',
+                    icon: 'phone' as const,
                     label: 'Phone',
                     value: '(281) 448-4447',
                     sub: 'Emergency service available',
                     href: 'tel:+12814484447',
                   },
                   {
-                    icon: '📍',
+                    icon: 'mapPin' as const,
                     label: 'Location',
                     value: 'Magnolia, TX',
                     sub: 'Serving Houston area & surrounding counties',
                   },
                   {
-                    icon: '🕐',
+                    icon: 'clock' as const,
                     label: 'Business Hours',
                     value: 'Mon–Fri 7am–7pm',
                     sub: 'Emergency Service Available',
                   },
-                ].map((item) => (
+                ]).map((item) => (
                   <div key={item.label} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                    <span style={{ fontSize: '1.6rem', lineHeight: 1 }}>{item.icon}</span>
+                    <span style={{ lineHeight: 1, color: 'var(--dark-earth)', flexShrink: 0 }}>
+                      <Icon name={item.icon} size={40} />
+                    </span>
                     <div>
                       <div style={{ fontFamily: 'var(--font-head)', fontWeight: 800, fontSize: '0.78rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--dark-earth)', marginBottom: '2px' }}>{item.label}</div>
                       {item.href ? (

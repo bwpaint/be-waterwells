@@ -133,7 +133,7 @@ export default function WellInspectionPage() {
               <span>Well Inspection</span>
             </nav>
             <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>Houston, TX — Written Report · Fast Turnaround</span>
+              <span className={styles.h1Line1}>Magnolia and Houston, TX Area — Written Report · Fast Turnaround</span>
               <h1 className={styles.h1Line2}>Water Well Inspection</h1>
               <span className={styles.h1Line3}>Home Buyers · Real Estate · Annual Inspection</span>
             </div>

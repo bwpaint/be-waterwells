@@ -159,7 +159,7 @@ export default function PressureTankSystemsPage() {
               <span>Pressure Tank Systems</span>
             </nav>
             <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>Houston, TX — Same-Day Service</span>
+              <span className={styles.h1Line1}>Magnolia and Houston, TX Area — Same-Day Service</span>
               <h1 className={styles.h1Line2}>Pressure Tank Systems</h1>
               <span className={styles.h1Line3}>Replacement · Sizing · Same-Day Service</span>
             </div>

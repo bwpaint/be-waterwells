@@ -9,7 +9,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Service Areas | B-E Waterwell Services — Houston, TX',
   description:
-    'B-E Waterwell Services provides waterwell drilling, pump repair, and well rehabilitation across Montgomery, Harris, Waller, Grimes, Washington, Anderson, and surrounding counties in the Houston area — Magnolia, Conroe, Tomball, The Woodlands, Spring, Cypress, Humble, Kingwood, Montgomery, Pinehurst, and Waller.',
+    'B-E Waterwell Services provides waterwell drilling, pump replacement, and well rehabilitation across Montgomery, Harris, Waller, Grimes, Washington, Anderson, and surrounding counties in the Houston area — Magnolia, Conroe, Tomball, The Woodlands, Spring, Cypress, Humble, Kingwood, Montgomery, Pinehurst, and Waller.',
   alternates: { canonical: 'https://bewaterwells.com/service-areas' },
 };
 
@@ -31,7 +31,7 @@ const cities = [
   { city: 'Katy', slug: 'katy-tx', county: 'Fort Bend County', desc: 'West Houston growth corridor. New wells and pump service.' },
   { city: 'Hempstead', slug: 'hempstead-tx', county: 'Waller County', desc: 'Waller County seat. Farm, ranch, and residential waterwells.' },
   { city: 'Anderson', slug: 'anderson-tx', county: 'Grimes County', desc: 'Historic Grimes County seat. Four decades of rural well work.' },
-  { city: 'Navasota', slug: 'navasota-tx', county: 'Grimes County', desc: 'Brazos Valley gateway. Drilling, rehab, and pump repair.' },
+  { city: 'Navasota', slug: 'navasota-tx', county: 'Grimes County', desc: 'Brazos Valley gateway. Drilling, rehab, and pump replacement.' },
   { city: 'Millican', slug: 'millican-tx', county: 'Brazos County', desc: 'South Brazos County. Rural residential and agricultural wells.' },
   { city: 'Washington', slug: 'washington-tx', county: 'Washington County', desc: 'Washington-on-the-Brazos country. Ranch and homestead wells.' },
   { city: 'Chappell Hill', slug: 'chappell-hill-tx', county: 'Washington County', desc: 'Historic Chappell Hill. Estate and acreage well service.' },
@@ -47,6 +47,26 @@ const jsonLd = {
   telephone: '+1-281-448-4447',
   areaServed: cities.map((c) => ({ '@type': 'City', name: `${c.city}, TX` })),
 };
+
+/**
+ * Descriptive accessible link names for the city cards.
+ *
+ * The card shows just "Magnolia, TX" so the grid stays scannable, but a bare
+ * city name is a poor link label out of context — screen readers announce a
+ * list of 22 links that all read as place names with no indication of where
+ * they go. These give each link a real description, which also happens to
+ * carry the service keyword. Rotated so 22 cards don't emit identical strings.
+ */
+const LINK_LABEL_PATTERNS = [
+  (city: string) => `Waterwell installation in ${city}, Texas`,
+  (city: string) => `Waterwell drilling and service in ${city}, Texas`,
+  (city: string) => `Water well drilling in ${city}, Texas`,
+  (city: string) => `Waterwell services and pump installation in ${city}, Texas`,
+];
+
+function cityLinkLabel(city: string, i: number): string {
+  return LINK_LABEL_PATTERNS[i % LINK_LABEL_PATTERNS.length](city);
+}
 
 export default function ServiceAreasPage() {
   return (
@@ -70,7 +90,7 @@ export default function ServiceAreasPage() {
           </nav>
           <span className={styles.heroLabel}>Where We Work</span>
           <h1 className={styles.heroH1}>
-            <span className={styles.heroOrange}>BE Water Well Service Areas</span>
+            <span className={styles.heroOrange}>B-E Waterwell Service Areas</span>
           </h1>
           <p className={styles.heroSubtitle}>
             Serving Montgomery, Harris, Waller, Grimes, Washington, Anderson, and
@@ -107,11 +127,13 @@ export default function ServiceAreasPage() {
           <span className="section-label">All Service Areas</span>
           <h2 className="section-title">22 Cities, One Team</h2>
           <div className={styles.citiesGrid}>
-            {cities.map((c) => (
+            {cities.map((c, i) => (
               <Link
                 key={c.slug}
                 href={`/service-area/${c.slug}`}
                 className={`${styles.cityCard} ${c.hq ? styles.cityCardHQ : ''}`}
+                aria-label={cityLinkLabel(c.city, i)}
+                title={cityLinkLabel(c.city, i)}
               >
                 {c.hq && <span className={styles.hqBadge}>★ Our HQ</span>}
                 <h3 className={styles.cityName}>{c.city}, TX</h3>

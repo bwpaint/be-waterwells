@@ -12,7 +12,7 @@
   background-image: url('https://bewaterwells.com/wp-content/uploads/2024/09/water-well-services.webp');
   background-size: cover;
   background-position: center;
-  opacity: 0.18;
+  opacity: 0.18; filter: saturate(0.25) sepia(0.25);
 }
 .heroGrid {
   position: relative;

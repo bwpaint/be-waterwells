@@ -191,7 +191,7 @@ export default function WellMaintenancePage() {
                 <span>Water Well Maintenance &amp; Inspection</span>
               </nav>
               <div className={styles.h1Wrap}>
-                <span className={styles.h1Line1}>Houston, TX · Since 1979</span>
+                <span className={styles.h1Line1}>Magnolia and Houston, TX Area · Since 1979</span>
                 <h1 className={styles.h1Line2}>Water Well Maintenance &amp; Inspection</h1>
                 <span className={styles.h1Line3}>Annual Service · Inspections · Real-Estate &amp; FHA/VA</span>
               </div>
@@ -298,7 +298,7 @@ export default function WellMaintenancePage() {
           <p className={styles.bodyP}>
             Buying a home with a well? Closing an FHA or VA loan? Need an annual well
             checkup? B-E Waterwell provides certified well inspections with written reports
-            accepted by lenders and real estate agents across Houston, TX.
+            accepted by lenders and real estate agents across the Magnolia and Houston areas.
           </p>
 
           <h3 className={styles.subHead}>Five Situations That Call for a Well Inspection</h3>

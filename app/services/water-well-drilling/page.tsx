@@ -165,7 +165,7 @@ const related = [
     icon: '🏡',
     title: 'Residential Water Well Services',
     slug: '/services/residential',
-    desc: 'Pump repair, pressure tanks, constant pressure upgrades, and complete system service for Houston-area homeowners.',
+    desc: 'Pump replacement, pressure tanks, constant pressure upgrades, and complete system service for Houston-area homeowners.',
   },
   {
     icon: '🏗️',
@@ -222,7 +222,7 @@ export default function WaterWellDrillingPage() {
                 <span>Water Well Drilling &amp; Installation</span>
               </nav>
               <div className={styles.h1Wrap}>
-                <span className={styles.h1Line1}>Houston, TX · Since 1979</span>
+                <span className={styles.h1Line1}>Magnolia and Houston, TX Area · Since 1979</span>
                 <h1 className={styles.h1Line2}>Water Well Drilling &amp; Installation</h1>
                 <span className={styles.h1Line3}>Residential · Irrigation · Commercial · Full Installation</span>
               </div>
@@ -258,7 +258,7 @@ export default function WaterWellDrillingPage() {
         {/* ── OVERVIEW ────────────────────────── */}
         <section className={styles.overviewSection}>
           <span className="section-label">The Process</span>
-          <h2 className="section-title">Water Well Drilling &amp; Installation in Houston, TX</h2>
+          <h2 className="section-title">Water Well Drilling &amp; Installation in the Magnolia and Houston Areas</h2>
           <p className={styles.overviewP}>
             New construction or emergency redrill — B-E Waterwell drills new residential
             and commercial wells across the greater Houston area and surrounding counties,
@@ -315,7 +315,7 @@ export default function WaterWellDrillingPage() {
         {/* ── COST ────────────────────────────── */}
         <section className={styles.costSection}>
           <span className="section-label">What It Costs</span>
-          <h2 className="section-title">Water Well Drilling Cost in Houston, TX</h2>
+          <h2 className="section-title">Water Well Drilling Cost in the Magnolia and Houston Areas</h2>
           <div className={styles.costLead}>
             <strong>Pricing built around your project</strong>
             <span>

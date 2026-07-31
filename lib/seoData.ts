@@ -24,7 +24,7 @@ export const LOCAL_BUSINESS_SCHEMA = {
   '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
   '@id': 'https://bewaterwells.com/#business',
   name: BUSINESS.name,
-  description: 'Family-owned waterwell drilling, pump repair, and well service company serving the greater Houston area since 1979. Licensed by the Texas Department of Licensing and Regulation (TDLR).',
+  description: 'Family-owned waterwell drilling, pump replacement, and well service company serving the greater Houston area since 1979. Licensed by the Texas Department of Licensing and Regulation (TDLR).',
   url: BUSINESS.url,
   telephone: BUSINESS.phoneE164,
   foundingDate: BUSINESS.founded,

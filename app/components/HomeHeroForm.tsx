@@ -57,7 +57,7 @@ export default function HomeHeroForm() {
       <select className={styles.input} required>
         <option value="">Service Needed…</option>
         <option>Waterwell Drilling — New</option>
-        <option>Pump Repair / Replacement</option>
+        <option>Pump Replacement / Installation</option>
         <option>Well Rehabilitation</option>
         <option>Irrigation Waterwell</option>
         <option>Well Inspection</option>

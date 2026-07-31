@@ -4,6 +4,7 @@ import AnnouncementBar from '../../../components/AnnouncementBar';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import ServiceLayout from '../../../components/ServiceLayout';
+import Icon from '../../../components/Icon';
 import CityFaqAccordion from '../../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
@@ -58,19 +59,19 @@ const jsonLd = {
 };
 
 const included = [
-  { icon: '⚙️', title: 'Pump Performance Test', desc: 'Flow rate measurement, motor amp draw, and start/stop pressure verification to confirm the pump is operating within spec.' },
-  { icon: '🔋', title: 'Pressure Tank Pre-Charge', desc: 'Check bladder integrity and air charge level. A declining pre-charge is an early warning of bladder failure before waterlogging occurs.' },
-  { icon: '🔍', title: 'Wellhead & Casing Visual', desc: 'Inspect sanitary cap, vent screen, surface seal, and casing condition. Check for pest entry points or surface water intrusion risks.' },
-  { icon: '📊', title: 'Pressure & Flow Rate Test', desc: 'Measure system pressure at multiple points, verify cut-in and cut-out settings, check for pressure loss across distribution.' },
-  { icon: '🔧', title: 'Pressure Switch Calibration', desc: 'Verify and adjust cut-in and cut-out pressure settings. An out-of-spec switch causes short cycling or inadequate system pressure.' },
-  { icon: '💧', title: 'Water Quality Visual', desc: 'Assess color, clarity, and odor. Flag any changes from prior visits for targeted lab testing if needed. Not a full lab test but catches obvious changes.' },
-  { icon: '📋', title: 'Written Report', desc: 'Detailed report with photos, test results, comparison to prior visits, and written recommendations. Formatted for home sales and lender use.' },
+  { icon: 'gear' as const, title: 'Pump Performance Test', desc: 'Flow rate measurement, motor amp draw, and start/stop pressure verification to confirm the pump is operating within spec.' },
+  { icon: 'battery' as const, title: 'Pressure Tank Pre-Charge', desc: 'Check bladder integrity and air charge level. A declining pre-charge is an early warning of bladder failure before waterlogging occurs.' },
+  { icon: 'search' as const, title: 'Wellhead & Casing Visual', desc: 'Inspect sanitary cap, vent screen, surface seal, and casing condition. Check for pest entry points or surface water intrusion risks.' },
+  { icon: 'chart' as const, title: 'Pressure & Flow Rate Test', desc: 'Measure system pressure at multiple points, verify cut-in and cut-out settings, check for pressure loss across distribution.' },
+  { icon: 'wrench' as const, title: 'Pressure Switch Calibration', desc: 'Verify and adjust cut-in and cut-out pressure settings. An out-of-spec switch causes short cycling or inadequate system pressure.' },
+  { icon: 'droplet' as const, title: 'Water Quality Visual', desc: 'Assess color, clarity, and odor. Flag any obvious changes for targeted lab testing if needed. Not a full lab test.' },
+  { icon: 'clipboard' as const, title: 'Written Report', desc: 'Detailed report with test results and written recommendations. Formatted for home sales and lender use.' },
 ];
 
 const seasons = [
   {
     season: 'Spring',
-    icon: '🌱',
+    icon: 'sprout' as const,
     tasks: [
       'Post-freeze inspection — check for cracked pressure tank or casing damage',
       'Annual water quality test (bacteria and basic chemistry)',
@@ -79,7 +80,7 @@ const seasons = [
   },
   {
     season: 'Pre-Hurricane (May)',
-    icon: '⚡',
+    icon: 'tornado' as const,
     tasks: [
       'Pump performance test — identify any weakening before storm season',
       'Generator hookup test run under load',
@@ -88,7 +89,7 @@ const seasons = [
   },
   {
     season: 'Fall',
-    icon: '🍂',
+    icon: 'leafFall' as const,
     tasks: [
       'Pre-winter system check — pressure tank, all fittings',
       'Verify wellhead is clear of debris and vegetation',
@@ -97,10 +98,10 @@ const seasons = [
   },
   {
     season: 'Annual',
-    icon: '📅',
+    icon: 'calendar' as const,
     tasks: [
       'Full inspection per the B-E Waterwell checklist',
-      'Written report with photos and prior-year comparison',
+      'Written report of findings',
       'Recommendations for upcoming service needs',
     ],
   },
@@ -109,7 +110,7 @@ const seasons = [
 const faqs = [
   {
     question: 'What is included in B-E Waterwell annual maintenance?',
-    answer: 'Annual maintenance covers: pump performance test (flow rate, amp draw), pressure tank pre-charge and bladder integrity check, wellhead and casing visual inspection, water pressure and flow rate measurement, pressure switch calibration, visual water quality assessment, and a written report with photos. We compare results to prior visits to track trends.',
+    answer: 'Annual maintenance covers: pump performance test (flow rate, amp draw), pressure tank pre-charge and bladder integrity check, wellhead and casing visual inspection, water pressure and flow rate measurement, pressure switch calibration, visual water quality assessment, and a written report of findings.',
   },
   {
     question: 'How much does annual well maintenance cost in the Houston area?',
@@ -156,7 +157,7 @@ export default function OngoingMaintenancePage() {
               <span>Ongoing Maintenance</span>
             </nav>
             <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>Houston, TX · TDLR Licensed</span>
+              <span className={styles.h1Line1}>Magnolia and Houston, TX Area · TDLR Licensed</span>
               <h1 className={styles.h1Line2}>Ongoing Well Maintenance</h1>
               <span className={styles.h1Line3}>Annual Service Plans · Seasonal Care · Peace of Mind</span>
             </div>
@@ -199,7 +200,7 @@ export default function OngoingMaintenancePage() {
           <div className={styles.includedGrid}>
             {included.map((item) => (
               <div key={item.title} className={styles.includedCard}>
-                <span className={styles.includedIcon}>{item.icon}</span>
+                <span className={styles.includedIcon}><Icon name={item.icon} size={30} /></span>
                 <h3 className={styles.includedTitle}>{item.title}</h3>
                 <p className={styles.includedDesc}>{item.desc}</p>
               </div>
@@ -220,7 +221,7 @@ export default function OngoingMaintenancePage() {
             {seasons.map((s) => (
               <div key={s.season} className={styles.seasonCard}>
                 <div className={styles.seasonHeader}>
-                  <span className={styles.seasonIcon}>{s.icon}</span>
+                  <span className={styles.seasonIcon}><Icon name={s.icon} size={30} /></span>
                   <h3 className={styles.seasonTitle}>{s.season}</h3>
                 </div>
                 <ul className={styles.seasonTasks}>

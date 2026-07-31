@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import styles from './CityFaqAccordion.module.css';
+import { linkifyPhone } from '../../lib/linkifyPhone';
 
 interface Faq {
   question: string;
@@ -34,7 +35,7 @@ export default function CityFaqAccordion({ faqs }: Props) {
             </span>
           </button>
           <div className={styles.answerWrap}>
-            <p className={styles.answer}>{faq.answer}</p>
+            <p className={styles.answer}>{linkifyPhone(faq.answer)}</p>
           </div>
         </div>
       ))}

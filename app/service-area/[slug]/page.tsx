@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const cityServices = [
   { icon: '🔩', title: 'Waterwell Drilling', desc: 'New residential and commercial waterwells. Rotary rig drilling to the Jasper and Evangeline Aquifers.' },
-  { icon: '⚙️', title: 'Pump Repair & Install', desc: 'Submersible pump service, motor replacement, and emergency repair. Franklin Electric authorized dealer.' },
+  { icon: '⚙️', title: 'Pump Replacement & Install', desc: 'Submersible pump replacement, new pump installation, and emergency service. Franklin Electric authorized dealer.' },
   { icon: '💧', title: 'Well Rehabilitation', desc: 'Well shocking, acid treatment, and screen cleaning to restore aging wells to full production.' },
   { icon: '🌿', title: 'Irrigation Waterwells', desc: 'Dedicated irrigation systems for residential lots, farms, and ranches.' },
   { icon: '⚡', title: 'Generator Prep Kits', desc: 'Keep the water flowing during outages with a properly installed generator transfer switch.' },

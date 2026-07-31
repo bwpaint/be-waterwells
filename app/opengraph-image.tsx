@@ -53,7 +53,7 @@ export default function OpengraphImage() {
             marginTop: 24,
           }}
         >
-          Water Well Drilling, Pump Repair &amp; Well Service
+          Water Well Drilling, Pump Replacement &amp; Well Service
         </div>
         <div
           style={{

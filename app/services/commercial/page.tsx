@@ -6,6 +6,7 @@ import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import ServiceLayout from '../../components/ServiceLayout';
+import Icon from '../../components/Icon';
 import CityFaqAccordion from '../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
@@ -79,31 +80,31 @@ const jsonLd = {
 
 const wellTypes = [
   {
-    icon: '🐄',
+    icon: 'livestock' as const,
     title: 'Ranch & Livestock Wells',
     desc: 'High-yield wells for cattle ranches, livestock operations, and large rural properties. Sized for watering systems, stock tanks, and irrigation.',
     highlights: ['High-yield output', 'Stock tank supply', 'Livestock watering systems', 'Acreage irrigation'],
   },
   {
-    icon: '🐎',
+    icon: 'horse' as const,
     title: 'Equestrian Properties',
     desc: 'Dedicated wells for horse properties and stables. Multiple outlet capability, trough systems, and wash rack supply. Sized for the real daily water demand of horses.',
     highlights: ['Multiple outlet design', 'Trough fill systems', 'Wash rack supply', 'Stall line distribution'],
   },
   {
-    icon: '🌱',
+    icon: 'sprout' as const,
     title: 'Farms & Nurseries',
     desc: 'Agricultural wells for farming operations, plant nurseries, and greenhouse facilities. Irrigation-scale flow rates with appropriate pump sizing for extended run times.',
     highlights: ['Irrigation-scale flow', 'Extended run-time pumps', 'Greenhouse supply', 'Ag exemption assistance'],
   },
   {
-    icon: '🏗️',
+    icon: 'crane' as const,
     title: 'Commercial Properties',
     desc: 'Office parks, light industrial, retail developments, and any commercial property where city water supply is unavailable or cost-prohibitive.',
     highlights: ['High-capacity pumps', 'Larger casing diameters', 'Reduced utility cost', 'Reliable site supply'],
   },
   {
-    icon: '💧',
+    icon: 'droplet' as const,
     title: 'Irrigation Scale',
     desc: 'Large-volume wells for irrigation districts, multi-property irrigation systems, and acreage-scale agricultural irrigation. Multi-zone completion available.',
     highlights: ['Large-volume output', 'Multi-zone completion', 'Multi-property systems', 'Acreage-scale design'],
@@ -112,21 +113,21 @@ const wellTypes = [
 
 const relatedServices = [
   {
-    icon: '🛠️',
+    icon: 'tools' as const,
     title: 'Drilling & Installation',
     slug: 'water-well-drilling',
     desc: 'New rotary rig drilling, casing, development, and complete pump installation for residential, irrigation, and commercial sites.',
     highlights: ['Rotary rig to target aquifer', 'Schedule 40 PVC casing', 'Pump & pressure tank', '2-year warranty'],
   },
   {
-    icon: '🔧',
+    icon: 'wrench' as const,
     title: 'Rehabilitation',
     slug: 'well-rehabilitation',
     desc: 'Restore yield and water quality on aging wells — well screen repair, iron bacteria treatment, and redevelopment.',
     highlights: ['Well screen repair', 'Iron bacteria treatment', 'Yield restoration', 'Redevelopment'],
   },
   {
-    icon: '📋',
+    icon: 'clipboard' as const,
     title: 'Maintenance & Inspection',
     slug: 'well-maintenance',
     desc: 'Annual inspection and ongoing maintenance programs that keep high-demand commercial and ag wells running for decades.',
@@ -198,7 +199,7 @@ export default function CommercialWellServicesHubPage() {
                 <span>Commercial Water Well Services</span>
               </nav>
               <div className={styles.h1Wrap}>
-                <span className={styles.h1Line1}>Houston, TX · TDLR Licensed · Since 1979</span>
+                <span className={styles.h1Line1}>Magnolia and Houston, TX Area · TDLR Licensed · Since 1979</span>
                 <h1 className={styles.h1Line2}>Commercial &amp; Agricultural Water Well Services</h1>
                 <span className={styles.h1Line3}>Ranches · Farms · Equestrian · Commercial Sites</span>
               </div>
@@ -233,7 +234,7 @@ export default function CommercialWellServicesHubPage() {
         {/* ── OVERVIEW ────────────────────────── */}
         <section className={styles.overviewSection}>
           <span className="section-label">Built for Business</span>
-          <h2 className="section-title">Commercial &amp; Agricultural Wells in Houston, TX</h2>
+          <h2 className="section-title">Commercial &amp; Agricultural Wells in the Houston Area</h2>
           <p className={styles.overviewP}>
             B-E Waterwell drills high-capacity commercial and agricultural wells across
             Houston, TX — from horse properties in Magnolia to nurseries in Waller County
@@ -269,7 +270,7 @@ export default function CommercialWellServicesHubPage() {
           <div className={styles.subGrid}>
             {wellTypes.map((s) => (
               <div key={s.title} className={styles.subCard}>
-                <span className={styles.subIcon}>{s.icon}</span>
+                <span className={styles.subIcon}><Icon name={s.icon} size={44} /></span>
                 <h3 className={styles.subTitle}>{s.title}</h3>
                 <p className={styles.subDesc}>{s.desc}</p>
                 <ul className={styles.subHighlights}>
@@ -343,7 +344,7 @@ export default function CommercialWellServicesHubPage() {
           <div className={styles.subGrid}>
             {relatedServices.map((s) => (
               <div key={s.slug} className={styles.subCard}>
-                <span className={styles.subIcon}>{s.icon}</span>
+                <span className={styles.subIcon}><Icon name={s.icon} size={44} /></span>
                 <h3 className={styles.subTitle}>{s.title}</h3>
                 <p className={styles.subDesc}>{s.desc}</p>
                 <ul className={styles.subHighlights}>

@@ -5,6 +5,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import CostEstimator from './CostEstimator';
 import { buildFaqSchema, LOCAL_BUSINESS_SCHEMA, BUSINESS } from '../../../lib/seoData';
+import { linkifyPhone } from '../../../lib/linkifyPhone';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -234,10 +235,10 @@ export default function WaterWellCostPage() {
           </div>
         </section>
 
-        {/* PUMP REPAIR COSTS */}
+        {/* PUMP REPLACEMENT COSTS */}
         <section className={styles.section + ' ' + styles.altSection}>
           <div className={styles.container}>
-            <h2>Well Pump Repair &amp; Replacement Costs</h2>
+            <h2>Well Pump Replacement &amp; Installation Costs</h2>
             <p className={styles.sectionIntro}>
               Don't need a full new well? Here's what common pump service calls typically cost in
               the Houston area.
@@ -280,7 +281,7 @@ export default function WaterWellCostPage() {
                 Call Now: (281) 448-4447
               </a>
               <Link href="/services/residential" className={styles.ctaLink}>
-                Well Pump Repair Guide →
+                Well Pump Replacement Guide →
               </Link>
             </div>
           </div>
@@ -294,7 +295,7 @@ export default function WaterWellCostPage() {
               {faqs.map((faq, i) => (
                 <div key={i} className={styles.faqItem}>
                   <h3>{faq.question}</h3>
-                  <p>{faq.answer}</p>
+                  <p>{linkifyPhone(faq.answer)}</p>
                 </div>
               ))}
             </div>
@@ -324,7 +325,7 @@ export default function WaterWellCostPage() {
             </div>
             <div className={styles.relatedLinks}>
               <Link href="/services/water-well-drilling">Water Well Drilling Services</Link>
-              <Link href="/services/residential">Well Pump Repair</Link>
+              <Link href="/services/residential">Well Pump Replacement</Link>
               <Link href="/services/well-maintenance">Well Maintenance</Link>
               <Link href="/services">All Services</Link>
             </div>

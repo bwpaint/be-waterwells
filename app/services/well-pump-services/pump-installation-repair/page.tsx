@@ -204,7 +204,7 @@ export default function PumpInstallRepairPage() {
               <div className={styles.scopeCard}>
                 <div className={styles.scopeHeader}>
                   <span className={styles.scopeIcon}>🔧</span>
-                  <h2 className={styles.scopeH2}>Pump Repair & Diagnosis</h2>
+                  <h2 className={styles.scopeH2}>Pump Replacement & Diagnosis</h2>
                 </div>
                 <ul className={styles.scopeList}>
                   {[
@@ -409,7 +409,7 @@ export default function PumpInstallRepairPage() {
             <p>
               Same-day service available. Franklin Electric authorized.
               Free written estimate before any work starts.
-              Keywords: well pump repair Houston, TX · submersible pump replacement Texas · well pump repair Magnolia TX.
+              Keywords: well pump replacement Houston, TX · submersible pump replacement Texas · well pump replacement Magnolia TX.
             </p>
             <div className={styles.finalCtaBtns}>
               <a href="tel:+12814484447" className="btn btn-primary">

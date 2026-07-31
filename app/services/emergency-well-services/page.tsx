@@ -10,7 +10,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: '24/7 Emergency Well Service — Houston, TX | B-E Waterwell',
   description:
-    'Well stopped working? B-E Waterwell Services dispatches emergency well and pump repair 24/7 across the Houston area. Same-day service in Montgomery and Harris counties. (281) 448-4447.',
+    'Well stopped working? B-E Waterwell Services dispatches emergency well and pump replacement 24/7 across the Houston area. Same-day service in Montgomery and Harris counties. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/emergency-well-services' },
 };
 
@@ -33,7 +33,7 @@ const jsonLd = {
       },
       areaServed: 'Houston, TX',
       description:
-        '24/7 emergency well and pump repair dispatched same-day across Montgomery and Harris counties.',
+        '24/7 emergency well and pump replacement dispatched same-day across Montgomery and Harris counties.',
       availableChannel: {
         '@type': 'ServiceChannel',
         servicePhone: { '@type': 'ContactPoint', telephone: '+1-281-448-4447', contactType: 'emergency' },

@@ -153,7 +153,7 @@ export default function WaterWellSystemsPage() {
               <span>Water Well Systems</span>
             </nav>
             <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>Houston, TX · Since 1979</span>
+              <span className={styles.h1Line1}>Magnolia and Houston, TX Area · Since 1979</span>
               <h1 className={styles.h1Line2}>Water Well Systems</h1>
               <span className={styles.h1Line3}>Pressure Tanks · Generator Prep · Complete System Service</span>
             </div>

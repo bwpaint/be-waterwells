@@ -12,8 +12,14 @@
 .heroBg {
   position: absolute;
   inset: 0;
+  /* Photo sits beneath the existing tint gradients (last layer = bottom). */
   background: radial-gradient(ellipse at 30% 60%, rgba(0,80,160,0.22) 0%, transparent 65%),
-              radial-gradient(ellipse at 80% 30%, rgba(221,208,172,0.15) 0%, transparent 55%);
+              radial-gradient(ellipse at 80% 30%, rgba(221,208,172,0.15) 0%, transparent 55%),
+              url('/images/hero-residential-tank.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  filter: saturate(0.25) sepia(0.25);
 }
 .heroInner {
   position: relative;

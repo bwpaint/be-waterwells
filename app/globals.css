@@ -186,6 +186,9 @@ a {
   font-weight: 800;
   line-height: 1.15;
   color: var(--charcoal);
+  /* Section headings previously had no bottom margin, so content that follows
+     (FAQ accordions, tables, grids) sat directly against the heading. */
+  margin-bottom: 20px;
 }
 .section-title.light { color: var(--white); }
 

@@ -128,7 +128,7 @@ export default function WellRehabilitationPage() {
               <span>Well Rehabilitation</span>
             </nav>
             <div className={styles.h1Wrap}>
-              <span className={styles.h1Line1}>Houston, TX — Restore Before You Replace</span>
+              <span className={styles.h1Line1}>Magnolia and Houston, TX Area — Restore Before You Replace</span>
               <h1 className={styles.h1Line2}>Well Rehabilitation</h1>
               <span className={styles.h1Line3}>Restore Flow · Treat Biofouling · Avoid Costly Replacement</span>
             </div>

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { getBlogPostsByCategory, getRecentBlogPosts } from '../../lib/blogData';
 import styles from './ServiceSidebar.module.css';
+import Icon from './Icon';
 
 interface ServiceSidebarProps {
   category?: string;
@@ -14,7 +15,7 @@ interface ServiceSidebarProps {
 const SERVICE_OPTIONS = [
   'Water Well Drilling & Installation',
   'Residential Well Services',
-  'Well Pump Repair',
+  'Well Pump Replacement',
   'Pressure Tank / Constant Pressure',
   'Generator Prep',
   'Emergency Service',
@@ -139,7 +140,7 @@ export default function ServiceSidebar({
               Request Callback
             </button>
             <a href="tel:+12814484447" className={styles.phoneAlt}>
-              📞 Or Call (281) 448-4447
+              <Icon name="phone" size={16} /> Or Call (281) 448-4447
             </a>
           </form>
         )}

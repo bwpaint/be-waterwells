@@ -11,14 +11,14 @@
   background-image: url('https://bewaterwells.com/wp-content/uploads/2024/09/bewater1-scaled.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.18;
+  opacity: 0.18; filter: saturate(0.25) sepia(0.25);
 }
 .heroGrid {
   position: relative;
   z-index: 1;
   padding: 72px 0 88px;
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: 2fr 1fr;
   gap: 48px;
   align-items: center;
 }

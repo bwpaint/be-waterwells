@@ -8,7 +8,7 @@ export const services = [
   {
     icon: 'pump',
     title: 'Residential Water Well Services',
-    desc: 'Pump repair and replacement, pressure tanks, constant pressure systems, and generator prep for homeowners. Franklin Electric authorized dealer.',
+    desc: 'Pump replacement and new installation, pressure tanks, constant pressure systems, and generator prep for homeowners. Franklin Electric authorized dealer.',
     href: '/services/residential',
   },
   {
@@ -96,7 +96,7 @@ export const jsonLd = {
   '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
   '@id': 'https://bewaterwells.com/#business',
   name: 'B-E Waterwell Services',
-  description: 'Family-owned waterwell drilling, pump repair, and well service company serving the greater Houston area since 1979. Licensed by the Texas Department of Licensing and Regulation (TDLR).',
+  description: 'Family-owned waterwell drilling, pump replacement, and well service company serving the greater Houston area since 1979. Licensed by the Texas Department of Licensing and Regulation (TDLR).',
   url: 'https://bewaterwells.com',
   telephone: '+12814484447',
   email: 'zack@bewaterwells.com',

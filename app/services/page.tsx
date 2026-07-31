@@ -13,7 +13,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Water Well Services — Houston, TX | B-E Waterwell Services',
   description:
-    'Complete water well services in the Houston area since 1979. Drilling, pump repair, constant pressure, well maintenance & more. TDLR licensed. Call (281) 448-4447.',
+    'Complete water well services in the Houston area since 1979. Drilling, pump replacement, constant pressure, well maintenance & more. TDLR licensed. Call (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services' },
 };
 
@@ -32,7 +32,7 @@ const jsonLd = {
     addressCountry: 'US',
   },
   description:
-    'Complete waterwell services in the Houston area since 1979. Drilling, pump repair, constant pressure systems, well maintenance, and emergencies handled. TDLR Licensed.',
+    'Complete waterwell services in the Houston area since 1979. Drilling, pump replacement, constant pressure systems, well maintenance, and emergencies handled. TDLR Licensed.',
   foundingDate: '1979',
   areaServed: 'Houston, TX',
   hasOfferCatalog: {
@@ -60,8 +60,8 @@ const categories = [
     icon: '🏡',
     title: 'Residential Water Well Services',
     slug: 'residential',
-    desc: 'Everything homeowners need: well pump repair and replacement, pressure tanks, constant pressure systems, generator prep, and emergency service when you need it.',
-    services: ['Pump Repair', 'Pressure Tanks', 'Constant Pressure', 'Emergency Service'],
+    desc: 'Everything homeowners need: well pump replacement and new installation, pressure tanks, constant pressure systems, generator prep, and emergency service when you need it.',
+    services: ['Pump Replacement', 'Pressure Tanks', 'Constant Pressure', 'Emergency Service'],
   },
   {
     icon: '🏗️',

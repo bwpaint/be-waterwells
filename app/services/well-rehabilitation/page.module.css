@@ -11,14 +11,14 @@
   background-image: url('https://bewaterwells.com/wp-content/uploads/2024/09/water-well-services.webp');
   background-size: cover;
   background-position: center;
-  opacity: 0.18;
+  opacity: 0.18; filter: saturate(0.25) sepia(0.25);
 }
 .heroGrid {
   position: relative;
   z-index: 1;
   padding: 72px 0 88px;
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: 2fr 1fr;
   gap: 48px;
   align-items: center;
 }
@@ -360,9 +360,18 @@
   font-family: var(--font-head);
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 900;
+  line-height: 1.15;
   color: var(--white);
   margin-bottom: 16px;
 }
+/* crossLink defaults to dark-earth for use on the cream crossLinkSection.
+   Inside this dark CTA that renders nearly invisible, so override to white
+   with the orange reserved for hover. */
+.finalCtaInner .crossLink {
+  color: var(--white);
+  margin-left: 6px;
+}
+.finalCtaInner .crossLink:hover { color: #D95F0A; }
 .finalCtaInner p {
   color: rgba(255,255,255,0.65);
   font-size: 1rem;

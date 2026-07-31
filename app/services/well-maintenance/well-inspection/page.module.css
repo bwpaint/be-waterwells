@@ -1,6 +1,6 @@
 /* ── HERO ──────────────────────────────────────────────────── */
 .hero { position: relative; padding-top: 120px; background: var(--charcoal); overflow: hidden; }
-.heroBg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.18; }
+.heroBg { background-image: url('/images/hero-well-equipment.webp'); position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.18; filter: saturate(0.25) sepia(0.25); }
 .heroGrid { position: relative; z-index: 1; padding: 72px 0 88px; max-width: 760px; }
 .breadcrumb { display: flex; align-items: center; gap: 8px; font-family: var(--font-head); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 28px; flex-wrap: wrap; }
 .breadcrumb a { color: rgba(255,255,255,0.45); transition: var(--transition); }
