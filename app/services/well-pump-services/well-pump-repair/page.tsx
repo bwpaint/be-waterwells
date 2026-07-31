@@ -118,7 +118,7 @@ export default function WellPumpRepairPage() {
             <div style={{ background: 'rgba(217,95,10,0.15)', border: '2px solid var(--orange)', borderRadius: 'var(--radius)', padding: '24px 28px', minWidth: '240px', textAlign: 'center' }}>
               <div style={{ marginBottom: '8px', color: 'var(--orange)' }}><Icon name="bolt" size={34} /></div>
               <div style={{ fontFamily: 'var(--font-head)', fontWeight: 900, color: 'var(--orange)', fontSize: '0.88rem', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '6px' }}>24/7 Emergency</div>
-              <div style={{ fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '1.4rem', color: 'var(--white)', marginBottom: '6px' }}>(281) 448-4447</div>
+              <a href="tel:+12814484447" style={{ display: 'block', fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '1.4rem', color: 'var(--white)', marginBottom: '6px', textDecoration: 'none' }}>(281) 448-4447</a>
               <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.6)' }}>No water? Call now.<br />Same-day response available.</div>
             </div>
           </div>

@@ -21,8 +21,10 @@ export default function Footer() {
             Family-owned. Licensed. Guaranteed.
           </p>
           <div className={styles.socialLinks}>
-            <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
-            <a href="https://google.com/maps" aria-label="Google Reviews" target="_blank" rel="noopener noreferrer">G</a>
+            <a href="https://www.facebook.com/bewaterwells" aria-label="B-E Waterwell Services on Facebook" target="_blank" rel="noopener noreferrer">f</a>
+            {/* Google icon intentionally omitted until the Google Business Profile
+                exists. It previously linked to generic Google Maps, which was a dead
+                end. Restore it pointing at the real listing once verified. */}
           </div>
         </div>
 

@@ -26,7 +26,7 @@ export default function CityHeroForm({ city }: Props) {
         <div className={styles.successMsg}>
           <span className={styles.successIcon}>✓</span>
           <strong>Request received!</strong>
-          <p>We&apos;ll be in touch within 2 hours. For emergencies call (281) 448-4447.</p>
+          <p>We&apos;ll be in touch within 2 hours. For emergencies call <a href="tel:+12814484447">(281) 448-4447</a>.</p>
         </div>
       </div>
     );

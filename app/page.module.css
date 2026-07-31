@@ -5,7 +5,11 @@
 /* ── HERO ─────────────────────────────────────────────────── */
 .hero {
   position: relative;
+  /* svh = "small viewport height": the height with mobile browser chrome
+     showing, so the hero fits without scrolling on phones too. vh is kept
+     first as a fallback for older browsers. */
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,7 +67,10 @@
   grid-template-columns: 1fr 420px;
   gap: 56px;
   align-items: center;
-  padding: 160px var(--container-pad) 140px;
+  /* Was 160px / 140px, which pushed the hero past the viewport and forced a
+     scroll before the form's bottom was visible. Top still clears the fixed
+     navbar; bottom trimmed hardest since nothing sits under it. */
+  padding: 118px var(--container-pad) 72px;
   max-width: var(--container-max);
   margin: 0 auto;
   width: 100%;

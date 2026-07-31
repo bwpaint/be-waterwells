@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllCitySlugs } from '../lib/cityData';
 import { getAllBlogPosts } from '../lib/blogData';
+import { counties } from '../lib/countyData';
 import { SITE_URL } from '../lib/siteConfig';
 
 const BASE = SITE_URL;
@@ -36,6 +37,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  // County hubs sit above their cities in the internal link structure, so they
+  // carry a slightly higher priority than the individual city pages.
+  const countyEntries: MetadataRoute.Sitemap = counties.map((c) => ({
+    url: `${BASE}/service-area/county/${c.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
   const blogEntries: MetadataRoute.Sitemap = getAllBlogPosts().map((post) => ({
     url: `${BASE}/blog/${post.slug}`,
     lastModified: new Date(post.date),
@@ -43,5 +53,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticEntries, ...cityEntries, ...blogEntries];
+  return [...staticEntries, ...countyEntries, ...cityEntries, ...blogEntries];
 }

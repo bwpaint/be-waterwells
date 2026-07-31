@@ -200,6 +200,38 @@ a {
 h3.section-title {
   margin-top: 40px;
 }
+
+/* ── In-text internal links ───────────────────────────────────
+   For links inside running prose (county names, service mentions).
+   Deliberately quiet: same size, weight, and colour as the surrounding
+   copy, distinguished only by a faint underline that firms up on hover.
+   Reads as prose, but remains findable — a link with no visual signal at
+   all fails WCAG 1.4.1 and is invisible to sighted users, while gaining
+   nothing in search value. */
+.inline-link {
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(83, 59, 34, 0.28);
+  transition: var(--transition);
+}
+.inline-link:hover,
+.inline-link:focus-visible {
+  text-decoration-color: currentColor;
+  color: var(--accent-on-light);
+}
+/* On dark surfaces the underline needs to be light rather than brown. */
+.inline-link-light {
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+}
+.inline-link-light:hover,
+.inline-link-light:focus-visible {
+  text-decoration-color: currentColor;
+  color: var(--orange);
+}
 .section-title.light { color: var(--white); }
 
 /* Copperplate on every heading — nav, buttons, and small labels stay on Montserrat */

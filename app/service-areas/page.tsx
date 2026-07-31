@@ -4,6 +4,7 @@ import AnnouncementBar from '../components/AnnouncementBar';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ServiceAreaMap from '../components/ServiceAreaMap';
+import { counties } from '../../lib/countyData';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -93,10 +94,18 @@ export default function ServiceAreasPage() {
             <span className={styles.heroOrange}>B-E Waterwell Service Areas</span>
           </h1>
           <p className={styles.heroSubtitle}>
-            Serving Montgomery, Harris, Waller, Grimes, Washington, Anderson, and
-            surrounding counties. One crew that knows this ground better than anyone.
-            B-E Waterwell Services has been drilling and servicing waterwells in
-            Houston since 1979.
+            Serving{' '}
+            <Link href="/service-area/county/montgomery-county-tx" className="inline-link inline-link-light">Montgomery</Link>,{' '}
+            <Link href="/service-area/county/harris-county-tx" className="inline-link inline-link-light">Harris</Link>,{' '}
+            <Link href="/service-area/county/waller-county-tx" className="inline-link inline-link-light">Waller</Link>,{' '}
+            <Link href="/service-area/county/grimes-county-tx" className="inline-link inline-link-light">Grimes</Link>,{' '}
+            <Link href="/service-area/county/washington-county-tx" className="inline-link inline-link-light">Washington</Link>,{' '}
+            <Link href="/service-area/county/brazos-county-tx" className="inline-link inline-link-light">Brazos</Link>,{' '}
+            <Link href="/service-area/county/burleson-county-tx" className="inline-link inline-link-light">Burleson</Link>, and{' '}
+            <Link href="/service-area/county/fort-bend-county-tx" className="inline-link inline-link-light">Fort Bend</Link>{' '}
+            counties. One crew that knows this ground better than anyone.
+            B-E Waterwell Services has been drilling and servicing waterwells across
+            the Magnolia and Houston area since 1979.
           </p>
           <div className={styles.heroBtns}>
             <a href="tel:+12814484447" className="btn btn-primary">
@@ -122,6 +131,32 @@ export default function ServiceAreasPage() {
       </section>
 
       {/* ── CITY CARDS ───────────────────────── */}
+      {/* ── COUNTY HUBS ──────────────────────── */}
+      <section className={styles.countiesSection}>
+        <div className="container">
+          <span className="section-label">By County</span>
+          <h2 className="section-title">Counties We Serve</h2>
+          <p className={styles.mapSubtext}>
+            Aquifer depths, permitting districts, and local conditions differ by county.
+            Pick yours for the specifics.
+          </p>
+          <div className={styles.countiesGrid}>
+            {counties.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/service-area/county/${c.slug}`}
+                className={styles.countyCard}
+                aria-label={`Waterwell services in ${c.name}, Texas`}
+                title={`Waterwell services in ${c.name}, Texas`}
+              >
+                <span className={styles.countyName}>{c.name}</span>
+                <span className={styles.countyMeta}>{c.depthRange}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className={styles.citiesSection}>
         <div className="container">
           <span className="section-label">All Service Areas</span>
@@ -154,7 +189,7 @@ export default function ServiceAreasPage() {
           <div className={styles.finalCtaInner}>
             <h2>Don&apos;t See Your City?</h2>
             <p>
-              We may still be able to serve you. Call us at (281) 448-4447 and tell us
+              We may still be able to serve you. Call us at <a href="tel:+12814484447">(281) 448-4447</a> and tell us
               your location — we&apos;ll let you know if we can make it work.
             </p>
             <div className={styles.finalCtaBtns}>

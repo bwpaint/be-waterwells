@@ -249,3 +249,43 @@
 @media (max-width: 480px) {
   .citiesGrid { grid-template-columns: 1fr; }
 }
+
+/* ── COUNTY HUBS ──────────────────────────────────────────── */
+.countiesSection { padding: 64px 0 8px; background: var(--white); }
+.countiesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+}
+.countyCard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--cream);
+  border: 1px solid var(--stone-light);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.countyCard:hover {
+  border-color: var(--orange);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+.countyName {
+  font-family: var(--font-head);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--charcoal);
+}
+.countyMeta {
+  font-family: var(--font-head);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent-on-light);
+}
+@media (max-width: 1000px) { .countiesGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .countiesGrid { grid-template-columns: 1fr; } }

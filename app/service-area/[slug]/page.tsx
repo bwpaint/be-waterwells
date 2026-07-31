@@ -9,6 +9,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import CityHeroForm from '../../components/CityHeroForm';
 import CityFaqAccordion from '../../components/CityFaqAccordion';
+import { COUNTY_PATHS } from '../../../lib/countyData';
 import { getCityBySlug, getAllCitySlugs } from '../../../lib/cityData';
 import styles from './page.module.css';
 
@@ -160,7 +161,15 @@ export default function CityPage({ params }: Props) {
               </div>
               <div className={styles.introStat}>
                 <strong>County</strong>
-                <span>{city.county}</span>
+                <span>
+                  {COUNTY_PATHS[city.county] ? (
+                    <Link href={COUNTY_PATHS[city.county]} className="inline-link">
+                      {city.county}
+                    </Link>
+                  ) : (
+                    city.county
+                  )}
+                </span>
               </div>
               <div className={styles.introStat}>
                 <strong>Emergency</strong>
@@ -268,8 +277,16 @@ export default function CityPage({ params }: Props) {
           <div className={styles.finalCtaInner}>
             <h2>Need a Waterwell in {city.city}?</h2>
             <p>
-              Call us directly or request an estimate online.
-              We serve {city.city} and all of {city.county} with 45+ years of expertise.
+              Call us directly at <a href="tel:+12814484447">(281) 448-4447</a> or
+              request an estimate online. We serve {city.city} and all of{' '}
+              {COUNTY_PATHS[city.county] ? (
+                <Link href={COUNTY_PATHS[city.county]} className="inline-link inline-link-light">
+                  {city.county}
+                </Link>
+              ) : (
+                city.county
+              )}{' '}
+              with 45+ years of expertise.
             </p>
             <div className={styles.finalCtaBtns}>
               <a href="tel:+12814484447" className="btn btn-primary">
