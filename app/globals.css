@@ -190,6 +190,11 @@ a {
      (FAQ accordions, tables, grids) sat directly against the heading. */
   margin-bottom: 20px;
 }
+/* An h3 used as a sub-heading inside a section needs breathing room above it,
+   otherwise it crowds the block of content it follows. */
+h3.section-title {
+  margin-top: 40px;
+}
 .section-title.light { color: var(--white); }
 
 /* Copperplate on every heading — nav, buttons, and small labels stay on Montserrat */

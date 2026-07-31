@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../../components/Icon';
 import Link from 'next/link';
 import AnnouncementBar from '../../../components/AnnouncementBar';
 import Navbar from '../../../components/Navbar';
@@ -65,10 +66,10 @@ const declineReasons = [
 ];
 
 const methods = [
-  { icon: '💧', title: 'Mechanical Jetting', desc: 'High-pressure water jetting directed at the well screen and perforations to physically remove biofouling and mineral buildup. Most effective for screens with debris accumulation.', best: 'Best for: mineral deposits, sediment blockage' },
-  { icon: '🧪', title: 'Shock Chlorination', desc: 'High-concentration chlorine solution introduced into the well and circulated through the screen to kill iron bacteria colonies. Contact time and concentration are critical for effectiveness.', best: 'Best for: iron bacteria, biofouling, water quality' },
-  { icon: '⚗️', title: 'Acid Treatment', desc: 'Food-grade or weak acid solution dissolves calcium carbonate and iron oxide mineral scale from the screen and perforations. Followed by full neutralization and flushing.', best: 'Best for: mineral encrustation, carbonate scale' },
-  { icon: '🔬', title: 'Combination Treatment', desc: 'Severely fouled wells often require sequential treatment — mechanical jetting to remove physical buildup, then chemical treatment for remaining bacteria or mineral deposits.', best: 'Best for: advanced fouling, multiple issues' },
+  { icon: 'droplet' as const, title: 'Mechanical Jetting', desc: 'High-pressure water jetting directed at the well screen and perforations to physically remove biofouling and mineral buildup. Most effective for screens with debris accumulation.', best: 'Best for: mineral deposits, sediment blockage' },
+  { icon: 'testTube' as const, title: 'Shock Chlorination', desc: 'High-concentration chlorine solution introduced into the well and circulated through the screen to kill iron bacteria colonies. Contact time and concentration are critical for effectiveness.', best: 'Best for: iron bacteria, biofouling, water quality' },
+  { icon: 'flask' as const, title: 'Acid Treatment', desc: 'Food-grade or weak acid solution dissolves calcium carbonate and iron oxide mineral scale from the screen and perforations. Followed by full neutralization and flushing.', best: 'Best for: mineral encrustation, carbonate scale' },
+  { icon: 'microscope' as const, title: 'Combination Treatment', desc: 'Severely fouled wells often require sequential treatment — mechanical jetting to remove physical buildup, then chemical treatment for remaining bacteria or mineral deposits.', best: 'Best for: advanced fouling, multiple issues' },
 ];
 
 const compareRows = [
@@ -184,7 +185,7 @@ export default function WellRehabilitationPage() {
           <div className={styles.methodGrid}>
             {methods.map((m) => (
               <div key={m.title} className={styles.methodCard}>
-                <span className={styles.methodIcon}>{m.icon}</span>
+                <span className={styles.methodIcon}><Icon name={m.icon} size={30} /></span>
                 <h3 className={styles.methodTitle}>{m.title}</h3>
                 <p className={styles.methodDesc}>{m.desc}</p>
                 <div className={styles.methodBest}>{m.best}</div>

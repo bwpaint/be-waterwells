@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../components/Icon';
 import Link from 'next/link';
 import AnnouncementBar from '../../components/AnnouncementBar';
 import Navbar from '../../components/Navbar';
@@ -69,14 +70,14 @@ const jsonLd = {
 
 const subServices = [
   {
-    icon: '🔋',
+    icon: 'battery' as const,
     title: 'Pressure Tank Systems',
     slug: 'pressure-tank-systems',
     desc: 'Waterlogged tank or pump short cycling? We replace pressure tanks same-day — sized correctly for your household and installed right the first time.',
     highlights: ['Bladder & diaphragm tanks', 'Correct sizing for household', 'Same-day replacement', '$400–$900 installed'],
   },
   {
-    icon: '⚡',
+    icon: 'bolt' as const,
     title: 'Generator Prep Kits',
     slug: 'generator-prep-kits',
     desc: 'Keep your well running through ERCOT outages and hurricane season. We install transfer switches and generator hookups for well pump circuits.',
@@ -93,9 +94,9 @@ const systemComponents = [
 ];
 
 const trustItems = [
-  { icon: '🏆', title: 'Franklin Electric Authorized', desc: 'Factory-authorized to service and warranty Franklin Electric pump systems — the leading brand in residential well pumps.' },
-  { icon: '🚚', title: 'Stocked Parts Truck', desc: 'Our service trucks carry common pressure tanks, switches, and controls. Most repairs completed in one visit.' },
-  { icon: '📅', title: 'Same-Day Service', desc: 'No water? We prioritize same-day dispatch for households with complete loss of pressure or water.' },
+  { icon: 'trophy' as const, title: 'Franklin Electric Authorized', desc: 'Factory-authorized to service and warranty Franklin Electric pump systems — the leading brand in residential well pumps.' },
+  { icon: 'truck' as const, title: 'Stocked Parts Truck', desc: 'Our service trucks carry common pressure tanks, switches, and controls. Most repairs completed in one visit.' },
+  { icon: 'calendar' as const, title: 'Same-Day Service', desc: 'No water? We prioritize same-day dispatch for households with complete loss of pressure or water.' },
 ];
 
 const faqs = [
@@ -211,7 +212,7 @@ export default function WaterWellSystemsPage() {
           <div className={styles.subGrid2}>
             {subServices.map((s) => (
               <div key={s.slug} className={styles.subCard}>
-                <span className={styles.subIcon}>{s.icon}</span>
+                <span className={styles.subIcon}><Icon name={s.icon} size={30} /></span>
                 <h3 className={styles.subTitle}>{s.title}</h3>
                 <p className={styles.subDesc}>{s.desc}</p>
                 <ul className={styles.subHighlights}>
@@ -255,7 +256,7 @@ export default function WaterWellSystemsPage() {
           <div className={styles.trustGrid}>
             {trustItems.map((t) => (
               <div key={t.title} className={styles.trustCard}>
-                <span className={styles.trustIcon}>{t.icon}</span>
+                <span className={styles.trustIcon}><Icon name={t.icon} size={30} /></span>
                 <h3 className={styles.trustTitle}>{t.title}</h3>
                 <p className={styles.trustDesc}>{t.desc}</p>
               </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnnouncementBar from '../../components/AnnouncementBar';
@@ -99,25 +100,25 @@ const reasons = [
 
 const methods = [
   {
-    icon: '💧',
+    icon: 'droplet' as const,
     title: 'Mechanical Jetting',
     desc: 'High-pressure water jetting directed at the well screen and perforations to physically remove biofouling and mineral buildup. Most effective for screens with debris accumulation.',
     highlights: ['Best for mineral deposits', 'Clears sediment blockage', 'Restores screen open area'],
   },
   {
-    icon: '🧪',
+    icon: 'testTube' as const,
     title: 'Shock Chlorination',
     desc: 'High-concentration chlorine solution introduced into the well and circulated through the screen to kill iron bacteria colonies. Contact time and concentration are critical for effectiveness.',
     highlights: ['Best for iron bacteria', 'Treats biofouling', 'Improves water quality'],
   },
   {
-    icon: '⚗️',
+    icon: 'flask' as const,
     title: 'Acid Treatment',
     desc: 'A controlled acid solution dissolves calcium carbonate and iron oxide mineral scale from the screen and perforations. Followed by full neutralization and flushing.',
     highlights: ['Best for mineral encrustation', 'Dissolves carbonate scale', 'Neutralized and flushed'],
   },
   {
-    icon: '🔬',
+    icon: 'microscope' as const,
     title: 'Combination Treatment',
     desc: 'Severely fouled wells often require sequential treatment — mechanical jetting to remove physical buildup, then chemical treatment for remaining bacteria or mineral deposits.',
     highlights: ['Best for advanced fouling', 'Handles multiple issues', 'Sequential jetting + chemical'],
@@ -298,7 +299,7 @@ export default function WellRehabilitationPage() {
           <div className={styles.subGrid}>
             {methods.map((m) => (
               <div key={m.title} className={styles.subCard}>
-                <span className={styles.subIcon}>{m.icon}</span>
+                <span className={styles.subIcon}><Icon name={m.icon} size={30} /></span>
                 <h3 className={styles.subTitle}>{m.title}</h3>
                 <p className={styles.subDesc}>{m.desc}</p>
                 <ul className={styles.subHighlights}>

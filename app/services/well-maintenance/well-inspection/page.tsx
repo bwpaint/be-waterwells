@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../../components/Icon';
 import Link from 'next/link';
 import AnnouncementBar from '../../../components/AnnouncementBar';
 import Navbar from '../../../components/Navbar';
@@ -63,11 +64,11 @@ const jsonLd = {
 };
 
 const whoNeeds = [
-  { icon: '🏠', title: 'Home Buyers', desc: 'Purchasing a property with a private well? A pre-purchase inspection gives you an independent assessment of the well system — pump condition, water quality, pressure performance.' },
-  { icon: '📋', title: 'Sellers Pre-Listing', desc: 'A pre-listing well inspection lets you address issues before they become closing surprises. Buyers and agents appreciate documented inspection history.' },
-  { icon: '🔄', title: 'Annual Owners', desc: 'Current well owners benefit from annual or every-3-year inspection to catch issues early — pump wear, water quality changes, pressure tank decline.' },
-  { icon: '🏦', title: 'FHA / VA / USDA Borrowers', desc: 'Government-backed loans require a functioning well inspection and water quality test meeting minimum distance requirements. We are familiar with all applicable requirements.' },
-  { icon: '🏘️', title: 'Real Estate Agents', desc: 'Houston realtors rely on our fast turnaround inspection reports to keep transactions on track. We know what lenders need and deliver it quickly.' },
+  { icon: 'home' as const, title: 'Home Buyers', desc: 'Purchasing a property with a private well? A pre-purchase inspection gives you an independent assessment of the well system — pump condition, water quality, pressure performance.' },
+  { icon: 'clipboard' as const, title: 'Sellers Pre-Listing', desc: 'A pre-listing well inspection lets you address issues before they become closing surprises. Buyers and agents appreciate documented inspection history.' },
+  { icon: 'cycle' as const, title: 'Annual Owners', desc: 'Current well owners benefit from annual or every-3-year inspection to catch issues early — pump wear, water quality changes, pressure tank decline.' },
+  { icon: 'bank' as const, title: 'FHA / VA / USDA Borrowers', desc: 'Government-backed loans require a functioning well inspection and water quality test meeting minimum distance requirements. We are familiar with all applicable requirements.' },
+  { icon: 'buildings' as const, title: 'Real Estate Agents', desc: 'Houston realtors rely on our fast turnaround inspection reports to keep transactions on track. We know what lenders need and deliver it quickly.' },
 ];
 
 const coverItems = [
@@ -158,7 +159,7 @@ export default function WellInspectionPage() {
           <div className={styles.whoGrid}>
             {whoNeeds.map((w) => (
               <div key={w.title} className={styles.whoCard}>
-                <span className={styles.whoIcon}>{w.icon}</span>
+                <span className={styles.whoIcon}><Icon name={w.icon} size={30} /></span>
                 <h3 className={styles.whoTitle}>{w.title}</h3>
                 <p className={styles.whoDesc}>{w.desc}</p>
               </div>

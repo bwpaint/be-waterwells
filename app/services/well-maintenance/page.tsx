@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnnouncementBar from '../../components/AnnouncementBar';
@@ -85,12 +86,12 @@ const jsonLd = {
 };
 
 const checklist = [
-  { icon: '⚙️', item: 'Pump Performance Test', detail: 'Flow rate, motor amp draw, and start/stop pressure verification to confirm the pump is operating within spec.' },
-  { icon: '🔋', item: 'Pressure Tank Pre-Charge', detail: 'Check bladder integrity and air charge level. A declining pre-charge is an early warning of bladder failure before waterlogging occurs.' },
-  { icon: '🔍', item: 'Wellhead & Casing Visual', detail: 'Inspect sanitary cap, vent screen, surface seal, and casing condition. Check for pest entry points or surface water intrusion risks.' },
-  { icon: '📊', item: 'Pressure & Flow Rate Test', detail: 'Measure system pressure at multiple points, verify cut-in and cut-out settings, and check for pressure loss across distribution.' },
-  { icon: '🔧', item: 'Pressure Switch Calibration', detail: 'Verify and adjust cut-in and cut-out pressure settings. An out-of-spec switch causes short cycling or inadequate system pressure.' },
-  { icon: '💧', item: 'Water Quality Visual', detail: 'Assess color, clarity, and odor, and flag any changes for targeted lab testing if needed.' },
+  { icon: 'gear' as const, item: 'Pump Performance Test', detail: 'Flow rate, motor amp draw, and start/stop pressure verification to confirm the pump is operating within spec.' },
+  { icon: 'battery' as const, item: 'Pressure Tank Pre-Charge', detail: 'Check bladder integrity and air charge level. A declining pre-charge is an early warning of bladder failure before waterlogging occurs.' },
+  { icon: 'search' as const, item: 'Wellhead & Casing Visual', detail: 'Inspect sanitary cap, vent screen, surface seal, and casing condition. Check for pest entry points or surface water intrusion risks.' },
+  { icon: 'chart' as const, item: 'Pressure & Flow Rate Test', detail: 'Measure system pressure at multiple points, verify cut-in and cut-out settings, and check for pressure loss across distribution.' },
+  { icon: 'wrench' as const, item: 'Pressure Switch Calibration', detail: 'Verify and adjust cut-in and cut-out pressure settings. An out-of-spec switch causes short cycling or inadequate system pressure.' },
+  { icon: 'droplet' as const, item: 'Water Quality Visual', detail: 'Assess color, clarity, and odor, and flag any changes for targeted lab testing if needed.' },
 ];
 
 const costCompare = [
@@ -100,11 +101,11 @@ const costCompare = [
 ];
 
 const inspectionSituations = [
-  { icon: '🏠', title: 'Home Buyers', desc: 'Purchasing a property with a private well? A pre-purchase inspection gives you an independent assessment of the well system — pump condition, water quality, and pressure performance.' },
-  { icon: '📋', title: 'Sellers Pre-Listing', desc: 'A pre-listing well inspection lets you address issues before they become closing surprises. Buyers and agents appreciate documented inspection history.' },
-  { icon: '🔄', title: 'Annual Owners', desc: 'Current well owners benefit from annual or every-3-year inspection to catch issues early — pump wear, water quality changes, and pressure tank decline.' },
-  { icon: '🏦', title: 'FHA / VA / USDA Borrowers', desc: 'Government-backed loans require a functioning well inspection and water quality test meeting minimum distance requirements. We are familiar with all applicable requirements.' },
-  { icon: '🏘️', title: 'Real Estate Agents', desc: 'Houston realtors rely on our fast turnaround inspection reports to keep transactions on track. We know what lenders need and deliver it quickly.' },
+  { icon: 'home' as const, title: 'Home Buyers', desc: 'Purchasing a property with a private well? A pre-purchase inspection gives you an independent assessment of the well system — pump condition, water quality, and pressure performance.' },
+  { icon: 'clipboard' as const, title: 'Sellers Pre-Listing', desc: 'A pre-listing well inspection lets you address issues before they become closing surprises. Buyers and agents appreciate documented inspection history.' },
+  { icon: 'cycle' as const, title: 'Annual Owners', desc: 'Current well owners benefit from annual or every-3-year inspection to catch issues early — pump wear, water quality changes, and pressure tank decline.' },
+  { icon: 'bank' as const, title: 'FHA / VA / USDA Borrowers', desc: 'Government-backed loans require a functioning well inspection and water quality test meeting minimum distance requirements. We are familiar with all applicable requirements.' },
+  { icon: 'buildings' as const, title: 'Real Estate Agents', desc: 'Houston realtors rely on our fast turnaround inspection reports to keep transactions on track. We know what lenders need and deliver it quickly.' },
 ];
 
 const inspectionCovers = [
@@ -118,7 +119,7 @@ const inspectionCovers = [
 
 const seasonalCalendar = [
   {
-    season: 'Spring 🌱',
+    icon: 'sprout' as const, season: 'Spring',
     items: [
       'Post-freeze inspection — check for cracked pressure tank or casing damage',
       'Annual water quality test (bacteria and basic chemistry)',
@@ -126,7 +127,7 @@ const seasonalCalendar = [
     ],
   },
   {
-    season: 'Pre-Hurricane (May) ⚡',
+    icon: 'bolt' as const, season: 'Pre-Hurricane (May)',
     items: [
       'Pump performance test — identify any weakening before storm season',
       'Generator hookup test run under load',
@@ -134,7 +135,7 @@ const seasonalCalendar = [
     ],
   },
   {
-    season: 'Fall 🍂',
+    icon: 'leafFall' as const, season: 'Fall',
     items: [
       'Pre-winter system check — pressure tank, all fittings',
       'Verify wellhead is clear of debris and vegetation',
@@ -142,7 +143,7 @@ const seasonalCalendar = [
     ],
   },
   {
-    season: 'Annual 📅',
+    icon: 'calendar' as const, season: 'Annual',
     items: [
       'Full inspection per the B-E Waterwell checklist',
       'Written report',
@@ -267,7 +268,7 @@ export default function WellMaintenancePage() {
           <div className={styles.checkGrid}>
             {checklist.map((c) => (
               <div key={c.item} className={styles.checkCard}>
-                <div className={styles.checkIcon}>{c.icon}</div>
+                <div className={styles.checkIcon}><Icon name={c.icon} size={30} /></div>
                 <div>
                   <h3 className={styles.checkItem}>{c.item}</h3>
                   <p className={styles.checkDetail}>{c.detail}</p>
@@ -305,7 +306,7 @@ export default function WellMaintenancePage() {
           <div className={styles.subGrid}>
             {inspectionSituations.map((s) => (
               <div key={s.title} className={styles.subCard}>
-                <span className={styles.subIcon}>{s.icon}</span>
+                <span className={styles.subIcon}><Icon name={s.icon} size={30} /></span>
                 <h4 className={styles.subTitle}>{s.title}</h4>
                 <p className={styles.subDesc}>{s.desc}</p>
               </div>
@@ -362,7 +363,7 @@ export default function WellMaintenancePage() {
           <div className={styles.seasonGrid}>
             {seasonalCalendar.map((s) => (
               <div key={s.season} className={styles.seasonCard}>
-                <h3 className={styles.seasonTitle}>{s.season}</h3>
+                <h3 className={styles.seasonTitle}><Icon name={s.icon} size={20} /> {s.season}</h3>
                 <ul className={styles.seasonList}>
                   {s.items.map((i) => <li key={i}>{i}</li>)}
                 </ul>

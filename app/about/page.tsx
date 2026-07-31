@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../components/Icon';
 import Link from 'next/link';
 import AnnouncementBar from '../components/AnnouncementBar';
 import Navbar from '../components/Navbar';
@@ -12,22 +13,22 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    icon: '🏡',
+    icon: 'house' as const,
     title: 'Family-Owned',
     desc: 'Three generations of waterwell expertise. When you call us, you talk to the people who will show up and do the work — not a call center.',
   },
   {
-    icon: '⏱️',
+    icon: 'stopwatch' as const,
     title: 'Emergency Service',
     desc: 'When water emergencies strike, our team responds quickly for well failures, pump outages, and loss of water pressure.',
   },
   {
-    icon: '🎓',
+    icon: 'graduation' as const,
     title: 'Licensed & Insured',
     desc: 'Fully licensed with the Texas Department of Licensing and Regulation (TDLR). Every job meets Texas well construction standards.',
   },
   {
-    icon: '📍',
+    icon: 'mapPin' as const,
     title: 'Local Expertise',
     desc: 'We know Houston-area geology, aquifer depths, and water table conditions by county. That local knowledge means fewer surprises on your job.',
   },
@@ -89,7 +90,7 @@ export default function AboutPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '28px' }}>
             {values.map((v) => (
               <div key={v.title} style={{ background: 'var(--white)', border: '1px solid var(--light-stone)', borderRadius: 'var(--radius)', padding: '32px 28px' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '14px' }}>{v.icon}</div>
+                <div style={{ marginBottom: '14px', color: 'var(--dark-earth)' }}><Icon name={v.icon} size={40} /></div>
                 <h3 style={{ fontFamily: 'var(--font-head)', fontWeight: 800, fontSize: '1rem', color: 'var(--dark-earth)', marginBottom: '10px', letterSpacing: '0.02em' }}>{v.title}</h3>
                 <p style={{ color: 'var(--dark-stone)', fontSize: '0.92rem', lineHeight: 1.7 }}>{v.desc}</p>
               </div>

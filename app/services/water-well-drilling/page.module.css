@@ -372,8 +372,13 @@
   font-family: var(--font-head);
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 900;
+  line-height: 1.15;
   color: var(--white);
   margin-bottom: 16px;
+  /* Short headline — keep it on one line. The 600px container was just
+     narrow enough to break it. Wrapping is re-enabled on small screens
+     below so it can never overflow the viewport. */
+  white-space: nowrap;
 }
 .finalCtaInner p {
   color: rgba(255,255,255,0.65);
@@ -394,6 +399,8 @@
 @media (max-width: 600px) {
   .subServicesSection { padding: 28px 16px; }
   .overviewStats { grid-template-columns: repeat(2, 1fr); }
+  /* Allow the CTA headline to wrap again on narrow screens. */
+  .finalCtaInner h2 { white-space: normal; }
 }
 
 /* Hero photo — right column */

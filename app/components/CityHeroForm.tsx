@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Icon from './Icon';
 import styles from './CityHeroForm.module.css';
 
 interface Props {
@@ -59,7 +60,7 @@ export default function CityHeroForm({ city }: Props) {
         {loading ? 'Sending…' : `Request Estimate in ${city} →`}
       </button>
       <p className={styles.disclaimer}>
-        🔒 Your info is private. TDLR Licensed · Insured · 45+ Years
+        <Icon name="lock" size={14} /> Your info is private. TDLR Licensed · Insured · 45+ Years
       </p>
     </form>
   );

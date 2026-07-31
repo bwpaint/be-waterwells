@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../../components/Icon';
 import Link from 'next/link';
 import AnnouncementBar from '../../../components/AnnouncementBar';
 import Navbar from '../../../components/Navbar';
@@ -53,12 +54,12 @@ const faqs = [
 ];
 
 const symptoms = [
-  { icon: '💧', title: 'No Water at All', desc: 'Turned on a faucet and nothing came out? Could be a tripped breaker, failed pump, or broken pressure switch. Call us — this is a same-day emergency.' },
-  { icon: '📉', title: 'Sudden Low Pressure', desc: 'Pressure dropped overnight or after a power outage? Your pump or pressure tank may have failed. Do not wait — low pressure often means the pump is working overtime.' },
-  { icon: '⚡', title: 'Pump Won\'t Stop Running', desc: 'If your pump runs continuously and never shuts off, your tank\'s air bladder has failed or your pump can\'t build pressure. This will burn out your motor fast.' },
-  { icon: '🔄', title: 'Short Cycling (On/Off Every Few Seconds)', desc: 'A pump that clicks on and off rapidly every few seconds has a waterlogged tank. Easy fix — but ignore it and you\'ll burn out a $1,500 pump.' },
-  { icon: '💨', title: 'Air Spitting from Faucets', desc: 'Sputtering air mixed with water means your pump intake is near or above the water table, or you have a crack in the drop pipe. Both need immediate attention.' },
-  { icon: '🌊', title: 'Discolored or Gritty Water', desc: 'Brown, rusty, or sandy water after having clear water for years often means your well screen has failed or your pump is pulling sediment. Time for an inspection.' },
+  { icon: 'droplet' as const, title: 'No Water at All', desc: 'Turned on a faucet and nothing came out? Could be a tripped breaker, failed pump, or broken pressure switch. Call us — this is a same-day emergency.' },
+  { icon: 'trendDown' as const, title: 'Sudden Low Pressure', desc: 'Pressure dropped overnight or after a power outage? Your pump or pressure tank may have failed. Do not wait — low pressure often means the pump is working overtime.' },
+  { icon: 'bolt' as const, title: 'Pump Won\'t Stop Running', desc: 'If your pump runs continuously and never shuts off, your tank\'s air bladder has failed or your pump can\'t build pressure. This will burn out your motor fast.' },
+  { icon: 'cycle' as const, title: 'Short Cycling (On/Off Every Few Seconds)', desc: 'A pump that clicks on and off rapidly every few seconds has a waterlogged tank. Easy fix — but ignore it and you\'ll burn out a $1,500 pump.' },
+  { icon: 'wind' as const, title: 'Air Spitting from Faucets', desc: 'Sputtering air mixed with water means your pump intake is near or above the water table, or you have a crack in the drop pipe. Both need immediate attention.' },
+  { icon: 'wave' as const, title: 'Discolored or Gritty Water', desc: 'Brown, rusty, or sandy water after having clear water for years often means your well screen has failed or your pump is pulling sediment. Time for an inspection.' },
 ];
 
 const serviceSteps = [
@@ -115,7 +116,7 @@ export default function WellPumpRepairPage() {
             </div>
             {/* Emergency box */}
             <div style={{ background: 'rgba(217,95,10,0.15)', border: '2px solid var(--orange)', borderRadius: 'var(--radius)', padding: '24px 28px', minWidth: '240px', textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>⚡</div>
+              <div style={{ marginBottom: '8px', color: 'var(--orange)' }}><Icon name="bolt" size={34} /></div>
               <div style={{ fontFamily: 'var(--font-head)', fontWeight: 900, color: 'var(--orange)', fontSize: '0.88rem', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '6px' }}>24/7 Emergency</div>
               <div style={{ fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '1.4rem', color: 'var(--white)', marginBottom: '6px' }}>(281) 448-4447</div>
               <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.6)' }}>No water? Call now.<br />Same-day response available.</div>
@@ -136,7 +137,7 @@ export default function WellPumpRepairPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '18px' }}>
             {symptoms.map(s => (
               <div key={s.title} style={{ background: 'var(--off-white)', border: '1px solid var(--light-stone)', borderRadius: 'var(--radius)', padding: '20px' }}>
-                <div style={{ fontSize: '1.8rem', marginBottom: '10px' }}>{s.icon}</div>
+                <div style={{ fontSize: '1.8rem', marginBottom: '10px' }}><Icon name={s.icon} size={30} /></div>
                 <h3 style={{ fontFamily: 'var(--font-head)', fontWeight: 800, fontSize: '0.95rem', color: 'var(--dark-earth)', marginBottom: '6px' }}>{s.title}</h3>
                 <p style={{ fontSize: '0.88rem', color: 'var(--dark-stone)', lineHeight: 1.65 }}>{s.desc}</p>
               </div>
@@ -295,7 +296,7 @@ export default function WellPumpRepairPage() {
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="tel:+12814484447" className="btn btn-primary" style={{ fontSize: '1.05rem', padding: '16px 32px' }}>
-              ⚡ Call (281) 448-4447
+              <Icon name="bolt" size={15} /> Call (281) 448-4447
             </a>
             <Link href="/contact" className="btn btn-secondary">Request Service Online</Link>
           </div>

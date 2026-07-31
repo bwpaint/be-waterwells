@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon, { type IconName } from '../components/Icon';
 import Link from 'next/link';
 import AnnouncementBar from '../components/AnnouncementBar';
 import Navbar from '../components/Navbar';
@@ -20,12 +21,12 @@ const categories = [
 ];
 
 // Branded card headers (stand in for photography until the CMS media library is wired)
-const CATEGORY_STYLES: Record<string, { gradient: string; icon: string }> = {
-  'water-well-drilling': { gradient: 'linear-gradient(135deg,#4a3a2a 0%,#6B4F33 100%)', icon: '🔩' },
-  'well-pump-services':  { gradient: 'linear-gradient(135deg,#3d4b52 0%,#55636d 100%)', icon: '⚙️' },
-  'water-well-systems':  { gradient: 'linear-gradient(135deg,#4a4030 0%,#6b5a3b 100%)', icon: '💧' },
-  'well-maintenance':    { gradient: 'linear-gradient(135deg,#3f4a3a 0%,#55634f 100%)', icon: '🔧' },
-  'emergency-well-services': { gradient: 'linear-gradient(135deg,#7a3a1a 0%,#b84e08 100%)', icon: '⚡' },
+const CATEGORY_STYLES: Record<string, { gradient: string; icon: IconName }> = {
+  'water-well-drilling': { gradient: 'linear-gradient(135deg,#4a3a2a 0%,#6B4F33 100%)', icon: 'drill' as const },
+  'well-pump-services':  { gradient: 'linear-gradient(135deg,#3d4b52 0%,#55636d 100%)', icon: 'gear' as const },
+  'water-well-systems':  { gradient: 'linear-gradient(135deg,#4a4030 0%,#6b5a3b 100%)', icon: 'droplet' as const },
+  'well-maintenance':    { gradient: 'linear-gradient(135deg,#3f4a3a 0%,#55634f 100%)', icon: 'wrench' as const },
+  'emergency-well-services': { gradient: 'linear-gradient(135deg,#7a3a1a 0%,#b84e08 100%)', icon: 'bolt' as const },
 };
 
 function formatDate(d: string): string {
@@ -93,7 +94,7 @@ export default function BlogPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(320px,1fr))', gap: '28px' }}>
               {posts.map((post) => {
                 const cat = categories.find(c => c.slug === post.categorySlug);
-                const cs = CATEGORY_STYLES[post.categorySlug] ?? { gradient: 'linear-gradient(135deg,#4a3a2a 0%,#6B4F33 100%)', icon: '💧' };
+                const cs = CATEGORY_STYLES[post.categorySlug] ?? { gradient: 'linear-gradient(135deg,#4a3a2a 0%,#6B4F33 100%)', icon: 'droplet' as const };
                 return (
                 <Link
                   key={post.slug}
@@ -102,7 +103,7 @@ export default function BlogPage() {
                 >
                   {/* Card header (branded visual) */}
                   <div style={{ position: 'relative', height: '150px', background: cs.gradient, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <span style={{ fontSize: '3rem', opacity: 0.9 }} aria-hidden="true">{cs.icon}</span>
+                    <span style={{ fontSize: '3rem', opacity: 0.9 }} aria-hidden="true"><Icon name={cs.icon} size={30} /></span>
                     <span style={{ position: 'absolute', left: '16px', bottom: '14px', fontFamily: 'var(--font-head)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--white)', background: 'rgba(0,0,0,0.35)', padding: '4px 12px', borderRadius: '20px' }}>
                       {cat?.label ?? post.categorySlug}
                     </span>

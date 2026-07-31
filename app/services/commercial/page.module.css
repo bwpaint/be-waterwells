@@ -339,8 +339,11 @@
   font-family: var(--font-head);
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 900;
+  line-height: 1.15;
   color: var(--white);
   margin-bottom: 16px;
+  /* Short headline — keep on one line; re-enabled to wrap on small screens. */
+  white-space: nowrap;
 }
 .finalCtaInner p {
   color: rgba(255,255,255,0.65);
@@ -380,6 +383,8 @@
   .subServicesSection { padding: 28px 16px; }
   .permitsSection { padding: 28px 16px; }
   .overviewStats { grid-template-columns: repeat(2, 1fr); }
+  /* Allow the CTA headline to wrap again on narrow screens. */
+  .finalCtaInner h2 { white-space: normal; }
 }
 
 /* Hero photo — right column */

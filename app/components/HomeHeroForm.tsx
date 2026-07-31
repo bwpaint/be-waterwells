@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Icon from './Icon';
 import styles from './HomeHeroForm.module.css';
 
 export default function HomeHeroForm() {
@@ -69,7 +70,7 @@ export default function HomeHeroForm() {
         {loading ? 'Sending…' : 'Request Service'}
       </button>
       <p className={styles.formDisclaimer}>
-        🔒 Your info stays private. TDLR Licensed · Insured · Since 1979
+        <Icon name="lock" size={14} /> Your info stays private. TDLR Licensed · Insured · Since 1979
       </p>
     </form>
   );

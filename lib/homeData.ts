@@ -170,11 +170,4 @@ export const homeFaqs = [
   },
 ];
 
-export const SERVICE_ICONS: Record<string, string> = {
-  drill: '🔩',
-  pump: '⚙️',
-  rehab: '💧',
-  irrigation: '🌿',
-  inspect: '🔬',
-  generator: '⚡',
-};
+

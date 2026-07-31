@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnnouncementBar from '../../components/AnnouncementBar';
@@ -86,32 +87,32 @@ const jsonLd = {
 
 const included = [
   {
-    icon: '🔧',
+    icon: 'wrench' as const,
     title: 'Rotary Rig Drilling',
     desc: 'Truck-mounted rotary rig drilled to your target aquifer with a complete geological log for your records.',
   },
   {
-    icon: '🪛',
+    icon: 'screwdriver' as const,
     title: 'Proper Casing & Screen',
     desc: 'Casing and screen type matched to your well conditions, pressure cemented in place for long-term performance.',
   },
   {
-    icon: '💧',
+    icon: 'droplet' as const,
     title: 'Well Development',
     desc: 'Full aquifer development to clear drilling fluids, remove fines, and maximize sustainable production yield.',
   },
   {
-    icon: '⚙️',
+    icon: 'gear' as const,
     title: 'Submersible Pump & Motor',
     desc: 'Franklin Electric submersible pump and motor sized to your household demand — installed and wired at the wellhead.',
   },
   {
-    icon: '🔋',
+    icon: 'battery' as const,
     title: 'Pressure Tank',
     desc: 'Correctly sized pressure tank with pressure switch, gauge, and main shut-off for reliable system pressure.',
   },
   {
-    icon: '📋',
+    icon: 'clipboard' as const,
     title: 'Permits',
     desc: 'All GCD permits and the driller’s completion report.',
   },
@@ -162,19 +163,19 @@ const costDrivers = [
 
 const related = [
   {
-    icon: '🏡',
+    icon: 'house' as const,
     title: 'Residential Water Well Services',
     slug: '/services/residential',
     desc: 'Pump replacement, pressure tanks, constant pressure upgrades, and complete system service for Houston-area homeowners.',
   },
   {
-    icon: '🏗️',
+    icon: 'crane' as const,
     title: 'Commercial Water Well Services',
     slug: '/services/commercial',
     desc: 'High-capacity wells for ranches, farms, equestrian properties, nurseries, and commercial sites across the Houston area.',
   },
   {
-    icon: '🛠️',
+    icon: 'tools' as const,
     title: 'Maintenance & Inspection',
     slug: '/services/well-maintenance',
     desc: 'Annual inspection, well rehabilitation, and ongoing care that keeps your well running for decades, not years.',
@@ -287,7 +288,7 @@ export default function WaterWellDrillingPage() {
           <div className={styles.subGrid}>
             {included.map((item) => (
               <div key={item.title} className={styles.subCard}>
-                <span className={styles.subIcon}>{item.icon}</span>
+                <span className={styles.subIcon}><Icon name={item.icon} size={30} /></span>
                 <h3 className={styles.subTitle}>{item.title}</h3>
                 <p className={styles.subDesc}>{item.desc}</p>
               </div>
@@ -354,7 +355,7 @@ export default function WaterWellDrillingPage() {
           <div className={styles.subGrid}>
             {related.map((r) => (
               <div key={r.slug} className={styles.subCard}>
-                <span className={styles.subIcon}>{r.icon}</span>
+                <span className={styles.subIcon}><Icon name={r.icon} size={30} /></span>
                 <h3 className={styles.subTitle}>{r.title}</h3>
                 <p className={styles.subDesc}>{r.desc}</p>
                 <Link href={r.slug} className={styles.subLink}>

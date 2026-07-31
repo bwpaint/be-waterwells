@@ -50,8 +50,10 @@
 /* ── CROSS-LINKS ───────────────────────────────────────────── */
 .crossLinkSection { margin-bottom: 40px; }
 .crossLinkP { font-size: 0.95rem; color: var(--warm-gray); line-height: 1.75; background: var(--cream); border: 1px solid var(--stone-light); border-radius: var(--radius-lg); padding: 22px 24px; }
-.crossLinkP a { color: var(--orange); font-weight: 700; }
-.crossLinkP a:hover { color: var(--orange-hover); }
+/* Orange-on-cream failed contrast in this callout. Black + bold reads clearly;
+   orange is reserved for the hover state. */
+.crossLinkP a { color: var(--charcoal); font-weight: 800; text-decoration: underline; }
+.crossLinkP a:hover { color: var(--orange); }
 
 /* ── SUB-SERVICE CARDS ─────────────────────────────────────── */
 .subServicesSection { background: var(--cream); border-radius: var(--radius-lg); padding: 40px 32px; margin-bottom: 40px; }
@@ -137,3 +139,6 @@
   .heroGrid { grid-template-columns: 1fr; }
   .heroPhoto { max-width: 480px; }
 }
+
+/* Inline heading icons — align to the text baseline and keep a small gap. */
+.seasonTitle { display: flex; align-items: center; gap: 8px; }

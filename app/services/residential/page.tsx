@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnnouncementBar from '../../components/AnnouncementBar';
@@ -83,21 +84,21 @@ const jsonLd = {
 
 const homeownerServices = [
   {
-    icon: '🏡',
+    icon: 'house' as const,
     title: 'New & Replacement Wells',
     href: '/services/water-well-drilling',
     desc: 'A new residential well drilled to the Jasper or Evangeline Aquifer — permitted, cased in Schedule 40 PVC, and finished with pump and pressure tank.',
     highlights: ['Rotary rig to target aquifer', 'All permits included', '2-year workmanship warranty'],
   },
   {
-    icon: '🔧',
+    icon: 'wrench' as const,
     title: 'Well Rehabilitation',
     href: '/services/well-rehabilitation',
     desc: 'Restore a tired well producing brown, gritty, or low-yield water — well screen repair, redevelopment, and iron-bacteria treatment instead of drilling new.',
     highlights: ['Well screen repair', 'Yield restoration', 'Iron bacteria treatment'],
   },
   {
-    icon: '🗓️',
+    icon: 'calendar' as const,
     title: 'Maintenance & Inspection',
     href: '/services/well-maintenance',
     desc: 'Annual well water pump maintenance and inspection that catches early wear, keeps your warranty intact, and prevents the emergency call before it happens.',
@@ -107,27 +108,27 @@ const homeownerServices = [
 
 const pumpSigns = [
   {
-    title: '💧 No Water at All',
+    icon: 'droplet' as const, title: 'No Water at All',
     desc: 'Turned on a faucet and nothing came out? Could be a tripped breaker, failed pump, or broken pressure switch. Call us — this is an emergency.',
   },
   {
-    title: '📉 Sudden Low Pressure',
+    icon: 'trendDown' as const, title: 'Sudden Low Pressure',
     desc: 'Pressure dropped overnight or after a power outage? Your pump or pressure tank may have failed. Do not wait — low pressure often means the pump is working overtime.',
   },
   {
-    title: '⚡ Pump Won&apos;t Stop Running',
+    icon: 'bolt' as const, title: 'Pump Won&apos;t Stop Running',
     desc: 'If your pump runs continuously and never shuts off, your tank&apos;s air bladder has failed or your pump can&apos;t build pressure. This will burn out your motor fast.',
   },
   {
-    title: '🔄 Short Cycling',
+    icon: 'cycle' as const, title: 'Short Cycling',
     desc: 'A pump that clicks on and off rapidly every few seconds has a waterlogged tank. But ignore it and you run the risk of burning up the pump entirely.',
   },
   {
-    title: '💨 Air Spitting from Faucets',
+    icon: 'wind' as const, title: 'Air Spitting from Faucets',
     desc: 'Sputtering air mixed with water usually means it&apos;s time for maintenance. Over time, wells need to be maintained to keep optimal performance.',
   },
   {
-    title: '🌊 Discolored or Gritty Water',
+    icon: 'wave' as const, title: 'Discolored or Gritty Water',
     desc: 'Brown, rusty, or sandy water after years of clear water often means your well screen has failed or your pump is pulling sediment. Time for an inspection.',
   },
 ];
@@ -142,27 +143,27 @@ const replaceWhen = [
 
 const pressureFeatures = [
   {
-    title: '🔄 Rapid Pump Cycling',
+    icon: 'cycle' as const, title: 'Rapid Pump Cycling',
     desc: 'Pump turns on and off every few seconds — the classic sign of a waterlogged or undersized tank. A correctly sized tank stops the cycling that wears out motors.',
   },
   {
-    title: '💧 Waterlogged Tank',
+    icon: 'droplet' as const, title: 'Waterlogged Tank',
     desc: 'The bladder has failed and the tank is full of water with no air cushion, and it is due for replacement.',
   },
   {
-    title: '📏 Sized to Your Home',
+    icon: 'ruler' as const, title: 'Sized to Your Home',
     desc: 'A 2-bedroom home needs ~20 gallons; 3-bedroom homes ~32; 4+ bedroom or irrigation properties 44–80 gallons. Undersizing is the #1 cause of premature pump failure.',
   },
   {
-    title: '🛠️ Single-Visit Replacement',
+    icon: 'tools' as const, title: 'Single-Visit Replacement',
     desc: 'Most pressure tank replacements are completed in a single visit — tank, fittings, pre-charge setup, and labor — and immediately stop the short-cycling that kills pumps.',
   },
   {
-    title: '🚿 City-Like Constant Pressure',
+    icon: 'shower' as const, title: 'City-Like Constant Pressure',
     desc: 'A variable frequency drive (VFD) system holds pressure within ±2–3 PSI continuously. Shower while the dishwasher runs and three irrigation zones water — no surges, no drops.',
   },
   {
-    title: '⚡ 30–50% Energy Savings',
+    icon: 'bolt' as const, title: '30–50% Energy Savings',
     desc: 'A VFD pump soft-starts and runs only as fast as demand requires — typically 30–50% less electricity, soft start that extends motor life, and a 3–5 year payback.',
   },
 ];
@@ -275,7 +276,7 @@ export default function ResidentialHubPage() {
           <div className={styles.subGrid}>
             {homeownerServices.map((s) => (
               <div key={s.href} className={styles.subCard}>
-                <span className={styles.subIcon}>{s.icon}</span>
+                <span className={styles.subIcon}><Icon name={s.icon} size={30} /></span>
                 <h3 className={styles.subTitle}>{s.title}</h3>
                 <p className={styles.subDesc}>{s.desc}</p>
                 <ul className={styles.subHighlights}>
@@ -307,7 +308,7 @@ export default function ResidentialHubPage() {
           <div className={styles.signGrid}>
             {pumpSigns.map((s) => (
               <div key={s.title} className={styles.signCard}>
-                <h3 dangerouslySetInnerHTML={{ __html: s.title }} />
+                <h3><Icon name={s.icon} size={20} /> <span dangerouslySetInnerHTML={{ __html: s.title }} /></h3>
                 <p dangerouslySetInnerHTML={{ __html: s.desc }} />
               </div>
             ))}
@@ -355,7 +356,7 @@ export default function ResidentialHubPage() {
           <div className={styles.featureGrid}>
             {pressureFeatures.map((f) => (
               <div key={f.title} className={styles.featureCard}>
-                <h3>{f.title}</h3>
+                <h3><Icon name={f.icon} size={20} /> {f.title}</h3>
                 <p>{f.desc}</p>
               </div>
             ))}
@@ -413,7 +414,7 @@ export default function ResidentialHubPage() {
 
         {/* ── EMERGENCY CALLOUT ───────────────── */}
         <div className={styles.emergencyBlock}>
-          <span className={styles.emergencyBadge}>⚡ Emergency Service</span>
+          <span className={styles.emergencyBadge}><Icon name="bolt" size={14} /> Emergency Service</span>
           <h2>No Water? Call Us.</h2>
           <p>
             Call us directly or fill out the request form, and a licensed technician will

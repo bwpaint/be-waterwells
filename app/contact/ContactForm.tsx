@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 
+import Icon from '../components/Icon';
 const SERVICES = [
   'New Well Drilling',
   'Irrigation Well',
@@ -27,7 +28,7 @@ export default function ContactForm() {
   if (sent) {
     return (
       <div style={{ background: 'var(--white)', border: '1px solid var(--light-stone)', borderRadius: 'var(--radius)', padding: '40px', textAlign: 'center' }}>
-        <div style={{ fontSize: '2.5rem', marginBottom: '16px' }}>✅</div>
+        <div style={{ marginBottom: '16px', color: 'var(--orange)' }}><Icon name="checkCircle" size={44} /></div>
         <h3 style={{ fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '1.3rem', color: 'var(--dark-earth)', marginBottom: '10px' }}>Message Received!</h3>
         <p style={{ color: 'var(--dark-stone)', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '20px' }}>
           We&apos;ll be in touch shortly. For urgent issues, call us directly:

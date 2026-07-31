@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
+import Icon from './Icon';
 import { useRouter } from 'next/navigation';
 import { COUNTIES, CITIES, MAP_VIEWBOX, GULF_LABEL } from '../../lib/serviceAreaGeo';
 import styles from './ServiceAreaMap.module.css';
@@ -287,7 +288,7 @@ export default function ServiceAreaMap() {
       )}
 
       <p className={styles.mapHint}>
-        💡 Hover a pin for the city, click to open its waterwell service page
+        <Icon name="bulb" size={14} /> Hover a pin for the city, click to open its waterwell service page
       </p>
     </div>
   );

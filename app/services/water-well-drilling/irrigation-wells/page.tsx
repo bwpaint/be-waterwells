@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../../components/Icon';
 import Link from 'next/link';
 import AnnouncementBar from '../../../components/AnnouncementBar';
 import Navbar from '../../../components/Navbar';
@@ -77,33 +78,33 @@ const jsonLd = {
 
 const whyDedicated = [
   {
-    icon: '💸',
+    icon: 'money' as const,
     title: 'Stop Paying City Water Rates',
     desc: 'Running a sprinkler system on city water in the Houston area can cost $150–$250 per month or more during summer. A dedicated irrigation well eliminates that bill entirely.',
   },
   {
-    icon: '🏠',
+    icon: 'home' as const,
     title: 'Protect Your Household Supply',
     desc: 'Running irrigation on your household well creates pressure drops, overworks your pump, and shortens pump life. A dedicated well keeps systems separate and both running better.',
   },
   {
-    icon: '🚫',
+    icon: 'ban' as const,
     title: 'No City Water Restrictions',
     desc: 'City water use restrictions during drought conditions do not apply to your own well water. Water your lawn when it needs it, not when the city allows it.',
   },
   {
-    icon: '📈',
+    icon: 'trendUp' as const,
     title: 'Pays for Itself',
     desc: 'At $150–$250/month in irrigation water savings, most wells pay for themselves in 4–6 years — after that, your irrigation water is essentially free.',
   },
 ];
 
 const included = [
-  { icon: '🔩', title: 'Rotary Rig Drilling', desc: 'Drilled to your target aquifer with full geological log. Cased in Schedule 40 PVC with gravel pack and screen.' },
-  { icon: '⚙️', title: 'Irrigation Pump Sizing', desc: 'Pump sized for your sprinkler system flow rate and pressure requirements — not generic household sizing.' },
-  { icon: '🔧', title: 'Dedicated Wellhead', desc: 'Separate wellhead, pitless adapter, and surface casing distinct from any existing household well on the property.' },
-  { icon: '🔌', title: 'System Integration', desc: 'We work with your existing irrigation system or contractor to ensure clean integration at the pump controller.' },
-  { icon: '📋', title: 'All Permits Included', desc: 'GCD permit filing and fees, driller\'s completion report, and all required documentation included in your estimate.' },
+  { icon: 'drill' as const, title: 'Rotary Rig Drilling', desc: 'Drilled to your target aquifer with full geological log. Cased in Schedule 40 PVC with gravel pack and screen.' },
+  { icon: 'gear' as const, title: 'Irrigation Pump Sizing', desc: 'Pump sized for your sprinkler system flow rate and pressure requirements — not generic household sizing.' },
+  { icon: 'wrench' as const, title: 'Dedicated Wellhead', desc: 'Separate wellhead, pitless adapter, and surface casing distinct from any existing household well on the property.' },
+  { icon: 'plug' as const, title: 'System Integration', desc: 'We work with your existing irrigation system or contractor to ensure clean integration at the pump controller.' },
+  { icon: 'clipboard' as const, title: 'All Permits Included', desc: 'GCD permit filing and fees, driller\'s completion report, and all required documentation included in your estimate.' },
 ];
 
 const bestFor = [
@@ -224,7 +225,7 @@ export default function IrrigationWellsPage() {
           <div className={styles.whyGrid}>
             {whyDedicated.map((w) => (
               <div key={w.title} className={styles.whyCard}>
-                <span className={styles.whyIcon}>{w.icon}</span>
+                <span className={styles.whyIcon}><Icon name={w.icon} size={30} /></span>
                 <h3 className={styles.whyTitle}>{w.title}</h3>
                 <p className={styles.whyDesc}>{w.desc}</p>
               </div>
@@ -262,7 +263,7 @@ export default function IrrigationWellsPage() {
           <div className={styles.includedGrid}>
             {included.map((item) => (
               <div key={item.title} className={styles.includedCard}>
-                <span className={styles.includedIcon}>{item.icon}</span>
+                <span className={styles.includedIcon}><Icon name={item.icon} size={30} /></span>
                 <h3 className={styles.includedTitle}>{item.title}</h3>
                 <p className={styles.includedDesc}>{item.desc}</p>
               </div>

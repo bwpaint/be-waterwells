@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon, { type IconName } from '../../components/Icon';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import AnnouncementBar from '../../components/AnnouncementBar';
@@ -15,12 +16,12 @@ const CATEGORY_LABELS: Record<string, string> = {
   'emergency-well-services': 'Emergency Service',
 };
 
-const CATEGORY_STYLES: Record<string, { gradient: string; icon: string }> = {
-  'water-well-drilling': { gradient: 'linear-gradient(135deg,#4a3a2a 0%,#6B4F33 100%)', icon: '🔩' },
-  'well-pump-services':  { gradient: 'linear-gradient(135deg,#3d4b52 0%,#55636d 100%)', icon: '⚙️' },
-  'water-well-systems':  { gradient: 'linear-gradient(135deg,#4a4030 0%,#6b5a3b 100%)', icon: '💧' },
-  'well-maintenance':    { gradient: 'linear-gradient(135deg,#3f4a3a 0%,#55634f 100%)', icon: '🔧' },
-  'emergency-well-services': { gradient: 'linear-gradient(135deg,#7a3a1a 0%,#b84e08 100%)', icon: '⚡' },
+const CATEGORY_STYLES: Record<string, { gradient: string; icon: IconName }> = {
+  'water-well-drilling': { gradient: 'linear-gradient(135deg,#4a3a2a 0%,#6B4F33 100%)', icon: 'drill' as const },
+  'well-pump-services':  { gradient: 'linear-gradient(135deg,#3d4b52 0%,#55636d 100%)', icon: 'gear' as const },
+  'water-well-systems':  { gradient: 'linear-gradient(135deg,#4a4030 0%,#6b5a3b 100%)', icon: 'droplet' as const },
+  'well-maintenance':    { gradient: 'linear-gradient(135deg,#3f4a3a 0%,#55634f 100%)', icon: 'wrench' as const },
+  'emergency-well-services': { gradient: 'linear-gradient(135deg,#7a3a1a 0%,#b84e08 100%)', icon: 'bolt' as const },
 };
 
 export function generateStaticParams() {
@@ -46,7 +47,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   if (!post) notFound();
 
   const label = CATEGORY_LABELS[post.categorySlug] ?? post.categorySlug;
-  const cs = CATEGORY_STYLES[post.categorySlug] ?? { gradient: 'linear-gradient(135deg,#4a3a2a 0%,#6B4F33 100%)', icon: '💧' };
+  const cs = CATEGORY_STYLES[post.categorySlug] ?? { gradient: 'linear-gradient(135deg,#4a3a2a 0%,#6B4F33 100%)', icon: 'droplet' as const };
   const related = getBlogPostsByCategory(post.categorySlug, 4).filter((p) => p.slug !== post.slug).slice(0, 3);
 
   return (

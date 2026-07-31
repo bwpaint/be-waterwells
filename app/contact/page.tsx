@@ -86,7 +86,7 @@ export default function ContactPage() {
               </div>
 
               <div style={{ marginTop: '40px', padding: '24px', background: 'rgba(217,95,10,0.08)', border: '1px solid rgba(217,95,10,0.25)', borderRadius: 'var(--radius)' }}>
-                <div style={{ fontFamily: 'var(--font-head)', fontWeight: 800, color: 'var(--dark-earth)', fontSize: '0.88rem', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: '8px' }}>⚡ Water Emergency?</div>
+                <div style={{ fontFamily: 'var(--font-head)', fontWeight: 800, color: 'var(--dark-earth)', fontSize: '0.88rem', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: '8px' }}><Icon name="bolt" size={15} /> Water Emergency?</div>
                 <p style={{ fontSize: '0.92rem', color: 'var(--dark-stone)', lineHeight: 1.6, margin: 0 }}>
                   If you&apos;ve lost water or have a pump failure, call us directly at <a href="tel:+12814484447" style={{ color: 'var(--dark-earth)', fontWeight: 700 }}>(281) 448-4447</a>. Emergency service is available.
                 </p>

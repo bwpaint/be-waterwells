@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnnouncementBar from '../components/AnnouncementBar';
@@ -50,35 +51,35 @@ const jsonLd = {
 
 const categories = [
   {
-    icon: '🔩',
+    icon: 'drill' as const,
     title: 'Water Well Drilling & Installation',
     slug: 'water-well-drilling',
     desc: 'New residential, irrigation, and commercial well drilling and complete installation using truck-mounted rotary rigs. We drill to the Jasper, Chicot, and Evangeline Aquifers across the Houston area.',
     services: ['New Wells', 'Irrigation Wells', 'Full Installation', 'Permit Handling'],
   },
   {
-    icon: '🏡',
+    icon: 'house' as const,
     title: 'Residential Water Well Services',
     slug: 'residential',
     desc: 'Everything homeowners need: well pump replacement and new installation, pressure tanks, constant pressure systems, generator prep, and emergency service when you need it.',
     services: ['Pump Replacement', 'Pressure Tanks', 'Constant Pressure', 'Emergency Service'],
   },
   {
-    icon: '🏗️',
+    icon: 'crane' as const,
     title: 'Commercial & Agricultural',
     slug: 'commercial',
     desc: 'High-capacity wells for ranches, farms, equestrian properties, nurseries, and commercial sites — larger casing, higher-horsepower pumps, high-capacity permits handled.',
     services: ['Ranch & Livestock', 'Equestrian', 'Farms & Nurseries', 'Commercial Sites'],
   },
   {
-    icon: '💧',
+    icon: 'droplet' as const,
     title: 'Water Well Rehabilitation',
     slug: 'well-rehabilitation',
     desc: 'Restore yield and water quality in declining wells through mechanical jetting, shock chlorination, and acid treatment — at a fraction of new well drilling cost.',
     services: ['Restore Flow', 'Iron Bacteria', 'Well Screen Repair', 'Avoid Replacement'],
   },
   {
-    icon: '🔍',
+    icon: 'search' as const,
     title: 'Water Well Maintenance & Inspection',
     slug: 'well-maintenance',
     desc: 'Annual inspection, real-estate and FHA/VA well inspections, and ongoing maintenance programs to extend the life of your well and protect water quality.',
@@ -197,7 +198,7 @@ export default function ServicesHubPage() {
           <div className={styles.categoriesGrid}>
             {categories.map((cat) => (
               <div key={cat.slug} className={styles.catCard}>
-                <span className={styles.catIcon}>{cat.icon}</span>
+                <span className={styles.catIcon}><Icon name={cat.icon} size={30} /></span>
                 <h3 className={styles.catTitle}>{cat.title}</h3>
                 <p className={styles.catDesc}>{cat.desc}</p>
                 <ul className={styles.catServices}>

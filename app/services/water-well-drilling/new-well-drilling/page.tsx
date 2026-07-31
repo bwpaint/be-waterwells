@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../../components/Icon';
 import Link from 'next/link';
 import AnnouncementBar from '../../../components/AnnouncementBar';
 import Navbar from '../../../components/Navbar';
@@ -84,12 +85,12 @@ const jsonLd = {
 };
 
 const included = [
-  { icon: '🔧', title: 'Rotary Rig Drilling', desc: 'Truck-mounted rotary rig drilled to your target aquifer with a complete geological log for your records.' },
-  { icon: '🪛', title: 'PVC Casing & Screen', desc: 'Schedule 40 PVC casing with gravel pack and properly placed stainless screen for long-term performance.' },
-  { icon: '💧', title: 'Well Development', desc: 'Full aquifer development to clear drilling fluids, remove fines, and maximize sustainable production yield.' },
-  { icon: '⚙️', title: 'Submersible Pump & Motor', desc: 'Franklin Electric submersible pump and motor sized to your household demand — installed and wired at wellhead.' },
-  { icon: '🔋', title: 'Pressure Tank', desc: 'Correctly sized pressure tank with pressure switch, gauge, and main shut-off for reliable system pressure.' },
-  { icon: '📋', title: 'Permits & Water Test', desc: 'All GCD permits, driller\'s completion report, and initial bacteriological and basic water quality test.' },
+  { icon: 'wrench' as const, title: 'Rotary Rig Drilling', desc: 'Truck-mounted rotary rig drilled to your target aquifer with a complete geological log for your records.' },
+  { icon: 'screwdriver' as const, title: 'PVC Casing & Screen', desc: 'Schedule 40 PVC casing with gravel pack and properly placed stainless screen for long-term performance.' },
+  { icon: 'droplet' as const, title: 'Well Development', desc: 'Full aquifer development to clear drilling fluids, remove fines, and maximize sustainable production yield.' },
+  { icon: 'gear' as const, title: 'Submersible Pump & Motor', desc: 'Franklin Electric submersible pump and motor sized to your household demand — installed and wired at wellhead.' },
+  { icon: 'battery' as const, title: 'Pressure Tank', desc: 'Correctly sized pressure tank with pressure switch, gauge, and main shut-off for reliable system pressure.' },
+  { icon: 'clipboard' as const, title: 'Permits & Water Test', desc: 'All GCD permits, driller\'s completion report, and initial bacteriological and basic water quality test.' },
 ];
 
 const processSteps = [
@@ -217,7 +218,7 @@ export default function NewWellDrillingPage() {
           <div className={styles.includedGrid}>
             {included.map((item) => (
               <div key={item.title} className={styles.includedCard}>
-                <span className={styles.includedIcon}>{item.icon}</span>
+                <span className={styles.includedIcon}><Icon name={item.icon} size={30} /></span>
                 <h3 className={styles.includedTitle}>{item.title}</h3>
                 <p className={styles.includedDesc}>{item.desc}</p>
               </div>

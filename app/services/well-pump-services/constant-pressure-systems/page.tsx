@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../../components/Icon';
 import Link from 'next/link';
 import AnnouncementBar from '../../../components/AnnouncementBar';
 import Navbar from '../../../components/Navbar';
@@ -289,28 +290,28 @@ export default function ConstantPressureSystemsPage() {
             <div className={styles.whoGrid}>
               {[
                 {
-                  icon: '🏡',
+                  icon: 'house' as const,
                   title: 'Large Homes (3+ Bathrooms)',
                   desc: 'More simultaneous water users means more noticeable pressure swings with a standard system. Constant pressure eliminates the competition between showers, sinks, and toilets.',
                 },
                 {
-                  icon: '🌿',
+                  icon: 'leaf' as const,
                   title: 'Properties with Irrigation',
                   desc: 'When irrigation zones activate, a standard pump can\'t keep up and household pressure suffers. A VFD pump ramps to match combined demand — irrigation and indoor use at full pressure simultaneously.',
                 },
                 {
-                  icon: '🐴',
+                  icon: 'horse' as const,
                   title: 'Horse Properties & Farms',
                   desc: 'High-volume fill cycles for troughs, wash racks, and livestock watering demand consistent flow. Constant pressure systems handle variable demand without the pressure surges that stress older pipes.',
                 },
                 {
-                  icon: '🏗️',
+                  icon: 'crane' as const,
                   title: 'New Construction',
                   desc: 'Installing a constant pressure system during initial construction costs less than retrofitting later — and your home never has to experience a "well water" pressure reputation.',
                 },
               ].map((item) => (
                 <div key={item.title} className={styles.whoCard}>
-                  <span className={styles.whoIcon}>{item.icon}</span>
+                  <span className={styles.whoIcon}><Icon name={item.icon} size={30} /></span>
                   <h3 className={styles.whoTitle}>{item.title}</h3>
                   <p className={styles.whoDesc}>{item.desc}</p>
                 </div>

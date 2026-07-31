@@ -482,3 +482,6 @@
   .heroGrid { grid-template-columns: 1fr; }
   .heroPhoto { max-width: 480px; }
 }
+
+/* Inline heading icons — align to the text baseline and keep a small gap. */
+.signCard h3, .featureCard h3 { display: flex; align-items: center; gap: 8px; }

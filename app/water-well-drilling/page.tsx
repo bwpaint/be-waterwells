@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnnouncementBar from '../components/AnnouncementBar';
@@ -226,15 +227,15 @@ export default function WaterWellDrillingPage() {
           </h2>
           <div className={styles.includedGrid}>
             {[
-              { icon: '🔧', title: 'Rotary Rig Drilling', desc: 'Truck-mounted rig, drilled to target aquifer depth with full geological log.' },
-              { icon: '🪛', title: 'PVC Casing & Screen', desc: 'Schedule 40 PVC casing, gravel pack, and properly placed well screen.' },
-              { icon: '💧', title: 'Well Development', desc: 'Aquifer development to clear drilling fluids and maximize production yield.' },
-              { icon: '⚙️', title: 'Submersible Pump & Motor', desc: 'Franklin Electric submersible pump sized to your household or commercial demand.' },
-              { icon: '🔋', title: 'Pressure Tank', desc: 'Correctly sized pressure tank with pressure switch, gauge, and shut-off.' },
-              { icon: '📋', title: 'Permits & Docs', desc: 'All groundwater district permits, driller\'s report, and completion paperwork.' },
+              { icon: 'wrench' as const, title: 'Rotary Rig Drilling', desc: 'Truck-mounted rig, drilled to target aquifer depth with full geological log.' },
+              { icon: 'screwdriver' as const, title: 'PVC Casing & Screen', desc: 'Schedule 40 PVC casing, gravel pack, and properly placed well screen.' },
+              { icon: 'droplet' as const, title: 'Well Development', desc: 'Aquifer development to clear drilling fluids and maximize production yield.' },
+              { icon: 'gear' as const, title: 'Submersible Pump & Motor', desc: 'Franklin Electric submersible pump sized to your household or commercial demand.' },
+              { icon: 'battery' as const, title: 'Pressure Tank', desc: 'Correctly sized pressure tank with pressure switch, gauge, and shut-off.' },
+              { icon: 'clipboard' as const, title: 'Permits & Docs', desc: 'All groundwater district permits, driller\'s report, and completion paperwork.' },
             ].map((item) => (
               <div key={item.title} className={styles.includedCard}>
-                <span className={styles.includedIcon}>{item.icon}</span>
+                <span className={styles.includedIcon}><Icon name={item.icon} size={30} /></span>
                 <h3 className={styles.includedTitle}>{item.title}</h3>
                 <p className={styles.includedDesc}>{item.desc}</p>
               </div>

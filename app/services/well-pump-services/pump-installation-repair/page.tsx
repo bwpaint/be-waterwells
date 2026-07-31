@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../../components/Icon';
 import Link from 'next/link';
 import AnnouncementBar from '../../../components/AnnouncementBar';
 import Navbar from '../../../components/Navbar';
@@ -203,7 +204,7 @@ export default function PumpInstallRepairPage() {
 
               <div className={styles.scopeCard}>
                 <div className={styles.scopeHeader}>
-                  <span className={styles.scopeIcon}>🔧</span>
+                  <span className={styles.scopeIcon}><Icon name="wrench" size={30} /></span>
                   <h2 className={styles.scopeH2}>Pump Replacement & Diagnosis</h2>
                 </div>
                 <ul className={styles.scopeList}>

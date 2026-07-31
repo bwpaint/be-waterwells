@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -38,12 +39,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const cityServices = [
-  { icon: '🔩', title: 'Waterwell Drilling', desc: 'New residential and commercial waterwells. Rotary rig drilling to the Jasper and Evangeline Aquifers.' },
-  { icon: '⚙️', title: 'Pump Replacement & Install', desc: 'Submersible pump replacement, new pump installation, and emergency service. Franklin Electric authorized dealer.' },
-  { icon: '💧', title: 'Well Rehabilitation', desc: 'Well shocking, acid treatment, and screen cleaning to restore aging wells to full production.' },
-  { icon: '🌿', title: 'Irrigation Waterwells', desc: 'Dedicated irrigation systems for residential lots, farms, and ranches.' },
-  { icon: '⚡', title: 'Generator Prep Kits', desc: 'Keep the water flowing during outages with a properly installed generator transfer switch.' },
-  { icon: '🔬', title: 'Well Inspection', desc: 'Pre-purchase inspections and pump diagnostics with written reports for real estate transactions.' },
+  { icon: 'drill' as const, title: 'Waterwell Drilling', desc: 'New residential and commercial waterwells. Rotary rig drilling to the Jasper and Evangeline Aquifers.' },
+  { icon: 'gear' as const, title: 'Pump Replacement & Install', desc: 'Submersible pump replacement, new pump installation, and emergency service. Franklin Electric authorized dealer.' },
+  { icon: 'droplet' as const, title: 'Well Rehabilitation', desc: 'Well shocking, acid treatment, and screen cleaning to restore aging wells to full production.' },
+  { icon: 'leaf' as const, title: 'Irrigation Waterwells', desc: 'Dedicated irrigation systems for residential lots, farms, and ranches.' },
+  { icon: 'bolt' as const, title: 'Generator Prep Kits', desc: 'Keep the water flowing during outages with a properly installed generator transfer switch.' },
+  { icon: 'microscope' as const, title: 'Well Inspection', desc: 'Pre-purchase inspections and pump diagnostics with written reports for real estate transactions.' },
 ];
 
 export default function CityPage({ params }: Props) {
@@ -193,7 +194,7 @@ export default function CityPage({ params }: Props) {
           <div className={styles.servicesGrid}>
             {cityServices.map((svc) => (
               <div key={svc.title} className={styles.serviceCard}>
-                <span className={styles.svcIcon}>{svc.icon}</span>
+                <span className={styles.svcIcon}><Icon name={svc.icon} size={30} /></span>
                 <h3 className={styles.svcTitle}>{svc.title}</h3>
                 <p className={styles.svcDesc}>{svc.desc}</p>
               </div>

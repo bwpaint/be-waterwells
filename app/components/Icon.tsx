@@ -24,7 +24,7 @@ export type IconName =
   | 'plug' | 'search' | 'lock' | 'wrench' | 'drill' | 'microscope'
   | 'clock' | 'truck' | 'ban' | 'shower' | 'tools' | 'testTube'
   | 'screwdriver' | 'pump' | 'irrigation' | 'rehab' | 'inspect' | 'mail'
-  | 'tornado';
+  | 'tornado' | 'stopwatch';
 
 const P: Record<IconName, React.ReactNode> = {
   star: <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />,
@@ -81,6 +81,7 @@ const P: Record<IconName, React.ReactNode> = {
   inspect: <><circle cx="11" cy="11" r="6" /><path d="M21 21l-4-4" /><path d="M11 8v6M8 11h6" /></>,
   mail: <><rect x="2" y="4" width="20" height="16" rx="2" /><polyline points="22,7 12,14 2,7" /></>,
   tornado: <><path d="M3 4h18" /><path d="M5 8h14" /><path d="M7 12h10" /><path d="M9.5 16h5" /><path d="M11 20h2" /></>,
+  stopwatch: <><circle cx="12" cy="13" r="8" /><path d="M12 9v4l2.5 2.5" /><path d="M9 2h6" /><path d="M12 2v3" /><path d="M18.5 6.5l1.5-1.5" /></>,
 };
 
 export interface IconProps {

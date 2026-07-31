@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../components/Icon';
 import Link from 'next/link';
 import AnnouncementBar from '../../components/AnnouncementBar';
 import Navbar from '../../components/Navbar';
@@ -138,7 +139,7 @@ export default function EmergencyWellServicesPage() {
             <span>/</span>
             <span>Emergency Well Services</span>
           </nav>
-          <div className={styles.urgencyBadge}>⚡ 24/7 Dispatch — We Answer Now</div>
+          <div className={styles.urgencyBadge}><Icon name="bolt" size={15} /> 24/7 Dispatch — We Answer Now</div>
           <div className={styles.h1Wrap}>
             <span className={styles.h1Line1}>No Water?</span>
             <h1 className={styles.h1Main}>Emergency Well Service — 24/7</h1>
@@ -304,15 +305,15 @@ export default function EmergencyWellServicesPage() {
             <h2 className="section-title">What Emergency Repair Covers</h2>
             <div className={styles.coveredGrid}>
               {[
-                { icon: '🔍', title: 'Pump Diagnosis', desc: 'Full electrical and mechanical diagnosis to pinpoint the failure before any repair begins. Written findings every time.' },
-                { icon: '⚙️', title: 'Motor Replacement', desc: 'Franklin Electric and compatible submersible motors — pulled and replaced same day when stock allows.' },
-                { icon: '🔧', title: 'Pressure Switch', desc: 'New pressure switch installation with properly calibrated cut-in and cut-out pressure settings.' },
-                { icon: '📦', title: 'Control Box', desc: 'Control box replacement for single-phase and three-phase systems. Surge-protected replacements available.' },
-                { icon: '⚡', title: 'Electrical Troubleshooting', desc: 'Wire testing from breaker to pump head, splice repair, and motor lead replacement.' },
-                { icon: '🚚', title: 'Same-Day Parts', desc: 'We stock the most common pump sizes and components — no waiting a week for parts to arrive.' },
+                { icon: 'search' as const, title: 'Pump Diagnosis', desc: 'Full electrical and mechanical diagnosis to pinpoint the failure before any repair begins. Written findings every time.' },
+                { icon: 'gear' as const, title: 'Motor Replacement', desc: 'Franklin Electric and compatible submersible motors — pulled and replaced same day when stock allows.' },
+                { icon: 'wrench' as const, title: 'Pressure Switch', desc: 'New pressure switch installation with properly calibrated cut-in and cut-out pressure settings.' },
+                { icon: 'package' as const, title: 'Control Box', desc: 'Control box replacement for single-phase and three-phase systems. Surge-protected replacements available.' },
+                { icon: 'bolt' as const, title: 'Electrical Troubleshooting', desc: 'Wire testing from breaker to pump head, splice repair, and motor lead replacement.' },
+                { icon: 'truck' as const, title: 'Same-Day Parts', desc: 'We stock the most common pump sizes and components — no waiting a week for parts to arrive.' },
               ].map((item) => (
                 <div key={item.title} className={styles.coveredCard}>
-                  <span className={styles.coveredIcon}>{item.icon}</span>
+                  <span className={styles.coveredIcon}><Icon name={item.icon} size={30} /></span>
                   <h3 className={styles.coveredTitle}>{item.title}</h3>
                   <p className={styles.coveredDesc}>{item.desc}</p>
                 </div>
@@ -403,7 +404,7 @@ export default function EmergencyWellServicesPage() {
       {/* ── FINAL CTA ─── full-width, outside grid ── */}
       <section className={styles.finalCta}>
         <div className={styles.finalCtaInner}>
-          <div className={styles.finalCtaUrgency}>⚡ 24 / 7 Emergency Dispatch</div>
+          <div className={styles.finalCtaUrgency}><Icon name="bolt" size={15} /> 24 / 7 Emergency Dispatch</div>
           <h2 className={styles.finalCtaH2}>No Water? Call Now.</h2>
           <a href="tel:+12814484447" className={`btn btn-primary ${styles.finalCtaPhone}`}>
             (281) 448-4447

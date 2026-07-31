@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../components/Icon';
 import Link from 'next/link';
 import AnnouncementBar from '../../components/AnnouncementBar';
 import Navbar from '../../components/Navbar';
@@ -159,7 +160,7 @@ export default function WellPumpServicesPage() {
                 href="/services/well-pump-services/pump-installation-repair"
                 className={styles.serviceCard}
               >
-                <div className={styles.cardIcon}>⚙️</div>
+                <div className={styles.cardIcon}><Icon name="gear" size={34} /></div>
                 <h3 className={styles.cardTitle}>Pump Installation & Repair</h3>
                 <p className={styles.cardDesc}>
                   New submersible pump installation, pull-and-replace service,
@@ -179,7 +180,7 @@ export default function WellPumpServicesPage() {
                 href="/services/well-pump-services/constant-pressure-systems"
                 className={styles.serviceCard}
               >
-                <div className={styles.cardIcon}>📊</div>
+                <div className={styles.cardIcon}><Icon name="chart" size={34} /></div>
                 <h3 className={styles.cardTitle}>Constant Pressure Systems</h3>
                 <p className={styles.cardDesc}>
                   Upgrade your well to city-like constant pressure with a
@@ -205,7 +206,7 @@ export default function WellPumpServicesPage() {
           <div className="container">
             <div className={styles.franklinInner}>
               <div className={styles.franklinBadge}>
-                <div className={styles.franklinBadgeIcon}>🏆</div>
+                <div className={styles.franklinBadgeIcon}><Icon name="trophy" size={30} /></div>
                 <div>
                   <div className={styles.franklinBadgeTitle}>Franklin Electric</div>
                   <div className={styles.franklinBadgeSub}>Authorized Service Center</div>
@@ -239,14 +240,14 @@ export default function WellPumpServicesPage() {
             <h2 className="section-title">Signs Your Pump Needs Attention</h2>
             <div className={styles.signsGrid}>
               {[
-                { icon: '📉', sign: 'Fluctuating Pressure', desc: 'Water pressure surges and drops while running a faucet — often an undersized tank or failing pump.' },
-                { icon: '🔄', sign: 'Pump Running Constantly', desc: 'Your pump never stops cycling, even when no water is being used. This signals a waterlogged tank or pressure switch issue.' },
-                { icon: '💨', sign: 'Air Spurts at Faucets', desc: 'Air bubbles or spitting from taps after the pump runs. Can mean a low water table, failed check valve, or pump cavitation.' },
-                { icon: '💡', sign: 'High Electric Bills', desc: 'A pump running more than it should — due to leaks, tank problems, or motor inefficiency — shows up in your electricity costs.' },
-                { icon: '🚫', sign: 'No Water at All', desc: 'Complete loss of water is a pump or electrical failure until proven otherwise. Call for 24/7 emergency service.' },
+                { icon: 'trendDown' as const, sign: 'Fluctuating Pressure', desc: 'Water pressure surges and drops while running a faucet — often an undersized tank or failing pump.' },
+                { icon: 'cycle' as const, sign: 'Pump Running Constantly', desc: 'Your pump never stops cycling, even when no water is being used. This signals a waterlogged tank or pressure switch issue.' },
+                { icon: 'wind' as const, sign: 'Air Spurts at Faucets', desc: 'Air bubbles or spitting from taps after the pump runs. Can mean a low water table, failed check valve, or pump cavitation.' },
+                { icon: 'bulb' as const, sign: 'High Electric Bills', desc: 'A pump running more than it should — due to leaks, tank problems, or motor inefficiency — shows up in your electricity costs.' },
+                { icon: 'ban' as const, sign: 'No Water at All', desc: 'Complete loss of water is a pump or electrical failure until proven otherwise. Call for 24/7 emergency service.' },
               ].map((item) => (
                 <div key={item.sign} className={styles.signCard}>
-                  <span className={styles.signIcon}>{item.icon}</span>
+                  <span className={styles.signIcon}><Icon name={item.icon} size={30} /></span>
                   <h3 className={styles.signTitle}>{item.sign}</h3>
                   <p className={styles.signDesc}>{item.desc}</p>
                 </div>

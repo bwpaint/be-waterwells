@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '../../../components/Icon';
 import Link from 'next/link';
 import AnnouncementBar from '../../../components/AnnouncementBar';
 import Navbar from '../../../components/Navbar';
@@ -58,11 +59,11 @@ const jsonLd = {
 };
 
 const wellTypes = [
-  { icon: '🐄', title: 'Ranch & Livestock Wells', desc: 'High-yield wells for cattle ranches, livestock operations, and large rural properties. Sized for watering systems, stock tanks, and irrigation.' },
-  { icon: '🐎', title: 'Equestrian Properties', desc: 'Dedicated wells for horse properties and stables. Multiple outlet capability, trough systems, and wash rack supply. Sized for the real daily water demand of horses.' },
-  { icon: '🌱', title: 'Farms & Nurseries', desc: 'Agricultural wells for farming operations, plant nurseries, and greenhouse facilities. Irrigation-scale flow rates with appropriate pump sizing for extended run times.' },
-  { icon: '🏗️', title: 'Commercial Properties', desc: 'Office parks, light industrial, retail developments, and any commercial property where city water supply is unavailable or cost-prohibitive.' },
-  { icon: '💧', title: 'Irrigation Scale', desc: 'Large-volume wells for irrigation districts, multi-property irrigation systems, and acreage-scale agricultural irrigation. Multi-zone completion available.' },
+  { icon: 'livestock' as const, title: 'Ranch & Livestock Wells', desc: 'High-yield wells for cattle ranches, livestock operations, and large rural properties. Sized for watering systems, stock tanks, and irrigation.' },
+  { icon: 'horse' as const, title: 'Equestrian Properties', desc: 'Dedicated wells for horse properties and stables. Multiple outlet capability, trough systems, and wash rack supply. Sized for the real daily water demand of horses.' },
+  { icon: 'sprout' as const, title: 'Farms & Nurseries', desc: 'Agricultural wells for farming operations, plant nurseries, and greenhouse facilities. Irrigation-scale flow rates with appropriate pump sizing for extended run times.' },
+  { icon: 'crane' as const, title: 'Commercial Properties', desc: 'Office parks, light industrial, retail developments, and any commercial property where city water supply is unavailable or cost-prohibitive.' },
+  { icon: 'droplet' as const, title: 'Irrigation Scale', desc: 'Large-volume wells for irrigation districts, multi-property irrigation systems, and acreage-scale agricultural irrigation. Multi-zone completion available.' },
 ];
 
 const specs = [
@@ -154,7 +155,7 @@ export default function CommercialAgriculturalWellsPage() {
           <div className={styles.typesGrid}>
             {wellTypes.map((t) => (
               <div key={t.title} className={styles.typeCard}>
-                <span className={styles.typeIcon}>{t.icon}</span>
+                <span className={styles.typeIcon}><Icon name={t.icon} size={30} /></span>
                 <h3 className={styles.typeTitle}>{t.title}</h3>
                 <p className={styles.typeDesc}>{t.desc}</p>
               </div>
