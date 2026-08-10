@@ -53,10 +53,10 @@ const jsonLd = {
         },
         {
           '@type': 'Question',
-          name: 'How fast can B-E Waterwell respond to an emergency?',
+          name: 'How does B-E Waterwell handle an emergency call?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'We target a 2-hour response across all 11 service areas in Montgomery and Harris counties.',
+            text: 'You reach a technician rather than an answering service, and we dispatch across all 11 service areas in Montgomery, Harris, and Waller counties. Call (281) 448-4447 and we will tell you where we are and when we can get to you.',
           },
         },
         {
@@ -87,9 +87,9 @@ const faqs = [
       'The most common causes are a tripped breaker, a failed pressure switch, a burned-out pump motor, or a blown control box. Power surges during storms are a frequent culprit in the Houston area — a single voltage spike can kill a control box instantly.',
   },
   {
-    question: 'How fast can B-E Waterwell respond to an emergency?',
+    question: 'How does B-E Waterwell handle an emergency call?',
     answer:
-      'We target a 2-hour response across all 11 service areas in Montgomery and Harris counties.',
+      'You reach a technician rather than an answering service, and we dispatch across all 11 service areas in Montgomery, Harris, and Waller counties. Call (281) 448-4447 and we will tell you where we are and when we can get to you.',
   },
   {
     question: 'What does emergency well repair cost?',
@@ -145,9 +145,9 @@ export default function EmergencyWellServicesPage() {
             <h1 className={styles.h1Main}>Emergency Well Service</h1>
           </div>
           <p className={styles.heroSubtitle}>
-            Well stopped working? We dispatch same-day across all 11 Houston
-            service areas — Montgomery County, Harris County, and Waller County.
-            Two-hour response target.
+            Well stopped working? We dispatch across all 11 Houston service
+            areas — Montgomery County, Harris County, and Waller County.
+            Call and you reach a technician, not an answering service.
           </p>
           <div className={styles.heroBtns}>
             <a href="tel:+12814484447" className={`btn btn-primary ${styles.callBtn}`}>
@@ -271,33 +271,6 @@ export default function EmergencyWellServicesPage() {
           </div>
         </section>
 
-        {/* ── RESPONSE TIME ────────────────────── */}
-        <section className={styles.responseSection}>
-          <div className="container">
-            <span className="section-label">Response Time</span>
-            <h2 className="section-title">We Respond Within 2 Hours</h2>
-            <p className={styles.responseIntro}>
-              We maintain emergency dispatch coverage across all 11 Houston
-              service areas. When you call, you reach a technician —
-              not an answering service.
-            </p>
-            <div className={styles.responseGrid}>
-              {[
-                { stat: '2 hr', label: 'Average response time', sub: 'All service areas' },
-                { stat: '11', label: 'Service areas covered', sub: 'Montgomery, Harris, and Waller counties' },
-                { stat: 'Same Day', label: 'Parts on hand', sub: 'Common pumps, switches, control boxes' },
-                { stat: '45+', label: 'Years serving Houston', sub: 'Since 1979' },
-              ].map((s) => (
-                <div key={s.label} className={styles.responseStat}>
-                  <div className={styles.responseStatNum}>{s.stat}</div>
-                  <div className={styles.responseStatLabel}>{s.label}</div>
-                  <div className={styles.responseStatSub}>{s.sub}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* ── WHAT'S COVERED ───────────────────── */}
         <section className={styles.coveredSection}>
           <div className="container">
@@ -306,11 +279,11 @@ export default function EmergencyWellServicesPage() {
             <div className={styles.coveredGrid}>
               {[
                 { icon: 'search' as const, title: 'Pump Diagnosis', desc: 'Full electrical and mechanical diagnosis to pinpoint the failure before any repair begins. Written findings every time.' },
-                { icon: 'gear' as const, title: 'Motor Replacement', desc: 'Franklin Electric and compatible submersible motors — pulled and replaced same day when stock allows.' },
+                { icon: 'gear' as const, title: 'Motor Replacement', desc: 'Franklin Electric and compatible submersible motors, pulled and replaced once the failure is confirmed.' },
                 { icon: 'wrench' as const, title: 'Pressure Switch', desc: 'New pressure switch installation with properly calibrated cut-in and cut-out pressure settings.' },
                 { icon: 'package' as const, title: 'Control Box', desc: 'Control box replacement for single-phase and three-phase systems. Surge-protected replacements available.' },
                 { icon: 'bolt' as const, title: 'Electrical Troubleshooting', desc: 'Wire testing from breaker to pump head, splice repair, and motor lead replacement.' },
-                { icon: 'truck' as const, title: 'Same-Day Parts', desc: 'We stock the most common pump sizes and components — no waiting a week for parts to arrive.' },
+                { icon: 'truck' as const, title: 'Stocked Parts', desc: 'We carry the most common pump sizes, pressure switches, and control boxes on the truck.' },
               ].map((item) => (
                 <div key={item.title} className={styles.coveredCard}>
                   <span className={styles.coveredIcon}><Icon name={item.icon} size={30} /></span>
@@ -383,7 +356,7 @@ export default function EmergencyWellServicesPage() {
             <span className="section-label">Where We Respond</span>
             <h2 className="section-title">Emergency Service Areas</h2>
             <p className={styles.areasNote}>
-              Emergency well service across the Houston area — 2-hour response target.
+              Emergency well service across the Houston area.
             </p>
             <div className={styles.areasGrid}>
               {serviceAreas.map((a) => (
