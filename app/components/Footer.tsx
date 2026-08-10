@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { cityAreas } from '../../lib/homeData';
+import {
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  EMAIL,
+  FACEBOOK_URL,
+  GOOGLE_BUSINESS_URL,
+} from '../../lib/siteConfig';
 import FooterContactForm from './FooterContactForm';
 import styles from './Footer.module.css';
 
@@ -8,7 +15,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.footerGrid}`}>
-        {/* Column 1 — Brand + Contact */}
+        {/* Column 1 — Brand */}
         <div className={styles.footerBrand}>
           <Image
             src="/images/be-logo-white.svg"
@@ -17,14 +24,34 @@ export default function Footer() {
             height={101}
           />
           <p className={styles.tagline}>
-            Houston&apos;s trusted water well specialists since 1979.
-            Family-owned. Licensed. Guaranteed.
+            Houston&apos;s trusted water well specialists since 1979, serving the
+            Greater Houston area. Family-owned. Licensed. Guaranteed.
           </p>
+          <div className={styles.footerAddress}>
+            <span>B-E Waterwell Services</span>
+            <span>Magnolia, Texas</span>
+          </div>
           <div className={styles.socialLinks}>
-            <a href="https://www.facebook.com/bewaterwells" aria-label="B-E Waterwell Services on Facebook" target="_blank" rel="noopener noreferrer">f</a>
-            {/* Google icon intentionally omitted until the Google Business Profile
-                exists. It previously linked to generic Google Maps, which was a dead
-                end. Restore it pointing at the real listing once verified. */}
+            <a
+              href={FACEBOOK_URL}
+              aria-label="B-E Waterwell Services on Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              f
+            </a>
+            {/* Renders only once NEXT_PUBLIC_GOOGLE_BUSINESS_URL is set, so the
+                icon never points at a dead-end generic Maps search. */}
+            {GOOGLE_BUSINESS_URL && (
+              <a
+                href={GOOGLE_BUSINESS_URL}
+                aria-label="B-E Waterwell Services on Google"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                G
+              </a>
+            )}
           </div>
         </div>
 
@@ -32,34 +59,29 @@ export default function Footer() {
         <div>
           <h4 className={styles.footerHeading}>Services</h4>
           <ul className={styles.footerLinks}>
-            <li><Link href="/services/water-well-drilling">Water Well Drilling & Installation</Link></li>
+            <li><Link href="/services/water-well-drilling">Water Well Drilling &amp; Installation</Link></li>
             <li><Link href="/services/residential">Residential Services</Link></li>
-            <li><Link href="/services/commercial">Commercial & Agricultural</Link></li>
+            <li><Link href="/services/commercial">Commercial &amp; Agricultural</Link></li>
             <li><Link href="/services/well-rehabilitation">Well Rehabilitation</Link></li>
-            <li><Link href="/services/well-maintenance">Maintenance & Inspection</Link></li>
+            <li><Link href="/services/well-maintenance">Maintenance &amp; Inspection</Link></li>
           </ul>
         </div>
 
-        {/* Columns 3–4 — Contact form */}
+        {/* Columns 3–4 — Request Service: contact details + form */}
         <div className={styles.footerFormCol}>
           <h4 className={styles.footerHeading}>Request Service</h4>
-          <FooterContactForm />
-        </div>
-
-        {/* Contact bar — spans columns 1–2, bordered */}
-        <div className={styles.footerContactBar}>
           <ul className={styles.footerContact}>
             <li>
               <span className={styles.contactIcon} aria-hidden="true">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
               </span>
-              <a href="tel:+12814484447">281-448-4447</a>
+              <a href={`tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</a>
             </li>
             <li>
               <span className={styles.contactIcon} aria-hidden="true">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><polyline points="22,7 12,14 2,7" /></svg>
               </span>
-              <a href="mailto:zack@bewaterwells.com">zack@bewaterwells.com</a>
+              <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
             </li>
             <li>
               <span className={styles.contactIcon} aria-hidden="true">
@@ -68,11 +90,7 @@ export default function Footer() {
               <span>Emergency Service Available</span>
             </li>
           </ul>
-          <div className={styles.footerAddress}>
-            <span>B-E Waterwell Services</span>
-            <span>Serving the Greater Houston Area</span>
-            <span>Magnolia, Texas</span>
-          </div>
+          <FooterContactForm />
         </div>
       </div>
 

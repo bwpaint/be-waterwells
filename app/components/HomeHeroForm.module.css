@@ -128,3 +128,43 @@
   color: rgba(255, 255, 255, 0.65);
   line-height: 1.5;
 }
+
+/* == Two-up field row ===================== */
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* == Short comments box =================== */
+.textarea {
+  resize: vertical;
+  min-height: 58px;
+  font-family: inherit;
+}
+
+/* == Honeypot — hidden from people ======== */
+.honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+/* == Submit error ========================= */
+.formError {
+  margin: 0;
+  padding: 0.6rem 0.75rem;
+  background: rgba(168, 84, 8, 0.08);
+  border-left: 3px solid #A85408;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #7A3D06;
+}
+
+@media (max-width: 480px) {
+  .fieldRow { grid-template-columns: 1fr; }
+}
