@@ -32,6 +32,7 @@ export const CITIES: GeoCity[] = [
   { name: 'Pinehurst', slug: 'pinehurst-tx', x: 471, y: 402 },
   { name: 'Tomball', slug: 'tomball-tx', x: 495, y: 434 },
   { name: 'Spring', slug: 'spring-tx', x: 563, y: 441, major: true },
+  { name: 'Klein', slug: 'klein-tx', x: 528, y: 452 },
   { name: 'Cypress', slug: 'cypress-tx', x: 467, y: 485 },
   { name: 'Humble', slug: 'humble-tx', x: 617, y: 473 },
   { name: 'Kingwood', slug: 'kingwood-tx', x: 644, y: 453, major: true },

@@ -176,6 +176,9 @@ export default function CityPage({ params }: Props) {
                 <span>Emergency Coverage</span>
               </div>
             </div>
+            {city.depthDisclaimer && (
+              <p className={styles.depthDisclaimer}>{city.depthDisclaimer}</p>
+            )}
           </div>
           <div className={styles.introImageWrap}>
             <Image
@@ -192,6 +195,49 @@ export default function CityPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* ── LOCAL WATER DISTRICTS ──────────── */}
+      {city.waterDistricts && city.waterDistricts.length > 0 && (
+        <section className={styles.districtSection}>
+          <div className="container">
+            <span className="section-label">Local Water Districts</span>
+            <h2 className="section-title">Who Supplies Water in {city.city}</h2>
+            <div className={styles.districtGrid}>
+              {city.waterDistricts.map((d) => (
+                <div key={d.name} className={styles.districtCard}>
+                  <h3 className={styles.districtName}>{d.name}</h3>
+                  <p className={styles.districtDetail}>{d.detail}</p>
+                </div>
+              ))}
+            </div>
+            {city.permitNote && (
+              <div className={styles.permitNote}>
+                <strong>Permitting</strong>
+                <p>{city.permitNote}</p>
+              </div>
+            )}
+            {city.references && city.references.length > 0 && (
+              <div className={styles.refs}>
+                <strong>Sources</strong>
+                <ul>
+                  {city.references.map((r) => (
+                    <li key={r.url}>
+                      <a
+                        href={r.url}
+                        className="inline-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {r.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* ── SERVICES ─────────────────────────── */}
       <section className={styles.servicesSection}>

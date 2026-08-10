@@ -21,6 +21,7 @@ const CITY_COUNTY: Record<string, string> = {
   'woodlands-tx': 'Montgomery County', 'pinehurst-tx': 'Montgomery County',
   'tomball-tx': 'Harris County', 'spring-tx': 'Harris County',
   'cypress-tx': 'Harris County', 'humble-tx': 'Harris County',
+  'klein-tx': 'Harris County',
   'kingwood-tx': 'Harris County', 'hockley-tx': 'Harris County',
   'katy-tx': 'Fort Bend County', 'waller-tx': 'Waller County',
   'hempstead-tx': 'Waller County', 'anderson-tx': 'Grimes County',

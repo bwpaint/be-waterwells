@@ -9,6 +9,14 @@ export interface CityData {
   metaDescription: string;
   intro: string;
   aquiferDepth: string;
+  /** Liability disclaimer rendered directly above any depth figure. */
+  depthDisclaimer?: string;
+  /** Local water districts (MUD / UD / WCID) serving this area. */
+  waterDistricts?: { name: string; detail: string }[];
+  /** Permitting note specific to this area's regulating authority. */
+  permitNote?: string;
+  /** Outbound citations to primary regulatory or data sources. */
+  references?: { label: string; url: string }[];
   nearbyAreas: { city: string; slug: string; distance: string }[];
   faqs: { question: string; answer: string }[];
 }
@@ -55,6 +63,81 @@ export const cities: CityData[] = [
         question: 'How much does a water well cost in the Houston area?',
         answer:
           'Pricing depends on your location, well depth, static water level, and equipment selection — call us to discuss your project and we\'ll provide a written estimate.',
+      },
+    ],
+  },
+  {
+    slug: 'klein-tx',
+    city: 'Klein',
+    state: 'TX',
+    county: 'Harris County',
+    isHQ: false,
+    tagline: 'Water Well Drilling, Pump Replacement & Rehabilitation in Klein, TX',
+    heroSubtitle: 'Drilling · Pumps · Rehabilitation',
+    metaDescription:
+      'B-E Waterwell Services — water well drilling, pump replacement, and well rehabilitation in Klein, TX. Serving Klein and northwest Harris County since 1979. TDLR licensed. Call (281) 448-4447.',
+    intro:
+      'Klein sits in northwest Harris County, and its water picture is more layered than most of the areas we serve. Much of Klein is inside a municipal utility district that supplies water to the home, while properties on larger acreage outside those district boundaries stay on private wells. B-E Waterwell Services has drilled and serviced wells across this corner of Harris County since 1979 — new wells where district water does not reach, pump replacement and pressure systems on existing wells, and rehabilitation on older wells that have lost yield.',
+    aquiferDepth: 'Records unavailable — contact us',
+    depthDisclaimer:
+      'We were unable to pull past well-depth records for this area. Depth varies site to site, and we do not publish a figure we cannot source. Contact B-E Waterwell Services and we will discuss what to expect on your specific property.',
+    waterDistricts: [
+      {
+        name: 'Kleinwood Municipal Utility District',
+        detail:
+          'Operates two water wells — the first completed in 1974 and a second added in the 1980s drawing from the Evangeline aquifer — while also purchasing surface water through the North Harris County Regional Water Authority. If your property is inside Kleinwood MUD, the district supplies your water.',
+      },
+      {
+        name: 'Cypress Klein Utility District',
+        detail:
+          'Serves the western side of the Klein area. District coverage here is the main factor in whether a property is on supplied water or a private well.',
+      },
+      {
+        name: 'Harris County MUD 157',
+        detail:
+          'A groundwater-sourced district inside the Klein ISD boundary, northwest toward Tomball. Still draws from its own wells rather than purchased surface water.',
+      },
+    ],
+    permitNote:
+      'Klein falls under the Harris-Galveston Subsidence District. A well with a casing diameter of less than five inches that serves only a single-family dwelling is exempt from HGSD permit requirements — which covers most residential wells. Larger wells, irrigation wells, and commercial wells do require a permit, and B-E Waterwell handles that filing as part of the job.',
+    references: [
+      { label: 'Harris-Galveston Subsidence District — permitting rules', url: 'https://hgsubsidence.org/permits/' },
+      { label: 'TWDB Groundwater Data — look up filed well records near your address', url: 'https://www.twdb.texas.gov/groundwater/data/index.asp' },
+      { label: 'TWDB Submitted Driller\'s Report database', url: 'https://www.twdb.texas.gov/groundwater/data/drillersdb.asp' },
+    ],
+    nearbyAreas: [
+      { city: 'Spring', slug: 'spring-tx', distance: '5 mi' },
+      { city: 'Tomball', slug: 'tomball-tx', distance: '10 mi' },
+      { city: 'Cypress', slug: 'cypress-tx', distance: '12 mi' },
+      { city: 'The Woodlands', slug: 'woodlands-tx', distance: '14 mi' },
+      { city: 'Magnolia', slug: 'magnolia-tx', distance: '20 mi' },
+      { city: 'Houston', slug: 'houston-tx', distance: '22 mi' },
+    ],
+    faqs: [
+      {
+        question: 'Do I need a permit to drill a water well in Klein, TX?',
+        answer:
+          'Usually not, for a standard residential well. Klein is inside the Harris-Galveston Subsidence District, and HGSD exempts wells with a casing diameter under five inches that serve only a single-family dwelling. Irrigation, commercial, and larger-diameter wells do require a permit. B-E Waterwell handles the permitting on any job that needs it.',
+      },
+      {
+        question: 'Can I drill a well in Klein if my property is inside a MUD?',
+        answer:
+          'It depends on your district and your deed restrictions. Much of Klein sits inside Kleinwood MUD, Cypress Klein Utility District, or Harris County MUD 157, and those districts supply water to the home. Properties outside district boundaries — typically larger acreage — are the ones that rely on private wells. Call us and we will tell you what applies to your address.',
+      },
+      {
+        question: 'How deep are water wells in the Klein area?',
+        answer:
+          'We were unable to pull past well-depth records specific to Klein, so we will not publish a number we cannot stand behind. What we can tell you is that wells in this area draw from the Chicot and Evangeline aquifers — Kleinwood MUD\'s own second well is completed in the Evangeline. Depth is site-specific: contact B-E Waterwell Services and we will assess your property before quoting.',
+      },
+      {
+        question: 'Why does Klein have both well water and surface water?',
+        answer:
+          'In 1999 the State of Texas and the Harris-Galveston Subsidence District required districts in this region to convert from groundwater to surface water to slow land subsidence. That is why districts like Kleinwood now blend their own well production with surface water purchased through the North Harris County Regional Water Authority.',
+      },
+      {
+        question: 'Does B-E Waterwell service existing wells in Klein?',
+        answer:
+          'Yes, and it is a large share of our work here. We replace pumps, install and size pressure tanks, and rehabilitate older wells that have lost yield. We replace pumps rather than repair them — a rebuilt pump on a well this depth tends to fail again sooner than it is worth.',
       },
     ],
   },
