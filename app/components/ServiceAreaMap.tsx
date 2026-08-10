@@ -21,7 +21,11 @@ const CITY_COUNTY: Record<string, string> = {
   'woodlands-tx': 'Montgomery County', 'pinehurst-tx': 'Montgomery County',
   'tomball-tx': 'Harris County', 'spring-tx': 'Harris County',
   'cypress-tx': 'Harris County', 'humble-tx': 'Harris County',
-  'klein-tx': 'Harris County',
+  'klein-tx': 'Harris County', 'jersey-village-tx': 'Harris County',
+  'bridgeland-tx': 'Harris County', 'rivercrest-tx': 'Harris County',
+  'cinco-ranch-tx': 'Fort Bend County',
+  'spring-branch': 'Harris County', 'memorial': 'Harris County',
+  'aldine': 'Harris County', 'pasadena': 'Harris County',
   'kingwood-tx': 'Harris County', 'hockley-tx': 'Harris County',
   'katy-tx': 'Fort Bend County', 'waller-tx': 'Waller County',
   'hempstead-tx': 'Waller County', 'anderson-tx': 'Grimes County',
@@ -54,7 +58,10 @@ export default function ServiceAreaMap() {
     setHover(null);
   }, []);
 
-  const go = useCallback((slug: string) => router.push(`/service-area/${slug}`), [router]);
+  const go = useCallback(
+    (slug: string, href?: string) => router.push(href ?? `/service-area/${slug}`),
+    [router],
+  );
 
   const pins = CITIES.filter((c) => !c.hq);
   const hq = CITIES.find((c) => c.hq);
@@ -208,11 +215,11 @@ export default function ServiceAreaMap() {
                 onMouseEnter={() => setHover(ct.slug)}
                 onMouseMove={(e) => move(e, ct.name, CITY_COUNTY[ct.slug] || '')}
                 onMouseLeave={leave}
-                onClick={() => go(ct.slug)}
+                onClick={() => go(ct.slug, ct.href)}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
-                    go(ct.slug);
+                    go(ct.slug, ct.href);
                   }
                 }}
               />

@@ -242,3 +242,74 @@
   /* Long county names must be allowed to wrap on a phone. */
   .finalCtaInner h2 { white-space: normal; }
 }
+
+/* == Areas within this county ============= */
+.areasSection { padding: 4.5rem 0; background: #faf8f5; }
+
+.areaJump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.75rem;
+}
+
+.areaJumpLink {
+  padding: 0.45rem 0.95rem;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  text-decoration: none;
+  color: var(--accent-on-light, #A85408);
+}
+
+.areaJumpLink:hover {
+  background: var(--accent-on-light, #A85408);
+  color: #fff;
+}
+
+.areaList { margin-top: 2.25rem; display: grid; gap: 1.5rem; }
+
+.areaBlock {
+  padding: 1.75rem;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  scroll-margin-top: 110px;
+}
+
+.areaName {
+  margin: 0 0 0.7rem;
+  font-size: 1.15rem;
+  color: var(--accent-on-light, #A85408);
+}
+
+.areaBody { margin: 0; line-height: 1.75; }
+
+.areaCta {
+  margin-top: 2.25rem;
+  padding: 1.75rem;
+  background: #fff;
+  border: 1px solid var(--accent-on-light, #A85408);
+  border-radius: 10px;
+}
+
+.areaCta p { margin: 0 0 1rem; line-height: 1.7; }
+
+.areaCtaBtn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background: var(--accent-on-light, #A85408);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.areaCtaBtn:hover { background: var(--accent-on-light-hover, #7A3D06); }
+
+@media (max-width: 700px) {
+  .areasSection { padding: 3rem 0; }
+  .areaBlock { padding: 1.25rem; }
+}

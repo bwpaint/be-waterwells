@@ -62,11 +62,11 @@
 }
 
 .item.open .answerWrap {
-  max-height: 400px;
+  max-height: 1200px;
 }
 
 .answer {
-  padding: 0 24px 20px;
+  padding: 20px 24px;
   font-size: 0.9rem;
   color: var(--warm-gray);
   line-height: 1.75;

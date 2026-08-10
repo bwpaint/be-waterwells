@@ -13,6 +13,8 @@ export interface CountyData {
   metaDescription: string;
   intro: string;
   notes: string[];
+  /** Neighborhood-level areas served, rendered as anchored sections. */
+  areas?: { name: string; slug: string; body: string }[];
 }
 
 export const counties: CountyData[] = [
@@ -52,6 +54,32 @@ export const counties: CountyData[] = [
       'Permitting runs through HGSD and carries more documentation than other counties in our service area.',
       'East Harris County wells frequently encounter sulfur, which is treatable but worth knowing about before you drill.',
       'Depth varies more within this county than any other we serve — a quote based on a neighbor’s well is often wrong.',
+    ],
+    areas: [
+      {
+        name: 'Spring Branch',
+        slug: 'spring-branch',
+        body:
+          'Spring Branch sits inside Beltway 8 in northwest Houston and is served by the City of Houston water system, so homes here are on municipal supply rather than private wells. Where wells still make sense is on the larger remaining lots along the bayou corridors, where irrigation demand across a big landscaped property is expensive to meet on metered city water. Wells serving a single-family dwelling with casing under five inches are exempt from Harris-Galveston Subsidence District permitting.',
+      },
+      {
+        name: 'Memorial',
+        slug: 'memorial',
+        body:
+          'The Memorial corridor is one of the few places inside Beltway 8 where groundwater is still part of the public supply. Memorial Villages Water Authority, founded in 1962, draws from wells completed in the Evangeline aquifer and blends that with surface water purchased from the City of Houston, producing roughly 1.3 billion gallons a year for Hedwig Village and the portions of Piney Point Village and Hunters Creek Village north of Buffalo Bayou. Private wells on the large estate lots through this corridor are typically irrigation wells running alongside a municipal connection.',
+      },
+      {
+        name: 'Aldine',
+        slug: 'aldine',
+        body:
+          'Aldine is unincorporated north Harris County, and water service here is a patchwork — municipal utility districts cover much of the developed area while properties outside district boundaries remain on private wells. Because the boundaries are not obvious from the street, the practical first step is confirming whether your address falls inside a district. We do that check as part of any site visit.',
+      },
+      {
+        name: 'Pasadena',
+        slug: 'pasadena',
+        body:
+          'Pasadena runs its own water system in southeastern Harris County, combining surface water purchased from the City of Houston with production from its own wells — the Cascade, Deepwater, Guthrie, Pansy, Red Bluff, Sycamore, Tulip and Westside wells among them, alongside ground and elevated storage across the city. Inside city service, homes are on municipal supply. Private well work here skews toward commercial and industrial sites and acreage on the outskirts rather than residential drilling.',
+      },
     ],
   },
   {

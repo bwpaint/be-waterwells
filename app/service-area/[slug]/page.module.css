@@ -457,3 +457,27 @@
   .districtGrid { grid-template-columns: 1fr; }
   .districtSection { padding: 3rem 0; }
 }
+
+/* == Area note CTA ======================== */
+.areaNote {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid var(--accent-on-light, #A85408);
+  border-radius: 10px;
+}
+
+.areaNote p { margin: 0 0 1rem; line-height: 1.7; }
+
+.areaNoteCta {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background: var(--accent-on-light, #A85408);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.areaNoteCta:hover { background: var(--accent-on-light-hover, #7A3D06); }

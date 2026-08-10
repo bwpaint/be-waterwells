@@ -218,6 +218,14 @@ export default function CityPage({ params }: Props) {
                 <p>{city.permitNote}</p>
               </div>
             )}
+            {city.areaNote && (
+              <div className={styles.areaNote}>
+                <p>{city.areaNote}</p>
+                <a href="tel:+12814484447" className={styles.areaNoteCta}>
+                  Call (281) 448-4447
+                </a>
+              </div>
+            )}
             {city.references && city.references.length > 0 && (
               <div className={styles.refs}>
                 <strong>Sources</strong>

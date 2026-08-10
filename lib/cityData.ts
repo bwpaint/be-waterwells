@@ -18,6 +18,8 @@ export interface CityData {
   permitNote?: string;
   /** Outbound citations to primary regulatory or data sources. */
   references?: { label: string; url: string }[];
+  /** Call-to-action shown under the water districts block. */
+  areaNote?: string;
   nearbyAreas: { city: string; slug: string; distance: string }[];
   faqs: { question: string; answer: string }[];
 }
@@ -138,6 +140,271 @@ export const cities: CityData[] = [
         question: 'Does B-E Waterwell service existing wells in Klein?',
         answer:
           'Yes, and it is a large share of our work here. We replace pumps, install and size pressure tanks, and rehabilitate older wells that have lost yield. We replace pumps rather than repair them — a rebuilt pump on a well this depth tends to fail again sooner than it is worth.',
+      },
+    ],
+  },
+  {
+    slug: 'jersey-village-tx',
+    city: 'Jersey Village',
+    state: 'TX',
+    county: 'Harris County',
+    isHQ: false,
+    tagline: 'Water Well Drilling, Pump Replacement & Rehabilitation in Jersey Village, TX',
+    heroSubtitle: 'Drilling · Pumps · Rehabilitation',
+    metaDescription:
+      'B-E Waterwell Services — water well drilling, pump replacement, and well rehabilitation in Jersey Village, TX. Serving northwest Harris County since 1979. TDLR licensed. Call (281) 448-4447.',
+    intro:
+      'Jersey Village is a good illustration of how quickly the water picture changes in northwest Harris County. Until October 2000 the city ran its own network of groundwater wells. Today it buys treated water from the City of Houston, with deep wells completed in the Evangeline and Chicot aquifers still making up part of the supply. Properties around the city limits that never connected to that system remain on private wells, and that is where B-E Waterwell works — new wells, pump replacement, pressure systems, and rehabilitation of older wells.',
+    depthDisclaimer:
+      'We were unable to pull past well-depth records for this area. Depth varies site to site, and we do not publish a figure we cannot source. Contact B-E Waterwell Services and we will discuss what to expect on your specific property.',
+    waterDistricts: [
+      {
+        name: 'City of Jersey Village',
+        detail:
+          'Supplied its residents from a network of city-owned groundwater wells prior to October 2000. The city now contracts with the City of Houston for treated surface water, with deep wells in the Evangeline and Chicot aquifers still supplying part of the total.',
+      },
+      {
+        name: 'West Harris County Regional Water Authority',
+        detail:
+          'Created by the Texas legislature in 2001 to cut groundwater use across western Harris County. Since 2010 the City of Houston surface-water supply point has been the Jersey Village Pump Station on Fairview Street north of FM 529.',
+      },
+    ],
+    permitNote:
+      'This area falls under the Harris-Galveston Subsidence District. A well with a casing diameter of less than five inches that serves only a single-family dwelling is exempt from HGSD permit requirements — which covers most residential wells. Irrigation, commercial, and larger-diameter wells do require a permit, and B-E Waterwell handles that filing as part of the job.',
+    references: [
+      { label: 'https://hgsubsidence.org/permits/', url: 'Harris-Galveston Subsidence District — permitting rules' },
+      { label: 'https://www.twdb.texas.gov/groundwater/data/index.asp', url: 'TWDB Groundwater Data — look up filed well records near your address' },
+      { label: 'https://www.whcrwa.com/about-whcrwa/groundwater-reduction-plan/', url: 'West Harris County Regional Water Authority — groundwater reduction plan' },
+    ],
+    nearbyAreas: [
+      { city: 'Klein', slug: 'klein-tx', distance: '10 mi' },
+      { city: 'Cypress', slug: 'cypress-tx', distance: '8 mi' },
+      { city: 'Tomball', slug: 'tomball-tx', distance: '14 mi' },
+      { city: 'Hockley', slug: 'hockley-tx', distance: '16 mi' },
+      { city: 'Houston', slug: 'houston-tx', distance: '17 mi' },
+      { city: 'Spring', slug: 'spring-tx', distance: '15 mi' },
+    ],
+    faqs: [
+      {
+        question: 'Can I drill a water well in Jersey Village?',
+        answer:
+          'On property inside the city system you are already on supplied water. Acreage around the city limits that never connected is where private wells make sense. HGSD exempts wells under five inches of casing serving a single-family dwelling from permitting, so a standard residential well usually does not need a permit.',
+      },
+      {
+        question: 'Why did Jersey Village stop using its own wells?',
+        answer:
+          'The city moved to purchased City of Houston water in October 2000, and in 2001 the legislature created the West Harris County Regional Water Authority specifically to reduce groundwater pumping in this part of the county. Deep Evangeline and Chicot wells still contribute part of the supply.',
+      },
+      {
+        question: 'How deep are wells around Jersey Village?',
+        answer:
+          'We were unable to pull past well-depth records specific to Jersey Village, and we will not publish a number we cannot source. Wells in this part of Harris County draw from the Chicot and Evangeline aquifers. Contact B-E Waterwell Services and we will assess your site before quoting.',
+      },
+      {
+        question: 'Do you service existing wells in the Jersey Village area?',
+        answer:
+          'Yes. Pump replacement, pressure tank sizing and installation, and rehabilitation of wells that have lost yield make up most of our work in built-out parts of Harris County.',
+      },
+    ],
+  },
+  {
+    slug: 'bridgeland-tx',
+    city: 'Bridgeland',
+    state: 'TX',
+    county: 'Harris County',
+    isHQ: false,
+    tagline: 'Water Well Drilling, Pump Replacement & Rehabilitation near Bridgeland, TX',
+    heroSubtitle: 'Drilling · Pumps · Rehabilitation',
+    metaDescription:
+      'B-E Waterwell Services — water well drilling, pump replacement, and well rehabilitation around Bridgeland and Cypress, TX. Serving northwest Harris County since 1979. Call (281) 448-4447.',
+    intro:
+      'Bridgeland is a master-planned community in the Cypress area of northwest Harris County, and water inside its boundaries is handled by an unusually large group of districts. That means most homes inside Bridgeland are on district water rather than private wells. The acreage surrounding the development is a different story — properties on the edges of Cypress and toward Hockley and Waller still rely on private wells, and that is where B-E Waterwell works.',
+    depthDisclaimer:
+      'We were unable to pull past well-depth records for this area. Depth varies site to site, and we do not publish a figure we cannot source. Contact B-E Waterwell Services and we will discuss what to expect on your specific property.',
+    waterDistricts: [
+      {
+        name: 'Bridgeland Water Agency',
+        detail:
+          'A non-profit representing the districts inside the Bridgeland community — Harris County MUD 418, 419, 489, 490, 491, 492 and 493, plus Harris County WCID 157 and 158. If your address is inside Bridgeland, one of these districts supplies your water.',
+      },
+      {
+        name: 'West Harris County Regional Water Authority',
+        detail:
+          'Created by the legislature in 2001 to reduce groundwater use in western Harris County. It met the Subsidence District mandate of more than 30 percent surface water by 2010, with a 60 percent target set for 2025. Bridgeland is among the Cypress-area communities converting to surface water.',
+      },
+    ],
+    permitNote:
+      'This area falls under the Harris-Galveston Subsidence District. A well with a casing diameter of less than five inches that serves only a single-family dwelling is exempt from HGSD permit requirements — which covers most residential wells. Irrigation, commercial, and larger-diameter wells do require a permit, and B-E Waterwell handles that filing as part of the job.',
+    references: [
+      { label: 'https://hgsubsidence.org/permits/', url: 'Harris-Galveston Subsidence District — permitting rules' },
+      { label: 'https://www.twdb.texas.gov/groundwater/data/index.asp', url: 'TWDB Groundwater Data — look up filed well records near your address' },
+      { label: 'https://bridgelandwater.com/', url: 'Bridgeland Water Agency' },
+      { label: 'https://www.whcrwa.com/faq/', url: 'West Harris County Regional Water Authority — FAQ' },
+    ],
+    areaNote:
+      'District boundaries in this area do not follow property lines in any obvious way, and whether a well is an option for you comes down to your specific address. If there is any confusion about which district covers your property, or whether a well makes sense for what you are trying to do, contact B-E Waterwell Services and we will sort it out with you.',
+    nearbyAreas: [
+      { city: 'Cypress', slug: 'cypress-tx', distance: '5 mi' },
+      { city: 'Hockley', slug: 'hockley-tx', distance: '9 mi' },
+      { city: 'Tomball', slug: 'tomball-tx', distance: '12 mi' },
+      { city: 'Waller', slug: 'waller-tx', distance: '14 mi' },
+      { city: 'Klein', slug: 'klein-tx', distance: '16 mi' },
+      { city: 'Katy', slug: 'katy-tx', distance: '18 mi' },
+    ],
+    faqs: [
+      {
+        question: 'Can I have a water well in Bridgeland?',
+        answer:
+          'Inside the Bridgeland community your water comes from one of the districts represented by the Bridgeland Water Agency, so a private well is generally neither needed nor permitted by deed restriction. On surrounding acreage outside those district boundaries, private wells are common and we drill them regularly.',
+      },
+      {
+        question: 'Which districts serve Bridgeland?',
+        answer:
+          'The Bridgeland Water Agency represents Harris County MUD 418, 419, 489, 490, 491, 492 and 493, along with Harris County WCID 157 and 158.',
+      },
+      {
+        question: 'Is Bridgeland on well water or surface water?',
+        answer:
+          'It is converting. The West Harris County Regional Water Authority passed 30 percent surface water by 2010 under the Subsidence District mandate, with a 60 percent target for 2025, and Bridgeland is among the Cypress-area communities making that switch.',
+      },
+      {
+        question: 'How deep are wells near Bridgeland?',
+        answer:
+          'We were unable to pull past well-depth records specific to this area, and we do not publish figures we cannot source. Wells around Cypress draw from the Chicot and Evangeline aquifers. Contact B-E Waterwell Services and we will assess your property.',
+      },
+    ],
+  },
+  {
+    slug: 'cinco-ranch-tx',
+    city: 'Cinco Ranch',
+    state: 'TX',
+    county: 'Fort Bend County',
+    isHQ: false,
+    tagline: 'Water Well Drilling, Pump Replacement & Rehabilitation near Cinco Ranch, TX',
+    heroSubtitle: 'Drilling · Pumps · Rehabilitation',
+    metaDescription:
+      'B-E Waterwell Services — water well drilling, pump replacement, and well rehabilitation around Cinco Ranch and Katy, TX. TDLR licensed since 1979. Call (281) 448-4447.',
+    intro:
+      'Cinco Ranch is a master-planned community in the Katy area, roughly 25 miles west of Houston, sitting mainly in Fort Bend County. Water inside the community runs through the Cinco municipal utility districts, which are under Fort Bend Subsidence District mandates to cut groundwater use. Outside those district boundaries — on the acreage west and south toward Fulshear and Brookshire — private wells remain the norm, and that is where B-E Waterwell works.',
+    depthDisclaimer:
+      'We were unable to pull past well-depth records for this area. Depth varies site to site, and we do not publish a figure we cannot source. Contact B-E Waterwell Services and we will discuss what to expect on your specific property.',
+    waterDistricts: [
+      {
+        name: 'Cinco Municipal Utility Districts',
+        detail:
+          'A group of districts including Cinco MUD 1, 5, 10 and 12, plus Cinco Southwest MUD 1, which serves the southwest portion of the community. Cinco MUD 1 alone serves more than 32,000 residents.',
+      },
+      {
+        name: 'North Fort Bend Water Authority',
+        detail:
+          'The authority created to deliver surface water to districts in this area so they can meet subsidence mandates. Cinco MUD 10 began receiving NFBWA surface water on June 30, 2026.',
+      },
+      {
+        name: 'Fort Bend Subsidence District',
+        detail:
+          'Holds jurisdiction over groundwater in Fort Bend County and mandated a 30 percent reduction in groundwater use by 2015 and 60 percent by 2025. Irrigation is a major driver here — close to 40 percent of the roughly 2.1 billion gallons used annually in Cinco MUD 1 goes to irrigation.',
+      },
+    ],
+    permitNote:
+      'Cinco Ranch falls under the Fort Bend Subsidence District rather than Harris-Galveston, and permitting requirements are similar. B-E Waterwell handles the filing as part of every job that requires one.',
+    references: [
+      { label: 'https://www.twdb.texas.gov/groundwater/data/index.asp', url: 'TWDB Groundwater Data — look up filed well records near your address' },
+      { label: 'https://www.cincomuds.org/', url: 'Cinco MUDs — district information' },
+      { label: 'https://www.bgeinc.com/cinco-ranch-white-paper/', url: 'Cinco Ranch water and wastewater overview' },
+    ],
+    areaNote:
+      'District boundaries in this area do not follow property lines in any obvious way, and whether a well is an option for you comes down to your specific address. If there is any confusion about which district covers your property, or whether a well makes sense for what you are trying to do, contact B-E Waterwell Services and we will sort it out with you.',
+    nearbyAreas: [
+      { city: 'Katy', slug: 'katy-tx', distance: '4 mi' },
+      { city: 'Houston', slug: 'houston-tx', distance: '25 mi' },
+      { city: 'Cypress', slug: 'cypress-tx', distance: '15 mi' },
+      { city: 'Hockley', slug: 'hockley-tx', distance: '20 mi' },
+      { city: 'Waller', slug: 'waller-tx', distance: '22 mi' },
+      { city: 'Hempstead', slug: 'hempstead-tx', distance: '30 mi' },
+    ],
+    faqs: [
+      {
+        question: 'Can I drill a well in Cinco Ranch?',
+        answer:
+          'Inside the Cinco MUD boundaries your water is supplied by the district. On acreage outside those boundaries — west and south toward Fulshear and Brookshire — private wells are common. Permitting runs through the Fort Bend Subsidence District and we handle it.',
+      },
+      {
+        question: 'Which subsidence district covers Cinco Ranch?',
+        answer:
+          'The Fort Bend Subsidence District. It mandated a 30 percent reduction in groundwater use by 2015 and 60 percent by 2025, which is why the Cinco districts are converting to surface water through the North Fort Bend Water Authority.',
+      },
+      {
+        question: 'How deep are wells around Cinco Ranch?',
+        answer:
+          'We were unable to pull past well-depth records specific to this area and we will not publish a figure we cannot source. Wells in the west Houston corridor generally run deeper than the counties north of Houston. Contact B-E Waterwell Services for an assessment of your site.',
+      },
+      {
+        question: 'Do you install irrigation wells near Katy?',
+        answer:
+          'Yes. Irrigation is a large share of water use in this corridor — close to 40 percent of annual use in Cinco MUD 1 alone — and irrigation wells on acreage outside district boundaries are a regular part of our work.',
+      },
+    ],
+  },
+  {
+    slug: 'rivercrest-tx',
+    city: 'Rivercrest',
+    state: 'TX',
+    county: 'Harris County',
+    isHQ: false,
+    tagline: 'Water Well Drilling, Pump Replacement & Rehabilitation in Rivercrest, Houston, TX',
+    heroSubtitle: 'Drilling · Pumps · Rehabilitation',
+    metaDescription:
+      'B-E Waterwell Services — water well drilling, pump replacement, and well rehabilitation in Rivercrest, Houston, TX 77042. TDLR licensed since 1979. Call (281) 448-4447.',
+    intro:
+      'Rivercrest is an enclave of large wooded estates in west Houston, inside Beltway 8, bordered by Buffalo Bayou to the north and Westheimer to the south. Lots here commonly run three to four acres, and that changes the water picture entirely — many properties carry both a City of Houston connection and a private well, with the well handling irrigation and landscape demand across acreage that municipal service was never priced for. B-E Waterwell drills, services, and rehabilitates those wells.',
+    depthDisclaimer:
+      'We were unable to pull past well-depth records for this area. Depth varies site to site, and we do not publish a figure we cannot source. Contact B-E Waterwell Services and we will discuss what to expect on your specific property.',
+    waterDistricts: [
+      {
+        name: 'City of Houston',
+        detail:
+          'Provides public water service to the Rivercrest area. Many estates here run a dual system — city water to the house, private well for irrigation and landscape demand across the acreage.',
+      },
+      {
+        name: 'Harris-Galveston Subsidence District',
+        detail:
+          'Holds groundwater jurisdiction over this part of Houston. Its single-family exemption is what makes a private residential well practical on a lot this size.',
+      },
+    ],
+    permitNote:
+      'This area falls under the Harris-Galveston Subsidence District. A well with a casing diameter of less than five inches that serves only a single-family dwelling is exempt from HGSD permit requirements — which covers most residential wells. Irrigation, commercial, and larger-diameter wells do require a permit, and B-E Waterwell handles that filing as part of the job.',
+    references: [
+      { label: 'https://hgsubsidence.org/permits/', url: 'Harris-Galveston Subsidence District — permitting rules' },
+      { label: 'https://www.twdb.texas.gov/groundwater/data/index.asp', url: 'TWDB Groundwater Data — look up filed well records near your address' },
+    ],
+    nearbyAreas: [
+      { city: 'Houston', slug: 'houston-tx', distance: '12 mi' },
+      { city: 'Katy', slug: 'katy-tx', distance: '15 mi' },
+      { city: 'Cypress', slug: 'cypress-tx', distance: '18 mi' },
+      { city: 'Klein', slug: 'klein-tx', distance: '22 mi' },
+      { city: 'Spring', slug: 'spring-tx', distance: '25 mi' },
+      { city: 'Tomball', slug: 'tomball-tx', distance: '26 mi' },
+    ],
+    faqs: [
+      {
+        question: 'Can I have a private water well in Rivercrest?',
+        answer:
+          'Yes, and many properties here do. Lots in Rivercrest average close to four acres, and a dual arrangement — City of Houston water to the house, private well for irrigation — is common. HGSD exempts wells under five inches of casing serving a single-family dwelling from permitting.',
+      },
+      {
+        question: 'Why would I want a well if I already have city water?',
+        answer:
+          'Irrigation. Watering three or four acres of established landscape on municipal water gets expensive quickly, and a private irrigation well is not subject to the same volumetric cost. It is the main reason wells exist on large lots inside the Beltway.',
+      },
+      {
+        question: 'How deep are wells in the Rivercrest area?',
+        answer:
+          'We were unable to pull past well-depth records specific to Rivercrest and we do not publish numbers we cannot source. Wells in this part of Harris County draw from the Chicot and Evangeline aquifers. Contact B-E Waterwell Services and we will assess your property.',
+      },
+      {
+        question: 'Do you service existing wells in west Houston?',
+        answer:
+          'Yes. Pump replacement, pressure tank sizing, and rehabilitation of older wells that have lost yield are a large part of what we do inside the Beltway.',
       },
     ],
   },

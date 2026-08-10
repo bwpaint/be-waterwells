@@ -177,6 +177,42 @@ export default function CountyPage({ params }: Props) {
         </section>
       )}
 
+      {/* ── AREAS WITHIN THIS COUNTY ─────────── */}
+      {county.areas && county.areas.length > 0 && (
+        <section className={styles.areasSection}>
+          <div className="container">
+            <span className="section-label">Neighborhoods &amp; Communities</span>
+            <h2 className="section-title">
+              Areas We Cover in {county.name}
+            </h2>
+            <div className={styles.areaJump}>
+              {county.areas.map((a) => (
+                <a key={a.slug} href={`#${a.slug}`} className={styles.areaJumpLink}>
+                  {a.name}
+                </a>
+              ))}
+            </div>
+            <div className={styles.areaList}>
+              {county.areas.map((a) => (
+                <div key={a.slug} id={a.slug} className={styles.areaBlock}>
+                  <h3 className={styles.areaName}>{a.name}</h3>
+                  <p className={styles.areaBody}>{a.body}</p>
+                </div>
+              ))}
+            </div>
+            <div className={styles.areaCta}>
+              <p>
+                Not sure which district covers your address, or whether a well is an
+                option where you are? We will tell you straight.
+              </p>
+              <a href="tel:+12814484447" className={styles.areaCtaBtn}>
+                Call (281) 448-4447
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── LOCAL NOTES ──────────────────────── */}
       <section className={styles.notesSection}>
         <div className="container">

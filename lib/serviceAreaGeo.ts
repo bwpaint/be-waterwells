@@ -22,7 +22,7 @@ export const COUNTIES: GeoCounty[] = [
   { name: 'San Jacinto', tier: 'secondary', lx: 651, ly: 238, d: 'M583 272 594 131 599 126 599 116 620 112 628 120 623 128 628 138 662 161 657 188 661 197 669 197 668 210 688 202 688 206 695 205 694 209 704 212 699 214 705 231 696 235 697 242 719 244 729 251 738 250 766 258 753 270 754 276 762 279 629 346 637 333 626 322 601 312 583 272Z' },
   { name: 'Walker', tier: 'secondary', lx: 520, ly: 152, d: 'M410 129 421 130 460 110 469 114 477 113 482 118 490 115 496 108 494 103 557 52 557 100 566 103 564 112 576 120 576 123 570 122 572 124 570 131 584 133 589 125 594 131 583 272 501 270 421 222 410 129Z' },
 ];
-export interface GeoCity { name: string; slug: string; x: number; y: number; hq?: boolean; major?: boolean; }
+export interface GeoCity { name: string; slug: string; x: number; y: number; hq?: boolean; major?: boolean; href?: string; }
 export const CITIES: GeoCity[] = [
   { name: 'Magnolia', slug: 'magnolia-tx', x: 448, y: 390, hq: true },
   { name: 'Houston', slug: 'houston-tx', x: 580, y: 568, major: true },
@@ -33,6 +33,14 @@ export const CITIES: GeoCity[] = [
   { name: 'Tomball', slug: 'tomball-tx', x: 495, y: 434 },
   { name: 'Spring', slug: 'spring-tx', x: 563, y: 441, major: true },
   { name: 'Klein', slug: 'klein-tx', x: 528, y: 452 },
+  { name: 'Jersey Village', slug: 'jersey-village-tx', x: 505, y: 520 },
+  { name: 'Bridgeland', slug: 'bridgeland-tx', x: 449, y: 470 },
+  { name: 'Cinco Ranch', slug: 'cinco-ranch-tx', x: 437, y: 567 },
+  { name: 'Rivercrest', slug: 'rivercrest-tx', x: 534, y: 559 },
+  { name: 'Spring Branch', slug: 'spring-branch', x: 551, y: 541, href: '/service-area/county/harris-county-tx#spring-branch' },
+  { name: 'Memorial', slug: 'memorial', x: 543, y: 551, href: '/service-area/county/harris-county-tx#memorial' },
+  { name: 'Aldine', slug: 'aldine', x: 594, y: 523, href: '/service-area/county/harris-county-tx#aldine' },
+  { name: 'Pasadena', slug: 'pasadena', x: 615, y: 592, href: '/service-area/county/harris-county-tx#pasadena' },
   { name: 'Cypress', slug: 'cypress-tx', x: 467, y: 485 },
   { name: 'Humble', slug: 'humble-tx', x: 617, y: 473 },
   { name: 'Kingwood', slug: 'kingwood-tx', x: 644, y: 453, major: true },
