@@ -404,6 +404,16 @@
   margin-top: 8px;
 }
 
+/* Second line of the closing CTA. Kept as its own block so the two sentences
+   never share a line and wrap mid-phrase. */
+.finalCtaSubAlt {
+  /* Same typography as .finalCtaSub — it is a sibling line, not a lesser one. */
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.7;
+  margin-top: 6px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .callNowGrid { grid-template-columns: 1fr; }

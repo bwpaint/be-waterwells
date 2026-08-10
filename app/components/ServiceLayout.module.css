@@ -12,6 +12,22 @@
   min-width: 0; /* prevent grid blowout */
 }
 
+/*
+ * The grid uses align-items: start, so both columns begin on the same line —
+ * but each page's first <section> brings its own padding-top, which pushed the
+ * main column's first heading below the sidebar's first widget. Most pages
+ * already use 8px here; a handful used 80px, which is what caused the mismatch.
+ * Normalising it in the layout keeps every service page aligned with the
+ * sidebar without touching 20 page stylesheets.
+ *
+ * Specificity is 0,2,1 (class + pseudo-class + element), so it beats the
+ * single-class rules in the page modules regardless of stylesheet order.
+ * Safe because no first-in-layout section has its own background colour.
+ */
+.mainContent > section:first-child {
+  padding-top: 8px;
+}
+
 /* Sidebar sticks while content scrolls */
 .sidebarCol {
   position: sticky;

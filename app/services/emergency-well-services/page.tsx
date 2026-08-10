@@ -384,6 +384,8 @@ export default function EmergencyWellServicesPage() {
           </a>
           <p className={styles.finalCtaSub}>
             You reach a technician — not an answering service.
+          </p>
+          <p className={styles.finalCtaSubAlt}>
             Houston&apos;s emergency well specialists since 1979.
           </p>
         </div>

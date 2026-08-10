@@ -22,7 +22,13 @@
   margin-top: 30px;
 }
 
-.footerBrand {}
+.footerBrand {
+  /* Whole column is centred: heading rule, logo, tagline, contact, socials. */
+  text-align: center;
+}
+.footerBrand img {
+  margin: 4px auto 0;
+}
 
 /* Tint footer logo image to tan (--orange #DDD0AC) */
 .footerBrand img {
@@ -32,13 +38,40 @@
 .tagline {
   font-size: 0.88rem;
   line-height: 1.65;
-  margin: 16px 0 20px;
+  margin: 14px auto 0;
+  max-width: 260px;
   color: var(--white);
 }
+
+/* Phone then email, sitting below the tagline with extra space above. */
+.brandContactList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 28px 0 0;
+  padding: 0;
+}
+.brandContactList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+.brandContactList li a {
+  color: rgba(255, 255, 255, 0.72);
+  transition: var(--transition);
+}
+.brandContactList li a:hover { color: var(--orange); }
 
 .socialLinks {
   display: flex;
   gap: 10px;
+  /* Extra space where "Emergency Service Available" used to sit. */
+  margin-top: 28px;
+  justify-content: center;
 }
 
 .socialLinks a {
@@ -70,6 +103,11 @@
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--mid-stone);
+}
+
+.footerLinksSpaced {
+  /* Double the list gap so About / Contact Us read as a separate group. */
+  margin-top: 24px;
 }
 
 .footerLinks {
