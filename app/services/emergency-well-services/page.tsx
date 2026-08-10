@@ -9,9 +9,9 @@ import CityFaqAccordion from '../../components/CityFaqAccordion';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: '24/7 Emergency Well Service — Houston, TX | B-E Waterwell',
+  title: 'Emergency Well Service — Houston, TX | B-E Waterwell',
   description:
-    'Well stopped working? B-E Waterwell Services dispatches emergency well and pump replacement 24/7 across the Houston area. Same-day service in Montgomery and Harris counties. (281) 448-4447.',
+    'Well stopped working? B-E Waterwell Services dispatches emergency well and pump replacement across the Houston area, in Montgomery and Harris counties. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/emergency-well-services' },
 };
 
@@ -20,7 +20,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Service',
-      name: '24/7 Emergency Well Service — Houston, TX',
+      name: 'Emergency Well Service — Houston, TX',
       provider: {
         '@type': 'LocalBusiness',
         name: 'B-E Waterwell Services',
@@ -34,7 +34,7 @@ const jsonLd = {
       },
       areaServed: 'Houston, TX',
       description:
-        '24/7 emergency well and pump replacement dispatched same-day across Montgomery and Harris counties.',
+        'Emergency well and pump replacement across Montgomery and Harris counties.',
       availableChannel: {
         '@type': 'ServiceChannel',
         servicePhone: { '@type': 'ContactPoint', telephone: '+1-281-448-4447', contactType: 'emergency' },
@@ -56,7 +56,7 @@ const jsonLd = {
           name: 'How fast can B-E Waterwell respond to an emergency?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'We target a 2-hour response across all 11 service areas in Montgomery and Harris counties. We dispatch 24 hours a day, 7 days a week including holidays.',
+            text: 'We target a 2-hour response across all 11 service areas in Montgomery and Harris counties.',
           },
         },
         {
@@ -89,7 +89,7 @@ const faqs = [
   {
     question: 'How fast can B-E Waterwell respond to an emergency?',
     answer:
-      'We target a 2-hour response across all 11 service areas in Montgomery and Harris counties. We dispatch 24 hours a day, 7 days a week including weekends and holidays.',
+      'We target a 2-hour response across all 11 service areas in Montgomery and Harris counties.',
   },
   {
     question: 'What does emergency well repair cost?',
@@ -139,15 +139,15 @@ export default function EmergencyWellServicesPage() {
             <span>/</span>
             <span>Emergency Well Services</span>
           </nav>
-          <div className={styles.urgencyBadge}><Icon name="bolt" size={15} /> 24/7 Dispatch — We Answer Now</div>
+          <div className={styles.urgencyBadge}><Icon name="bolt" size={15} /> Emergency Dispatch — We Answer Now</div>
           <div className={styles.h1Wrap}>
             <span className={styles.h1Line1}>No Water?</span>
-            <h1 className={styles.h1Main}>Emergency Well Service — 24/7</h1>
+            <h1 className={styles.h1Main}>Emergency Well Service</h1>
           </div>
           <p className={styles.heroSubtitle}>
             Well stopped working? We dispatch same-day across all 11 Houston
             service areas — Montgomery County, Harris County, and Waller County.
-            Two-hour response target, any time, any day.
+            Two-hour response target.
           </p>
           <div className={styles.heroBtns}>
             <a href="tel:+12814484447" className={`btn btn-primary ${styles.callBtn}`}>
@@ -277,14 +277,14 @@ export default function EmergencyWellServicesPage() {
             <span className="section-label">Response Time</span>
             <h2 className="section-title">We Respond Within 2 Hours</h2>
             <p className={styles.responseIntro}>
-              We maintain 24/7 dispatch coverage across all 11 Houston
-              service areas. When you call after hours, you reach a technician —
+              We maintain emergency dispatch coverage across all 11 Houston
+              service areas. When you call, you reach a technician —
               not an answering service.
             </p>
             <div className={styles.responseGrid}>
               {[
                 { stat: '2 hr', label: 'Average response time', sub: 'All service areas' },
-                { stat: '24/7', label: 'Dispatch coverage', sub: '365 days a year' },
+                { stat: '11', label: 'Service areas covered', sub: 'Montgomery, Harris, and Waller counties' },
                 { stat: 'Same Day', label: 'Parts on hand', sub: 'Common pumps, switches, control boxes' },
                 { stat: '45+', label: 'Years serving Houston', sub: 'Since 1979' },
               ].map((s) => (
@@ -383,7 +383,7 @@ export default function EmergencyWellServicesPage() {
             <span className="section-label">Where We Respond</span>
             <h2 className="section-title">Emergency Service Areas</h2>
             <p className={styles.areasNote}>
-              24/7 emergency well service across the Houston area — 2-hour response target.
+              Emergency well service across the Houston area — 2-hour response target.
             </p>
             <div className={styles.areasGrid}>
               {serviceAreas.map((a) => (
@@ -410,7 +410,7 @@ export default function EmergencyWellServicesPage() {
             (281) 448-4447
           </a>
           <p className={styles.finalCtaSub}>
-            We answer around the clock — not an answering service, a technician.
+            You reach a technician — not an answering service.
             Houston&apos;s emergency well specialists since 1979.
           </p>
         </div>

@@ -13,7 +13,6 @@ const nextConfig = {
   async redirects() {
     return [
       // ── Retired /services/* pages → new five (folded content) ──
-      { source: '/services/emergency-well-services', destination: '/services/residential', permanent: true },
       { source: '/services/well-pump-services', destination: '/services/residential', permanent: true },
       { source: '/services/well-pump-services/well-pump-repair', destination: '/services/residential', permanent: true },
       { source: '/services/well-pump-services/pump-installation-repair', destination: '/services/residential', permanent: true },
@@ -42,8 +41,8 @@ const nextConfig = {
       { source: '/constant-pressure', destination: '/services/residential', permanent: true },
       { source: '/constant-pressure-systems', destination: '/services/residential', permanent: true },
       { source: '/generator-prep', destination: '/services/residential', permanent: true },
-      { source: '/emergency', destination: '/services/residential', permanent: true },
-      { source: '/emergency-service', destination: '/services/residential', permanent: true },
+      { source: '/emergency', destination: '/services/emergency-well-services', permanent: true },
+      { source: '/emergency-service', destination: '/services/emergency-well-services', permanent: true },
       { source: '/well-rehabilitation', destination: '/services/well-rehabilitation', permanent: true },
       { source: '/well-inspection', destination: '/services/well-maintenance', permanent: true },
       { source: '/well-maintenance', destination: '/services/well-maintenance', permanent: true },

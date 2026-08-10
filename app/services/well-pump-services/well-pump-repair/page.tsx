@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     question: 'Can you repair my well pump the same day?',
-    answer: 'Yes — for most residential pump failures in the greater Houston area, we carry common pump models and parts on our service trucks and can complete same-day repairs. For 24/7 emergency service, call us directly at (281) 448-4447.',
+    answer: 'Yes — for most residential pump failures in the greater Houston area, we carry common pump models and parts on our service trucks and can complete same-day repairs. For emergency service, call us directly at (281) 448-4447.',
   },
   {
     question: 'What is the difference between a submersible pump and a jet pump?',
@@ -107,7 +107,7 @@ export default function WellPumpRepairPage() {
                 Well Pump Repair &amp;<br />Replacement Services
               </h1>
               <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '1.05rem', maxWidth: '600px', lineHeight: 1.75, marginBottom: '28px' }}>
-                Lost water pressure or no water at all? B-E Waterwell Services has diagnosed and repaired well pumps across the Houston area for over 45 years. We carry most pump models on our service trucks — same-day repairs available, 24/7 emergency service.
+                Lost water pressure or no water at all? B-E Waterwell Services has diagnosed and repaired well pumps across the Houston area for over 45 years. We carry most pump models on our service trucks — same-day repairs available, emergency service.
               </p>
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
                 <a href="tel:+12814484447" className="btn btn-primary">Call (281) 448-4447</a>
@@ -117,7 +117,7 @@ export default function WellPumpRepairPage() {
             {/* Emergency box */}
             <div style={{ background: 'rgba(217,95,10,0.15)', border: '2px solid var(--orange)', borderRadius: 'var(--radius)', padding: '24px 28px', minWidth: '240px', textAlign: 'center' }}>
               <div style={{ marginBottom: '8px', color: 'var(--orange)' }}><Icon name="bolt" size={34} /></div>
-              <div style={{ fontFamily: 'var(--font-head)', fontWeight: 900, color: 'var(--orange)', fontSize: '0.88rem', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '6px' }}>24/7 Emergency</div>
+              <div style={{ fontFamily: 'var(--font-head)', fontWeight: 900, color: 'var(--orange)', fontSize: '0.88rem', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '6px' }}>Emergency</div>
               <a href="tel:+12814484447" style={{ display: 'block', fontFamily: 'var(--font-head)', fontWeight: 900, fontSize: '1.4rem', color: 'var(--white)', marginBottom: '6px', textDecoration: 'none' }}>(281) 448-4447</a>
               <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.6)' }}>No water? Call now.<br />Same-day response available.</div>
             </div>
@@ -237,7 +237,7 @@ export default function WellPumpRepairPage() {
             {[
               { label: 'Constant Pressure Systems', href: '/services/well-pump-services/constant-pressure-systems', desc: 'Upgrade to steady pressure — no more fluctuations when irrigation runs.' },
               { label: 'Pressure Tank Service', href: '/services/water-well-systems/pressure-tank-systems', desc: 'Waterlogged tank? We replace all brands, same day.' },
-              { label: 'Emergency Well Service', href: '/services/emergency-well-services', desc: '24/7 response for complete water loss anywhere in the Houston area.' },
+              { label: 'Emergency Well Service', href: '/services/emergency-well-services', desc: 'Response for complete water loss anywhere in the Houston area.' },
               { label: 'Well Inspection', href: '/services/well-maintenance/well-inspection', desc: 'Annual inspection catches pump wear before you lose water.' },
               { label: 'Well Rehabilitation', href: '/services/well-maintenance/well-rehabilitation', desc: 'Low yield or iron bacteria? We restore output and water quality.' },
               { label: 'New Well Drilling', href: '/services/water-well-drilling/new-well-drilling', desc: 'Time for a new well? We drill and complete in one mobilization.' },

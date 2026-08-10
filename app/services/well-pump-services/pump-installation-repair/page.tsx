@@ -51,7 +51,7 @@ const jsonLd = {
           name: 'Do you offer same-day pump installation?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, for most residential systems. We stock common Franklin Electric submersible pump sizes and can complete same-day pull-and-replace service. Emergency dispatch is available 24/7.',
+            text: 'Yes, for most residential systems. We stock common Franklin Electric submersible pump sizes and can complete same-day pull-and-replace service. Emergency dispatch is available.',
           },
         },
         {
@@ -87,7 +87,7 @@ const faqs = [
   {
     question: 'Do you offer same-day pump installation?',
     answer:
-      'Yes, for most residential systems. We stock common Franklin Electric submersible pump sizes and can complete same-day pull-and-replace service when the pump is available. Emergency dispatch is available 24/7 at (281) 448-4447.',
+      'Yes, for most residential systems. We stock common Franklin Electric submersible pump sizes and can complete same-day pull-and-replace service when the pump is available. Emergency dispatch is available at (281) 448-4447.',
   },
   {
     question: 'How deep can you pull a submersible pump?',
@@ -360,7 +360,7 @@ export default function PumpInstallRepairPage() {
                 </div>
                 <p className={styles.costNote}>
                   All prices include labor. Final quote given before any work begins.
-                  Emergency service available 24/7.
+                  Emergency service available.
                 </p>
                 <a href="tel:+12814484447" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', marginTop: 20 }}>
                   Get a Free Estimate

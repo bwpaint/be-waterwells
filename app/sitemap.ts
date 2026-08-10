@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/commercial',
     '/services/well-rehabilitation',
     '/services/well-maintenance',
+    '/services/emergency-well-services',
     '/service-areas',
     '/blog',
   ];

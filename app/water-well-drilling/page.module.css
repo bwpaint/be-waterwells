@@ -7,12 +7,18 @@
   overflow: hidden;
 }
 .heroBg {
+  /* Canonical hero treatment — matches /services/residential, the client-approved
+     reference. Photo sits at low opacity over the solid --charcoal hero background,
+     desaturated and warm-toned. No directional gradient and no accent tint: the even
+     wash is what produces the consistent cast across every hero on the site.
+     If you change these three values, change them here and nowhere else. */
   position: absolute;
   inset: 0;
-  background-image: url('https://bewaterwells.com/wp-content/uploads/2024/09/water-well-services.webp');
+  background-image: url('/images/hero-drilling-rig.webp');
   background-size: cover;
   background-position: center;
-  opacity: 0.18; filter: saturate(0.25) sepia(0.25);
+  opacity: 0.18;
+  filter: saturate(0.25) sepia(0.25);
 }
 .heroGrid {
   position: relative;

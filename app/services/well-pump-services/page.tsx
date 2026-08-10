@@ -60,7 +60,7 @@ const jsonLd = {
           name: 'Do you offer same-day pump service?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. We stock the most common submersible pump sizes and can typically complete a same-day pump replacement for residential systems. Emergency service is available 24/7.',
+            text: 'Yes. We stock the most common submersible pump sizes and can typically complete a same-day pump replacement for residential systems. Emergency service is available.',
           },
         },
       ],
@@ -82,7 +82,7 @@ const faqs = [
   {
     question: 'Do you offer same-day pump service?',
     answer:
-      'Yes. We stock the most common Franklin Electric submersible pump sizes and can complete same-day pump replacement for most residential systems. Emergency dispatch is available 24/7 at (281) 448-4447.',
+      'Yes. We stock the most common Franklin Electric submersible pump sizes and can complete same-day pump replacement for most residential systems. Emergency dispatch is available at (281) 448-4447.',
   },
 ];
 
@@ -244,7 +244,7 @@ export default function WellPumpServicesPage() {
                 { icon: 'cycle' as const, sign: 'Pump Running Constantly', desc: 'Your pump never stops cycling, even when no water is being used. This signals a waterlogged tank or pressure switch issue.' },
                 { icon: 'wind' as const, sign: 'Air Spurts at Faucets', desc: 'Air bubbles or spitting from taps after the pump runs. Can mean a low water table, failed check valve, or pump cavitation.' },
                 { icon: 'bulb' as const, sign: 'High Electric Bills', desc: 'A pump running more than it should — due to leaks, tank problems, or motor inefficiency — shows up in your electricity costs.' },
-                { icon: 'ban' as const, sign: 'No Water at All', desc: 'Complete loss of water is a pump or electrical failure until proven otherwise. Call for 24/7 emergency service.' },
+                { icon: 'ban' as const, sign: 'No Water at All', desc: 'Complete loss of water is a pump or electrical failure until proven otherwise. Call for emergency service.' },
               ].map((item) => (
                 <div key={item.sign} className={styles.signCard}>
                   <span className={styles.signIcon}><Icon name={item.icon} size={30} /></span>

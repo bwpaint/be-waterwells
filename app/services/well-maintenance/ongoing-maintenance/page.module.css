@@ -1,6 +1,19 @@
 /* ── HERO ──────────────────────────────────────────────────── */
 .hero { position: relative; padding-top: 120px; background: var(--charcoal); overflow: hidden; }
-.heroBg { background-image: url('/images/hero-windmill-service.webp'); position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.18; filter: saturate(0.25) sepia(0.25); }
+.heroBg {
+  /* Canonical hero treatment — matches /services/residential, the client-approved
+     reference. Photo sits at low opacity over the solid --charcoal hero background,
+     desaturated and warm-toned. No directional gradient and no accent tint: the even
+     wash is what produces the consistent cast across every hero on the site.
+     If you change these three values, change them here and nowhere else. */
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/hero-windmill-service.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  filter: saturate(0.25) sepia(0.25);
+}
 .heroGrid { position: relative; z-index: 1; padding: 72px 0 88px; max-width: 760px; }
 .breadcrumb { display: flex; align-items: center; gap: 8px; font-family: var(--font-head); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 28px; flex-wrap: wrap; }
 .breadcrumb a { color: rgba(255,255,255,0.45); transition: var(--transition); }

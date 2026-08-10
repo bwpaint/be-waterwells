@@ -20,10 +20,11 @@
 }
 
 .heroBg {
-  /* Matches the residential page hero treatment the client approved: the photo
-     sits at low opacity over the solid charcoal hero background, desaturated
-     and warm-toned. No blur, and no directional gradient — the even wash is
-     what produces the consistent sepia look. */
+  /* Canonical hero treatment — matches /services/residential, the client-approved
+     reference. Photo sits at low opacity over the solid --charcoal hero background,
+     desaturated and warm-toned. No directional gradient and no accent tint: the even
+     wash is what produces the consistent cast across every hero on the site.
+     If you change these three values, change them here and nowhere else. */
   position: absolute;
   inset: 0;
   background-image: url('/images/hero-home-rig.jpg');
@@ -31,7 +32,6 @@
   background-position: center;
   opacity: 0.18;
   filter: saturate(0.25) sepia(0.25);
-  z-index: 0;
 }
 
 .heroDiagonal {

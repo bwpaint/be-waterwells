@@ -6,16 +6,21 @@
 .hero {
   position: relative;
   padding-top: 120px;
-  background: #0e0c0a;
+  /* Must stay var(--charcoal) to match every other hero — this page previously
+     used a hardcoded near-black (#0e0c0a), which read noticeably colder than the
+     rest of the site because --charcoal is a warm brown, not a grey. */
+  background: var(--charcoal);
   overflow: hidden;
 }
 .heroBg {
+  /* Canonical hero treatment — matches /services/residential, the client-approved
+     reference. Photo sits at low opacity over the solid --charcoal hero background,
+     desaturated and warm-toned. No directional gradient and no accent tint: the even
+     wash is what produces the consistent cast across every hero on the site.
+     If you change these three values, change them here and nowhere else. */
   position: absolute;
   inset: 0;
-  /* Photo sits beneath the existing tint gradients (last layer = bottom). */
-  background: radial-gradient(ellipse at 60% 40%, rgba(180,30,10,0.28) 0%, transparent 70%),
-              radial-gradient(ellipse at 20% 80%, rgba(221,208,172,0.18) 0%, transparent 60%),
-              url('/images/hero-service-truck.webp');
+  background-image: url('/images/hero-service-truck.webp');
   background-size: cover;
   background-position: center;
   opacity: 0.18;

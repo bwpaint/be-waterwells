@@ -10,12 +10,14 @@
   overflow: hidden;
 }
 .heroBg {
+  /* Canonical hero treatment — matches /services/residential, the client-approved
+     reference. Photo sits at low opacity over the solid --charcoal hero background,
+     desaturated and warm-toned. No directional gradient and no accent tint: the even
+     wash is what produces the consistent cast across every hero on the site.
+     If you change these three values, change them here and nowhere else. */
   position: absolute;
   inset: 0;
-  /* Photo sits beneath the existing tint gradients (last layer = bottom). */
-  background: radial-gradient(ellipse at 30% 60%, rgba(0,80,160,0.22) 0%, transparent 65%),
-              radial-gradient(ellipse at 80% 30%, rgba(221,208,172,0.15) 0%, transparent 55%),
-              url('/images/hero-residential-tank.webp');
+  background-image: url('/images/hero-residential-tank.webp');
   background-size: cover;
   background-position: center;
   opacity: 0.18;
