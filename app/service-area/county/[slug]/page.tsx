@@ -32,7 +32,7 @@ export function generateMetadata({ params }: Props): Metadata {
 }
 
 const countyServices = [
-  { icon: 'drill' as const, title: 'Waterwell Drilling', desc: 'New residential, agricultural, and commercial waterwells drilled to the county’s productive aquifer.' },
+  { icon: 'drill' as const, title: 'Waterwell Drilling', desc: 'New residential, agricultural, and commercial waterwells drilled to the depth your site requires.' },
   { icon: 'gear' as const, title: 'Pump Replacement & Install', desc: 'Submersible pump replacement and new installation. Franklin Electric authorized dealer.' },
   { icon: 'droplet' as const, title: 'Well Rehabilitation', desc: 'Restore yield on aging wells with shocking, acid treatment, and screen cleaning.' },
   { icon: 'bolt' as const, title: 'Generator Prep Kits', desc: 'Keep water flowing through outages with a properly installed transfer switch.' },
@@ -113,10 +113,6 @@ export default function CountyPage({ params }: Props) {
       <section className={styles.factsSection}>
         <div className="container">
           <div className={styles.factsGrid}>
-            <div className={styles.factCard}>
-              <span className={styles.factLabel}>Target Aquifer</span>
-              <strong className={styles.factValue}>{county.aquifer}</strong>
-            </div>
             <div className={styles.factCard}>
               <span className={styles.factLabel}>Typical Depth</span>
               <strong className={styles.factValue}>{county.depthRange}</strong>

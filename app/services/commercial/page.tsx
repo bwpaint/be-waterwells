@@ -46,7 +46,7 @@ const jsonLd = {
           name: 'How deep are commercial and agricultural wells in the Houston area?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Commercial and agricultural wells in the Houston area range from 200 to 500+ feet depending on location, target aquifer, and required yield. Standard residential Jasper Aquifer wells run 180–320 feet. Higher-demand commercial applications may require the deeper Evangeline Aquifer (240–440 ft) or even the Trinity Group formation for maximum yield. We assess your site water demand before recommending a target depth.',
+            text: 'Commercial and agricultural wells in the Houston area range from 200 to 500+ feet depending on location, target aquifer, and required yield. Standard residential wells run 180–320 feet. Higher-demand commercial applications may require deeper zones (240–440 ft) for maximum yield. We assess your site water demand before recommending a target depth.',
           },
         },
         {
@@ -139,7 +139,7 @@ const faqs = [
   {
     question: 'How deep are commercial and agricultural wells in the Houston area?',
     answer:
-      'Commercial and agricultural wells in the Houston area range from 200 to 500+ feet depending on location, target aquifer, and required yield. Standard residential Jasper Aquifer wells run 180–320 feet. Higher-demand commercial applications may require the deeper Evangeline Aquifer (240–440 ft) or even the Trinity Group formation for maximum yield. We assess your site water demand before recommending a target depth.',
+      'Commercial and agricultural wells in the Houston area range from 200 to 500+ feet depending on location, target aquifer, and required yield. Standard residential wells run 180–320 feet. Higher-demand commercial applications may require deeper zones (240–440 ft) for maximum yield. We assess your site water demand before recommending a target depth.',
   },
   {
     question: 'Do I need a high-capacity permit for a commercial well in Texas?',
@@ -288,7 +288,7 @@ export default function CommercialWellServicesHubPage() {
           <span className="section-label">Permitting Handled</span>
           <h2 className="section-title">Commercial &amp; Agricultural Permits in Texas</h2>
           <p className={styles.overviewP}>
-            All wells in Texas require Groundwater Conservation District permits. Commercial
+            All commercial and agricultural wells in Texas require Groundwater Conservation District permits. Commercial
             and agricultural wells exceeding production thresholds require enhanced
             high-capacity permits — including documentation of intended water use, requested
             production quantity, and in some cases hydrological review.

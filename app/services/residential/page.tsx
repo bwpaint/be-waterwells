@@ -87,7 +87,7 @@ const homeownerServices = [
     icon: 'house' as const,
     title: 'New & Replacement Wells',
     href: '/services/water-well-drilling',
-    desc: 'A new residential well drilled to the Jasper or Evangeline Aquifer — permitted, cased in Schedule 40 PVC, and finished with pump and pressure tank.',
+    desc: 'A new residential well drilled to the water-bearing zone or the water-bearing zone — permitted, cased in Schedule 40 PVC, and finished with pump and pressure tank.',
     highlights: ['Rotary rig to target aquifer', 'All permits included', '2-year workmanship warranty'],
   },
   {
@@ -164,7 +164,7 @@ const pressureFeatures = [
   },
   {
     icon: 'bolt' as const, title: '30–50% Energy Savings',
-    desc: 'A VFD pump soft-starts and runs only as fast as demand requires — typically 30–50% less electricity, soft start that extends motor life, and a 3–5 year payback.',
+    desc: 'A VFD pump soft-starts and runs only as fast as demand requires — typically 30–50% less electricity and a soft start that extends motor life. Actual savings vary by household and usage.',
   },
 ];
 
@@ -381,28 +381,21 @@ export default function ResidentialHubPage() {
               <h3>01 Basic Portable Hookup</h3>
               <p>
                 Transfer switch and dedicated generator inlet receptacle wired to your
-                well pump circuit. Connect your portable generator during an outage without
-                back-feeding your panel. Installed in 2–4 hours.
+                well pump circuit. Connect your own portable generator during an outage
+                without back-feeding your panel. Installed in 2–4 hours. We supply and
+                install the prep kit — we do not sell or install generators. For panel
+                work, contact your electrician.
               </p>
             </div>
             <div className={styles.featureCard}>
               <h3>02 Manual Transfer Panel</h3>
               <p>
-                A robust manual transfer panel that lets you select individual circuits —
-                better if you also want to run a refrigerator or lighting from the same
-                generator. Load calculation included.
+                A manual transfer panel wired specifically for the well pump circuit.
+                Sized to your pump, not to your house.
               </p>
             </div>
             <div className={styles.featureCard}>
-              <h3>03 Whole-Home Standby</h3>
-              <p>
-                Automatic transfer switch with a natural gas or propane standby generator —
-                power returns within seconds of an outage. We handle the well pump prep and
-                coordinate the electrician.
-              </p>
-            </div>
-            <div className={styles.featureCard}>
-              <h3>⏱️ Install Before the Storm</h3>
+              <h3>Install Before the Storm</h3>
               <p>
                 Install in spring — March through May, before June 1. Once a named storm
                 approaches, contractors book up within hours. We recommend a minimum

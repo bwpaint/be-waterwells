@@ -26,7 +26,7 @@ const faqs = [
   {
     question: 'How long does well rehabilitation last?',
     answer:
-      'It depends on the method and the underlying cause. Shock chlorination for iron bacteria typically lasts 2–5 years before re-treatment is needed, especially in high-iron well water. Mechanical jetting for mineral deposits often restores yield for 5–10 years. We monitor performance after rehabilitation and recommend annual inspection to track results.',
+      'It depends on the method and the underlying cause. Shock chlorination for iron bacteria typically lasts 1–2 years before re-treatment is needed, especially in high-iron well water. Mechanical jetting for mineral deposits often restores yield for 5–10 years. We monitor performance after rehabilitation and recommend annual inspection to track results.',
   },
   {
     question: 'What is iron bacteria and why is it so common in the Houston area?',
@@ -36,7 +36,7 @@ const faqs = [
   {
     question: 'Can I treat iron bacteria in my well myself?',
     answer:
-      'DIY shock chlorination is possible but rarely eliminates established iron bacteria colonies in the well screen. Effectiveness depends on chlorine concentration, contact time, and reaching the perforations — not just pouring bleach down the casing. We use proper concentration, agitation, and contact time protocols. Improper treatment can temporarily suppress bacteria without eliminating the colony, giving false reassurance.',
+      'DIY shock chlorination is possible but rarely eliminates established iron bacteria colonies in the well screen. Effectiveness depends on chlorine concentration, contact time, and reaching the perforations — not just pouring bleach down the casing. We use proper chemical concentration, agitation, and contact time protocols. Improper treatment can temporarily suppress bacteria without eliminating the colony, giving false reassurance.',
   },
 ];
 
@@ -89,7 +89,7 @@ const reasons = [
   {
     num: '03',
     title: 'Mechanical Wear',
-    desc: 'Worn or corroded well screen, damaged casing, or shifted gravel pack. Structural issues require assessment before rehabilitation — some may need new well drilling.',
+    desc: 'Worn or corroded well screen, damaged casing, or shifted production sand. Structural issues require assessment before rehabilitation — some may need new well drilling.',
   },
   {
     num: '04',

@@ -21,17 +21,17 @@ const faqs = [
   {
     question: 'How often should a water well be inspected and serviced in the Houston area?',
     answer:
-      'Annual inspection is recommended for residential wells, and at minimum every 3 years. In Houston, the humid climate and mineral-heavy Jasper Aquifer water accelerate equipment wear, so consistent well water pump maintenance pays off. Pre-hurricane season pump checks are also wise — discovering a weak pump in April is far better than discovering it in August when your power is out.',
+      'Bi-annual inspection is recommended for residential wells, and at minimum every 3 years. In Houston, the humid climate and mineral-heavy groundwater accelerate equipment wear, so consistent well water pump maintenance pays off. Pre-hurricane season pump checks are also wise — discovering a weak pump in April is far better than discovering it in August when your power is out.',
   },
   {
     question: 'What does a water well inspection include?',
     answer:
-      'Our inspection covers visual inspection of the wellhead and casing (sanitary cap, vent screen, setback from structures), a pump performance test (flow rate and motor amp draw), a pressure system check (tank pre-charge, switch calibration), a water quality sample collection, and a written report. For FHA/VA/USDA requirements, we test for bacteria and nitrates as required by the applicable program.',
+      'Our inspection covers visual inspection of the wellhead and casing (sanitary cap, vent screen, setback from structures), a pump performance test (flow rate and motor amp draw), a pressure system check (tank pre-charge, switch calibration), and a written report.',
   },
   {
-    question: 'Can I set up an ongoing annual maintenance plan with B-E Waterwell?',
+    question: 'Can I set up an ongoing bi-annual maintenance plan with B-E Waterwell?',
     answer:
-      'Yes. We offer priority scheduling for customers who want an annual maintenance relationship. We maintain your service record and reach out when your visit is due. You receive written service reports after every visit — these records are valuable when selling your home and may support warranty claims on equipment.',
+      'Yes. We offer priority scheduling for customers who want a bi-annual maintenance relationship. We maintain your service record and reach out when your visit is due. You receive written service reports after every visit — these records are valuable when selling your home and may support warranty claims on equipment.',
   },
   {
     question: 'How much does well inspection and annual maintenance cost?',
@@ -109,12 +109,12 @@ const inspectionSituations = [
 ];
 
 const inspectionCovers = [
-  { item: 'Wellhead & casing visual', detail: 'Vent screen, sanitary cap, surface seal, setback from septic' },
+  { item: 'Wellhead & casing visual', detail: 'Vent screen, sanitary cap, surface seal' },
   { item: 'Pump performance test', detail: 'Flow rate (GPM), pressure output, motor amp draw' },
   { item: 'Recovery rate assessment', detail: 'How quickly the water level recovers after pumping' },
   { item: 'Pressure system check', detail: 'Tank pre-charge, pressure switch calibration, cut-in/cut-out settings' },
   { item: 'Water quality sample', detail: 'Collected for lab analysis — bacteria, nitrates, and basic chemistry' },
-  { item: 'Written report', detail: 'Delivered within 24 hours of site visit, formatted for lenders' },
+  { item: 'Written report', detail: 'Delivered within 24 hours of site visit' },
 ];
 
 const seasonalCalendar = [
@@ -233,11 +233,11 @@ export default function WellMaintenancePage() {
             water. Over time, wells need to be maintained to keep optimal performance.
             A residential waterwell with annual inspection and proper maintenance
             regularly achieves 25–40 years of service. Neglected wells — where problems
-            go undetected — often fail at 10–15 years, requiring expensive emergency
+            go undetected — often fail at 10–15 years or sooner, requiring expensive emergency
             repairs or full replacement.
           </p>
           <p className={styles.overviewP}>
-            In Houston, the Jasper Aquifer water is mineral-heavy with iron content that
+            In Houston, the water-bearing zone water is mineral-heavy with iron content that
             accelerates pump wear and can cause biofouling in aging wells. Annual
             monitoring catches these conditions early, when they are treatable rather than
             catastrophic.
@@ -352,7 +352,7 @@ export default function WellMaintenancePage() {
         {/* ── ONGOING MAINTENANCE & SEASONAL CARE ─ */}
         <section className={styles.seasonSection}>
           <span className="section-label">Ongoing Care</span>
-          <h2 className="section-title">Ongoing Maintenance &amp; Seasonal Care</h2>
+          <h2 className="section-title">Bi-Annual Maintenance &amp; Seasonal Care</h2>
           <p className={styles.bodyP}>
             Annual well maintenance is the single highest-ROI investment a Houston well owner
             can make — catch a small pressure switch issue before it becomes a major pump

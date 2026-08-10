@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const cities = [
   { city: 'Magnolia', slug: 'magnolia-tx', county: 'Montgomery County', hq: true, desc: 'Our home base since 1979. Deep local knowledge, fastest response times.' },
   { city: 'Conroe', slug: 'conroe-tx', county: 'Montgomery County', desc: 'County seat and Lake Conroe corridor. 200–400 ft depth range.' },
-  { city: 'Tomball', slug: 'tomball-tx', county: 'Harris County', desc: 'NW Houston. Sandy loam soils, reliable Jasper Aquifer access.' },
+  { city: 'Tomball', slug: 'tomball-tx', county: 'Harris County', desc: 'NW Houston. Sandy loam soils with reliable groundwater access.' },
   { city: 'The Woodlands', slug: 'woodlands-tx', county: 'Montgomery County', desc: 'Estate areas and acreage tracts. Discreet, professional service.' },
   { city: 'Spring', slug: 'spring-tx', county: 'Harris County', desc: 'North Harris County crossroads. New construction and legacy well service.' },
   { city: 'Cypress', slug: 'cypress-tx', county: 'Harris County', desc: 'NW Harris County. Residential and irrigation waterwells.' },

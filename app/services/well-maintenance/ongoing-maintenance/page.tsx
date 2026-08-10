@@ -65,7 +65,7 @@ const included = [
   { icon: 'chart' as const, title: 'Pressure & Flow Rate Test', desc: 'Measure system pressure at multiple points, verify cut-in and cut-out settings, check for pressure loss across distribution.' },
   { icon: 'wrench' as const, title: 'Pressure Switch Calibration', desc: 'Verify and adjust cut-in and cut-out pressure settings. An out-of-spec switch causes short cycling or inadequate system pressure.' },
   { icon: 'droplet' as const, title: 'Water Quality Visual', desc: 'Assess color, clarity, and odor. Flag any obvious changes for targeted lab testing if needed. Not a full lab test.' },
-  { icon: 'clipboard' as const, title: 'Written Report', desc: 'Detailed report with test results and written recommendations. Formatted for home sales and lender use.' },
+  { icon: 'clipboard' as const, title: 'Written Report', desc: 'Detailed report with test results and written recommendations.' },
 ];
 
 const seasons = [

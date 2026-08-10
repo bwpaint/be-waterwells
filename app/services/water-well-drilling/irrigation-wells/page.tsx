@@ -52,7 +52,7 @@ const jsonLd = {
           name: 'How deep is an irrigation well in the Houston area?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Irrigation wells follow the same aquifer depths as residential wells. In Montgomery County that is typically 180–320 ft to the Jasper Aquifer. In Harris County NW it is 180–360 ft. We size the pump specifically for irrigation demand, which is different from household demand.',
+            text: 'Irrigation wells follow the same aquifer depths as residential wells. In Montgomery County that is typically 180–320 ft to the water-bearing zone. In Harris County NW it is 180–360 ft. We size the pump specifically for irrigation demand, which is different from household demand.',
           },
         },
         {
@@ -100,7 +100,7 @@ const whyDedicated = [
 ];
 
 const included = [
-  { icon: 'drill' as const, title: 'Rotary Rig Drilling', desc: 'Drilled to your target aquifer with full geological log. Cased in Schedule 40 PVC with gravel pack and screen.' },
+  { icon: 'drill' as const, title: 'Rotary Rig Drilling', desc: 'Drilled to your target aquifer with full geological log. Cased in Schedule 40 PVC with production sand and screen.' },
   { icon: 'gear' as const, title: 'Irrigation Pump Sizing', desc: 'Pump sized for your sprinkler system flow rate and pressure requirements — not generic household sizing.' },
   { icon: 'wrench' as const, title: 'Dedicated Wellhead', desc: 'Separate wellhead, pitless adapter, and surface casing distinct from any existing household well on the property.' },
   { icon: 'plug' as const, title: 'System Integration', desc: 'We work with your existing irrigation system or contractor to ensure clean integration at the pump controller.' },
@@ -125,7 +125,7 @@ const faqs = [
   {
     question: 'How deep is an irrigation well in the Houston area?',
     answer:
-      'Irrigation wells reach the same aquifers as residential wells. Montgomery County properties typically require 180–320 ft to the Jasper Aquifer. Harris County NW (Tomball, Cypress, Spring) is 180–360 ft. The pump is sized specifically for irrigation demand — higher flow rates at lower pressure than a household system.',
+      'Irrigation wells reach the same aquifers as residential wells. Montgomery County properties typically require 180–320 ft to the water-bearing zone. Harris County NW (Tomball, Cypress, Spring) is 180–360 ft. The pump is sized specifically for irrigation demand — higher flow rates at lower pressure than a household system.',
   },
   {
     question: 'Can I use my irrigation well for horses or livestock?',

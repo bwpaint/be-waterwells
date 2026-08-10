@@ -59,7 +59,7 @@ const jsonLd = {
           name: 'How long do pressure tanks last in Texas?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'In Houston, pressure tanks typically last 8–15 years. The humid climate and mineral-heavy water from the Jasper Aquifer can accelerate bladder wear. Tanks over 10 years old should be inspected annually, especially if you notice any pump cycling changes.',
+            text: 'In Houston, pressure tanks typically last 8–15 years. The humid climate and mineral-heavy water from the water-bearing zone can accelerate bladder wear. Tanks over 10 years old should be inspected annually, especially if you notice any pump cycling changes.',
           },
         },
         {
@@ -114,7 +114,7 @@ const faqs = [
   },
   {
     question: 'How long do pressure tanks last in Texas heat and humidity?',
-    answer: 'In Houston, pressure tanks typically last 8–15 years. The combination of humid air around the tank exterior and mineral-heavy water from the Jasper Aquifer accelerates bladder wear. Tanks over 10 years old should be inspected annually. We check pre-charge pressure and bladder integrity on every service call.',
+    answer: 'In Houston, pressure tanks typically last 8–15 years. The combination of humid air around the tank exterior and mineral-heavy water from the water-bearing zone accelerates bladder wear. Tanks over 10 years old should be inspected annually. We check pre-charge pressure and bladder integrity on every service call.',
   },
   {
     question: 'Can I replace my pressure tank myself?',

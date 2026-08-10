@@ -50,7 +50,7 @@ const jsonLd = {
           name: 'How long does generator prep kit installation take?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Basic transfer switch and generator inlet installation typically takes 2–4 hours. We handle the well pump circuit side. If you need a whole-home panel transfer switch, an electrician handles the main panel work and we handle the well pump preparation.',
+            text: 'Basic transfer switch and generator inlet installation typically takes 2–4 hours. We handle the well pump circuit only. For any main panel work, contact your electrician.',
           },
         },
         {
@@ -63,10 +63,10 @@ const jsonLd = {
         },
         {
           '@type': 'Question',
-          name: 'What about whole-home automatic standby generators?',
+          name: 'Do you sell or install generators?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'For automatic standby generators (Generac, Kohler, etc.), we install and prepare the well pump circuit and transfer connection. A licensed electrician handles the main panel automatic transfer switch. We coordinate with your electrician or can recommend one. Whole-home standby systems typically run $8,000–$15,000 including installation.',
+            text: 'No. We supply and install generator prep kits — the transfer switch and inlet wired to your well pump circuit. We do not sell generators or perform generator installation. You provide the generator, and for any main panel work you would contact your electrician.',
           },
         },
       ],
@@ -91,7 +91,7 @@ const options = [
   },
   {
     num: '03',
-    title: 'Whole-Home Automatic Standby',
+    title: 'Prep Kit Only — Well Circuit',
     price: '$8,000–$15,000 (with electrician)',
     desc: 'Automatic transfer switch with a natural gas or propane standby generator. Power comes back within seconds of an outage — no manual intervention. We handle the well pump preparation and coordination.',
     includes: ['Automatic transfer switch (electrician)', 'Well pump circuit prep', 'Load calculation', 'Generator pad & connection'],
@@ -124,7 +124,7 @@ const faqs = [
   },
   {
     question: 'Does a generator prep kit work with any generator brand?',
-    answer: 'Yes. We install a standard generator inlet receptacle (30-amp or 50-amp twist-lock) that works with any portable generator using a matching outlet. You supply a properly rated generator cord. For automatic standby systems (Generac, Kohler, Cummins), we coordinate with your electrician to ensure the well pump circuit is properly integrated into the automatic transfer switch.',
+    answer: 'Yes. We install a standard generator inlet receptacle (30-amp or 50-amp twist-lock) that works with any portable generator using a matching outlet. You supply the generator and a properly rated cord. For automatic standby systems, contact your electrician — that work is outside what we provide.',
   },
   {
     question: 'Should I install a generator prep kit before or after hurricane season starts?',

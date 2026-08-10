@@ -49,7 +49,7 @@ const jsonLd = {
           name: 'How deep are waterwells drilled in the Houston area?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Most residential waterwells in the Houston area reach 180–420 feet depending on your specific location. Montgomery County wells typically access the Jasper Aquifer at 180–320 ft. Harris County wells often require 220–420 ft to reach the Evangeline Aquifer.',
+            text: 'Most residential waterwells in the Houston area reach 180–420 feet depending on your specific location. Montgomery County wells typically access the water-bearing zone at 180–320 ft. Harris County wells often require 220–420 ft to reach the water-bearing zone.',
           },
         },
         {
@@ -73,7 +73,7 @@ const jsonLd = {
           name: 'What is included in a new waterwell installation?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A complete waterwell installation from B-E Waterwell Services includes: drilling, PVC casing, gravel pack, well development, submersible pump and motor, drop pipe, pressure tank, electrical connection, and initial water quality test.',
+            text: 'A complete waterwell installation from B-E Waterwell Services includes: drilling, PVC casing, production sand, well development, submersible pump and motor, drop pipe, pressure tank, electrical connection, and initial water quality test.',
           },
         },
         {
@@ -93,7 +93,7 @@ const faqs = [
   {
     question: 'How deep are waterwells drilled in the Houston area?',
     answer:
-      'Most residential waterwells in the Houston area reach 180–420 feet. Montgomery County wells typically access the Jasper Aquifer at 180–320 ft. Harris County wells often require 220–420 ft to reach the Evangeline Aquifer. We assess every property before quoting.',
+      'Most residential waterwells in the Houston area reach 180–420 feet. Montgomery County wells typically access the water-bearing zone at 180–320 ft. Harris County wells often require 220–420 ft to reach the water-bearing zone. We assess every property before quoting.',
   },
   {
     question: 'How long does it take to drill a waterwell?',
@@ -108,7 +108,7 @@ const faqs = [
   {
     question: 'What is included in a new waterwell installation?',
     answer:
-      'A complete installation includes: drilling, PVC casing, gravel pack, well development, submersible pump and motor, drop pipe, pressure tank, electrical connection, and initial water quality test.',
+      'A complete installation includes: drilling, PVC casing, production sand, well development, submersible pump and motor, drop pipe, pressure tank, electrical connection, and initial water quality test.',
   },
   {
     question: 'How much does waterwell drilling cost in the Houston area?',
@@ -177,8 +177,8 @@ export default function WaterWellDrillingPage() {
             </h2>
             <p>
               B-E Waterwell Services uses truck-mounted rotary drilling rigs to
-              drill through the sandy coastal plains of the Houston area to the Jasper,
-              Evangeline, and Chicot Aquifers — the same reliable freshwater
+              drill through the sandy coastal plains of the Houston area to the water-bearing zone,
+              the water-bearing zone, and the water-bearing zone Aquifers — the same reliable freshwater
               sources that have supplied this region for generations.
             </p>
             <p style={{ marginTop: 16 }}>
@@ -228,7 +228,7 @@ export default function WaterWellDrillingPage() {
           <div className={styles.includedGrid}>
             {[
               { icon: 'wrench' as const, title: 'Rotary Rig Drilling', desc: 'Truck-mounted rig, drilled to target aquifer depth with full geological log.' },
-              { icon: 'screwdriver' as const, title: 'PVC Casing & Screen', desc: 'Schedule 40 PVC casing, gravel pack, and properly placed well screen.' },
+              { icon: 'screwdriver' as const, title: 'PVC Casing & Screen', desc: 'Schedule 40 PVC casing, production sand, and properly placed well screen.' },
               { icon: 'droplet' as const, title: 'Well Development', desc: 'Aquifer development to clear drilling fluids and maximize production yield.' },
               { icon: 'gear' as const, title: 'Submersible Pump & Motor', desc: 'Franklin Electric submersible pump sized to your household or commercial demand.' },
               { icon: 'battery' as const, title: 'Pressure Tank', desc: 'Correctly sized pressure tank with pressure switch, gauge, and shut-off.' },
@@ -253,15 +253,14 @@ export default function WaterWellDrillingPage() {
           </h2>
           <div className={styles.aquiferGrid}>
             {[
-              { county: 'Montgomery County', range: '180–320 ft', aquifer: 'Jasper Aquifer', notes: 'LSGCD regulated. Sandy loam soils. Reliable yields for residential and ag use.' },
-              { county: 'Harris County (NW)', range: '180–360 ft', aquifer: 'Chicot / Jasper', notes: 'HGSD regulated. Tomball, Spring, Cypress corridor. Good residential yield.' },
-              { county: 'Harris County (East)', range: '240–440 ft', aquifer: 'Evangeline Aquifer', notes: 'Humble, Kingwood. Deeper wells required. Iron and sulfur treatment common.' },
-              { county: 'Waller County', range: '160–300 ft', aquifer: 'Trinity Group', notes: 'LSGCD / BVGCD regulated. Sandy coastal plains. Farm and ranch applications.' },
+              { county: 'Montgomery County', range: '180–320 ft', notes: 'LSGCD regulated. Sandy loam soils. Reliable yields for residential and ag use.' },
+              { county: 'Harris County (NW)', range: '180–360 ft', notes: 'HGSD regulated. Tomball, Spring, Cypress corridor. Good residential yield.' },
+              { county: 'Harris County (East)', range: '240–440 ft', notes: 'Humble, Kingwood. Deeper wells required. Iron and sulfur treatment common.' },
+              { county: 'Waller County', range: '160–300 ft', notes: 'LSGCD / BVGCD regulated. Sandy coastal plains. Farm and ranch applications.' },
             ].map((row) => (
               <div key={row.county} className={styles.aquiferCard}>
                 <h3 className={styles.aquiferCounty}>{row.county}</h3>
                 <div className={styles.aquiferDepth}>{row.range}</div>
-                <div className={styles.aquiferName}>{row.aquifer}</div>
                 <p className={styles.aquiferNotes}>{row.notes}</p>
               </div>
             ))}

@@ -69,7 +69,7 @@ export const cities: CityData[] = [
     metaDescription:
       'B-E Waterwell Services — Magnolia, TX water well drilling, pump replacement, and well rehabilitation. Our home base since 1979. Licensed TDLR contractor. Call (281) 448-4447.',
     intro:
-      'Magnolia, TX is home base for B-E Waterwell Services. We have been drilling water wells and servicing pumps in this community for over 45 years — longer than most of the subdivisions out here have existed. The sandy loam soils and Jasper Aquifer make for reliable wells when drilled right, and we know every foot of this ground.',
+      'Magnolia, TX is home base for B-E Waterwell Services. We have been drilling water wells and servicing pumps in this community for over 45 years — longer than most of the subdivisions out here have existed. The sandy loam soils and the water-bearing zone make for reliable wells when drilled right, and we know every foot of this ground.',
     aquiferDepth: '180–320 ft',
     nearbyAreas: [
       { city: 'Tomball', slug: 'tomball-tx', distance: '14 mi' },
@@ -83,7 +83,7 @@ export const cities: CityData[] = [
       {
         question: 'How deep are water wells drilled in Magnolia, TX?',
         answer:
-          'Most residential wells in Magnolia reach the Jasper Aquifer at 180–320 feet depending on your exact location and lot elevation. We assess each property before drilling.',
+          'Most residential wells in Magnolia reach the target depth at 180–320 feet depending on your exact location and lot elevation. We assess each property before drilling.',
       },
       {
         question: 'Does B-E Waterwell service Magnolia, TX?',
@@ -128,7 +128,7 @@ export const cities: CityData[] = [
       {
         question: 'How deep are water wells in Conroe, TX?',
         answer:
-          'Residential wells in Conroe typically reach the Evangeline or Jasper Aquifer at 200–400 feet. Depth varies based on elevation and proximity to Lake Conroe.',
+          'Residential wells in Conroe typically reach the target depth or the water-bearing zone at 200–400 feet. Depth varies based on elevation and proximity to Lake Conroe.',
       },
       {
         question: 'What permits are required for a new well in Conroe?',
@@ -171,7 +171,7 @@ export const cities: CityData[] = [
       {
         question: 'What aquifer do wells in Spring, TX draw from?',
         answer:
-          'Most Spring-area wells draw from the Evangeline Aquifer at 220–380 feet. This aquifer provides good yield but may require pressure tanks sized appropriately.',
+          'Most Spring-area wells draw from the target depth at 220–380 feet. This aquifer provides good yield but may require pressure tanks sized appropriately.',
       },
       {
         question: 'Who regulates water wells in Spring, TX?',
@@ -219,7 +219,7 @@ export const cities: CityData[] = [
       {
         question: 'What is the well depth in The Woodlands area?',
         answer:
-          'Wells in the south Montgomery County corridor typically range 200–350 feet to reach the Jasper or Evangeline Aquifer depending on the property location.',
+          'Wells in the south Montgomery County corridor typically range 200–350 feet to reach the target depth or the water-bearing zone depending on the property location.',
       },
       {
         question: 'Can you service an existing well in The Woodlands area?',
@@ -257,7 +257,7 @@ export const cities: CityData[] = [
       {
         question: 'How deep are wells drilled in Tomball, TX?',
         answer:
-          'Tomball-area wells typically reach the Chicot or Jasper Aquifer at 180–320 feet. We assess depth requirements before quoting any new well.',
+          'Tomball-area wells typically reach the water-bearing zone at 180–320 feet. We assess depth requirements before quoting any new well.',
       },
       {
         question: 'Do I need a permit to drill a well in Tomball?',
@@ -300,7 +300,7 @@ export const cities: CityData[] = [
       {
         question: 'What aquifer do wells in Cypress, TX use?',
         answer:
-          'Cypress-area wells typically draw from the Evangeline Aquifer at 200–360 feet. We test yield and water quality as part of every new well completion.',
+          'Cypress-area wells typically draw from the target depth at 200–360 feet. We test yield and water quality as part of every new well completion.',
       },
       {
         question: 'Are there restrictions on water wells in Cypress, TX?',
@@ -343,7 +343,7 @@ export const cities: CityData[] = [
       {
         question: 'How deep are water wells in Humble, TX?',
         answer:
-          'Humble-area wells typically reach 240–420 feet to access the Evangeline Aquifer. Depth can vary significantly near Lake Houston due to subsurface geology.',
+          'Humble-area wells typically reach 240–420 feet to access the target depth. Depth can vary significantly near Lake Houston due to subsurface geology.',
       },
       {
         question: 'Is Humble, TX in a subsidence zone?',
@@ -415,7 +415,7 @@ export const cities: CityData[] = [
     metaDescription:
       'Water well drilling and pump services in Montgomery, TX. Deep rural expertise in Montgomery County since 1979. Licensed TDLR contractor. Call (281) 448-4447.',
     intro:
-      'Montgomery, TX is the original settlement of Montgomery County — a small town with big rural character and some of the most actively farmed and ranched land in the service area. Rural properties here often have larger lots, deeper wells, and greater demand for reliable water supply. B-E Waterwell Services has served the Montgomery area for over four decades with deep knowledge of the local Jasper Aquifer and LSGCD regulations.',
+      'Montgomery, TX is the original settlement of Montgomery County — a small town with big rural character and some of the most actively farmed and ranched land in the service area. Rural properties here often have larger lots, deeper wells, and greater demand for reliable water supply. B-E Waterwell Services has served the Montgomery area for over four decades with deep knowledge of the local the water-bearing zone and LSGCD regulations.',
     aquiferDepth: '200–380 ft',
     nearbyAreas: [
       { city: 'Conroe', slug: 'conroe-tx', distance: '14 mi' },
@@ -439,7 +439,7 @@ export const cities: CityData[] = [
       {
         question: 'What is the water quality like in Montgomery, TX?',
         answer:
-          'Montgomery area well water from the Jasper Aquifer is generally clean with moderate hardness. Iron and tannins can occur in shallower intervals — proper casing depth is key.',
+          'Montgomery area well water from the target depth is generally clean with moderate hardness. Iron and tannins can occur in shallower intervals — proper casing depth is key.',
       },
       {
         question: 'How long does it take to drill a new well near Montgomery?',
@@ -472,7 +472,7 @@ export const cities: CityData[] = [
       {
         question: 'What is the typical well depth in Pinehurst, TX?',
         answer:
-          'Pinehurst wells generally run 190–340 feet to reach reliable Jasper Aquifer water. Shallower wells can encounter iron-bearing zones that require proper casing.',
+          'Pinehurst wells generally run 190–340 feet to reach reliable groundwater. Shallower wells can encounter iron-bearing zones that require proper casing.',
       },
       {
         question: 'My Pinehurst well is over 30 years old — should I replace it?',

@@ -72,7 +72,7 @@ const faqs = [
   {
     question: 'How long do well pumps last in the Houston area?',
     answer:
-      'Submersible well pumps in the Houston area typically last 10–15 years. Pumps that run frequently — due to an undersized pressure tank or high-demand irrigation — often see replacement in 8–12 years. Pumps drawing from sandier sections of the Jasper Aquifer wear faster.',
+      'Submersible well pumps in the Houston area typically last 10–15 years. Pumps that run frequently — due to an undersized pressure tank or high-demand irrigation — often see replacement in 8–12 years. Pumps drawing from sandier sections of the water-bearing zone wear faster.',
   },
   {
     question: 'Should I repair or replace my well pump?',

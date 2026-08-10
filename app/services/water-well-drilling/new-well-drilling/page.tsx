@@ -11,7 +11,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'New Water Well Drilling — Houston, Magnolia, Conroe TX | B-E Waterwell',
   description:
-    'New residential water well drilling in Houston, TX since 1979. Drill to the Jasper or Evangeline Aquifer. TDLR licensed, 2-year warranty, free estimate. (281) 448-4447.',
+    'New residential water well drilling in Houston, TX since 1979. Drilled to the depth your site requires. TDLR licensed, 2-year warranty, free estimate. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/water-well-drilling/new-well-drilling' },
 };
 
@@ -44,7 +44,7 @@ const jsonLd = {
           name: 'How deep will my new well be in the Houston area?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Depth depends on your county and target aquifer. Montgomery County typically requires 180–320 ft to reach the Jasper Aquifer. Harris County NW is 180–360 ft. Harris County East (Humble, Kingwood) requires 240–440 ft for the Evangeline. We assess your property before providing a quote.',
+            text: 'Depth depends on your county and target aquifer. Montgomery County typically requires 180–320 ft to reach the water-bearing zone. Harris County NW is 180–360 ft. Harris County East (Humble, Kingwood) requires 240–440 ft for the water-bearing zone. We assess your property before providing a quote.',
           },
         },
         {
@@ -68,7 +68,7 @@ const jsonLd = {
           name: 'What is included in a new well installation?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Every new well we drill includes: rotary rig drilling to target aquifer depth, Schedule 40 PVC casing, gravel pack, well development, submersible pump and motor, drop pipe, pressure tank, pressure switch and gauge, electrical connection at wellhead, and initial water quality test. Permits are included.',
+            text: 'Every new well we drill includes: rotary rig drilling to target aquifer depth, Schedule 40 PVC casing, production sand, well development, submersible pump and motor, drop pipe, pressure tank, pressure switch and gauge, electrical connection at wellhead, and initial water quality test. Permits are included.',
           },
         },
         {
@@ -86,7 +86,7 @@ const jsonLd = {
 
 const included = [
   { icon: 'wrench' as const, title: 'Rotary Rig Drilling', desc: 'Truck-mounted rotary rig drilled to your target aquifer with a complete geological log for your records.' },
-  { icon: 'screwdriver' as const, title: 'PVC Casing & Screen', desc: 'Schedule 40 PVC casing with gravel pack and properly placed stainless screen for long-term performance.' },
+  { icon: 'screwdriver' as const, title: 'PVC Casing & Screen', desc: 'Schedule 40 PVC casing with production sand and properly placed stainless screen for long-term performance.' },
   { icon: 'droplet' as const, title: 'Well Development', desc: 'Full aquifer development to clear drilling fluids, remove fines, and maximize sustainable production yield.' },
   { icon: 'gear' as const, title: 'Submersible Pump & Motor', desc: 'Franklin Electric submersible pump and motor sized to your household demand — installed and wired at wellhead.' },
   { icon: 'battery' as const, title: 'Pressure Tank', desc: 'Correctly sized pressure tank with pressure switch, gauge, and main shut-off for reliable system pressure.' },
@@ -102,17 +102,17 @@ const processSteps = [
 ];
 
 const aquifers = [
-  { county: 'Montgomery County', range: '180–320 ft', aquifer: 'Jasper Aquifer', notes: 'LSGCD regulated. Most common for residential wells in Magnolia, Conroe, Montgomery, Pinehurst.' },
-  { county: 'Harris County (NW)', range: '180–360 ft', aquifer: 'Chicot / Jasper', notes: 'HGSD regulated. Tomball, Spring, Cypress, The Woodlands corridor. Good residential yields.' },
-  { county: 'Harris County (East)', range: '240–440 ft', aquifer: 'Evangeline Aquifer', notes: 'Humble, Kingwood. Deeper drilling required. Iron and sulfur treatment common at this depth.' },
-  { county: 'Waller County', range: '160–300 ft', aquifer: 'Trinity Group', notes: 'LSGCD / BVGCD regulated. Shallower sandy formations. Good for residential and small farm use.' },
+  { county: 'Montgomery County', range: '180–320 ft', notes: 'LSGCD regulated. Most common for residential wells in Magnolia, Conroe, Montgomery, Pinehurst.' },
+  { county: 'Harris County (NW)', range: '180–360 ft', notes: 'HGSD regulated. Tomball, Spring, Cypress, The Woodlands corridor. Good residential yields.' },
+  { county: 'Harris County (East)', range: '240–440 ft', notes: 'Humble, Kingwood. Deeper drilling required. Iron and sulfur treatment common at this depth.' },
+  { county: 'Waller County', range: '160–300 ft', notes: 'LSGCD / BVGCD regulated. Shallower sandy formations. Good for residential and small farm use.' },
 ];
 
 const faqs = [
   {
     question: 'How deep will my new well be in Magnolia or Houston?',
     answer:
-      'Montgomery County properties (Magnolia, Conroe, Montgomery) typically require 180–320 ft to reach the Jasper Aquifer. Harris County NW (Tomball, Spring, Cypress) is 180–360 ft. Harris County East (Humble, Kingwood) requires 240–440 ft. We assess every property and quote the actual depth we expect to drill.',
+      'Montgomery County properties (Magnolia, Conroe, Montgomery) typically require 180–320 ft to reach the water-bearing zone. Harris County NW (Tomball, Spring, Cypress) is 180–360 ft. Harris County East (Humble, Kingwood) requires 240–440 ft. We assess every property and quote the actual depth we expect to drill.',
   },
   {
     question: 'How long does the entire new well installation take?',
@@ -127,7 +127,7 @@ const faqs = [
   {
     question: 'What exactly is included in my new well installation?',
     answer:
-      'Every well includes: rotary rig drilling, geological log, Schedule 40 PVC casing, gravel pack, stainless screen, full well development, Franklin Electric submersible pump and motor, drop pipe, pitless adapter, pressure tank, pressure switch and gauge, main shut-off, electrical wiring at wellhead, all GCD permits, driller\'s completion report, and initial water quality test.',
+      'Every well includes: rotary rig drilling, geological log, Schedule 40 PVC casing, production sand, stainless screen, full well development, Franklin Electric submersible pump and motor, drop pipe, pitless adapter, pressure tank, pressure switch and gauge, main shut-off, electrical wiring at wellhead, all GCD permits, driller\'s completion report, and initial water quality test.',
   },
   {
     question: 'How much does a new water well cost in Houston, TX?',
@@ -257,7 +257,6 @@ export default function NewWellDrillingPage() {
               <div key={row.county} className={styles.aquiferCard}>
                 <h3 className={styles.aquiferCounty}>{row.county}</h3>
                 <div className={styles.aquiferDepth}>{row.range}</div>
-                <div className={styles.aquiferName}>{row.aquifer}</div>
                 <p className={styles.aquiferNotes}>{row.notes}</p>
               </div>
             ))}

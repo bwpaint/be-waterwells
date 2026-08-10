@@ -14,40 +14,24 @@
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  /* Required: the photo now sits at 18% opacity, so this is the colour it
+     blends into. Without it the hero washes out to white. */
+  background: var(--charcoal);
 }
 
 .heroBg {
+  /* Matches the residential page hero treatment the client approved: the photo
+     sits at low opacity over the solid charcoal hero background, desaturated
+     and warm-toned. No blur, and no directional gradient — the even wash is
+     what produces the consistent sepia look. */
   position: absolute;
   inset: 0;
-  overflow: hidden;
-  z-index: 0;
-}
-/* Blurred + warm-toned photo layer. Overscanned by -12px on all sides so the
-   blur's feathered edges fall outside the visible area instead of showing a
-   soft/transparent fringe at the hero borders.
-   saturate() runs before sepia() so the warm cast lands on already-muted
-   color — that ordering is what produces tan rather than gray. */
-.heroBg::before {
-  content: '';
-  position: absolute;
-  inset: -8px;
   background-image: url('/images/hero-home-rig.jpg');
-  background-size: auto calc(100% + 300px);
-  background-position: center top;
-  filter: blur(1px) saturate(0.25) sepia(0.25);
-}
-/* Gradient overlay stays crisp — sits above the blurred photo layer. */
-.heroBg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    105deg,
-    rgba(36,26,16,0.70) 0%,
-    rgba(30,22,14,0.75) 30%,
-    rgba(26,20,14,0.78) 55%,
-    rgba(20,16,12,0.80) 100%
-  );
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  filter: saturate(0.25) sepia(0.25);
+  z-index: 0;
 }
 
 .heroDiagonal {

@@ -100,7 +100,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'water-well-depth-montgomery-county-tx',
     categorySlug: 'water-well-drilling',
     date: '2025-02-18',
-    excerpt: 'Montgomery County wells typically reach 180–320 ft to the Jasper Aquifer. Harris County often requires 220–440 ft. Here is the full breakdown by area.',
+    excerpt: 'Montgomery County wells typically run 180–320 ft. Harris County often requires 220–440 ft. Here is the full breakdown by area.',
   },
   {
     title: 'Do You Need a Permit to Drill a Well in Texas? Step-by-Step Guide',

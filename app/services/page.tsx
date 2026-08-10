@@ -54,7 +54,7 @@ const categories = [
     icon: 'drill' as const,
     title: 'Water Well Drilling & Installation',
     slug: 'water-well-drilling',
-    desc: 'New residential, irrigation, and commercial well drilling and complete installation using truck-mounted rotary rigs. We drill to the Jasper, Chicot, and Evangeline Aquifers across the Houston area.',
+    desc: 'New residential, irrigation, and commercial well drilling and complete installation using truck-mounted rotary rigs. We drill to the water-bearing zone, the water-bearing zone, and the water-bearing zones across the Houston area.',
     services: ['New Wells', 'Irrigation Wells', 'Full Installation', 'Permit Handling'],
   },
   {

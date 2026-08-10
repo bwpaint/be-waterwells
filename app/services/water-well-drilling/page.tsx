@@ -21,7 +21,7 @@ const faqs = [
   {
     question: 'How deep are water wells drilled in the Houston area?',
     answer:
-      'Depth depends on your county and target aquifer. Montgomery County wells typically reach the Jasper Aquifer at 180–320 ft. Harris County NW wells access the Chicot/Jasper at 180–360 ft. Harris County East (Humble, Kingwood) wells reach the Evangeline at 240–440 ft. Waller County wells run 160–300 ft. We assess every property and quote the actual depth we expect to drill.',
+      'Depth depends on your county and target aquifer. Montgomery County wells typically reach the water-bearing zone at 180–320 ft. Harris County NW wells access the water-bearing zone at 180–360 ft. Harris County East (Humble, Kingwood) wells reach the water-bearing zone at 240–440 ft. Waller County wells run 160–300 ft. We assess every property and quote the actual depth we expect to drill.',
   },
   {
     question: 'How long does the entire new well installation take?',
