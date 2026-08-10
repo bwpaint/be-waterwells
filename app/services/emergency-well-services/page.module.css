@@ -298,6 +298,15 @@
 .stormText > p:first-of-type {
   margin-top: 0;
 }
+
+/* Heading matches the stat figures (72 hrs / $0 / 1 Day) rather than plain white.
+   Selector is .stormText h2.stormH2 (0,2,1) so it reliably beats the global
+   .section-title rule regardless of stylesheet order. --orange is #DDD0AC — a
+   pale sand that fails contrast on light backgrounds, but sits at ~6.7:1 on the
+   --charcoal panel here, which passes WCAG AA. */
+.stormText h2.stormH2 {
+  color: var(--orange);
+}
 .stormBtn { margin-top: 28px; }
 .stormStats {
   display: flex;

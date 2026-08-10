@@ -236,7 +236,7 @@ export default function IrrigationWellsPage() {
         {/* ── ROI SECTION ─────────────────────── */}
         <section className={styles.roiSection}>
           <span className="section-label">Return on Investment</span>
-          <h2 className="section-title">How Quickly Does an Irrigation Well Pay Off?</h2>
+          <h2 className="section-title light">How Quickly Does an Irrigation Well Pay Off?</h2>
           <div className={styles.roiGrid}>
             <div className={styles.roiCard}>
               <div className={styles.roiNumber}>$150–$250</div>

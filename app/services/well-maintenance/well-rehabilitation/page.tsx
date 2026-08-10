@@ -181,7 +181,7 @@ export default function WellRehabilitationPage() {
 
         <section className={styles.methodsSection}>
           <span className="section-label">Rehabilitation Methods</span>
-          <h2 className="section-title">How We Restore Well Yield</h2>
+          <h2 className="section-title light">How We Restore Well Yield</h2>
           <div className={styles.methodGrid}>
             {methods.map((m) => (
               <div key={m.title} className={styles.methodCard}>

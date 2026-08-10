@@ -227,7 +227,7 @@ export default function PressureTankSystemsPage() {
         {/* ── TANK TYPES ───────────────────────── */}
         <section className={styles.typesSection}>
           <span className="section-label">Tank Types</span>
-          <h2 className="section-title">Bladder vs. Diaphragm Pressure Tanks</h2>
+          <h2 className="section-title light">Bladder vs. Diaphragm Pressure Tanks</h2>
           <div className={styles.typeGrid}>
             {tankTypes.map((t) => (
               <div key={t.type} className={styles.typeCard}>

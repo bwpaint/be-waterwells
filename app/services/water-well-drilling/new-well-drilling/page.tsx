@@ -229,7 +229,7 @@ export default function NewWellDrillingPage() {
         {/* ── PROCESS TIMELINE ────────────────── */}
         <section className={styles.processSection}>
           <span className="section-label">How It Works</span>
-          <h2 className="section-title">From Permit to First Drop of Water</h2>
+          <h2 className="section-title light">From Permit to First Drop of Water</h2>
           <div className={styles.processSteps}>
             {processSteps.map((s) => (
               <div key={s.step} className={styles.processStep}>

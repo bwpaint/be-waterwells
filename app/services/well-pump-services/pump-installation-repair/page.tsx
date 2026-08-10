@@ -234,7 +234,7 @@ export default function PumpInstallRepairPage() {
         <section className={styles.brandsSection}>
           <div className="container">
             <span className="section-label">Brands We Work With</span>
-            <h2 className="section-title">Pump Brands We Install & Service</h2>
+            <h2 className="section-title light">Pump Brands We Install & Service</h2>
             <div className={styles.brandsGrid}>
               {[
                 {

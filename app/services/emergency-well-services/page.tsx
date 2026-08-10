@@ -301,7 +301,7 @@ export default function EmergencyWellServicesPage() {
             <div className={styles.stormInner}>
               <div className={styles.stormText}>
                 <span className="section-label">Storm Season Prep</span>
-                <h2 className="section-title">
+                <h2 className={`section-title ${styles.stormH2}`}>
                   Don&apos;t Wait for the Next Power Outage
                 </h2>
                 <p>

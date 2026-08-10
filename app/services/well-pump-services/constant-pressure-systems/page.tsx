@@ -324,7 +324,7 @@ export default function ConstantPressureSystemsPage() {
         <section className={styles.brandsSection}>
           <div className="container">
             <span className="section-label">Systems We Install</span>
-            <h2 className="section-title">Constant Pressure Brands We Install & Service</h2>
+            <h2 className="section-title light">Constant Pressure Brands We Install & Service</h2>
             <div className={styles.brandsGrid}>
               {[
                 {
