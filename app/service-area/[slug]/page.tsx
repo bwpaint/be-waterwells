@@ -155,10 +155,12 @@ export default function CityPage({ params }: Props) {
             </h2>
             <p>{city.intro}</p>
             <div className={styles.introStats}>
-              <div className={styles.introStat}>
-                <strong>Aquifer Depth</strong>
-                <span>{city.aquiferDepth}</span>
-              </div>
+              {city.aquiferDepth && (
+                <div className={styles.introStat}>
+                  <strong>Aquifer Depth</strong>
+                  <span>{city.aquiferDepth}</span>
+                </div>
+              )}
               <div className={styles.introStat}>
                 <strong>County</strong>
                 <span>

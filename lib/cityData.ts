@@ -8,7 +8,8 @@ export interface CityData {
   heroSubtitle: string;
   metaDescription: string;
   intro: string;
-  aquiferDepth: string;
+  /** Omit entirely when no sourced depth record exists for the area. */
+  aquiferDepth?: string;
   /** Liability disclaimer rendered directly above any depth figure. */
   depthDisclaimer?: string;
   /** Local water districts (MUD / UD / WCID) serving this area. */
@@ -78,7 +79,6 @@ export const cities: CityData[] = [
       'B-E Waterwell Services — water well drilling, pump replacement, and well rehabilitation in Klein, TX. Serving Klein and northwest Harris County since 1979. TDLR licensed. Call (281) 448-4447.',
     intro:
       'Klein sits in northwest Harris County, and its water picture is more layered than most of the areas we serve. Much of Klein is inside a municipal utility district that supplies water to the home, while properties on larger acreage outside those district boundaries stay on private wells. B-E Waterwell Services has drilled and serviced wells across this corner of Harris County since 1979 — new wells where district water does not reach, pump replacement and pressure systems on existing wells, and rehabilitation on older wells that have lost yield.',
-    aquiferDepth: 'Records unavailable — contact us',
     depthDisclaimer:
       'We were unable to pull past well-depth records for this area. Depth varies site to site, and we do not publish a figure we cannot source. Contact B-E Waterwell Services and we will discuss what to expect on your specific property.',
     waterDistricts: [
