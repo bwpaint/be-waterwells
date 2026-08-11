@@ -129,7 +129,10 @@ export const jsonLd = {
     { '@type': 'AdministrativeArea', name: 'Brazoria County, Texas' },
     { '@type': 'AdministrativeArea', name: 'Liberty County, Texas' },
   ],
-  sameAs: ['https://www.facebook.com/bewaterwells'],
+  sameAs: [
+    'https://www.facebook.com/bewaterwells',
+    'https://maps.google.com/?cid=13501373956235499875',
+  ],
 };
 
 export const organizationSchema = {
@@ -139,7 +142,10 @@ export const organizationSchema = {
   name: 'B-E Waterwell Services',
   url: 'https://bewaterwells.com',
   logo: 'https://bewaterwells.com/wp-content/uploads/2024/08/be-waterwell-logo_dkor-250x99.png',
-  sameAs: ['https://www.facebook.com/bewaterwells'],
+  sameAs: [
+    'https://www.facebook.com/bewaterwells',
+    'https://maps.google.com/?cid=13501373956235499875',
+  ],
 };
 
 export const websiteSchema = {

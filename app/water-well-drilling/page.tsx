@@ -151,7 +151,7 @@ export default function WaterWellDrillingPage() {
             <p className={styles.heroSubtitle}>
               45+ years of rotary rig drilling across Montgomery, Harris, and
               Waller counties. We drill to depth, case it right, and stand
-              behind every foot with a 2-year workmanship warranty.
+              behind every foot with a 1-year workmanship warranty.
             </p>
             <div className={styles.heroBtns}>
               <a href="tel:+12814484447" className="btn btn-primary">

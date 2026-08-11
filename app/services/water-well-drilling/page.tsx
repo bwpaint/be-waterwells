@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { WARRANTY_PDF } from '../../../lib/siteConfig';
 import Icon from '../../components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -231,7 +232,8 @@ export default function WaterWellDrillingPage() {
                 45+ years of rotary rig drilling across Montgomery, Harris, Waller,
                 Grimes, Washington, Anderson, and surrounding counties. As experienced
                 water well drilling contractors, we drill to depth, case it right, and
-                stand behind every well with a guaranteed workmanship warranty. TDLR Licensed.
+                stand behind every well with a guaranteed workmanship{' '}
+                <a href={WARRANTY_PDF} target="_blank" rel="noopener noreferrer" className="inline-link">warranty</a>. TDLR Licensed.
               </p>
               <div className={styles.heroBtns}>
                 <a href="tel:+12814484447" className="btn btn-primary">
@@ -272,7 +274,7 @@ export default function WaterWellDrillingPage() {
             well on a Waller County acreage property, or a high-capacity commercial well
             in Conroe — the process is the same: we assess your site, pull the permit,
             drill to the right aquifer, and finish the job in writing with a workmanship
-            warranty. We don&apos;t cut corners because your water supply is not the
+            <a href={WARRANTY_PDF} target="_blank" rel="noopener noreferrer" className="inline-link">warranty</a>. We don&apos;t cut corners because your water supply is not the
             place to cut corners and regret it in 5 years.
           </p>
         </section>

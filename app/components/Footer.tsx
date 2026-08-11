@@ -7,6 +7,7 @@ import {
   EMAIL,
   FACEBOOK_URL,
   GOOGLE_BUSINESS_URL,
+  WARRANTY_PDF,
 } from '../../lib/siteConfig';
 import FooterContactForm from './FooterContactForm';
 import styles from './Footer.module.css';
@@ -80,6 +81,11 @@ export default function Footer() {
           <ul className={`${styles.footerLinks} ${styles.footerLinksSpaced}`}>
             <li><Link href="/about">About</Link></li>
             <li><Link href="/contact">Contact Us</Link></li>
+            <li>
+              <a href={WARRANTY_PDF} target="_blank" rel="noopener noreferrer">
+                Warranty
+              </a>
+            </li>
           </ul>
         </div>
 

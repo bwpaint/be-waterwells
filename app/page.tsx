@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { WARRANTY_PDF } from '../lib/siteConfig';
 import Image from 'next/image';
 import Link from 'next/link';
 import AnnouncementBar from './components/AnnouncementBar';
@@ -100,7 +101,7 @@ export default function HomePage() {
             <div className={styles.heroTrust}>
               <span>TDLR Licensed</span>
               <span>Fully Insured</span>
-              <span>2-Year Warranty</span>
+              <span>2-Year Pump Warranty</span>
             </div>
           </div>
 
@@ -215,7 +216,7 @@ export default function HomePage() {
             <ul className={styles.whyList}>
               <li>TDLR Licensed Water Well Driller / Pump Installer</li>
               <li>Franklin Electric Authorized Dealer</li>
-              <li>Two-year warranty on pump &amp; motors in most cases</li>
+              <li>Two-year <a href={WARRANTY_PDF} target="_blank" rel="noopener noreferrer" className="inline-link">warranty</a> on pump &amp; motors in most cases</li>
               <li>Locally owned, same family, same number since 1979</li>
             </ul>
             <Link href="/about" className="btn btn-dark" style={{ marginTop: "28px", display: "inline-flex" }}>

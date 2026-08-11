@@ -11,7 +11,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'New Water Well Drilling — Houston, Magnolia, Conroe TX | B-E Waterwell',
   description:
-    'New residential water well drilling in Houston, TX since 1979. Drilled to the depth your site requires. TDLR licensed, 2-year warranty, free estimate. (281) 448-4447.',
+    'New residential water well drilling in Houston, TX since 1979. Drilled to the depth your site requires. TDLR licensed, 1-year well warranty, free estimate. (281) 448-4447.',
   alternates: { canonical: 'https://bewaterwells.com/services/water-well-drilling/new-well-drilling' },
 };
 
@@ -34,7 +34,7 @@ const jsonLd = {
       },
       areaServed: 'Houston, TX',
       description:
-        'Complete new residential water well drilling in Houston, TX. Drill, case, develop, pump, pressure tank, and permits — all included. TDLR licensed, 2-year warranty.',
+        'Complete new residential water well drilling in Houston, TX. Drill, case, develop, pump, pressure tank, and permits — all included. TDLR licensed, 1-year well warranty.',
     },
     {
       '@type': 'FAQPage',
@@ -184,7 +184,7 @@ export default function NewWellDrillingPage() {
               <p className={styles.heroSubtitle}>
                 Switching from city water or drilling on a new property? B-E Waterwell
                 drills new residential wells across the Houston area — from permit to first
-                drop of water in your glass. 45+ years, 5,000+ wells, 2-year warranty.
+                drop of water in your glass. 45+ years, 5,000+ wells, 1-year well warranty.
               </p>
               <div className={styles.heroBtns}>
                 <a href="tel:+12814484447" className="btn btn-primary">

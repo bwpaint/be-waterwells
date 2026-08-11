@@ -12,9 +12,21 @@ export const EMAIL = 'zack@bewaterwells.com';
 export const FACEBOOK_URL = 'https://www.facebook.com/bewaterwells';
 
 /**
- * Google Business Profile URL. The profile does not exist yet — set
- * NEXT_PUBLIC_GOOGLE_BUSINESS_URL in Vercel once it is created and verified,
- * and the footer icon appears automatically. Left empty the icon stays hidden
- * rather than linking to a dead-end generic Maps search.
+ * Google Business Profile.
+ *
+ * This is the CID form, built from the listing's Customer ID
+ * (0xbb5e841471209963 = 13501373956235499875). It is the stable, permanent
+ * link to the profile — unlike a copied Maps or search URL, which carries
+ * session parameters (ei, ved, sxsrf, entry, g_ep) that expire.
+ *
+ * Override with NEXT_PUBLIC_GOOGLE_BUSINESS_URL if the listing ever moves.
  */
-export const GOOGLE_BUSINESS_URL = process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL || '';
+export const GOOGLE_BUSINESS_URL =
+  process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL ||
+  'https://maps.google.com/?cid=13501373956235499875';
+
+/**
+ * Warranty terms PDF, served from /public/docs. Always open in a new tab so a
+ * visitor reading a service page does not lose their place.
+ */
+export const WARRANTY_PDF = '/docs/be-warranty-terms-2026.pdf';

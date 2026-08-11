@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { WARRANTY_PDF } from '../../../lib/siteConfig';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnnouncementBar from '../../components/AnnouncementBar';
@@ -117,7 +118,7 @@ const relatedServices = [
     title: 'Drilling & Installation',
     slug: 'water-well-drilling',
     desc: 'New rotary rig drilling, casing, development, and complete pump installation for residential, irrigation, and commercial sites.',
-    highlights: ['Rotary rig to target aquifer', 'Schedule 40 PVC casing', 'Pump & pressure tank', '2-year warranty'],
+    highlights: ['Rotary rig to target aquifer', 'Schedule 40 PVC casing', 'Pump & pressure tank', '1-year well warranty'],
   },
   {
     icon: 'wrench' as const,
@@ -246,14 +247,15 @@ export default function CommercialWellServicesHubPage() {
             As established water well drilling contractors, we plan every commercial job
             around your real GPM demand — larger casing, higher-horsepower pumps, the right
             aquifer target, and the high-capacity permits the job requires. We handle the
-            full process and finish in writing with a workmanship warranty.
+            full process and finish in writing with a workmanship{' '}
+            <a href={WARRANTY_PDF} target="_blank" rel="noopener noreferrer" className="inline-link">warranty</a>.
           </p>
           <div className={styles.overviewStats}>
             {[
               { stat: '45+', label: 'Years Drilling' },
               { stat: '5,000+', label: 'Wells Serviced' },
               { stat: 'TDLR', label: 'Licensed' },
-              { stat: '2-Year', label: 'Warranty' },
+              { stat: '2-Year', label: 'Pump & Motor Warranty' },
             ].map((s) => (
               <div key={s.label} className={styles.overviewStat}>
                 <strong>{s.stat}</strong>

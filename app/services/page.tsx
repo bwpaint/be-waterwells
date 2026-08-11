@@ -91,7 +91,7 @@ const trustedReasons = [
   { stat: '45+', label: 'Years in Business', desc: 'Serving Houston since 1979' },
   { stat: 'TDLR', label: 'Licensed & Bonded', desc: 'Texas Dept. of Licensing & Regulation' },
   { stat: '5,000+', label: 'Wells Serviced', desc: 'Across Montgomery, Harris, Waller, Grimes, Washington, Anderson, and surrounding counties' },
-  { stat: '2-Year', label: 'Workmanship Warranty', desc: 'On all drilling and installation work' },
+  { stat: '2-Year', label: 'Pump & Motor Warranty', desc: 'Workmanship warranted 1 year on new pump and motor installation' },
   { stat: 'FE Auth.', label: 'Franklin Electric', desc: 'Authorized dealer for pumps & motors' },
   { stat: 'Emergency', label: 'Emergency Service Available', desc: 'We help when problems come up' },
 ];

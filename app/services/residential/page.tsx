@@ -88,7 +88,7 @@ const homeownerServices = [
     title: 'New & Replacement Wells',
     href: '/services/water-well-drilling',
     desc: 'A new residential well drilled to the water-bearing zone or the water-bearing zone — permitted, cased in Schedule 40 PVC, and finished with pump and pressure tank.',
-    highlights: ['Rotary rig to target aquifer', 'All permits included', '2-year workmanship warranty'],
+    highlights: ['Rotary rig to target aquifer', 'All permits included', '1-year well warranty'],
   },
   {
     icon: 'wrench' as const,
