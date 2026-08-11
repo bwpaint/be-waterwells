@@ -208,7 +208,7 @@ export default function WaterWellDrillingPage() {
           </div>
           <div className={styles.overviewImageWrap}>
             <Image
-              src="https://bewaterwells.com/wp-content/uploads/2024/09/water-well-services.webp"
+              src="/images/hero-drilling-rig.webp"
               alt="B-E Waterwell Services drilling rig in action"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

@@ -1,3 +1,4 @@
+import { SITE_URL } from './siteConfig';
 // Shared SEO data for B-E Waterwell Services
 // Address: 30815 Collier Smith Rd., Magnolia, TX 77354
 
@@ -29,8 +30,8 @@ export const LOCAL_BUSINESS_SCHEMA = {
   telephone: BUSINESS.phoneE164,
   foundingDate: BUSINESS.founded,
   priceRange: '$$',
-  image: 'https://bewaterwells.com/wp-content/uploads/2024/08/be-waterwell-logo_dkor-250x99.png',
-  logo: 'https://bewaterwells.com/wp-content/uploads/2024/08/be-waterwell-logo_dkor-250x99.png',
+  image: `${SITE_URL}/images/hero-home-rig.jpg`,
+  logo: `${SITE_URL}/images/be-logo-white.png`,
   address: {
     '@type': 'PostalAddress',
     streetAddress: BUSINESS.address.street,

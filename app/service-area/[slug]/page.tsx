@@ -11,6 +11,7 @@ import CityHeroForm from '../../components/CityHeroForm';
 import CityFaqAccordion from '../../components/CityFaqAccordion';
 import { COUNTY_PATHS } from '../../../lib/countyData';
 import { getCityBySlug, getAllCitySlugs } from '../../../lib/cityData';
+import { SITE_URL } from '../../../lib/siteConfig';
 import styles from './page.module.css';
 
 interface Props {
@@ -70,7 +71,7 @@ export default function CityPage({ params }: Props) {
           addressCountry: 'US',
         },
         areaServed: { '@type': 'City', name: `${city.city}, ${city.state}` },
-        logo: 'https://bewaterwells.com/wp-content/uploads/2024/08/be-waterwell-logo_dkor-250x99.png',
+        logo: `${SITE_URL}/images/be-logo-white.png`,
       },
       {
         '@type': 'Service',
@@ -184,7 +185,7 @@ export default function CityPage({ params }: Props) {
           </div>
           <div className={styles.introImageWrap}>
             <Image
-              src="https://bewaterwells.com/wp-content/uploads/2024/09/bewater3-1-scaled.jpg"
+              src="/images/hero-drilling-rig.webp"
               alt={`Waterwell services in ${city.city}, TX`}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

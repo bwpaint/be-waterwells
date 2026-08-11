@@ -1,0 +1,128 @@
+/* ──────────────────────────────────────────────────────────
+   Ken Burns slideshow — CSS only.
+
+   Sequencing model: every slide runs the SAME animation over one full
+   cycle and is offset by --kb-delay. Because all slides share one
+   duration and the browser drives them off the same clock, they can
+   never drift out of sync the way setInterval-based sliders do.
+
+   The fade percentages below are calculated for 6 slides (16.667% each).
+   They are deliberately hard-coded rather than derived: CSS cannot compute
+   keyframe percentages from a custom property. If the slide count changes,
+   the four fade stops need recalculating — see the note by @keyframes.
+   ────────────────────────────────────────────────────────── */
+
+.kb {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--stone-light);
+  aspect-ratio: 16 / 9;
+  background: var(--dark-stone);
+  /* Contain paint so the scaling images cannot bleed past the rounded corners. */
+  isolation: isolate;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: kbFade var(--kb-cycle) var(--kb-delay) infinite;
+  /* Hint the compositor: opacity + transform only, no layout or paint. */
+  will-change: opacity;
+}
+
+/* First slide paints immediately rather than waiting a full cycle for its
+   turn — without this the panel is empty background on initial load. */
+.slide:first-child {
+  opacity: 1;
+  animation-name: kbFadeFirst;
+}
+
+.pan {
+  position: absolute;
+  inset: 0;
+  animation: kbPan var(--kb-cycle) var(--kb-delay) infinite;
+  will-change: transform;
+}
+
+.img {
+  object-fit: cover;
+}
+
+/* Alternating movement so it reads as camera work rather than a loop.
+   Even slides push in and drift left, odd slides pull back and drift right. */
+.slide:nth-child(even) .pan {
+  animation-name: kbPanAlt;
+}
+
+/*
+ * 6 slides x 5s = 30s cycle. Each slide owns 16.667%.
+ * 0%      hidden
+ * 3.3%    fully visible (1s crossfade in)
+ * 16.7%   still visible (hold)
+ * 20%     hidden again (1s crossfade out, overlapping the next slide's fade in)
+ */
+@keyframes kbFade {
+  0%     { opacity: 0; }
+  3.3%   { opacity: 1; }
+  16.7%  { opacity: 1; }
+  20%    { opacity: 0; }
+  100%   { opacity: 0; }
+}
+
+/* Same timing, but starts visible so there is no blank first paint. */
+@keyframes kbFadeFirst {
+  0%     { opacity: 1; }
+  16.7%  { opacity: 1; }
+  20%    { opacity: 0; }
+  96.7%  { opacity: 0; }
+  100%   { opacity: 1; }
+}
+
+/* The Ken Burns move itself. Motion runs across the visible window and then
+   holds, so a slide is never caught mid-jump when it fades out. */
+@keyframes kbPan {
+  0%    { transform: scale(1.04) translate3d(0, 0, 0); }
+  20%   { transform: scale(1.15) translate3d(-2%, -1.5%, 0); }
+  100%  { transform: scale(1.15) translate3d(-2%, -1.5%, 0); }
+}
+
+@keyframes kbPanAlt {
+  0%    { transform: scale(1.15) translate3d(2%, 1%, 0); }
+  20%   { transform: scale(1.04) translate3d(0, 0, 0); }
+  100%  { transform: scale(1.04) translate3d(0, 0, 0); }
+}
+
+.label {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  z-index: 2;
+  background: rgba(26, 23, 20, 0.85);
+  backdrop-filter: blur(8px);
+  color: var(--white);
+  font-family: var(--font-head);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 100px;
+}
+
+/*
+ * Vestibular safety. A slow continuous zoom is exactly the kind of motion that
+ * triggers discomfort, so under prefers-reduced-motion we stop everything and
+ * show a single static frame rather than merely slowing it down.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .slide,
+  .pan {
+    animation: none;
+  }
+  .slide { opacity: 0; }
+  .slide:first-child { opacity: 1; }
+  .pan { transform: none; }
+}

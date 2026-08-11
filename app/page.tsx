@@ -11,12 +11,25 @@ import { services, stats, cityAreas, partners, testimonials, jsonLd, homeFaqs, o
 import { buildFaqSchema } from '../lib/seoData';
 import { linkifyPhone } from '../lib/linkifyPhone';
 import { COUNTIES, MAP_VIEWBOX } from '../lib/serviceAreaGeo';
+import KenBurnsSlideshow from './components/KenBurnsSlideshow';
 import styles from './page.module.css';
 
 const faqSchema = buildFaqSchema(homeFaqs);
 
 /* Service icons — monotone, inheriting currentColor (previously a metallic
    gradient stroke). Sized 68px, double the former 34px. */
+/* Six local webp/jpg frames for the Ken Burns panel. All served from /public,
+   which also retires the last hotlinked asset from the old WordPress install —
+   this section previously streamed an mp4 from bewaterwells.com. */
+const SLIDESHOW = [
+  { src: '/images/hero-drilling-rig.webp' },
+  { src: '/images/hero-service-truck.webp' },
+  { src: '/images/hero-commercial-tank.webp' },
+  { src: '/images/hero-well-equipment.webp' },
+  { src: '/images/hero-residential-tank.webp' },
+  { src: '/images/hero-windmill-service.webp' },
+];
+
 const SERVICE_SVG: Record<string, React.ReactNode> = {
   drill: <Icon name="drill" size={68} />,
   pump: <Icon name="pump" size={68} />,
@@ -156,15 +169,11 @@ export default function HomePage() {
                 before, on a well a lot like yours.
               </p>
             </div>
-            <div className={styles.servicesVideoWrap}>
-              <video autoPlay muted loop playsInline>
-                <source
-                  src="https://bewaterwells.com/wp-content/uploads/2024/08/bewater.mp4"
-                  type="video/mp4"
-                />
-              </video>
-              <span className={styles.servicesVideoLabel}>B-E Waterwell Services in Action</span>
-            </div>
+            <KenBurnsSlideshow
+              slides={SLIDESHOW}
+              secondsPerSlide={5}
+              label="B-E Waterwell Services in Action"
+            />
           </div>
           <div className={styles.servicesGrid}>
             {services.map((svc) => (
@@ -230,7 +239,7 @@ export default function HomePage() {
           <div className={styles.whyImageCol}>
             <div className={styles.whyImageWrap}>
               <Image
-                src="https://bewaterwells.com/wp-content/uploads/2024/09/bewater1-scaled.jpg"
+                src="/images/hero-home-rig.jpg"
                 alt="B-E Waterwell Services drilling crew at work"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

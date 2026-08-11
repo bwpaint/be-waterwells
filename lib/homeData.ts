@@ -1,3 +1,4 @@
+import { SITE_URL } from './siteConfig';
 export const services = [
   {
     icon: 'drill',
@@ -63,11 +64,11 @@ export const cityAreas = [
 ];
 
 export const partners = [
-  { src: 'https://bewaterwells.com/wp-content/uploads/2024/08/franklin-electric.webp', alt: 'Franklin Electric' },
-  { src: 'https://bewaterwells.com/wp-content/uploads/2024/08/water-pro-dealer.webp', alt: 'Water Pro Dealer' },
-  { src: 'https://bewaterwells.com/wp-content/uploads/2024/08/tgwa.webp', alt: 'Texas Ground Water Association' },
-  { src: 'https://bewaterwells.com/wp-content/uploads/2024/08/tdlr.webp', alt: 'TDLR Licensed' },
-  { src: 'https://bewaterwells.com/wp-content/uploads/2024/08/simple-pump.webp', alt: 'Simple Pump' },
+  { src: '/images/logos/franklin-electric.webp', alt: 'Franklin Electric' },
+  { src: '/images/logos/water-pro-dealer.webp', alt: 'Water Pro Dealer' },
+  { src: '/images/logos/tgwa.webp', alt: 'Texas Ground Water Association' },
+  { src: '/images/logos/tdlr.webp', alt: 'TDLR Licensed' },
+  { src: '/images/logos/simple-pump.webp', alt: 'Simple Pump' },
 ];
 
 export const testimonials = [
@@ -102,8 +103,8 @@ export const jsonLd = {
   email: 'zack@bewaterwells.com',
   foundingDate: '1979',
   priceRange: '$$',
-  image: 'https://bewaterwells.com/wp-content/uploads/2024/09/bewater2-1024x768.jpg',
-  logo: 'https://bewaterwells.com/wp-content/uploads/2024/08/be-waterwell-logo_dkor-250x99.png',
+  image: `${SITE_URL}/images/hero-home-rig.jpg`,
+  logo: `${SITE_URL}/images/be-logo-white.png`,
   address: {
     '@type': 'PostalAddress',
     streetAddress: '30815 Collier Smith Rd.',
@@ -141,7 +142,7 @@ export const organizationSchema = {
   '@id': 'https://bewaterwells.com/#organization',
   name: 'B-E Waterwell Services',
   url: 'https://bewaterwells.com',
-  logo: 'https://bewaterwells.com/wp-content/uploads/2024/08/be-waterwell-logo_dkor-250x99.png',
+  logo: `${SITE_URL}/images/be-logo-white.png`,
   sameAs: [
     'https://www.facebook.com/bewaterwells',
     'https://maps.google.com/?cid=13501373956235499875',

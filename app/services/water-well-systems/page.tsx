@@ -142,7 +142,7 @@ export default function WaterWellSystemsPage() {
       <section className={styles.hero}>
         <div
           className={styles.heroBg}
-          style={{ backgroundImage: "url('https://bewaterwells.com/wp-content/uploads/2024/09/bewater1-scaled.jpg')" }}
+          style={{ backgroundImage: "url('/images/hero-residential-tank.webp')" }}
         />
         <div className="container">
           <div className={styles.heroGrid}>
