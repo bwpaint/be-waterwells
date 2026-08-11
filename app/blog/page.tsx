@@ -42,7 +42,15 @@ export default function BlogPage() {
       <Navbar />
 
       {/* Hero */}
-      <section style={{ background: 'var(--charcoal)', paddingTop: '180px', paddingBottom: '56px', textAlign: 'center' }}>
+      <section
+        className="simple-hero"
+        style={{
+          paddingTop: '180px',
+          paddingBottom: '56px',
+          textAlign: 'center',
+          ['--hero-image' as string]: "url('/images/hero-well-equipment.webp')",
+        } as React.CSSProperties}
+      >
         <div className="container">
           <p style={{ color: 'var(--orange)', fontFamily: 'var(--font-head)', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
             Tips, Guides & Insights

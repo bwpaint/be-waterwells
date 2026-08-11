@@ -91,7 +91,7 @@ export default function ServiceAreasPage() {
           </nav>
           <span className={styles.heroLabel}>Where We Work</span>
           <h1 className={styles.heroH1}>
-            <span className={styles.heroOrange}>B-E Waterwell Service Areas</span>
+            B-E Waterwell Service Areas
           </h1>
           <p className={styles.heroSubtitle}>
             Serving{' '}

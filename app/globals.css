@@ -238,3 +238,38 @@ h3.section-title {
 h1, h2, h3 {
   font-family: var(--font-display) !important;
 }
+
+/* ──────────────────────────────────────────────────────────────
+   Simple hero — About, Contact, Blog.
+   These pages use inline-styled heroes rather than page modules, so the
+   canonical hero treatment lives here as a shared class instead of being
+   duplicated three times. Set the photo per page with the --hero-image
+   custom property:
+       <section className="simple-hero" style={{ '--hero-image': "url('/images/x.webp')" }}>
+   Values match the sitewide reference (/services/residential).
+   ────────────────────────────────────────────────────────────── */
+.simple-hero {
+  position: relative;
+  background: var(--charcoal);
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.simple-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  filter: saturate(0.25) sepia(0.25);
+  pointer-events: none;
+}
+/* Keep hero content above the photo layer. */
+.simple-hero > * {
+  position: relative;
+  z-index: 1;
+}

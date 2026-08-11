@@ -41,12 +41,15 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero */}
-      <section style={{
-        background: 'var(--charcoal)',
-        paddingTop: '180px',
-        paddingBottom: '60px',
-        textAlign: 'center',
-      }}>
+      <section
+        className="simple-hero"
+        style={{
+          paddingTop: '180px',
+          paddingBottom: '60px',
+          textAlign: 'center',
+          ['--hero-image' as string]: "url('/images/hero-windmill-service.webp')",
+        } as React.CSSProperties}
+      >
         <div className="container">
           <p style={{ color: 'var(--orange)', fontFamily: 'var(--font-head)', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
             Magnolia, Texas · Est. 1979
