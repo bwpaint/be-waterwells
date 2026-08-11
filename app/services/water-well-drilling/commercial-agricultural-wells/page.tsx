@@ -63,7 +63,7 @@ const wellTypes = [
   { icon: 'horse' as const, title: 'Equestrian Properties', desc: 'Dedicated wells for horse properties and stables. Multiple outlet capability, trough systems, and wash rack supply. Sized for the real daily water demand of horses.' },
   { icon: 'sprout' as const, title: 'Farms & Nurseries', desc: 'Agricultural wells for farming operations, plant nurseries, and greenhouse facilities. Irrigation-scale flow rates with appropriate pump sizing for extended run times.' },
   { icon: 'crane' as const, title: 'Commercial Properties', desc: 'Office parks, light industrial, retail developments, and any commercial property where city water supply is unavailable or cost-prohibitive.' },
-  { icon: 'droplet' as const, title: 'Irrigation Scale', desc: 'Large-volume wells for irrigation districts, multi-property irrigation systems, and acreage-scale agricultural irrigation. Multi-zone completion available.' },
+  { icon: 'droplet' as const, title: 'Irrigation Scale', desc: 'Large-volume wells for irrigation districts, multi-property irrigation systems, and acreage-scale agricultural irrigation.' },
 ];
 
 const specs = [
@@ -91,7 +91,7 @@ const faqs = [
   },
   {
     question: 'What does commercial well drilling cost in Houston, TX?',
-    answer: 'Commercial and agricultural wells typically range from $15,000–$35,000+ complete, depending on depth, casing diameter, pump specifications, and required yield. Equestrian properties and small farm applications are often in the $15,000–$22,000 range. Large commercial or multi-zone applications are higher. We provide free, itemized written estimates — no guessing on what you are paying for.',
+    answer: 'Commercial and agricultural wells typically range from $15,000–$35,000+ complete, depending on depth, casing diameter, pump specifications, and required yield. Equestrian properties and small farm applications are often in the $15,000–$22,000 range. Large commercial applications are higher. We provide free, itemized written estimates — no guessing on what you are paying for.',
   },
   {
     question: 'How long does commercial well drilling take?',

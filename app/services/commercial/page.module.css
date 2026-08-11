@@ -282,44 +282,6 @@
 }
 
 /* ── COST ──────────────────────────────────────────────────── */
-.costSection { margin-bottom: 40px; }
-.costGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 24px;
-}
-.costCard {
-  background: var(--white);
-  border: 1px solid var(--stone-light);
-  border-radius: var(--radius-lg);
-  padding: 24px 20px;
-  text-align: center;
-  transition: var(--transition);
-}
-.costCard:hover {
-  border-color: var(--orange);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
-}
-.costRange {
-  font-family: var(--font-head);
-  font-size: 1.45rem;
-  font-weight: 900;
-  color: var(--orange);
-  line-height: 1.1;
-  margin-bottom: 8px;
-}
-.costName {
-  font-family: var(--font-head);
-  font-size: 0.78rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--charcoal);
-  margin-bottom: 12px;
-}
-.costNote { font-size: 0.82rem; color: var(--warm-gray); line-height: 1.6; }
 
 /* ── FAQ ───────────────────────────────────────────────────── */
 .faqSection { margin-bottom: 40px; }
@@ -388,8 +350,7 @@
   .subGrid { grid-template-columns: 1fr; }
   .overviewStats { grid-template-columns: repeat(2, 1fr); }
   .equestrianGrid { grid-template-columns: 1fr; }
-  .costGrid { grid-template-columns: 1fr; }
-  .specRow { grid-template-columns: 1fr; }
+    .specRow { grid-template-columns: 1fr; }
   .specHead { display: none; }
   .specCell { border-right: none; }
   .specCell[data-th]::before {

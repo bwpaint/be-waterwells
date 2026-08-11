@@ -107,8 +107,8 @@ const wellTypes = [
   {
     icon: 'droplet' as const,
     title: 'Irrigation Scale',
-    desc: 'Large-volume wells for irrigation districts, multi-property irrigation systems, and acreage-scale agricultural irrigation. Multi-zone completion available.',
-    highlights: ['Large-volume output', 'Multi-zone completion', 'Multi-property systems', 'Acreage-scale design'],
+    desc: 'Large-volume wells for irrigation districts, multi-property irrigation systems, and acreage-scale agricultural irrigation.',
+    highlights: ['Large-volume output', 'Multi-property systems', 'Acreage-scale design'],
   },
   {
     icon: 'pump' as const,
@@ -330,37 +330,6 @@ export default function CommercialWellServicesHubPage() {
             experience navigating the GCD permit process across Montgomery, Harris, Waller,
             Grimes, Washington, Anderson, and surrounding counties.
           </p>
-        </section>
-
-        {/* ── COST ────────────────────────────── */}
-        <section className={styles.costSection}>
-          <span className="section-label">What It Costs</span>
-          <h2 className="section-title">Commercial Well Drilling Cost</h2>
-          <p className={styles.overviewP}>
-            Pricing depends on your location, well depth, static water level, and equipment
-            selection — call us to discuss your project. We quote every job in writing with an
-            itemized breakdown so you know exactly what you are paying for.
-          </p>
-          <div className={styles.costGrid}>
-            <div className={styles.costCard}>
-              <div className={styles.costName}>Equestrian &amp; Small Farm</div>
-              <p className={styles.costNote}>
-                Horse properties and small farm applications sized to your daily water demand.
-              </p>
-            </div>
-            <div className={styles.costCard}>
-              <div className={styles.costName}>Commercial &amp; Agricultural</div>
-              <p className={styles.costNote}>
-                Depends on depth, casing diameter, pump specifications, and required yield.
-              </p>
-            </div>
-            <div className={styles.costCard}>
-              <div className={styles.costName}>Large &amp; Multi-Zone</div>
-              <p className={styles.costNote}>
-                Large commercial or multi-zone irrigation applications with multi-zone completion.
-              </p>
-            </div>
-          </div>
         </section>
 
         {/* ── RELATED SERVICES ────────────────── */}
