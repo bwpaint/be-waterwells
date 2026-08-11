@@ -39,7 +39,9 @@
   font-size: 0.88rem;
   line-height: 1.65;
   margin: 14px auto 0;
-  max-width: 260px;
+  /* Wider than the one-line version so three lines of copy do not
+     become a narrow ribbon in a centred column. */
+  max-width: 300px;
   color: var(--white);
 }
 

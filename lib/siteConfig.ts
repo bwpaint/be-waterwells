@@ -30,3 +30,19 @@ export const GOOGLE_BUSINESS_URL =
  * visitor reading a service page does not lose their place.
  */
 export const WARRANTY_PDF = '/docs/be-warranty-terms-2026.pdf';
+
+/**
+ * TCEQ references.
+ *
+ * TSWQS is the Texas Surface Water Quality Standards intro (30 TAC Ch. 307) —
+ * it governs streams, rivers, lakes and bays, not groundwater. Cited as the
+ * state's water-quality framework, not as a well-construction standard.
+ *
+ * PUBLIC_WATER is TCEQ Chapter 290, which is the rule set that actually
+ * governs public and community drinking water systems — the relevant one for
+ * public-supply well work.
+ */
+export const TCEQ_STANDARDS_URL =
+  'https://www.tceq.texas.gov/waterquality/standards/WQ_standards_intro.html';
+export const TCEQ_PUBLIC_WATER_URL =
+  'https://www.tceq.texas.gov/drinkingwater';

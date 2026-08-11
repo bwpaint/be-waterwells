@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { WARRANTY_PDF } from '../../../lib/siteConfig';
+import { WARRANTY_PDF, TCEQ_STANDARDS_URL, TCEQ_PUBLIC_WATER_URL } from '../../../lib/siteConfig';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnnouncementBar from '../../components/AnnouncementBar';
@@ -329,6 +329,47 @@ export default function CommercialWellServicesHubPage() {
             B-E Waterwell handles all permitting on your behalf. We have 45+ years of
             experience navigating the GCD permit process across Montgomery, Harris, Waller,
             Grimes, Washington, Anderson, and surrounding counties.
+          </p>
+        </section>
+
+        {/* ── TCEQ STANDARDS ──────────────────── */}
+        <section className={styles.permitsSection}>
+          <span className="section-label">State Standards</span>
+          <h2 className="section-title">
+            Texas Commission on Environmental Quality Standards
+          </h2>
+          <p className={styles.overviewP}>
+            The Texas Commission on Environmental Quality sets the environmental
+            standards that govern water across the state. The{' '}
+            <a
+              href={TCEQ_STANDARDS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-link"
+            >
+              Texas Surface Water Quality Standards
+            </a>{' '}
+            (30 TAC Chapter 307), adopted under the Clean Water Act and the Texas
+            Water Code, set the goals for the state&apos;s streams, rivers, lakes,
+            and bays — including their protection as sources of public drinking
+            water.
+          </p>
+          <p className={styles.overviewP}>
+            B-E Waterwell Services works within TCEQ requirements as the state
+            requires. On a well site that obligation is practical rather than
+            abstract: properly set casing, pressure-cemented annular seals, and a
+            sanitary wellhead are what keep surface water and shallow
+            contamination out of the aquifer below. Where a project is a public or
+            community water supply, we build to the{' '}
+            <a
+              href={TCEQ_PUBLIC_WATER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-link"
+            >
+              TCEQ public drinking water requirements
+            </a>{' '}
+            that govern those systems.
           </p>
         </section>
 

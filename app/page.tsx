@@ -149,7 +149,11 @@ export default function HomePage() {
               <p className={styles.servicesSubtext}>
                 One call handles everything. Drilling, pumps, pressure tanks,
                 generator prep. B-E Waterwell does it all with the same crew
-                and the same accountability.
+                and the same accountability. That matters when something goes
+                wrong — there is no subcontractor to chase and no argument over
+                whose work failed. Forty-five years drilling and servicing wells
+                in the same counties means we have usually seen your problem
+                before, on a well a lot like yours.
               </p>
             </div>
             <div className={styles.servicesVideoWrap}>

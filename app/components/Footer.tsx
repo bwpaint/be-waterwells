@@ -8,6 +8,7 @@ import {
   FACEBOOK_URL,
   GOOGLE_BUSINESS_URL,
   WARRANTY_PDF,
+  TCEQ_STANDARDS_URL,
 } from '../../lib/siteConfig';
 import FooterContactForm from './FooterContactForm';
 import styles from './Footer.module.css';
@@ -26,7 +27,10 @@ export default function Footer() {
             height={101}
           />
           <p className={styles.tagline}>
-            Houston&apos;s trusted water well specialists since 1979.
+            Houston&apos;s trusted water well specialists since 1979. We drill new
+            water wells, replace pumps and pressure tanks, and rehabilitate wells
+            that have lost yield — across Montgomery, Harris, Waller, and the
+            surrounding counties.
           </p>
           <ul className={styles.brandContactList}>
             <li>
@@ -81,7 +85,11 @@ export default function Footer() {
           <ul className={`${styles.footerLinks} ${styles.footerLinksSpaced}`}>
             <li><Link href="/about">About</Link></li>
             <li><Link href="/contact">Contact Us</Link></li>
-            <li><Link href="/resources/waterwell-glossary">Waterwell Glossary</Link></li>
+            <li>
+              <a href={TCEQ_STANDARDS_URL} target="_blank" rel="noopener noreferrer">
+                TCEQ Standards
+              </a>
+            </li>
             <li>
               <a href={WARRANTY_PDF} target="_blank" rel="noopener noreferrer">
                 Warranty

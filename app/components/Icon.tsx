@@ -104,6 +104,11 @@ export default function Icon({ name, size = 40, className, strokeWidth = 1.6 }: 
       strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
+      /* Several glyphs draw right on the 0 0 24 24 boundary — the rehab arc is a
+         circle centred at (12,4) with r=4, so its top edge sits exactly at y=0.
+         With a 1.6 stroke, half the line falls outside the viewBox and SVG clips
+         it flat. overflow: visible lets those strokes render in full. */
+      style={{ overflow: 'visible' }}
       className={className}
       aria-hidden="true"
       focusable="false"
