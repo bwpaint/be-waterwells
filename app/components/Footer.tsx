@@ -81,6 +81,7 @@ export default function Footer() {
           <ul className={`${styles.footerLinks} ${styles.footerLinksSpaced}`}>
             <li><Link href="/about">About</Link></li>
             <li><Link href="/contact">Contact Us</Link></li>
+            <li><Link href="/resources/waterwell-glossary">Waterwell Glossary</Link></li>
             <li>
               <a href={WARRANTY_PDF} target="_blank" rel="noopener noreferrer">
                 Warranty

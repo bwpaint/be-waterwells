@@ -178,6 +178,18 @@
   color: var(--accent-on-light);
   font-weight: 700;
 }
+
+/* The "Wells & Systems We Provide" card carries eleven items rather than four.
+   Two columns keeps it close to the height of its neighbours instead of
+   stretching the whole grid row. */
+.subHighlightsWide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 14px;
+}
+@media (max-width: 1100px) {
+  .subHighlightsWide { grid-template-columns: 1fr; }
+}
 .subLink {
   font-family: var(--font-head);
   font-size: 0.8rem;

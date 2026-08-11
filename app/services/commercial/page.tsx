@@ -110,6 +110,26 @@ const wellTypes = [
     desc: 'Large-volume wells for irrigation districts, multi-property irrigation systems, and acreage-scale agricultural irrigation. Multi-zone completion available.',
     highlights: ['Large-volume output', 'Multi-zone completion', 'Multi-property systems', 'Acreage-scale design'],
   },
+  {
+    icon: 'pump' as const,
+    title: 'Wells & Systems We Provide',
+    desc: 'The full range of well types and pumping systems B-E designs, drills, and installs across the Houston area — from a single-home submersible to a regulated public supply system.',
+    // Eleven items rather than four, so the list renders in two columns.
+    wide: true,
+    highlights: [
+      'Commercial water wells',
+      'Residential water wells',
+      'Public water supply wells',
+      'Fire protection water wells',
+      'Irrigation water wells',
+      'Airlift water well systems',
+      'Submersible systems',
+      'Hand pump systems',
+      'Solar water well systems',
+      'Water plant & distribution systems',
+      'Community water supply systems',
+    ],
+  },
 ];
 
 const relatedServices = [
@@ -275,7 +295,11 @@ export default function CommercialWellServicesHubPage() {
                 <span className={styles.subIcon}><Icon name={s.icon} size={44} /></span>
                 <h3 className={styles.subTitle}>{s.title}</h3>
                 <p className={styles.subDesc}>{s.desc}</p>
-                <ul className={styles.subHighlights}>
+                <ul
+                  className={`${styles.subHighlights} ${
+                    'wide' in s && s.wide ? styles.subHighlightsWide : ''
+                  }`}
+                >
                   {s.highlights.map((h) => (
                     <li key={h}>{h}</li>
                   ))}

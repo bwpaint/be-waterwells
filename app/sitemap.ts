@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/well-rehabilitation',
     '/services/well-maintenance',
     '/services/emergency-well-services',
+    '/resources/waterwell-glossary',
     '/service-areas',
     '/blog',
   ];
