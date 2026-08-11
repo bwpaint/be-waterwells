@@ -43,11 +43,6 @@ const faqs = [
     answer:
       'We provide a written summary of all issues found and what remediation is recommended. Many issues are fixable — a waterlogged pressure tank, a failing pump, or a water quality treatment system. We quote remediation separately so buyers and sellers have clear information for negotiations. Not all "failures" mean a new well.',
   },
-  {
-    question: 'How does documented maintenance affect my well equipment warranty and home sale?',
-    answer:
-      'Franklin Electric pump warranties and most pressure tank warranties are more supportable with documented maintenance records from a TDLR-licensed contractor. Written service records also protect your investment when selling — buyers and lenders in the Houston area ask about well maintenance history, and a documented record of annual inspections answers that with confidence.',
-  },
 ];
 
 const jsonLd = {
@@ -130,7 +125,6 @@ const seasonalCalendar = [
     icon: 'bolt' as const, season: 'Pre-Hurricane (May)',
     items: [
       'Pump performance test — identify any weakening before storm season',
-      'Generator hookup test run under load',
       'Fuel and supply inventory check',
     ],
   },

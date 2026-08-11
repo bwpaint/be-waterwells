@@ -157,7 +157,12 @@
   color: var(--charcoal);
   margin-bottom: 10px;
 }
-.subDesc { font-size: 0.85rem; color: var(--warm-gray); line-height: 1.65; margin-bottom: 16px; flex: 1; }
+/* No flex: 1 here. Cards in a grid row stretch to the tallest card, and a
+   flexible description swallowed that extra height — pushing the checkmark
+   list to the bottom of the shorter cards and opening a gap under the
+   paragraph. Letting the description size to its content keeps the bullets
+   directly beneath it; the leftover height falls to the bottom of the card. */
+.subDesc { font-size: 0.85rem; color: var(--warm-gray); line-height: 1.65; margin-bottom: 16px; }
 .subHighlights {
   list-style: none;
   display: flex;

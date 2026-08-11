@@ -83,7 +83,6 @@ const seasons = [
     icon: 'tornado' as const,
     tasks: [
       'Pump performance test — identify any weakening before storm season',
-      'Generator hookup test run under load',
       'Fuel and supply inventory check',
     ],
   },
