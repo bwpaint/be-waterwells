@@ -8,7 +8,7 @@ import { NextResponse } from 'next/server';
  * stays out of client bundles and no CORS config is needed on the WP side.
  *
  * Required env vars (set in Vercel):
- *   WEBWIZE_FORMS_ENDPOINT  https://bewaterwellscms.wp1.sh/wp-json/webwize-forms/v1/submit
+ *   WEBWIZE_FORMS_ENDPOINT  https://cms.bewaterwells.com/wp-json/webwize-forms/v1/submit
  *   WEBWIZE_FORMS_API_KEY   from WP admin → WebWize Connect → Forms: Settings
  *   WEBWIZE_FORM_SLUG       defaults to 'lead'
  *

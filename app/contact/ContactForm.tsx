@@ -17,12 +17,46 @@ const SERVICES = [
   'Other',
 ];
 
+const SOURCE = 'Contact page';
+
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSent(true);
+    setError(null);
+    setLoading(true);
+
+    const data = Object.fromEntries(new FormData(e.currentTarget).entries()) as Record<string, string>;
+    const name = `${data.firstName ?? ''} ${data.lastName ?? ''}`.trim();
+
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          phone: data.phone ?? '',
+          email: data.email ?? '',
+          city: data.city ?? '',
+          service: data.service ?? '',
+          comments: data.comments ?? '',
+          source: SOURCE,
+        }),
+      });
+      const json = await res.json();
+      if (!res.ok || !json.ok) {
+        setError(json.error ?? 'Something went wrong. Please call 281-448-4447.');
+      } else {
+        setSent(true);
+      }
+    } catch {
+      setError('Could not reach the server. Please call 281-448-4447.');
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (sent) {
@@ -48,32 +82,32 @@ export default function ContactForm() {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
           <label style={labelStyle}>First Name *</label>
-          <input required style={inputStyle} type="text" placeholder="John" />
+          <input required style={inputStyle} type="text" name="firstName" placeholder="John" />
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
           <label style={labelStyle}>Last Name *</label>
-          <input required style={inputStyle} type="text" placeholder="Smith" />
+          <input required style={inputStyle} type="text" name="lastName" placeholder="Smith" />
         </div>
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
         <label style={labelStyle}>Phone *</label>
-        <input required style={inputStyle} type="tel" placeholder="(281) 555-0000" />
+        <input required style={inputStyle} type="tel" name="phone" placeholder="(281) 555-0000" />
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
         <label style={labelStyle}>Email</label>
-        <input style={inputStyle} type="email" placeholder="john@example.com" />
+        <input style={inputStyle} type="email" name="email" placeholder="john@example.com" />
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
         <label style={labelStyle}>City / Property Location *</label>
-        <input required style={inputStyle} type="text" placeholder="Magnolia, TX" />
+        <input required style={inputStyle} type="text" name="city" placeholder="Magnolia, TX" />
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
         <label style={labelStyle}>Service Needed *</label>
-        <select required style={inputStyle}>
+        <select required style={inputStyle} name="service" defaultValue="">
           <option value="">— Select a service —</option>
           {SERVICES.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
@@ -83,12 +117,19 @@ export default function ContactForm() {
         <label style={labelStyle}>Tell us about your project</label>
         <textarea
           style={{ ...inputStyle, minHeight: '100px', resize: 'vertical' }}
+          name="comments"
           placeholder="Property type, existing well condition, urgency, etc."
         />
       </div>
 
-      <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '14px', fontSize: '0.9rem' }}>
-        Send Message
+      {error && (
+        <p style={{ color: '#b3261e', fontSize: '0.85rem', margin: 0 }} role="alert">
+          {error}
+        </p>
+      )}
+
+      <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '14px', fontSize: '0.9rem' }} disabled={loading}>
+        {loading ? 'Sending…' : 'Send Message'}
       </button>
 
       <p style={{ fontSize: '0.78rem', color: 'var(--dark-stone)', textAlign: 'center', marginTop: '-4px' }}>

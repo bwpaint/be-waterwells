@@ -38,6 +38,8 @@ export default function ServiceSidebar({
   const [service, setService] = useState(defaultService);
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const posts = category
     ? getBlogPostsByCategory(category)
@@ -50,11 +52,34 @@ export default function ServiceSidebar({
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In production this would POST to an API route / CRM
-    // For now: show confirmation and offer the phone number
-    setSubmitted(true);
+    setError(null);
+    setLoading(true);
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          phone,
+          email,
+          service,
+          comments: message,
+          source: `Sidebar${categoryLabel ? ` — ${categoryLabel}` : ''}`,
+        }),
+      });
+      const json = await res.json();
+      if (!res.ok || !json.ok) {
+        setError(json.error ?? 'Something went wrong. Please call 281-448-4447.');
+      } else {
+        setSubmitted(true);
+      }
+    } catch {
+      setError('Could not reach the server. Please call 281-448-4447.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -136,8 +161,13 @@ export default function ServiceSidebar({
               rows={3}
               style={{ resize: 'vertical' }}
             />
-            <button type="submit" className={styles.submitBtn}>
-              Request Callback
+            {error && (
+              <p style={{ color: '#b3261e', fontSize: '0.8rem', margin: 0 }} role="alert">
+                {error}
+              </p>
+            )}
+            <button type="submit" className={styles.submitBtn} disabled={loading}>
+              {loading ? 'Sending…' : 'Request Callback'}
             </button>
             <a href="tel:+12814484447" className={styles.phoneAlt}>
               <Icon name="phone" size={16} /> Or Call (281) 448-4447
