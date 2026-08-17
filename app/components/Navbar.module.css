@@ -44,6 +44,16 @@
 /* Make logo white on dark navbar */
 .navLogo img {
   filter: brightness(0) invert(1);
+  /* Hard-coded display size instead of letting the flex/grid row squeeze
+     it — on narrow phones the row had less width than the image's natural
+     180px, and with only `max-width:100%` (no `height:auto`) in the global
+     img reset, the browser shrank the width but not the height, stretching
+     the logo. aspect-ratio locks height to width at every size so this
+     cannot happen again, even if the row gets tight. */
+  width: 180px;
+  height: auto;
+  aspect-ratio: 3268 / 1836;
+  flex-shrink: 0;
 }
 
 .navLinks {
@@ -361,9 +371,18 @@
 }
 
 @media (max-width: 900px) {
-  .navLinks,
-  .navCta .phoneLink,
-  .navCta .btn {
+  .navLinks {
+    display: none;
+  }
+
+  /* .navCta only ever holds the phone-number CTA on mobile. It was meant
+     to be hidden here, but the old selector was `.navCta .btn` — under
+     CSS Modules that compiles to a scoped class and can never match the
+     plain global `btn` on the <a>, so the orange button rendered on every
+     phone. Hiding the whole wrapper both fixes that and removes the
+     button per Brooks 8/17 (call number already lives in the announcement
+     bar and the mobile menu). */
+  .navCta {
     display: none;
   }
 
@@ -371,12 +390,20 @@
     display: flex;
   }
 
+  /* Grid gave the hamburger its own column, but with only 2 columns
+     defined and 3 grid items (logo, navCta, hamburger) the hamburger
+     wrapped to a second row below the logo. Flex + space-between keeps
+     exactly 2 visible items — logo and hamburger — pinned to opposite
+     ends of one row regardless of how many hidden siblings sit between
+     them. */
   .nav {
-    grid-template-columns: 1fr auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 12px;
   }
 
-  .navCta {
-    gap: 8px;
+  .navLogo img {
+    width: 148px;
   }
 }

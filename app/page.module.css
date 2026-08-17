@@ -661,6 +661,30 @@
   .servicesGrid { grid-template-columns: 1fr; }
   .testimonialsGrid { grid-template-columns: 1fr; }
   .areasGrid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Badge wraps to 2 lines on phones; the 22px gap under it that reads fine
+     under one line reads as a gap under two. Tightened per Brooks 8/17. */
+  .heroBadge {
+    margin-bottom: 12px;
+    padding: 5px 12px;
+  }
+
+  /* .heroOrange's `white-space: nowrap` (kept for desktop, where it fits
+     comfortably as one line) forced "Waterwell Service" onto a single line
+     at whatever size .heroH1's clamp() resolved to — on phones that ran
+     past the viewport edge. Base size comes down a step so "Houston Area"
+     and "Experts" fit clean, Waterwell Service is bumped relatively larger
+     per Brooks 8/17, and wrapping is allowed as a backstop so it folds to
+     a second line instead of overflowing on the narrowest phones. */
+  .heroH1 {
+    font-size: clamp(1.7rem, 8vw, 2.6rem);
+  }
+  .heroOrange {
+    display: inline-block;
+    white-space: normal;
+    font-size: 1.12em;
+    line-height: 1.05;
+  }
 }
 
 /* ── FAQ SECTION ───────────────────────────────────────────── */
