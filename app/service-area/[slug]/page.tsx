@@ -250,6 +250,24 @@ export default function CityPage({ params }: Props) {
         </section>
       )}
 
+      {/* ── LOCAL TO {CITY} ──────────────────── */}
+      {city.localHighlights && city.localHighlights.length > 0 && (
+        <section className={styles.localSection}>
+          <div className="container">
+            <span className="section-label">Local to {city.city}</span>
+            <h2 className="section-title">What {city.city} Is Known For</h2>
+            <div className={styles.localGrid}>
+              {city.localHighlights.map((h) => (
+                <div key={h.title} className={styles.localCard}>
+                  <h3 className={styles.localTitle}>{h.title}</h3>
+                  <p className={styles.localText}>{h.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── SERVICES ─────────────────────────── */}
       <section className={styles.servicesSection}>
         <div className="container">

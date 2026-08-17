@@ -8,6 +8,11 @@ export interface CityData {
   heroSubtitle: string;
   metaDescription: string;
   intro: string;
+  /** 2 sourced, non-well local-interest facts (landmark, history, annual
+      event) that ground the page geographically for local SEO. Every entry
+      must be independently verifiable against a real source — do not add
+      anything that can't be checked. */
+  localHighlights?: { title: string; text: string }[];
   /** Omit entirely when no sourced depth record exists for the area. */
   aquiferDepth?: string;
   /** Liability disclaimer rendered directly above any depth figure. */
@@ -420,6 +425,16 @@ export const cities: CityData[] = [
       'B-E Waterwell Services — Magnolia, TX water well drilling, pump replacement, and well rehabilitation. Our home base since 1979. Licensed TDLR contractor. Call (281) 448-4447.',
     intro:
       'Magnolia, TX is home base for B-E Waterwell Services. We have been drilling water wells and servicing pumps in this community for over 45 years — longer than most of the subdivisions out here have existed. The sandy loam soils and the water-bearing zone make for reliable wells when drilled right, and we know every foot of this ground.',
+    localHighlights: [
+      {
+        title: 'The Historic Magnolia Depot',
+        text: "Magnolia's downtown grew up around the rail line that reached the area in 1902. The original depot was relocated and restored in 2005, and the Magnolia Historical Society now runs it as a small museum and event space — home to the town's annual Depot Day festival every April.",
+      },
+      {
+        title: "Unity Park's Wetlands Trail",
+        text: 'The city park has 2.5 miles of walking trails through a wetlands area where alligators and red-shouldered hawks are regularly spotted, plus a splash pad, amphitheater, and skate park.',
+      },
+    ],
     aquiferDepth: '180–320 ft',
     nearbyAreas: [
       { city: 'Tomball', slug: 'tomball-tx', distance: '14 mi' },
@@ -463,6 +478,16 @@ export const cities: CityData[] = [
       'Water well drilling and pump services in Conroe, TX. B-E Waterwell Services has served Montgomery County since 1979. Licensed & insured. Call (281) 448-4447.',
     intro:
       'Conroe is the county seat of Montgomery County and one of the fastest-growing areas in Texas. As the region expands beyond municipal water infrastructure, private water wells are increasingly common — and increasingly important to get right. B-E Waterwell Services has drilled and serviced wells throughout Conroe and the surrounding Lake Conroe corridor for decades.',
+    localHighlights: [
+      {
+        title: 'Lake Conroe',
+        text: 'The 19,640-acre reservoir on the West Fork San Jacinto River was completed in January 1973 by the San Jacinto River Authority and the City of Houston. It still functions as a water-supply reservoir alongside its reputation as a boating and fishing lake.',
+      },
+      {
+        title: "Texas's Official Cajun Catfish Festival",
+        text: 'Held every October in downtown Conroe, the festival was designated by the Texas Legislature in 1995 as the official Cajun catfish festival of the State of Texas.',
+      },
+    ],
     aquiferDepth: '200–400 ft',
     nearbyAreas: [
       { city: 'Montgomery', slug: 'montgomery-tx', distance: '14 mi' },
@@ -594,6 +619,16 @@ export const cities: CityData[] = [
       'Water well drilling and pump replacement in Tomball, TX. 45+ years serving NW Houston and Harris County. Licensed TDLR. Call (281) 448-4447.',
     intro:
       'Tomball sits at the edge of the Houston metro in northwest Harris County — a community that still has roots in rural Texas while growing fast. Many properties here have water wells that predate current TDLR standards, and owners are often surprised to learn how much a well rehabilitation can restore. B-E Waterwell Services knows the local geology inside out and has been a trusted name in Tomball since the 1970s.',
+    localHighlights: [
+      {
+        title: 'Renamed Tomball in 1907',
+        text: "The town started out as a rail stop called Peck. It was renamed Tomball on December 2, 1907 for Thomas Henry Ball, the attorney who helped route the Trinity and Brazos Valley Railway through — and it's still Harris County's northernmost town.",
+      },
+      {
+        title: 'German Heritage Festival, Twice a Year',
+        text: 'Old downtown Tomball marks the German families who settled the area starting in 1840 with a festival the last weekend of March and an open-air German Christmas Market in December.',
+      },
+    ],
     aquiferDepth: '180–320 ft',
     nearbyAreas: [
       { city: 'Magnolia', slug: 'magnolia-tx', distance: '14 mi' },
@@ -1189,6 +1224,16 @@ export const cities: CityData[] = [
       'Water well drilling, pump replacement, and rehabilitation in Katy, TX. B-E Waterwell Services serves the Fort Bend County area since 1979. Licensed TDLR. Call (281) 448-4447.',
     intro:
       'Katy spans the western edge of the Houston metro across parts of Fort Bend, Harris, and Waller counties. While much of the area is on municipal water, acreage properties and rural tracts on the outskirts still rely on private wells. B-E Waterwell Services brings the same licensed, fully insured service to the Katy area that we deliver across our service region, and we assess each property before drilling.',
+    localHighlights: [
+      {
+        title: 'Named for the MKT Railroad',
+        text: "Originally called Cane Island, the town took its name from the Missouri-Kansas-Texas Railroad — 'the Katy' — after the line reached the site around 1893. The 1898 depot later became a museum run by the Katy Historical Society.",
+      },
+      {
+        title: 'Rice Harvest Festival, 40+ Years Running',
+        text: "Rice farming replaced cotton and corn as the area's dominant crop starting in 1901, and the city's Rice Harvest Festival — parade included — has run every October at the Historic Town Square for more than four decades.",
+      },
+    ],
     aquiferDepth: '200–400 ft',
     nearbyAreas: [
       { city: 'Cypress', slug: 'cypress-tx', distance: '16 mi' },
@@ -1273,6 +1318,16 @@ export const cities: CityData[] = [
       'Water well drilling, pump replacement, and rehabilitation in Brenham, TX. B-E Waterwell Services serves Washington County since 1979. Licensed TDLR. Call (281) 448-4447.',
     intro:
       'Brenham is the heart of Washington County — a thriving small city surrounded by rolling ranch country, dairies, and rural acreage that depends on private water wells. The terrain here, west of the Houston metro, differs from the Gulf Coast, so we evaluate each property individually. B-E Waterwell Services has served the Brenham area for over four decades and assesses every site before drilling.',
+    localHighlights: [
+      {
+        title: "Blue Bell Creameries' Hometown",
+        text: "Brenham is where Blue Bell makes its ice cream. There's no factory walk-through anymore, but the Visitor Center, Observation Deck, and Ice Cream Parlor are open to visitors on weekdays.",
+      },
+      {
+        title: "Maifest — Texas's Oldest Festival",
+        text: 'What started as a German spring Volksfest became Maifest when the Brenham Fire Department took over organizing it in 1880. Held every May, it\'s widely recognized as the oldest continuously run festival in Texas.',
+      },
+    ],
     aquiferDepth: 'Varies by location',
     nearbyAreas: [
       { city: 'Chappell Hill', slug: 'chappell-hill-tx', distance: '10 mi' },
