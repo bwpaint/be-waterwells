@@ -14,6 +14,13 @@ export const BUSINESS = {
     full: '30815 Collier Smith Rd., Magnolia, TX 77354',
   },
   founded: '1979',
+  /*
+   * Verified against the Google Business Profile listing
+   * (CID 13501373956235499875). These must stay identical to what GBP shows —
+   * a mismatch between site schema and the listing weakens local relevance.
+   * Previous values (30.2158, -95.7522) were roughly five miles off.
+   */
+  geo: { latitude: 30.1857925, longitude: -95.6473174 },
   url: 'https://bewaterwells.com',
   serviceRadius: '60-mile radius of Houston, TX',
   counties: ['Harris County', 'Montgomery County', 'Waller County', 'Fort Bend County', 'Brazoria County', 'Galveston County', 'Liberty County', 'Chambers County'],
@@ -42,8 +49,8 @@ export const LOCAL_BUSINESS_SCHEMA = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 30.2158,
-    longitude: -95.7522,
+    latitude: BUSINESS.geo.latitude,
+    longitude: BUSINESS.geo.longitude,
   },
   areaServed: BUSINESS.counties.map(county => ({
     '@type': 'AdministrativeArea',
@@ -99,6 +106,9 @@ export function buildServiceSchema(opts: {
     },
     areaServed: {
       '@type': 'GeoCircle',
+      /* Deliberately downtown Houston, not the shop. This is the centre of the
+         60-mile service radius, not the business location — which is why it does
+         not match BUSINESS.geo. */
       geoMidpoint: { '@type': 'GeoCoordinates', latitude: 29.7604, longitude: -95.3698 },
       geoRadius: '96560',
     },

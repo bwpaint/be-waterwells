@@ -1,3 +1,4 @@
+import { BUSINESS } from './seoData';
 import { SITE_URL } from './siteConfig';
 export const services = [
   {
@@ -113,12 +114,22 @@ export const jsonLd = {
     postalCode: '77354',
     addressCountry: 'US',
   },
-  geo: { '@type': 'GeoCoordinates', latitude: 30.2158, longitude: -95.7522 },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    reviewCount: '64',
-  },
+  // Single source of truth is BUSINESS.geo in seoData, verified against the
+  // Google Business Profile listing. Do not hardcode coordinates here.
+  geo: { '@type': 'GeoCoordinates', latitude: BUSINESS.geo.latitude, longitude: BUSINESS.geo.longitude },
+  /*
+   * aggregateRating intentionally removed before launch.
+   *
+   * It declared 4.8 / 64 while the Google Business Profile actually shows
+   * 4.9 / 115, and no reviews are published on this site at all. Google treats
+   * self-declared ratings about your own business, unsupported by on-page
+   * reviews, as self-serving — ineligible for rich results and a manual-action
+   * risk. With sameAs now pointing at the real listing, the mismatch is
+   * trivially checkable.
+   *
+   * Restore ONLY once real reviews are rendered on the page, and derive the
+   * values from those reviews rather than hardcoding them.
+   */
   openingHoursSpecification: [
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '07:00', closes: '18:00' },
   ],

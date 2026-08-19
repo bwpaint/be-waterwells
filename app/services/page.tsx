@@ -26,7 +26,7 @@ const jsonLd = {
   telephone: '+1-281-448-4447',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Magnolia, TX',
+    streetAddress: '30815 Collier Smith Rd.',
     addressLocality: 'Magnolia',
     addressRegion: 'TX',
     postalCode: '77354',
